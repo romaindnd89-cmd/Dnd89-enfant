@@ -5,11 +5,12 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sword, Shield, Sparkles, Clock, Users, ChevronRight, Star } from 'lucide-react';
+import { Sword, Shield, Sparkles, Clock, Users, ChevronRight, Star, BookOpen } from 'lucide-react';
 import RoyaumeDesMoustaches from './campaigns/RoyaumeDesMoustaches';
 import BouboulePangea from './campaigns/BouboulePangea';
 import EtoileCampaign from './campaigns/EtoileCampaign';
 import AubeCampaign from './campaigns/AubeCampaign';
+import ParentGuide from './components/ParentGuide';
 
 type AgeGroup = 'kids' | 'normal' | 'expert';
 
@@ -90,6 +91,7 @@ const kidsCampaigns: Campaign[] = [
 export default function App() {
   const [activeTab, setActiveTab] = useState<AgeGroup>('kids');
   const [selectedCampaignId, setSelectedCampaignId] = useState<string | null>(null);
+  const [showParentGuide, setShowParentGuide] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans selection:bg-emerald-200 selection:text-emerald-900">
@@ -116,7 +118,17 @@ export default function App() {
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <AnimatePresence mode="wait">
-          {selectedCampaignId === 'c1' ? (
+          {showParentGuide ? (
+            <motion.div
+              key="parent-guide"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ParentGuide onBack={() => setShowParentGuide(false)} />
+            </motion.div>
+          ) : selectedCampaignId === 'c1' ? (
             <motion.div
               key="campaign-c1"
               initial={{ opacity: 0, x: 20 }}
@@ -212,6 +224,22 @@ export default function App() {
                           Des aventures douces, colorées et pleines de magie, spécialement conçues pour initier les plus jeunes (5-8 ans) au jeu de rôle.
                         </p>
                       </div>
+
+                      <button 
+                        onClick={() => setShowParentGuide(true)}
+                        className="w-full mb-8 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-between text-left group"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <BookOpen className="w-7 h-7 text-white" />
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-xl sm:text-2xl mb-1 group-hover:underline">Guide du Parent Débutant</h3>
+                            <p className="text-blue-100 text-sm sm:text-base">Comment jouer ? Règles super simples et explication des dés pour les 100% novices.</p>
+                          </div>
+                        </div>
+                        <ChevronRight className="w-8 h-8 opacity-50 group-hover:opacity-100 transition-opacity hidden sm:block" />
+                      </button>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {kidsCampaigns.map((campaign, index) => (
