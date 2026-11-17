@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import EggHatch from '../../components/EggHatch';
 
 export default function Chapitre1() {
   return (
@@ -8,6 +9,8 @@ export default function Chapitre1() {
         CHAPITRE 1 : L'ŒUF VIDE
       </h2>
       <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 1<br/>Lieu : Le village de Fumerolles et le temple du Dragon<br/>Ambiance : Un matin de fête qui tourne à l'inquiétude, mais toujours chaleureux. Chapitre sans combat : on apprend à jouer.</p>
+
+      <EggHatch size={190} className="mb-2" />
 
       <InfoBox title="Synopsis du Chapitre pour le Maître du Jeu">
         <p>Premier chapitre, idéal pour apprendre les dés tranquillement. Les héros explorent le temple, interrogent trois villageois et découvrent les traces du bébé dragon, qui mènent à la forêt. Chaque joueur a au moins un jet à faire ; si un enfant hésite, propose-lui une idée plutôt qu'un test. <strong>À retenir en fin de chapitre :</strong> (1) l'œuf a éclos cette nuit ; (2) Braisillon a peur de son feu ; (3) ses traces mènent à la Forêt des Champignons.</p>

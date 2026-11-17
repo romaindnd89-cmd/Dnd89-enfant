@@ -288,3 +288,119 @@ section[id] {
   .cloud-drift, .shooting-star, .card-dragon-inner, .dice-wobble { animation: none !important; }
   section[id] > h2 { animation: none !important; }
 }
+
+/* ===== Troupe qui marche, forêt à étages, éclosion ===== */
+.parade-walker {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  will-change: transform;
+  animation: parade-walk 110s linear infinite both;
+}
+@keyframes parade-walk {
+  0% { transform: translate3d(-25vw, 0, 0); }
+  55% { transform: translate3d(125vw, 0, 0); }
+  100% { transform: translate3d(125vw, 0, 0); }
+}
+.parade-hop { animation: parade-hop 0.55s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+@keyframes parade-hop {
+  from { transform: translateY(0) rotate(-2.5deg); }
+  to { transform: translateY(-7px) rotate(2.5deg); }
+}
+.parade-float { animation: parade-float 2.4s ease-in-out infinite; filter: drop-shadow(0 0 10px rgba(253,224,71,0.95)); }
+@keyframes parade-float {
+  0%, 100% { transform: translate(0, 0) rotate(-6deg); }
+  50% { transform: translate(8px, -14px) rotate(6deg); }
+}
+
+.parallax-forest { --sy: 0; }
+.pf-layer {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  will-change: background-position, transform;
+}
+.pf-far {
+  height: 30%;
+  background-image: url('/art/forest-far.webp');
+  background-size: auto 100%;
+  opacity: 0.7;
+  animation: pf-slide-a 120s linear infinite alternate;
+  transform: translateY(calc(var(--sy) * -0.01px));
+}
+.pf-mid {
+  height: 55%;
+  background-image: url('/art/forest-mid.webp');
+  background-size: auto 100%;
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to top, #000 45%, transparent);
+  mask-image: linear-gradient(to top, #000 45%, transparent);
+  animation: pf-slide-b 90s linear infinite alternate;
+  transform: translateY(calc(var(--sy) * -0.02px));
+}
+.pf-near {
+  height: 44%;
+  background-image: url('/art/forest-near.webp');
+  background-size: auto 100%;
+  opacity: 0.9;
+  -webkit-mask-image: linear-gradient(to top, #000 55%, transparent 98%);
+  mask-image: linear-gradient(to top, #000 55%, transparent 98%);
+  animation: pf-slide-c 60s ease-in-out infinite alternate;
+  transform: translateY(calc(var(--sy) * -0.035px));
+}
+@keyframes pf-slide-a { from { background-position: 0 100%; } to { background-position: -420px 100%; } }
+@keyframes pf-slide-b { from { background-position: 0 100%; } to { background-position: 560px 100%; } }
+@keyframes pf-slide-c { from { background-position: 0 100%; } to { background-position: -700px 100%; } }
+
+/* Dragon qui traverse la bannière d'une aventure */
+.hero-flyer { animation: hero-fly 15s linear infinite; will-change: transform; }
+@keyframes hero-fly {
+  from { transform: translateX(-20%); }
+  to { transform: translateX(120%); }
+}
+.hero-flyer > div { display: inline-block; }
+
+/* Éclosion : l'œuf tremble, se fendille, puis le dragonneau sort */
+.egg-hatch {
+  background-image: url('/art/egg-hatch.png');
+  background-size: 400% 100%;
+  background-repeat: no-repeat;
+  animation: egg-frames 9s steps(1, end) infinite;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.3));
+}
+@keyframes egg-frames {
+  0% { background-position: 0% 0; }
+  36% { background-position: 33.3333% 0; }
+  54% { background-position: 66.6667% 0; }
+  68% { background-position: 100% 0; }
+  100% { background-position: 100% 0; }
+}
+.egg-wobble { animation: egg-wobble 9s ease-in-out infinite; transform-origin: 50% 95%; }
+@keyframes egg-wobble {
+  0%, 4%, 36%, 100% { transform: rotate(0deg); }
+  8% { transform: rotate(-5deg); }
+  12% { transform: rotate(5deg); }
+  16% { transform: rotate(-4deg); }
+  20% { transform: rotate(4deg); }
+  26% { transform: rotate(-6deg); }
+  30% { transform: rotate(6deg); }
+  70% { transform: translateY(0) scale(1); }
+  74% { transform: translateY(-10px) scale(1.04); }
+  80% { transform: translateY(0) scale(1); }
+}
+
+/* Icônes des encadrés qui respirent, boutons qui réagissent au toucher */
+.box-icon { animation: box-icon 3.6s ease-in-out infinite; }
+@keyframes box-icon {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.18) rotate(-6deg); }
+}
+button { transition: transform 0.15s ease; }
+button:active { transform: scale(0.97); }
+
+@media (prefers-reduced-motion: reduce) {
+  .parade-walker, .parade-hop, .parade-float, .pf-far, .pf-mid, .pf-near, .hero-flyer,
+  .egg-hatch, .egg-wobble, .box-icon { animation: none !important; }
+  .egg-hatch { background-position: 100% 0; }
+}

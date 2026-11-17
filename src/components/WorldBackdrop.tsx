@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { WORLDS, WorldKey } from '../theme/worlds';
 import FantasyScene from './FantasyScene';
 import AmbientParticles from './AmbientParticles';
+import ParallaxForest from './ParallaxForest';
 
 /**
  * Fond plein écran : le décor illustré du monde courant, légèrement assombri
@@ -31,6 +32,9 @@ export default function WorldBackdrop({ world }: { world: WorldKey }) {
         className="absolute inset-0"
         style={{ background: 'radial-gradient(ellipse at 50% 40%, transparent 45%, rgba(2,6,23,0.6) 100%)' }}
       />
+
+      {/* Forêt à étages au premier plan */}
+      <ParallaxForest world={world} />
 
       {/* Particules du monde (braises, lucioles, feuilles, confettis) */}
       <AmbientParticles world={world} />

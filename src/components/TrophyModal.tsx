@@ -36,6 +36,16 @@ export default function TrophyModal({ trophy, onClose }: { trophy: TrophyDef; on
             />
           </motion.div>
 
+          <motion.img
+            src="/art/dragon-fire.png"
+            alt=""
+            aria-hidden="true"
+            draggable={false}
+            className="absolute -right-2 top-1 w-28 z-20 drop-shadow-xl select-none"
+            animate={{ y: [0, -8, 0], rotate: [-3, 3, -3] }}
+            transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
+          />
+
           <div className="relative z-10">
             <p className="text-white/90 font-display font-bold tracking-wide uppercase text-sm mb-2">
               Aventure terminée !

@@ -9,18 +9,22 @@ export const DRAGON_TINTS = [
 ];
 
 /**
- * Petit dragon dessiné (bande de 4 images : ailes en haut, mi-haut, en bas, mi-haut).
- * Les images défilent en boucle, ce qui fait battre les ailes.
- * Il regarde vers la droite ; le sens de vol est géré par le parent.
+ * Animation image par image : une bande de 4 images qui défile en boucle.
+ * Par défaut : le dragon qui vole (ailes en haut, mi-haut, en bas, mi-haut).
+ * Les images regardent vers la droite ; le sens est géré par le parent.
  */
 export default function DragonSprite({
   size = 64,
   tint = 0,
   speed = 0.5,
+  src = '/art/dragon-fly.png',
+  ratio = 282 / 260,
 }: {
   size?: number;
   tint?: number;
   speed?: number;
+  src?: string;
+  ratio?: number;
 }) {
   return (
     <div
@@ -28,7 +32,8 @@ export default function DragonSprite({
       className="dragon-sprite"
       style={{
         width: size,
-        height: size * (282 / 260),
+        height: size * ratio,
+        backgroundImage: `url('${src}')`,
         animationDuration: `${speed}s`,
         filter: DRAGON_TINTS[tint % DRAGON_TINTS.length],
       }}

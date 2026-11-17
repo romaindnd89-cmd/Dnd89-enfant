@@ -1,6 +1,7 @@
 import React from 'react';
 import { WORLDS, WorldKey } from '../theme/worlds';
 import FantasyScene from './FantasyScene';
+import DragonSprite from './DragonSprite';
 
 /**
  * Bandeau d'ouverture d'une aventure : le décor illustré du monde,
@@ -25,6 +26,13 @@ export default function WorldHero({
     <div className={`relative mb-12 rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br ${w.fallback}`}>
       <FantasyScene world={world} className="absolute inset-0 w-full h-full" />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-slate-950/20" />
+
+      {/* Un petit dragon traverse la bannière */}
+      <div className="hero-flyer absolute inset-x-0 top-6 pointer-events-none" aria-hidden="true">
+        <div className="dragon-bob">
+          <DragonSprite size={64} tint={1} speed={0.45} />
+        </div>
+      </div>
 
       <div className="relative z-10 px-6 py-16 sm:py-24 text-center">
         <p className="font-display text-amber-200/90 tracking-[0.35em] text-xs uppercase mb-4">{overline}</p>

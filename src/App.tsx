@@ -20,6 +20,7 @@ import WorldBackdrop from './components/WorldBackdrop';
 import PortalGate from './components/PortalGate';
 import SparkleCursor from './components/SparkleCursor';
 import FlyingDragons from './components/FlyingDragons';
+import WalkingParade from './components/WalkingParade';
 import DragonForestBanner from './components/DragonForestBanner';
 import DragonSprite from './components/DragonSprite';
 import TrophyShelf from './components/TrophyShelf';
@@ -197,6 +198,7 @@ export default function App() {
           <DiceRoller />
           <DragonHelper />
           <FlyingDragons />
+          <WalkingParade />
         </>
       )}
 
