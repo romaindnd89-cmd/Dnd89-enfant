@@ -10,7 +10,11 @@ import RoyaumeDesMoustaches from './campaigns/RoyaumeDesMoustaches';
 import BouboulePangea from './campaigns/BouboulePangea';
 import EtoileCampaign from './campaigns/EtoileCampaign';
 import AubeCampaign from './campaigns/AubeCampaign';
+import RenardCampaign from './campaigns/RenardCampaign';
 import ParentGuide from './components/ParentGuide';
+import DiceRoller from './components/DiceRoller';
+import GlowBackground from './components/GlowBackground';
+import { readProgressCount } from './hooks/useProgress';
 
 type AgeGroup = 'kids' | 'normal' | 'expert';
 
@@ -23,8 +27,12 @@ interface Campaign {
   players: string;
   emoji: string;
   imageUrl?: string;
+  gradient?: string;
   colorClass: string;
   bgClass: string;
+  comingSoon?: boolean;
+  progressId?: string;
+  totalChapters?: number;
 }
 
 const kidsCampaigns: Campaign[] = [
@@ -77,14 +85,30 @@ const kidsCampaigns: Campaign[] = [
     bgClass: 'bg-amber-100 border-amber-200',
   },
   {
+    id: 'c6',
+    title: 'Le Renardeau et la Forêt qui Oublie',
+    description: 'Une brume grise a volé les couleurs et les souvenirs de la forêt de Grisefeuille ! Incarnez un petit renard, le seul à se souvenir, et partez retrouver les 3 Glands d\'Or avant la première neige.',
+    duration: '2h - 3h (Plusieurs sessions)',
+    difficulty: 'Difficulté : 2/5',
+    players: '1 petit héros (Dès 6 ans)',
+    emoji: '🦊🍂',
+    gradient: 'from-amber-300 via-orange-400 to-rose-400',
+    colorClass: 'text-orange-600',
+    bgClass: 'bg-orange-100 border-orange-200',
+    progressId: 'renard',
+    totalChapters: 12,
+  },
+  {
     id: 'c3',
     title: 'Le Trésor des Lutins Farceurs',
     description: 'Les lutins ont caché des pièces en chocolat partout dans le château. Saurez-vous déjouer leurs pièges rigolos ?',
     duration: '40 min',
     players: '3-6 petits héros',
     emoji: '🏰🍫',
-    colorClass: 'text-orange-600',
-    bgClass: 'bg-orange-100 border-orange-200',
+    gradient: 'from-lime-300 via-emerald-400 to-teal-400',
+    colorClass: 'text-emerald-600',
+    bgClass: 'bg-emerald-50 border-emerald-200',
+    comingSoon: true,
   }
 ];
 
@@ -94,9 +118,11 @@ export default function App() {
   const [showParentGuide, setShowParentGuide] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans selection:bg-emerald-200 selection:text-emerald-900">
+    <div className="min-h-screen bg-transparent font-sans selection:bg-emerald-200 selection:text-emerald-900">
+      <GlowBackground />
+      <DiceRoller />
       {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+      <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div 
             className="flex items-center gap-3 cursor-pointer"
@@ -167,6 +193,16 @@ export default function App() {
               transition={{ duration: 0.3 }}
             >
               <AubeCampaign onBack={() => setSelectedCampaignId(null)} />
+            </motion.div>
+          ) : selectedCampaignId === 'c6' ? (
+            <motion.div
+              key="campaign-c6"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <RenardCampaign onBack={() => setSelectedCampaignId(null)} />
             </motion.div>
           ) : (
             <motion.div
@@ -245,28 +281,46 @@ export default function App() {
                         {kidsCampaigns.map((campaign, index) => (
                           <motion.div
                             key={campaign.id}
-                            onClick={() => setSelectedCampaignId(campaign.id)}
+                            onClick={() => { if (!campaign.comingSoon) setSelectedCampaignId(campaign.id); }}
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.1, duration: 0.4, type: "spring", bounce: 0.4 }}
-                            className={`relative group overflow-hidden rounded-3xl border-2 ${campaign.bgClass} p-6 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer`}
+                            className={`relative group overflow-hidden rounded-3xl border-2 ${campaign.bgClass} p-6 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${campaign.comingSoon ? 'opacity-90 cursor-default' : 'cursor-pointer'}`}
                           >
+                            {campaign.comingSoon && (
+                              <div className="absolute top-5 -right-10 rotate-45 bg-slate-700 text-white text-xs font-bold px-12 py-1 shadow-md z-20">
+                                Bientôt
+                              </div>
+                            )}
                             <div className="absolute -right-6 -top-6 text-8xl opacity-40 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500 pointer-events-none">
                               {Array.from(campaign.emoji)[0]}
                             </div>
-                            
+
                             <div className="relative z-10">
                               {campaign.imageUrl ? (
                                 <div className="mb-5 rounded-2xl overflow-hidden aspect-video border-2 border-white/60 shadow-sm relative">
-                                  <img 
-                                    src={campaign.imageUrl} 
-                                    alt={campaign.title} 
+                                  <img
+                                    src={campaign.imageUrl}
+                                    alt={campaign.title}
                                     className="w-full h-full object-cover"
                                     referrerPolicy="no-referrer"
                                   />
                                   <div className="absolute top-2 right-2 text-2xl filter drop-shadow-md bg-white/80 rounded-full p-1">
                                     {Array.from(campaign.emoji)[0]}
                                   </div>
+                                </div>
+                              ) : campaign.gradient ? (
+                                <div className={`mb-5 rounded-2xl overflow-hidden aspect-video border-2 border-white/60 shadow-sm relative bg-gradient-to-br ${campaign.gradient} flex items-center justify-center`}>
+                                  <motion.span
+                                    className="text-7xl drop-shadow-lg"
+                                    animate={{ y: [0, -6, 0], rotate: [0, 4, -4, 0] }}
+                                    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+                                  >
+                                    {Array.from(campaign.emoji)[0]}
+                                  </motion.span>
+                                  <span className="absolute bottom-2 right-2 text-2xl bg-white/80 rounded-full p-1 shadow">
+                                    {Array.from(campaign.emoji)[1] ?? '✨'}
+                                  </span>
                                 </div>
                               ) : (
                                 <div className="text-5xl mb-4 filter drop-shadow-sm">
@@ -297,10 +351,36 @@ export default function App() {
                                 </div>
                               </div>
 
-                              <button className={`w-full sm:w-auto flex items-center justify-center gap-2 bg-white ${campaign.colorClass} px-6 py-3 rounded-2xl font-bold shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all`}>
-                                Voir l'aventure
-                                <ChevronRight className="w-5 h-5" />
-                              </button>
+                              {campaign.progressId && (() => {
+                                const count = readProgressCount(campaign.progressId!);
+                                if (count <= 0) return null;
+                                return (
+                                  <div className="mb-4 -mt-4">
+                                    <div className="flex items-center justify-between mb-1">
+                                      <span className="text-xs font-bold text-slate-500">📍 En cours</span>
+                                      <span className="text-xs font-bold text-slate-500">{count}/{campaign.totalChapters}</span>
+                                    </div>
+                                    <div className="h-2 rounded-full bg-white/70 overflow-hidden">
+                                      <div
+                                        className={`h-full rounded-full bg-gradient-to-r ${campaign.gradient ?? 'from-emerald-400 to-teal-500'}`}
+                                        style={{ width: `${Math.round((count / (campaign.totalChapters ?? count)) * 100)}%` }}
+                                      />
+                                    </div>
+                                  </div>
+                                );
+                              })()}
+
+                              {campaign.comingSoon ? (
+                                <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/70 text-slate-400 px-6 py-3 rounded-2xl font-bold shadow-sm cursor-default">
+                                  <Clock className="w-5 h-5" />
+                                  En préparation
+                                </div>
+                              ) : (
+                                <button className={`w-full sm:w-auto flex items-center justify-center gap-2 bg-white ${campaign.colorClass} px-6 py-3 rounded-2xl font-bold shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all`}>
+                                  Voir l'aventure
+                                  <ChevronRight className="w-5 h-5" />
+                                </button>
+                              )}
                             </div>
                           </motion.div>
                         ))}
@@ -374,19 +454,22 @@ function TabButton({
   );
 }
 
-function ComingSoon({ 
-  title, 
-  description, 
-  icon, 
-  colorClass, 
-  bgClass 
-}: { 
-  title: string; 
-  description: string; 
-  icon: string; 
-  colorClass: string; 
-  bgClass: string; 
-}) {
+interface ComingSoonProps {
+  key?: string; // @types/react absent du projet : on déclare key explicitement
+  title: string;
+  description: string;
+  icon: string;
+  colorClass: string;
+  bgClass: string;
+}
+
+function ComingSoon({
+  title,
+  description,
+  icon,
+  colorClass,
+  bgClass
+}: ComingSoonProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
