@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReadAloud, InfoBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
+import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -19,6 +20,8 @@ export default function Intro() {
         <BookOpen className="w-8 h-8 text-orange-500" />
         LIVRE D'AVENTURE : LE RENARDEAU ET LA FORÊT QUI OUBLIE
       </h2>
+
+      <ReadingLegend />
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4 flex items-center gap-2">
         <span className="text-orange-500">🍂</span> Prologue : La Légende du Grand Chêne-Mémoire

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReadAloud, InfoBox, ActionBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
+import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -19,6 +20,8 @@ export default function Intro() {
         <BookOpen className="w-8 h-8 text-emerald-600 shrink-0" />
         LIVRE D'AVENTURE : LE TRÉSOR DES LUTINS FARCEURS
       </h2>
+
+      <ReadingLegend />
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
         Prologue : La légende de Chantefarce

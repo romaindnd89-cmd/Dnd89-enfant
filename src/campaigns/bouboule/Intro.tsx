@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen, Download, Printer } from 'lucide-react';
 
 export default function Intro() {
@@ -49,6 +50,8 @@ export default function Intro() {
         <BookOpen className="w-8 h-8 text-emerald-500" />
         MANUEL DU MAÎTRE : PANGÉA, L'ÈRE DE L'ÉVEIL
       </h2>
+
+      <ReadingLegend />
       
       <InfoBox title="INTRODUCTION : L'HISTOIRE DU MONDE">
         <p className="mb-4">Il y a de cela des millénaires, la Terre était dominée par les "Bipèdes Sans Poils" (les humains). Leurs cités de pierre et de métal touchaient les nuages, et leurs navires d'acier fendaient les abysses. Puis, un événement appelé <strong>Le Grand Départ</strong> s'est produit. Les humains ont quitté la planète dans des vaisseaux de feu pour rejoindre les étoiles, laissant derrière eux leurs créations.</p>
