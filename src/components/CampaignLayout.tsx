@@ -87,7 +87,7 @@ export default function CampaignLayout({
     <Ctx.Provider value={{ isDone, toggle, theme }}>
       <div className="max-w-4xl mx-auto pb-24 relative">
         {/* Header fixe */}
-        <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border border-slate-200 rounded-2xl shadow-sm py-3 px-4 flex items-center gap-4 mb-8">
+        <div className="sticky top-[88px] z-40 bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-md py-3 px-4 flex items-center gap-4 mb-8">
           <button
             onClick={onBack}
             className="flex items-center gap-2 text-slate-500 hover:text-slate-800 font-bold transition-colors shrink-0"

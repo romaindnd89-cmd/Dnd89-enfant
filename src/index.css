@@ -1,14 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Cinzel:wght@500;600;700;800&family=Cinzel+Decorative:wght@700;900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+  --font-fantasy: "Cinzel", Georgia, serif;
 }
 
 body {
-  background-color: #f8fafc;
+  background-color: #0b1026;
   color: #334155;
+}
+
+/* ----- Décor enchanté : étoiles, étoiles filantes, brume ----- */
+.star {
+  position: absolute;
+  border-radius: 9999px;
+  background: #fff;
+  animation: twinkle var(--dur, 3s) ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 60%, #fff 100%);
+  border-radius: 9999px;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
+  opacity: 0;
+  transform: rotate(18deg);
+  animation: shoot var(--dur, 9s) ease-in var(--delay, 0s) infinite;
+}
+@keyframes shoot {
+  0% { opacity: 0; transform: translate(0,0) rotate(18deg); }
+  2% { opacity: 1; }
+  12% { opacity: 1; }
+  18% { opacity: 0; transform: translate(380px, 120px) rotate(18deg); }
+  100% { opacity: 0; }
+}
+
+/* Panneau "parchemin" lisible par-dessus le décor sombre */
+.parchment-panel {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,0.97) 0%, rgba(253,250,244,0.95) 55%, rgba(250,246,238,0.94) 100%);
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow:
+    0 0 0 1px rgba(99,102,241,0.08),
+    0 20px 60px -15px rgba(10,14,40,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  backdrop-filter: blur(4px);
 }
 
 .hide-scrollbar::-webkit-scrollbar { display: none; }

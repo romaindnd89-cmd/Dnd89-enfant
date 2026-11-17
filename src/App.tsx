@@ -14,7 +14,7 @@ import RenardCampaign from './campaigns/RenardCampaign';
 import ParentGuide from './components/ParentGuide';
 import DiceRoller from './components/DiceRoller';
 import DragonHelper from './components/DragonHelper';
-import GlowBackground from './components/GlowBackground';
+import EnchantedBackground from './components/EnchantedBackground';
 import SparkleCursor from './components/SparkleCursor';
 import TrophyShelf from './components/TrophyShelf';
 import { readProgressCount } from './hooks/useProgress';
@@ -122,32 +122,38 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-transparent font-sans selection:bg-emerald-200 selection:text-emerald-900">
-      <GlowBackground />
+      <EnchantedBackground />
       <SparkleCursor />
       <DiceRoller />
       <DragonHelper />
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+      <header className="bg-slate-950/40 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.6)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <div 
-            className="flex items-center gap-3 cursor-pointer"
+          <div
+            className="flex items-center gap-3 cursor-pointer group"
             onClick={() => setSelectedCampaignId(null)}
           >
-            <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-2xl shadow-inner border border-emerald-200">
+            <motion.div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl border border-amber-300/40"
+              style={{ background: 'radial-gradient(circle at 35% 30%, #fde68a33, #0b102600)' }}
+              animate={{ boxShadow: ['0 0 14px 2px rgba(251,191,36,0.3)', '0 0 26px 4px rgba(251,191,36,0.55)', '0 0 14px 2px rgba(251,191,36,0.3)'] }}
+              transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+            >
               🐉
-            </div>
-            <h1 className="font-display text-2xl sm:text-3xl font-bold text-slate-800 tracking-tight">
-              Dnd89 <span className="text-emerald-500">&</span> dragons
+            </motion.div>
+            <h1 className="font-fantasy text-xl sm:text-2xl font-bold tracking-wide text-amber-50 drop-shadow-[0_2px_8px_rgba(251,191,36,0.35)]">
+              Dnd89 <span className="text-amber-300">&</span> Dragons
             </h1>
           </div>
-          <div className="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-500 bg-slate-100 px-4 py-2 rounded-full">
-            <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
+          <div className="hidden sm:flex items-center gap-2 text-sm font-medium text-amber-100/80 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+            <Star className="w-4 h-4 text-amber-300 fill-amber-300" />
             <span>Le portail des aventures</span>
           </div>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <main className="max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-10">
+        <div className="parchment-panel rounded-[1.75rem] sm:rounded-[2rem] p-4 sm:p-8">
         <AnimatePresence mode="wait">
           {showParentGuide ? (
             <motion.div
@@ -258,8 +264,8 @@ export default function App() {
                       className="space-y-8"
                     >
                       <div className="text-center max-w-2xl mx-auto mb-12">
-                        <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-                          <span className="shiny-title">Bienvenue dans le Repaire des Petits Dragons !</span> ✨
+                        <h2 className="font-fantasy text-2xl sm:text-4xl font-bold mb-4 leading-tight tracking-wide">
+                          <span className="shiny-title">Le Repaire des Petits Dragons</span> ✨
                         </h2>
                         <p className="text-lg text-slate-600 font-medium">
                           Des aventures douces, colorées et pleines de magie, spécialement conçues pour initier les plus jeunes (5-8 ans) au jeu de rôle.
@@ -422,6 +428,7 @@ export default function App() {
             </motion.div>
           )}
         </AnimatePresence>
+        </div>
       </main>
     </div>
   );
