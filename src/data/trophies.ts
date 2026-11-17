@@ -48,6 +48,14 @@ export const TROPHIES: Record<string, TrophyDef> = {
     gradient: 'from-indigo-400 to-violet-600',
     message: 'Tu as raccompagné la petite étoile tout là-haut dans le ciel. Bravo !',
   },
+  dragonneau: {
+    id: 'dragonneau',
+    title: 'Amis du Dragonneau',
+    adventure: 'Le Dragonneau Perdu',
+    emoji: '🥚',
+    gradient: 'from-orange-400 to-rose-600',
+    message: "Vous avez retrouvé Braisillon et allumé la Grande Torche ensemble. Quelle équipe formidable !",
+  },
   aube: {
     id: 'aube',
     title: "Chevalier de l'Aube",

@@ -12,6 +12,7 @@ import EtoileCampaign from './campaigns/EtoileCampaign';
 import AubeCampaign from './campaigns/AubeCampaign';
 import RenardCampaign from './campaigns/RenardCampaign';
 import LutinsCampaign from './campaigns/LutinsCampaign';
+import DragonneauCampaign from './campaigns/DragonneauCampaign';
 import ParentGuide from './components/ParentGuide';
 import DiceRoller from './components/DiceRoller';
 import DragonHelper from './components/DragonHelper';
@@ -110,6 +111,17 @@ const kidsCampaigns: Campaign[] = [
     world: 'lutins',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(52,211,153,0.7)]',
     component: LutinsCampaign,
+  },
+  {
+    id: 'c7',
+    title: 'Le Dragonneau Perdu',
+    description: "Un bébé dragon s'est enfui la nuit de sa naissance : il a peur de son propre feu ! Deux apprentis, un Chevalier et un Magicien, partent le retrouver avant que la Grande Torche du village ne reste éteinte.",
+    duration: '1h - 1h30',
+    difficulty: 'Difficulté 1/5',
+    players: '2 héros (initiation, dès 6 ans)',
+    world: 'volcan',
+    glow: 'hover:shadow-[0_0_45px_-10px_rgba(251,146,60,0.7)]',
+    component: DragonneauCampaign,
   },
 ];
 

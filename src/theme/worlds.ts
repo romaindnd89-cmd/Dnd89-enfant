@@ -119,6 +119,21 @@ export const WORLDS = {
       crystalA: '#8dffb0', crystalB: '#ffe07a',
     },
   },
+  /** Le Dragonneau Perdu : village au pied d'un volcan, au coucher du soleil */
+  volcan: {
+    variant: 'canyon',
+    moon: false,
+    dragon: { body: '#c2410c', belly: '#fcd34d', wing: '#7f1d1d' },
+    fallback: 'from-rose-950 via-orange-900 to-slate-950',
+    palette: {
+      skyTop: '#3b0f2a', skyBottom: '#f97316', glow: '#fde68a', cloud: '#fdba74',
+      far: '#7f2a3a', farLight: '#a8433b', forest: '#5a1f2b', forestNear: '#3a121f',
+      leafA: '#c2410c', leafB: '#f59e0b',
+      rock: '#4a2230', rockLight: '#7b3a45', rockDark: '#2a1220', ground: '#220f1a',
+      castle: '#2a1220', window: '#ffd27a', water: '#e0663a',
+      crystalA: '#ffd27a', crystalB: '#ff7a45',
+    },
+  },
 } as const satisfies Record<string, World>;
 
 export type WorldKey = keyof typeof WORLDS;
