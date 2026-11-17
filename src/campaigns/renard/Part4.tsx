@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, ChoicePrompt } from '../../components/StoryExtras';
 
 export default function Part4() {
   return (
@@ -45,6 +45,18 @@ export default function Part4() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           Le vrai chemin de l'aventure : offrir son amitié à Grisaille
         </h3>
+
+        <ChoicePrompt title="À toi de jouer : que fais-tu face à Grisaille ?">
+          <p className="mb-2">C'est le grand moment de l'histoire, et il n'y a pas de bonne ou de mauvaise réponse. Demandez à l'enfant : <strong>« Elle a l'air en colère, mais au fond elle est triste et seule. Qu'est-ce que tu as envie de faire ? »</strong> Laissez-le proposer d'abord ; les gestes ci-dessous ne sont là que s'il hésite.</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Lui parler doucement, lui demander son nom ?</li>
+            <li>Lui offrir quelque chose trouvé en chemin (le fil de laine, une noisette, le Gland du Rire…) ?</li>
+            <li>Lui chanter la Chanson de Grisefeuille ?</li>
+            <li>T'asseoir à sa table, devant la deuxième tasse ?</li>
+            <li>Ou, si vraiment il le veut, se battre ? (Voir plus bas.)</li>
+          </ul>
+        </ChoicePrompt>
+
         <ActionBox title="Les gestes qui peuvent tout changer (l'enfant peut en tenter plusieurs)">
           <p className="mb-3">C'est ici que se révèle tout le secret de l'histoire. Le héros n'a nul besoin de se battre : il doit simplement montrer à Grisaille qu'on peut se souvenir d'elle, pour de vrai, sans qu'elle ait besoin de jeter le moindre sortilège pour qu'on la remarque. Encouragez vivement l'enfant à trouver, par lui-même, un geste gentil parmi ceux qui suivent — ou à en inventer un autre tout seul, encore mieux.</p>
           <ul className="list-disc pl-5 space-y-3">

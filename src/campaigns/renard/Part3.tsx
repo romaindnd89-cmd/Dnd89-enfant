@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, ChoicePrompt } from '../../components/StoryExtras';
 
 export default function Part3() {
   return (
@@ -117,6 +117,15 @@ export default function Part3() {
             <li><strong>Leur mission :</strong> empêcher quiconque d'atteindre la salle du trône sans prévenir Grisaille — rien de plus, rien de moins.</li>
           </ul>
         </InfoBox>
+
+        <ChoicePrompt title="À toi de jouer : comment traverses-tu les tunnels ?">
+          <p className="mb-2">Trois obstacles séparent le héros de la salle du trône. Il peut les aborder dans l'ordre qu'il rencontre, et choisir à chaque fois sa manière : avancer en silence, contourner, distraire, se fier à son flair... Et s'il a le <strong>Champignon-lanterne</strong> du chapitre 1, c'est le moment de l'allumer.</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Le <strong>couloir qui craque</strong></li>
+            <li>Les <strong>Mottes Grises</strong> à moitié endormies</li>
+            <li>La <strong>porte de racines</strong> aux multiples passages</li>
+          </ul>
+        </ChoicePrompt>
 
         <ActionBox title="Passage 1 : le couloir qui craque">
           <p className="mb-2">Un long couloir au sol instable, jonché de petites pierres qui roulent sous la moindre patte posée de travers, dans le noir presque complet. <strong>1D20 + Agilité (+4), réussite à 10</strong> pour avancer sans faire de bruit.</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, ChoicePrompt } from '../../components/StoryExtras';
 
 export default function Part2() {
   return (
@@ -49,9 +49,20 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La grande mission d'entraide : retrouver les provisions d'hiver
         </h3>
-        <ActionBox title="Trois façons d'aider, à combiner ou à choisir">
-          <p className="mb-3">Les écureuils ont caché leurs réserves de noisettes, glands et pommes de pin un peu partout dans et sous le village, comme chaque année. Sauf que cette année, à cause de la brume, plus personne ne se souvient de rien. Sans ces provisions, le village entier passera un hiver affamé.</p>
-          <p className="mb-4">Ce chapitre fonctionne comme une petite enquête collective : chaque méthode permet de retrouver une partie des provisions. Plus l'enfant en essaie, plus la fête finale sera belle — mais une seule suffit pour avancer dans l'histoire.</p>
+        <p className="mb-4 text-slate-700">
+          Les écureuils ont caché leurs réserves de noisettes, glands et pommes de pin partout dans le village, comme chaque année. Mais cette année, à cause de la brume, plus personne ne se souvient d'où. Sans ces provisions, le village passera un hiver affamé. À l'enfant de choisir comment chercher — plus il essaie de méthodes, plus la fête finale sera belle, mais une seule suffit pour avancer.
+        </p>
+
+        <ChoicePrompt title="À toi de jouer : comment retrouves-tu les provisions ?">
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Suivre ton <strong>flair</strong> en reniflant le sol à la recherche des noisettes enterrées ?</li>
+            <li><strong>Grimper</strong> tout en haut du hêtre pour repérer d'en haut la terre fraîchement remuée ?</li>
+            <li><strong>Consoler</strong> les bébés écureuils en pleurs, qui se souviennent peut-être de quelque chose ?</li>
+          </ul>
+          <p className="mt-2 text-sm">Chaque méthode a son jet, ci-dessous.</p>
+        </ChoicePrompt>
+
+        <ActionBox title="Les trois façons de chercher">
           <ul className="list-disc pl-5 space-y-3 mb-4">
             <li><strong>Suivre son nez</strong> (le vrai super-pouvoir du renard) : le héros renifle méthodiquement le sol du village à la recherche de l'odeur discrète des noisettes enterrées. <em>1D20 + Flair (+5), réussite à 10.</em> En cas de réussite, il déterre d'un coup trois cachettes complètes, sous les cris de joie des petits écureuils qui le suivent comme une procession.</li>
             <li><strong>Grimper tout en haut du hêtre</strong> pour repérer, depuis la cime, les zones de terre fraîchement remuée : <em>1D20 + Agilité (+4), réussite à 10.</em> Vue imprenable garantie sur toute la forêt grise, et une bonne occasion de décrire le paysage d'en haut.</li>
@@ -194,11 +205,16 @@ export default function Part2() {
           "« Ssssalut, petit renard, » siffle-t-elle en descendant encore d'un cran. « Grisssaille m'a dit de n'laisssser passssser personne qui ssse ssouvient encore. Mais tu peux toujours essssayer de passsser, ssi le cœur t'en dit... » Elle se tait un instant, puis ajoute, presque fière malgré elle : « Tu as remarqué ma toile, j'esssspère ? C'est du travail de maître, ssi je puis dire. »"
         </ReadAloud>
 
-        <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
-          Trois façons de franchir le passage
-        </h3>
+        <ChoicePrompt title="À toi de jouer : comment franchis-tu la toile ?">
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Flatter</strong> Filandre sur sa magnifique toile pour qu'elle te laisse passer gentiment ?</li>
+            <li><strong>La ruse :</strong> brûler discrètement un coin de la toile avec ta Feuille d'Or pendant qu'elle fanfaronne ?</li>
+            <li><strong>Le combat</strong>, si elle ne veut rien entendre (ou si tu préfères te battre) ?</li>
+          </ul>
+          <p className="mt-2 text-sm">Souffler la lumière de Lumi et les points faibles de Filandre valent pour toutes les options.</p>
+        </ChoicePrompt>
 
-        <ActionBox title="Voie 1 : la diplomatie (flatter Filandre sur sa toile)">
+        <ActionBox title="S'il choisit la diplomatie : flatter Filandre sur sa toile">
           <p className="mb-2">Si l'enfant pense à complimenter sincèrement la toile de Filandre avant toute chose, tentez un <strong>jet de Cœur (1D20 + 5), réussite à 12.</strong></p>
           <p><em>Réussite :</em> Filandre, totalement conquise, rougirait presque si les araignées pouvaient rougir. « Oh... ssstop, tu vas me faire fondre ! D'accord, d'accord, passsse, petit flatteur. Mais fais ATTENTION à ne rien abîmer en passant, hein ! » Elle ouvre elle-même un passage soigné sur le côté de sa toile, sans aucun combat.</p>
         </ActionBox>

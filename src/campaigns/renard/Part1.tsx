@@ -188,25 +188,39 @@ export default function Part1() {
         </InfoBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
-          Exploration avant le combat : trois façons d'aborder la clairière
+          Exploration : la clairière et les corbeaux
         </h3>
-        <ActionBox title="Approche A : l'approche discrète (se faufiler entre les épouvantails)">
-          <p className="mb-3">Le combat n'est pas obligé d'éclater tout de suite. Laissez l'enfant observer la scène et proposer une approche — voici trois pistes selon ce qu'il choisit d'essayer.</p>
-          <p className="mb-2">Le héros peut tenter de longer les épouvantails à couvert pour atteindre directement le tas d'objets volés sans se battre.</p>
-          <p className="mb-2"><strong>Jet d'Agilité (1D20 + 4), réussite à 13</strong> (plus difficile que la moyenne : les corbeaux ont l'œil partout).</p>
+        <p className="mb-4 text-slate-700">
+          Le combat n'est pas obligatoire tout de suite ! Décrivez la scène, puis laissez l'enfant décider comment il veut s'y prendre. Un renard malin n'est pas forcé de foncer dans la bagarre.
+        </p>
+
+        <ChoicePrompt title="À toi de jouer : comment abordes-tu la clairière ?">
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Te <strong>faufiler en douce</strong> entre les épouvantails pour attraper la plume dorée sans te battre ?</li>
+            <li><strong>Fouiller l'herbe</strong> d'abord, pour trouver de quoi distraire ces voleurs de brillant ?</li>
+            <li><strong>Foncer tout droit</strong> et leur montrer de quel bois se chauffe un renard ?</li>
+            <li>Ou simplement <strong>observer</strong> encore un peu avant de choisir ?</li>
+          </ul>
+          <p className="mt-2 text-sm">Chaque idée a son jet et ses conséquences, détaillés juste en dessous.</p>
+        </ChoicePrompt>
+
+        <ActionBox title="S'il se faufile en douce (l'approche discrète)">
+          <p className="mb-2">Le héros longe les épouvantails à couvert pour atteindre le tas d'objets volés sans réveiller les corbeaux.</p>
+          <p className="mb-2"><strong>Jet d'Agilité (1D20 + 4), réussite à 13</strong> (difficile : les corbeaux ont l'œil partout).</p>
           <ul className="list-disc pl-5 space-y-1">
             <li><em>Réussite :</em> le héros récupère discrètement la Plume-Carte dorée sans déclencher de combat ! Les corbeaux continuent de se disputer bruyamment, n'ayant rien remarqué. L'aventure peut directement sauter à la scène du butin plus bas.</li>
             <li><em>Échec :</em> une brindille craque sous une patte maladroite. Les trois corbeaux se retournent d'un coup. Le combat commence — mais avec un bonus : comme ils sont surpris en pleine dispute, ils ont <strong>-2</strong> à leur premier jet d'initiative.</li>
           </ul>
         </ActionBox>
 
-        <ActionBox title="Approche B : la breloque trouvée dans l'herbe">
-          <p className="mb-2">Avant toute chose, laissez l'enfant fouiner un peu dans l'herbe grise de la clairière : un jet de <strong>Flair (1D20 + 5), réussite à 9</strong>, fait découvrir une breloque de fête oubliée — un petit grelot de laiton, resté là depuis les moissons d'autrefois, encore étonnamment brillant.</p>
-          <p>S'il la lance loin dans les buissons au début du combat, les corbeaux adorent ce qui brille plus que tout au monde : <strong>Charbon</strong> (le plus bête des trois) quitte aussitôt le combat pour foncer le récupérer, et ne revient plus. Un ennemi de moins pour la suite.</p>
+        <ActionBox title="S'il fouille l'herbe pour les distraire">
+          <p className="mb-2">Fouiner dans l'herbe grise à la recherche de quelque chose de brillant : <strong>jet de Flair (1D20 + 5), réussite à 9.</strong></p>
+          <p className="mb-2"><em>Réussite →</em> le héros déniche une vieille breloque de fête : un petit grelot de laiton encore étonnamment brillant. S'il le lance loin au début du combat, <strong>Charbon</strong> (le plus bête) quitte aussitôt la bagarre pour le récupérer : un ennemi de moins.</p>
+          <p><em>Échec →</em> rien que des cailloux et de la paille mouillée. Il faudra se débrouiller autrement.</p>
         </ActionBox>
 
-        <ActionBox title="Approche C : foncer tout droit (l'approche directe, toujours possible)">
-          <p>Le héros s'avance simplement dans la clairière. C'est l'option la plus simple pour les plus jeunes, et elle mène tout droit au combat décrit ci-dessous, sans malus ni bonus particulier.</p>
+        <ActionBox title="S'il fonce tout droit (l'approche directe)">
+          <p>Le héros s'avance franchement dans la clairière : pas de jet, on passe directement au combat ci-dessous. C'est l'option la plus simple pour les plus jeunes.</p>
         </ActionBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
@@ -310,7 +324,16 @@ export default function Part1() {
           "« Halte-là, petit roux ! » coasse le crapaud sans bouger un muscle. « Moi, Croâ, je garde ce gué depuis cent automnes, et la brume grise a beau m'avoir pris pas mal de souvenirs, elle n'a pas touché à mon goût pour les bonnes devinettes. Réponds-moi juste, et l'eau te laissera passer sans une éclaboussure. Réponds-moi faux... et tu auras les pattes bien mouillées, c'est tout, rien de grave. »"
         </ReadAloud>
 
-        <ActionBox title="L'énigme : le test de sagesse">
+        <ChoicePrompt title="À toi de jouer : que fais-tu au bord du ruisseau ?">
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Relever le défi de Croâ</strong> et répondre à sa devinette pour traverser ?</li>
+            <li><strong>Examiner les galets</strong> de la rive qui semblent vibrer bizarrement ?</li>
+            <li><strong>Discuter avec le vieux crapaud</strong> pour lui soutirer un indice avant de répondre ?</li>
+          </ul>
+          <p className="mt-2 text-sm">L'énigme est le passage obligé pour traverser, mais rien n'empêche d'explorer d'abord.</p>
+        </ChoicePrompt>
+
+        <ActionBox title="S'il relève le défi : l'énigme de Croâ">
           <p className="mb-4">Laissez vraiment l'enfant réfléchir, et laissez le silence s'installer un peu — c'est un des rares moments calmes de l'aventure. S'il sèche complètement, proposez un jet de <strong>1D20 + Flair (+5)</strong> : à 12 ou plus, Lumi lui souffle un indice discret à l'oreille.</p>
           <ul className="list-disc pl-5 space-y-3 mb-4">
             <li><strong>Croâ demande :</strong> <em>« Plus je sèche, plus je deviens grand. Plus je bois, plus je deviens tout petit. Qui suis-je ? »</em></li>
@@ -321,16 +344,16 @@ export default function Part1() {
           <p><strong>Mauvaise réponse (aucun danger) :</strong> une petite vague toute douce vient éclabousser gentiment les pattes du héros (« SPLASH ! »), et Croâ, loin d'être vexé, offre carrément un deuxième indice : « Ça danse, ça réchauffe... et ça a très, très peur de mon ruisseau. » On peut retenter sa chance aussitôt après.</p>
         </ActionBox>
 
-        <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
-          Exploration des rives : deux petites découvertes avant de traverser
-        </h3>
-
-        <ActionBox title="Les cailloux qui chantent (zone d'enquête, au choix)">
-          <p className="mb-2">Le long de la rive, quelques galets plus clairs que les autres semblent vibrer légèrement quand on s'approche.</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Les examiner de près</strong> (Flair, 1D20 + 5, réussite à 11) : en les reniflant, le héros découvre qu'ils sentent très légèrement le miel. Ce sont en réalité d'anciennes pierres à abeilles, abandonnées depuis qu'une ruche voisine a déserté l'endroit. Sans grand effet immédiat, mais un joli détail d'ambiance à raconter — et un indice discret que des abeilles vivent non loin, pour une aventure future.</li>
-          </ul>
+        <ActionBox title="S'il examine les galets de la rive">
+          <p className="mb-2">Le long de la rive, quelques galets plus clairs semblent vibrer légèrement quand on s'approche. <strong>Jet de Flair (1D20 + 5), réussite à 11.</strong></p>
+          <p className="mb-2"><em>Réussite →</em> le héros découvre qu'ils sentent le miel : ce sont de vieilles pierres à abeilles, et dans une fente, un peu de miel a durci. Il en récupère un morceau (ci-dessous).</p>
+          <p><em>Échec →</em> les galets ne sont que des galets, et le héros se mouille le bout du nez pour rien.</p>
         </ActionBox>
+
+        <LootBox item="Miel cristallisé">
+          <p className="italic mb-2">"Dans la fente d'un galet, une petite perle de miel durci, encore parfumée. Tu la glisses dans ta joue pour plus tard."</p>
+          <p><strong>Récompense d'un jet de Flair réussi.</strong> À manger pour récupérer <strong>2 PV</strong>, ou à offrir à une créature grognonne pour l'adoucir d'un coup (réussite automatique d'un jet de Cœur, une fois).</p>
+        </LootBox>
 
         <VictoryBox title="La traversée (à lire à voix haute)">
           <p className="italic">"Une à une, les pierres plates remontent doucement du fond de l'eau, toutes luisantes de gouttelettes. Tu sautes de l'une à l'autre : plic, ploc, plic ! Sous tes petites pattes, le ruisseau chatouille et rit tout bas, comme s'il te félicitait à chaque bond. Arrivé sain et sauf sur l'autre rive, tu te retournes : le vieux Croâ agite sa grande patte palmée en guise d'au revoir. « Reviens me voir quand la forêt aura retrouvé ses couleurs, petit roux ! J'aurai inventé une devinette toute neuve, rien que pour toi ! »"</p>
