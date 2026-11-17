@@ -95,6 +95,15 @@ export default function Part2() {
           Dans un coin, entre deux grands cadres dorés, de superbes chandeliers d'argent se répètent à l'infini dans un jeu de reflets vertigineux. Et puis, soudain, du fond d'un troisième miroir, quelque chose attire votre attention : un petit bonnet à grelot apparaît furtivement, alors qu'aucun de vous n'en porte un pareil."
         </ReadAloud>
 
+        <ActionBox title="Avant de rencontrer Reflet : un instant face aux miroirs (aucun jet, juste pour regarder)">
+          <p className="mb-3">Avant que le bonnet à grelot ne se montre, laissez l'équipe s'amuser une minute avec les reflets eux-mêmes — personne ne les presse encore.</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Un miroir tout en longueur donne à chacun des jambes interminables et une toute petite tête, parfait pour un fou rire collectif.</li>
+            <li>Un miroir bombé renvoie toute la salle en rond, comme si on regardait le monde depuis l'intérieur d'une bulle de savon.</li>
+            <li>Dans un coin, un miroir tout simple, sans aucune déformation, ne reflète étrangement personne — juste la salle vide, comme s'il attendait quelqu'un d'autre.</li>
+          </ul>
+        </ActionBox>
+
         <InfoBox title="Profil de Reflet, le lutin des miroirs">
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Apparence :</strong> un reflet décalé de celui qui lui parle, avec un bonnet à grelot en plus.</li>

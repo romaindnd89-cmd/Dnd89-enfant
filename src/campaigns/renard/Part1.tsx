@@ -32,10 +32,29 @@ export default function Part1() {
         </AmbianceBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
-          Exploration libre : trois rencontres sur le chemin de la clairière
+          La promenade : le chemin du Grand Saule
         </h3>
-        <ActionBox title="Rencontre A : Monsieur Blaireau et les lunettes introuvables">
-          <p className="mb-3">Avant d'arriver jusqu'à Mémé Rouquine, laissez l'enfant trottiner à son rythme vers la clairière du Grand Saule. Trois petites scènes peuvent se jouer dans l'ordre qu'il veut, ou pas du tout s'il préfère foncer droit au but — rien n'est obligatoire, mais chacune enrichit la suite de l'histoire.</p>
+        <p className="mb-4 text-slate-700">
+          Avant d'arriver jusqu'à Mémé Rouquine, laissez l'enfant trottiner à son rythme. Ce n'est pas une course : c'est l'occasion de simplement traverser la forêt, de regarder autour de soi, de sentir ce monde gris sans qu'il se passe forcément quelque chose à chaque pas. Lisez le texte ci-dessous d'une traite, lentement, puis laissez l'enfant dire ce qui l'intrigue.
+        </p>
+
+        <ReadAloud title="La narration à voix haute :">
+          "Le chemin serpente entre les troncs, et tu prends ton temps. L'herbe, d'habitude verte et piquante sous tes coussinets, est devenue toute molle, comme de la cendre froide. Tu passes devant une toile d'araignée tissée entre deux branches basses : elle est intacte, parfaite, ornée de minuscules perles de rosée qui, elles, n'ont pas perdu une seule goutte de leur éclat — comme si la pluie, au moins, se souvenait encore comment briller.<br/><br/>
+          Un peu plus loin, un vieux nid d'oiseau est tombé au milieu du chemin, vide depuis longtemps, tapissé de mousse grise et d'un unique fil de laine rouge — un fil qui vient peut-être d'une écharpe tricotée, ou d'un bonnet perdu, il y a bien longtemps. Tu renifles une odeur de champignon humide qui monte d'un tronc couché, couvert de petites pousses en forme d'éventail, toutes grises elles aussi, mais dont les bords, quand la lumière les frôle juste comme il faut, semblent presque vouloir redevenir orangés.<br/><br/>
+          Rien ne te parle, rien ne te demande rien. C'est juste la forêt, telle qu'elle est devenue, et telle qu'elle était avant. Tu pourrais continuer tout droit. Ou tu pourrais t'arrêter, et regarder d'un peu plus près."
+        </ReadAloud>
+
+        <ActionBox title="S'arrêter et regarder (aucun jet, juste de la curiosité)">
+          <p className="mb-3">Proposez à l'enfant de choisir ce qu'il veut examiner de plus près, parmi ce que la narration vient de décrire — ou autre chose encore, s'il invente sa propre trouvaille. Il n'y a rien à réussir ni à rater ici : chaque choix donne juste une petite récompense d'ambiance, pour le plaisir de regarder.</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>La toile de rosée :</strong> en s'approchant tout près, on y voit son propre reflet, minuscule et renversé, dans chaque goutte — des dizaines de petits renards qui regardent.</li>
+            <li><strong>Le fil de laine rouge dans le nid :</strong> le héros peut le garder, sans aucun effet de jeu particulier — juste un petit bout de couleur à glisser dans son pelage, pour le trajet.</li>
+            <li><strong>Les champignons en éventail :</strong> en soufflant doucement dessus, une poussière argentée s'envole et retombe comme une mini pluie d'étoiles, avant de disparaître.</li>
+            <li><strong>Rien de tout ça :</strong> si l'enfant préfère avancer sans s'arrêter, c'est très bien aussi — certains héros préfèrent marcher.</li>
+          </ul>
+        </ActionBox>
+
+        <ActionBox title="Sur le chemin : Monsieur Blaireau et les lunettes introuvables">
           <p className="mb-3">Près du vieux pommier, Monsieur Blaireau tourne en rond, le museau collé au sol, en marmonnant sans cesse la même phrase.</p>
           <p className="italic mb-3">"Je cherche... je cherche... mais je ne sais plus quoi je cherche ! Ah si : mes lunettes ! Je ne vois plus rien sans mes lunettes !"</p>
           <p className="mb-3">Ses lunettes rondes sont posées bien en évidence... sur son propre nez.</p>
@@ -44,24 +63,6 @@ export default function Part1() {
             <li><strong>Si l'enfant tente de le convaincre avec un jet :</strong> <strong>1D20 + Cœur (+5)</strong>, réussite à 8. À la réussite, Monsieur Blaireau garde ses lunettes sur le nez pendant tout le reste de la scène, assez longtemps pour donner un indice utile : « Tiens, en parlant de choses qu'on perd... j'ai vu Mémé Rouquine filer vers le Grand Saule, toute seule, en fredonnant un air que je ne connaissais pas. »</li>
           </ul>
         </ActionBox>
-
-        <ActionBox title="Rencontre B : les deux lapins qui ne se reconnaissent plus">
-          <p className="mb-3">Sur le petit chemin de terre, deux lapins se font face, immobiles, le regard flou. Ce sont Frisette et Grisou, frère et sœur, inséparables depuis toujours. Aujourd'hui, ils se regardent comme deux inconnus.</p>
-          <p className="italic mb-3">Frisette : « Pardon... je crois qu'on ne s'est jamais rencontrés ? » — Grisou : « Non, je ne pense pas, madame. Bonne journée. »</p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Leur faire remarquer qu'ils ont la même tache blanche sur l'oreille gauche</strong> (jet de <strong>Flair, 1D20 + 5</strong>, réussite à 9) : les deux lapins se figent, puis éclatent de rire en même temps, le même rire exactement. « Grisou ?! » « FRISETTE ?! » Ils se sautent dessus pour un câlin. Ce souvenir retrouvé, même minuscule, redonne une pointe de couleur rose à leurs deux oreilles pendant quelques secondes — la toute première preuve que l'oubli n'est pas forcément définitif.</li>
-            <li><strong>Sans réussir le jet :</strong> les lapins restent polis et distants, mais remercient le renard d'avoir essayé, et l'un d'eux glisse : « Au fait... vous n'auriez pas vu une vieille dame renarde qui fredonnait tout bas ? Elle est passée par là, vers le grand arbre. »</li>
-          </ul>
-        </ActionBox>
-
-        <SideQuestBox title="Rencontre C : le garde-manger que Papa Renard ne retrouve plus">
-          <p className="italic mb-3">Un peu plus loin, Papa Renard (le propre père du héros, mais lui aussi touché par l'oubli) creuse frénétiquement n'importe où dans le jardin, sans méthode, en soufflant de la terre grise dans tous les sens. « J'avais caché nos provisions pour l'hiver... quelque part... sous quelque chose... mais quoi ? Et où ?! »</p>
-          <ul className="list-disc pl-5 space-y-2 mb-3">
-            <li><strong>Suivre son propre nez</strong> (le vrai super-pouvoir du héros) : <strong>1D20 + Flair (+5)</strong>, réussite à 10. À la réussite, l'odeur discrète de noisette grillée mène tout droit à la bonne cachette, sous la troisième pierre plate près du pommier.</li>
-            <li><strong>Aider en creusant ensemble</strong> (Courage, 1D20 + 3, réussite à 12) : plus long et plus fatigant, mais ça marche aussi, et ça permet à l'enfant qui n'a pas réussi le premier jet de quand même trouver le trésor.</li>
-          </ul>
-          <p><strong>Récompense :</strong> dans le trou, trois belles noisettes grillées rejoignent le sac à dos du héros (ce sont celles décrites sur sa fiche de personnage). Papa Renard, soulagé sans trop savoir pourquoi, ébouriffe la fourrure de son petit d'un geste tendre et mécanique, avant de repartir, déjà un peu perdu, vers une autre direction.</p>
-        </SideQuestBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La rencontre principale : Mémé Rouquine au pied du Grand Saule
@@ -154,8 +155,9 @@ export default function Part1() {
           </ul>
         </ActionBox>
 
-        <ActionBox title="Approche B : la distraction avec le bouton doré (si Margot la pie a été rencontrée)">
-          <p>Si l'enfant a aidé Margot la pie au chapitre précédent et possède son bouton doré, il peut le lancer loin dans les buissons. Les corbeaux adorent ce qui brille plus que tout au monde : <strong>Charbon</strong> (le plus bête des trois) quitte aussitôt le combat pour foncer le récupérer, et ne revient plus. Un ennemi de moins pour la suite, sans aucun jet nécessaire.</p>
+        <ActionBox title="Approche B : la breloque trouvée dans l'herbe">
+          <p className="mb-2">Avant toute chose, laissez l'enfant fouiner un peu dans l'herbe grise de la clairière : un jet de <strong>Flair (1D20 + 5), réussite à 9</strong>, fait découvrir une breloque de fête oubliée — un petit grelot de laiton, resté là depuis les moissons d'autrefois, encore étonnamment brillant.</p>
+          <p>S'il la lance loin dans les buissons au début du combat, les corbeaux adorent ce qui brille plus que tout au monde : <strong>Charbon</strong> (le plus bête des trois) quitte aussitôt le combat pour foncer le récupérer, et ne revient plus. Un ennemi de moins pour la suite.</p>
         </ActionBox>
 
         <ActionBox title="Approche C : foncer tout droit (l'approche directe, toujours possible)">

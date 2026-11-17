@@ -26,6 +26,15 @@ export default function Part1() {
           Dès que l'un d'entre vous ose s'approcher pour la toucher, la grille entière se met soudain à frémir, puis à glousser, et enfin à carrément pouffer de rire, dans un grand bruit métallique de ferraille secouée. Elle vous chatouille littéralement, rien qu'en vous voyant approcher ! Au-dessus de vos têtes, perchés dans les douves et sur les créneaux, de petits bonnets rouges à grelots apparaissent furtivement entre les pierres, puis disparaissent aussitôt dans un concert discret de rires étouffés et de « chut, chut, ils vont nous voir ! »."
         </ReadAloud>
 
+        <ActionBox title="Avant que Grelot n'arrive : un œil sur les environs (aucun jet, juste pour profiter du décor)">
+          <p className="mb-3">Laissez les enfants regarder autour d'eux quelques instants avant que l'aventure ne s'accélère. Voici quelques détails à offrir si l'équipe observe la colline, sans qu'aucun ne soit obligatoire :</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Un vieux cadran solaire de pierre, sculpté en forme de visage qui tire la langue à midi pile — personne n'a jamais compris pourquoi, pas même les lutins.</li>
+            <li>Des trèfles à quatre feuilles poussent par dizaines sur toute la colline, comme si le château entier portait chance. Chaque enfant peut en cueillir un, juste pour le plaisir.</li>
+            <li>Au loin, de la fumée de cheminée s'échappe en formant de petits ronds parfaits, un par un, comme si quelqu'un, à l'intérieur, fumait la pipe en bulles de savon.</li>
+          </ul>
+        </ActionBox>
+
         <AmbianceBox title="Comment jouer Grelot">
           <p>Petite voix pointue et joyeuse, il parle en rimes quand il y pense, et oublie complètement d'en faire le reste du temps, sans aucune logique apparente.</p>
         </AmbianceBox>

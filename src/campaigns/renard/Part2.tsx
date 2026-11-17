@@ -111,6 +111,11 @@ export default function Part2() {
           </ul>
         </ActionBox>
 
+        <ReadAloud title="En avançant dans le labyrinthe (à lire à voix haute) :">
+          "À l'intérieur, les ronces forment des couloirs tordus, hauts comme des tunnels, où la lumière grise filtre par endroits en minces rayons poussiéreux. Tu avances lentement, et le labyrinthe te montre, au passage, tout ce qu'il a avalé au fil des saisons : un vieux cerf-volant d'enfant, ses couleurs mangées par le temps, resté accroché tout en haut comme un fantôme de papier. Plus bas, un collier de perles de bois s'est enroulé si serré autour d'une branche qu'il en fait maintenant partie. Une chenille toute grise avance avec une lenteur infinie sur une épine, sans se presser, comme si elle avait tout son temps devant elle — ce qui, dans cette forêt, n'est peut-être plus tout à fait vrai.<br/><br/>
+          Plus tu avances vers le centre, plus les sanglots se font clairs."
+        </ReadAloud>
+
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La rencontre : Piquillon, coincé dans ses propres épines
         </h3>
@@ -173,7 +178,8 @@ export default function Part2() {
 
         <ReadAloud title="La narration à voix haute :">
           "Le sentier plonge entre deux parois rocheuses couvertes de mousse grise, et aussitôt, une brume épaisse comme du coton monte jusqu'à tes genoux, puis jusqu'à ton ventre. Tu n'y vois plus qu'à trois pas devant toi, sauf dans le halo doux que projette Lumi, posée sur ton épaule comme un petit phare tremblant.<br/><br/>
-          Entre deux arbres morts, tordus comme de vieilles mains griffues, une toile gigantesque barre tout le passage. Elle est couverte de gouttelettes qui scintillent faiblement malgré le gris ambiant — c'est presque beau, en fait, dans un genre un peu inquiétant. Une forme descend lentement le long d'un fil, patte après patte : huit yeux brillent dans la pénombre, et une voix sifflante s'élève, étirant chaque syllabe comme un long fil de soie."
+          Tu avances comme ça un bon moment, seul avec le bruit de tes propres pas étouffés par le coton blanc. Des formes passent, floues, de l'autre côté du brouillard : peut-être un cerf, peut-être juste un rocher, peut-être rien du tout. Une goutte d'eau tombe quelque part avec un « plic » qui résonne bizarrement, comme si le vallon entier retenait son souffle. Tu sens, sans savoir pourquoi, que quelque chose d'immense dort tout près, sous la brume — une présence plus qu'un danger.<br/><br/>
+          Puis, entre deux arbres morts, tordus comme de vieilles mains griffues, une toile gigantesque barre tout le passage. Elle est couverte de gouttelettes qui scintillent faiblement malgré le gris ambiant — c'est presque beau, en fait, dans un genre un peu inquiétant. Une forme descend lentement le long d'un fil, patte après patte : huit yeux brillent dans la pénombre, et une voix sifflante s'élève, étirant chaque syllabe comme un long fil de soie."
         </ReadAloud>
 
         <InfoBox title="Profil de Filandre, l'Araignée de Brume">
