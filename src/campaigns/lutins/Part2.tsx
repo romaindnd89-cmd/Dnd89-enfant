@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
 
 export default function Part2() {
   return (
@@ -20,23 +20,14 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : l'escalier farceur
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Au sortir de la bibliothèque, un grand escalier de pierre monte en spirale vers une longue galerie bordée d'armures. De chaque côté des marches, de vieux portraits de lutins à moustaches extravagantes semblent suivre les visiteurs des yeux avec une attention suspecte.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous vous engagez tous sur le grand escalier, un peu impressionnés par sa hauteur et par les portraits qui vous fixent de chaque côté. Puis, exactement au milieu de la montée, sans le moindre avertissement, les marches s'aplatissent brusquement dans un grand « FLOP ! » sonore. L'escalier tout entier devient, en un clin d'œil, un long toboggan de pierre parfaitement lisse !<br/><br/>
           Tout en haut de la galerie, dressées de chaque côté comme des sentinelles immobiles, d'imposantes armures vides montent une garde qui n'a, a priori, jamais été dérangée. L'une d'elles, pourtant, bien plus grande et bien plus bancale que les autres, tient fermement un énorme plumeau à la place d'une épée traditionnelle. Et à y regarder de plus près... cette armure-là semble bel et bien respirer."
         </ReadAloud>
 
-        <AmbianceBox title="Pour planter le décor de la galerie">
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> un tapis rouge passablement mité par endroits, des portraits de lutins à moustaches qui suivent visiblement les visiteurs du regard, des armures cabossées alignées en rangs plus ou moins droits. Par la fente de la visière de la plus grande armure, on devine, en regardant bien, trois paires d'yeux empilées les unes au-dessus des autres.</li>
-            <li><strong>Ce qu'on entend :</strong> le métal qui grince à chaque mouvement, et des chuchotements étouffés qui s'échappent clairement de l'intérieur de la grande armure (« Pousse-toi un peu ! — Non, c'est TOI qui me marches sur la tête, enfin ! »).</li>
-            <li><strong>Comment jouer l'armure du chevalier Trois-Lutins :</strong> une grosse voix caverneuse et solennelle, qui change constamment de ton et de rythme parce que trois lutins différents parlent chacun leur tour sans jamais se coordonner. Elle marche systématiquement en zigzag : celui qui est tout en bas, dans les jambes, ne voit strictement rien de ce qui se passe.</li>
-          </ul>
+        <AmbianceBox title="Comment jouer l'armure du chevalier Trois-Lutins">
+          <p>Une grosse voix caverneuse et solennelle, qui change constamment de ton et de rythme parce que trois lutins différents parlent chacun leur tour sans jamais se coordonner. Elle marche systématiquement en zigzag : celui qui est tout en bas, dans les jambes, ne voit strictement rien de ce qui se passe.</p>
         </AmbianceBox>
 
         <ActionBox title="D'abord : franchir l'escalier devenu toboggan">
@@ -50,10 +41,9 @@ export default function Part2() {
 
         <InfoBox title="Profil du chevalier Trois-Lutins">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> une vieille armure de chevalier, rouillée par endroits, bien plus haute et bien plus bancale que les autres armures de la galerie, qui titube légèrement à chaque pas sans qu'on sache trop pourquoi au premier regard.</li>
-            <li><strong>Le secret, révélé dès le premier échange :</strong> trois petits lutins se sont empilés à l'intérieur pour faire croire à un vrai gardien redoutable — l'un dans le casque, l'un dans le torse, l'un tout en bas dans les jambes.</li>
-            <li><strong>Caractère :</strong> théâtral et grandiloquent, mais tout de suite trahi par des petites voix qui se chamaillent sans cesse à l'intérieur de l'armure.</li>
-            <li><strong>Leur vraie motivation :</strong> ils adorent simplement jouer aux gardiens redoutables depuis que le roi les a nommés, à tour de rôle, « Sentinelle du Grand Escalier » — un titre purement honorifique dont ils sont ridiculement fiers.</li>
+            <li><strong>Apparence :</strong> une vieille armure rouillée, plus haute et plus bancale que les autres, qui titube à chaque pas.</li>
+            <li><strong>Le secret :</strong> trois petits lutins empilés à l'intérieur (casque, torse, jambes) jouent les gardiens redoutables.</li>
+            <li><strong>Caractère :</strong> théâtral et grandiloquent, vite trahi par des petites voix qui se chamaillent à l'intérieur.</li>
           </ul>
         </InfoBox>
 
@@ -99,11 +89,6 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : le labyrinthe des reflets
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          La longue galerie débouche, sans transition, sur une salle parfaitement ronde, entièrement couverte de miroirs du sol au plafond. Certains étirent les silhouettes en hauteur, d'autres les aplatissent comme des crêpes, d'autres encore donnent carrément un nez de carotte à qui ose s'en approcher de trop près.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous entrez tous ensemble dans cette curieuse salle ronde, et aussitôt, des centaines de reflets de vous-mêmes vous entourent de partout à la fois, chacun déformé d'une façon différente et plus ridicule que la précédente. La porte de sortie, celle par laquelle vous devriez logiquement continuer votre chemin, se reflète elle aussi, encore et encore, dans tous les miroirs environnants — mais laquelle, parmi toutes ces portes identiques, est la vraie ?<br/><br/>
@@ -112,10 +97,9 @@ export default function Part2() {
 
         <InfoBox title="Profil de Reflet, le lutin des miroirs">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> impossible à décrire précisément, puisqu'il n'apparaît jamais que comme un reflet un peu décalé de celui ou celle qui lui parle, avec juste un bonnet à grelot qui dépasse du cadre.</li>
-            <li><strong>Caractère :</strong> farceur et joueur, il adore répéter les gestes des visiteurs avec un léger retard malicieux, comme pour les prendre en défaut.</li>
-            <li><strong>Sa règle du jeu :</strong> il ne se montre vraiment, en entier, que lorsqu'on parvient à le faire rire pour de bon.</li>
-            <li><strong>Ce qu'il sait :</strong> il connaît le secret pour reconnaître la vraie porte parmi tous ses faux reflets, mais ne le révèle qu'à ceux qui ont joué le jeu jusqu'au bout avec lui.</li>
+            <li><strong>Apparence :</strong> un reflet décalé de celui qui lui parle, avec un bonnet à grelot en plus.</li>
+            <li><strong>Caractère :</strong> farceur, il répète les gestes des visiteurs avec un léger retard malicieux.</li>
+            <li><strong>Sa règle :</strong> il ne révèle le secret de la vraie porte qu'à ceux qui ont joué le jeu jusqu'au bout avec lui.</li>
           </ul>
         </InfoBox>
 
@@ -164,11 +148,6 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la salle du trône
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Derrière la vraie porte, une salle absolument immense s'ouvre devant vous, remplie de centaines de lutins assis sur des gradins improvisés, comme au cirque un jour de grande représentation. Tout au fond, sur un trône fait d'une pile de coussins multicolores soigneusement empilés, trône fièrement le roi Pirouette Iᵉʳ en personne.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "À vos pieds, posé juste devant le trône royal, un coffre absolument gigantesque attend, cerclé de bandes dorées et fermé par trois énormes serrures parfaitement alignées. Sur chacune d'elles, un mot a été gravé avec soin : <strong>RIRE</strong>, <strong>RUSE</strong>, <strong>PARTAGE</strong>. L'air sent délicieusement le chocolat, très fort, beaucoup plus fort que partout ailleurs dans le château — ça vient visiblement du coffre lui-même.<br/><br/>
@@ -177,18 +156,14 @@ export default function Part2() {
 
         <InfoBox title="Profil du roi Pirouette Iᵉʳ">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> minuscule, même pour un lutin, mais affublé d'une voix de théâtre digne des plus grandes scènes et de gestes d'une amplitude totalement disproportionnée pour sa taille.</li>
-            <li><strong>Caractère :</strong> il adore faire semblant d'être très sérieux et solennel, et n'y parvient jamais plus de dix secondes d'affilée avant de craquer dans un petit sourire incontrôlable.</li>
-            <li><strong>Ce qu'il attend vraiment de l'équipe :</strong> pas seulement qu'elle gagne le trésor, mais qu'elle montre, à travers les trois épreuves finales, qu'elle a bien compris l'esprit profond de tout le château — rire, ruser, et surtout partager.</li>
-            <li><strong>Son secret, derrière le spectacle :</strong> il aime sincèrement les enfants qui savent s'entraider, bien plus que ceux qui cherchent seulement à gagner coûte que coûte.</li>
+            <li><strong>Apparence :</strong> minuscule même pour un lutin, voix de théâtre et gestes totalement disproportionnés.</li>
+            <li><strong>Caractère :</strong> il joue au roi sérieux et solennel, et craque en sourire après dix secondes à peine.</li>
+            <li><strong>Son vrai secret :</strong> il aime sincèrement les enfants qui savent s'entraider, bien plus que ceux qui veulent seulement gagner.</li>
           </ul>
         </InfoBox>
 
-        <AmbianceBox title="Pour planter le décor de la grande salle">
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> des guirlandes partout, des lampions suspendus en cascade, des centaines de bonnets à grelots qui dépassent des gradins comme un champ de fleurs rouges.</li>
-            <li><strong>Les lutins du public :</strong> ils applaudissent avec enthousiasme, poussent des « Oooh ! » et des « Aaah ! » bien sentis à chaque étape, et parfois, de façon complètement malicieuse, soufflent exprès des réponses fausses pour embrouiller gentiment tout le monde — jouez-les avec beaucoup d'énergie et de théâtralité.</li>
-          </ul>
+        <AmbianceBox title="Comment jouer les lutins du public">
+          <p>Ils applaudissent avec enthousiasme, poussent des « Oooh ! » et des « Aaah ! » bien sentis à chaque étape, et parfois, de façon complètement malicieuse, soufflent exprès des réponses fausses pour embrouiller gentiment tout le monde — jouez-les avec beaucoup d'énergie et de théâtralité.</p>
         </AmbianceBox>
 
         <ReadAloud title="Ce que dit le roi Pirouette, debout sur son trône de coussins :">

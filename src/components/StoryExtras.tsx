@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, Trophy, Compass, MapPin } from 'lucide-react';
+import { Eye, Trophy, Compass } from 'lucide-react';
 
 function Kicker({ emoji, text, className }: { emoji: string; text: string; className: string }) {
   return (
@@ -9,28 +9,11 @@ function Kicker({ emoji, text, className }: { emoji: string; text: string; class
   );
 }
 
-/** Mise en situation : un court paragraphe qui te remet la scène en tête, à TOI,
- *  le MJ — jamais un texte à réciter. Ça répond à la question "je lis ça aussi
- *  à voix haute ?" avant même qu'elle se pose : non. Le texte à lire suit juste
- *  après, dans un encadré violet. */
-export function SceneBox({ children, title = 'Mise en situation' }: { children: React.ReactNode; title?: string }) {
-  return (
-    <div className="my-6 rounded-2xl bg-slate-100 border-2 border-slate-300 overflow-hidden shadow-sm">
-      <div className="bg-slate-200/60 px-4 py-2 border-b border-slate-300 flex flex-wrap items-center gap-2">
-        <MapPin className="w-5 h-5 text-slate-600 shrink-0" />
-        <span className="font-bold text-slate-700 font-display">{title}</span>
-        <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-slate-600 text-white">
-          🤫 Pour toi — ne lis pas ce paragraphe, la narration à lire suit juste après
-        </span>
-      </div>
-      <div className="p-4 sm:p-6 text-slate-700 space-y-2">{children}</div>
-    </div>
-  );
-}
-
 /** Décor, sons, odeurs et conseils de jeu pour aider le MJ à planter l'ambiance.
- *  C'est une préparation pour toi : tu la lis avant de jouer la scène, puis tu
- *  racontes avec tes propres mots — ce n'est jamais un texte à réciter tel quel. */
+ *  Réservé à ce qui n'est PAS déjà raconté dans le texte à voix haute qui suit
+ *  (sinon ça fait lire deux fois la même scène) : surtout des conseils de jeu
+ *  d'acteur (voix, rythme), pas une redite du décor. Courte par nature — une
+ *  ou deux lignes, pas un pavé. */
 export function AmbianceBox({ children, title = 'Décor & ambiance' }: { children: React.ReactNode; title?: string }) {
   return (
     <div className="my-6 rounded-2xl bg-teal-50 border-2 border-teal-200 overflow-hidden shadow-sm">

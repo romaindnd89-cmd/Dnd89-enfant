@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -20,14 +20,6 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : le terrier qui ne sent plus rien
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Le terrier de la famille Renard est creusé sous les racines d'un vieux châtaignier, à trois bonds du ruisseau. D'habitude, à cette heure de la matinée, il sent la mousse tiède, le pain d'écorce que Mémé fait griller, et cette odeur un peu sucrée des feuilles d'automne qui macèrent dehors. C'est l'odeur du foyer. C'est l'odeur qui dit : tout va bien, tu es chez toi.
-        </p>
-        <p className="mb-4 text-slate-700">
-          Ce matin, il n'y a plus d'odeur du tout.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Tu ouvres un œil. Puis l'autre. Il fait étrangement clair dans le terrier, comme si le jour s'était levé trop vite, sans prévenir. Tu te redresses sur tes quatre pattes, et c'est là que tu remarques la première chose bizarre : ta fourrure, d'habitude d'un roux éclatant, a la couleur d'un vieux journal mouillé.<br/><br/>
@@ -35,25 +27,15 @@ export default function Part1() {
           Tu sors en trottinant, le cœur qui bat un peu trop vite. Dehors, le monde entier a changé de couleurs, ou plutôt : il n'en a plus. Les feuilles qui dansaient en rouge et en or hier soir pendent maintenant, ternes, comme fatiguées. Le ciel lui-même semble avoir pris un rhume. Et le pire, dans tout ça, ce n'est pas le gris. C'est le silence. Pas un chant d'oiseau. Pas un bourdonnement d'abeille attardée. Juste... rien."
         </ReadAloud>
 
-        <AmbianceBox title="Pour planter le décor (à garder en tête tout le chapitre)">
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> tout est gris comme un vieux dessin au crayon — la mousse, les feuilles, même le ciel. Seule la feuille d'or dans la patte du renard garde sa couleur, et elle est chaude au toucher, comme un petit caillou resté au soleil. Des feuilles mortes tombent sans tourbillonner, toutes droites, comme si elles avaient oublié comment danser.</li>
-            <li><strong>Ce qu'on entend :</strong> presque rien. Pas un chant d'oiseau, pas un bourdonnement. Juste le vent qui souffle, s'arrête net au milieu d'une bourrasque, puis repart, comme s'il avait oublié sa propre chanson à mi-chemin.</li>
-            <li><strong>Ce qu'on sent :</strong> le vieux papier mouillé et la poussière de grenier, à la place de la bonne odeur de champignons, de châtaignes grillées et de feu de bois.</li>
-            <li><strong>Comment le jouer :</strong> parlez lentement, presque en chuchotant au début. Les animaux qui ont oublié répètent la même phrase en boucle, s'arrêtent au milieu d'un mot, sourient poliment sans reconnaître personne — même pas eux-mêmes.</li>
-          </ul>
+        <AmbianceBox title="Comment jouer les animaux oublieux">
+          <p>Parlez lentement, presque en chuchotant au début. Les animaux qui ont oublié répètent la même phrase en boucle, s'arrêtent au milieu d'un mot, sourient poliment sans reconnaître personne — même pas eux-mêmes.</p>
         </AmbianceBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           Exploration libre : trois rencontres sur le chemin de la clairière
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Avant d'arriver jusqu'à Mémé Rouquine, laissez l'enfant trottiner à son rythme vers la clairière du Grand Saule. Trois petites scènes peuvent se jouer dans l'ordre qu'il veut, ou pas du tout s'il préfère foncer droit au but — rien n'est obligatoire, mais chacune enrichit la suite de l'histoire.
-        </p>
-        </SceneBox>
-
         <ActionBox title="Rencontre A : Monsieur Blaireau et les lunettes introuvables">
+          <p className="mb-3">Avant d'arriver jusqu'à Mémé Rouquine, laissez l'enfant trottiner à son rythme vers la clairière du Grand Saule. Trois petites scènes peuvent se jouer dans l'ordre qu'il veut, ou pas du tout s'il préfère foncer droit au but — rien n'est obligatoire, mais chacune enrichit la suite de l'histoire.</p>
           <p className="mb-3">Près du vieux pommier, Monsieur Blaireau tourne en rond, le museau collé au sol, en marmonnant sans cesse la même phrase.</p>
           <p className="italic mb-3">"Je cherche... je cherche... mais je ne sais plus quoi je cherche ! Ah si : mes lunettes ! Je ne vois plus rien sans mes lunettes !"</p>
           <p className="mb-3">Ses lunettes rondes sont posées bien en évidence... sur son propre nez.</p>
@@ -84,18 +66,12 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La rencontre principale : Mémé Rouquine au pied du Grand Saule
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Au bout du chemin, sous les longues branches tombantes du Grand Saule, une silhouette familière est assise, immobile, le regard perdu dans le vide gris.
-        </p>
-        </SceneBox>
-
         <InfoBox title="Profil de Mémé Rouquine">
+          <p className="mb-3">Au bout du chemin, sous les longues branches tombantes du Grand Saule, une silhouette familière est assise, immobile, le regard perdu dans le vide gris.</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> une vieille renarde au pelage autrefois flamboyant, aujourd'hui terne comme de la cendre. Elle porte toujours son écharpe rouge tricotée main — seul vêtement du village encore légèrement coloré, comme si l'amour qu'elle y avait mis résistait un peu mieux à l'oubli que le reste.</li>
-            <li><strong>Caractère :</strong> douce, patiente, un peu rêveuse même dans les meilleurs jours. La brume l'a rendue flottante, comme à moitié endormie, mais jamais méchante ni effrayante.</li>
-            <li><strong>Ce qu'elle sait sans le savoir :</strong> elle fredonne, sans s'en rendre compte, un air très ancien — la <em>Chanson de Grisefeuille</em>, celle-là même que le héros retrouvera tout entière au chapitre 7, dans la Grotte aux Échos. Pour l'instant, ce n'est qu'une mélodie sans paroles, mais elle a son importance : notez-la mentalement.</li>
-            <li><strong>Ce qu'elle a vu :</strong> dans un éclair de lucidité, juste avant que l'enfant n'arrive, elle a aperçu des ombres noires s'envoler vers le nord avec quelque chose de brillant entre leurs serres.</li>
+            <li><strong>Apparence :</strong> pelage terne comme de la cendre, mais son écharpe rouge tricotée reste légèrement colorée.</li>
+            <li><strong>Voix :</strong> douce, lente, un peu flottante, comme à moitié endormie — jamais méchante.</li>
+            <li><strong>À retenir :</strong> elle fredonne sans le savoir un air sans paroles (la future Chanson de Grisefeuille, chapitre 7), et a vu des ombres noires filer vers le <strong>nord</strong> avec quelque chose de brillant.</li>
           </ul>
         </InfoBox>
 
@@ -150,11 +126,6 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la clairière des épouvantails
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          En suivant le nord comme l'a indiqué Mémé, le héros et Lumi débouchent sur une clairière ronde, autrefois utilisée pour les fêtes des moissons. Aujourd'hui, elle ressemble à un décor de fête qu'on aurait abandonné en pleine nuit.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "La clairière s'ouvre devant vous comme une immense pièce sans toit. De vieux épouvantails de paille montent une garde un peu penchée, leurs chapeaux troués laissant passer le vent avec un sifflement grêle. Entre eux, des citrouilles qui auraient dû être orange sont devenues grises comme des pierres, et certaines, fendues par le temps, laissent échapper un peu de paille humide.<br/><br/>
@@ -164,23 +135,17 @@ export default function Part1() {
 
         <InfoBox title="Profil des Corbeaux de Suie : Suie, Charbon et Cendrar">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> trois corbeaux aux plumes grasses et noires, un peu plus gros que des corbeaux normaux, avec des yeux rouge braise qui luisent dans la pénombre. Une odeur de cheminée froide colle à leurs plumes.</li>
-            <li><strong>Personnalités :</strong> <em>Suie</em> est le plus nerveux, toujours en train de guetter un danger imaginaire. <em>Charbon</em> est le plus bête des trois, et le plus facile à distraire. <em>Cendrar</em>, le plus gros, se prend pour le chef et déteste qu'on le lui rappelle qu'il ne l'est pas vraiment.</li>
-            <li><strong>Comment les jouer :</strong> voix nasillarde, phrases courtes qui finissent presque toujours par un « CROÂ ! » sonore. Ils se disputent entre eux même pendant le combat (« C'est MON renard ! — Non, c'est le MIEN, gros bêta ! »), ce qui peut faire rire l'enfant et détendre la tension.</li>
-            <li><strong>Leur mission :</strong> ils obéissent à une voix qu'ils n'ont jamais vue, qui leur a ordonné de rapporter tout ce qui brille et d'empêcher quiconque « se souvient encore » de passer vers le nord. Ils ne savent presque rien d'autre, et s'ils sont interrogés gentiment après leur défaite, ils peuvent le confier.</li>
+            <li><strong>Qui ils sont :</strong> <em>Suie</em> (nerveux), <em>Charbon</em> (bête, facile à distraire) et <em>Cendrar</em> (le plus gros, se prend pour le chef).</li>
+            <li><strong>Voix :</strong> nasillarde, phrases courtes qui finissent par un « CROÂ ! ». Ils se disputent entre eux même en combat — ça détend la tension.</li>
+            <li><strong>Leur secret :</strong> une voix inconnue leur a ordonné de voler ce qui brille et de garder le passage vers le nord. Ils peuvent le confier si on les interroge gentiment après leur défaite.</li>
           </ul>
         </InfoBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           Exploration avant le combat : trois façons d'aborder la clairière
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Le combat n'est pas obligé d'éclater tout de suite. Laissez l'enfant observer la scène et proposer une approche — voici trois pistes selon ce qu'il choisit d'essayer.
-        </p>
-        </SceneBox>
-
         <ActionBox title="Approche A : l'approche discrète (se faufiler entre les épouvantails)">
+          <p className="mb-3">Le combat n'est pas obligé d'éclater tout de suite. Laissez l'enfant observer la scène et proposer une approche — voici trois pistes selon ce qu'il choisit d'essayer.</p>
           <p className="mb-2">Le héros peut tenter de longer les épouvantails à couvert pour atteindre directement le tas d'objets volés sans se battre.</p>
           <p className="mb-2"><strong>Jet d'Agilité (1D20 + 4), réussite à 13</strong> (plus difficile que la moyenne : les corbeaux ont l'œil partout).</p>
           <ul className="list-disc pl-5 space-y-1">
@@ -269,11 +234,6 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : un ruisseau qui n'est pas tout à fait silencieux
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Après la clairière, le sentier descend en pente douce vers un ruisseau peu profond, bordé de galets ronds et de hautes herbes grises. C'est un endroit qui, d'ordinaire, chante tout seul.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Le ruisseau murmure, glougloute et... oui, c'est bien ça : il parle ! Pas des mots très clairs, plutôt des bribes qui ressemblent à des conseils marmonnés entre deux clapotis : « par ici... non, pas par là... prudence, petit... »<br/><br/>
@@ -282,10 +242,9 @@ export default function Part1() {
 
         <InfoBox title="Profil de Croâ, le vieux crapaud gardien du gué">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> un crapaud énorme pour son espèce, à la peau grumeleuse couleur de boue séchée, avec des yeux d'or qui ne cillent presque jamais.</li>
-            <li><strong>Caractère :</strong> fier, bougon en apparence, mais secrètement ravi d'avoir enfin de la visite. Il garde ce gué depuis cent automnes et personne ne vient plus jouer aux devinettes avec lui depuis longtemps.</li>
-            <li><strong>Comment le jouer :</strong> voix très grave et très lente, presque caverneuse. Gonflez les joues avant chaque réplique pour accentuer l'effet — les enfants adorent en général l'imiter en retour.</li>
-            <li><strong>Ce qu'il sait :</strong> la brume lui a pris beaucoup de souvenirs anciens, mais jamais son amour des énigmes. Il a aussi vu, tout récemment, des écureuils affolés passer en courant vers l'amont du ruisseau.</li>
+            <li><strong>Apparence :</strong> un crapaud énorme, peau grumeleuse couleur boue, yeux d'or qui ne cillent presque jamais.</li>
+            <li><strong>Voix :</strong> très grave et très lente, caverneuse — gonflez les joues avant chaque réplique. Fier et bougon, mais ravi d'avoir enfin de la visite.</li>
+            <li><strong>Ce qu'il sait :</strong> il a vu des écureuils affolés filer vers l'amont du ruisseau.</li>
           </ul>
         </InfoBox>
 

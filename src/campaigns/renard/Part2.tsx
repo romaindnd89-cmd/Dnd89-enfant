@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
 
 export default function Part2() {
   return (
@@ -20,11 +20,6 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : un village sens dessus dessous
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          En haut d'un hêtre si vieux que son tronc pourrait contenir une maison entière, les écureuils de la forêt ont bâti, au fil des générations, un vrai petit village : des maisonnettes creusées dans l'écorce, reliées par des ponts de corde tressée et des toboggans d'écorce lisse. Normalement, c'est l'endroit le plus joyeux et le plus bruyant de toute la forêt. Aujourd'hui, c'est surtout le plus bruyant.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Dès que tu poses la patte sur la première plateforme de bois, une véritable nuée d'écureuils affolés déboule de toutes les maisonnettes à la fois, en couinant si fort que tu dois reculer d'un pas. « Un visiteur ! Au secours ! On a tout oublié ! On va avoir froid ! On va avoir faim tout l'hiver ! » Les petites boules de poils grises tournent en rond, se cognent les unes dans les autres, laissent tomber des brindilles qu'elles ramassaient on ne sait pour quoi faire.<br/><br/>
@@ -33,10 +28,9 @@ export default function Part2() {
 
         <InfoBox title="Profil de Noisette, la cheffe du village">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> une écureuil âgée, au pelage grisonnant mais encore vif, avec une petite cicatrice sur l'oreille gauche qu'elle porte comme une médaille.</li>
-            <li><strong>Caractère :</strong> organisée, bienveillante, un rien autoritaire — le genre de grand-mère qui mène tout son monde à la baguette, mais avec le cœur sur la main.</li>
-            <li><strong>Ce qu'elle a vu :</strong> juste avant que la brume ne tombe sur le village, elle a aperçu une lueur dorée disparaître dans la grande Ronceraie, au sud. Elle en est presque certaine, même si sa mémoire vacille comme celle des autres.</li>
-            <li><strong>Ce qu'elle veut vraiment :</strong> sauver son village avant tout. Elle n'aidera le héros qu'une fois les siens en sécurité pour l'hiver — c'est tout le sens de ce chapitre.</li>
+            <li><strong>Apparence :</strong> écureuil âgé, pelage grisonnant, une cicatrice sur l'oreille gauche portée comme une médaille.</li>
+            <li><strong>Caractère :</strong> organisée et autoritaire, mais le cœur sur la main — une grand-mère qui mène son monde à la baguette.</li>
+            <li><strong>Son marché :</strong> elle n'aidera le héros qu'une fois le village en sécurité pour l'hiver. Elle a vu, juste avant la brume, une lueur dorée disparaître dans la Ronceraie, au sud.</li>
           </ul>
         </InfoBox>
 
@@ -55,13 +49,8 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La grande mission d'entraide : retrouver les provisions d'hiver
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Les écureuils ont caché leurs réserves de noisettes, glands et pommes de pin un peu partout dans et sous le village, comme chaque année. Sauf que cette année, à cause de la brume, plus personne ne se souvient de rien. Sans ces provisions, le village entier passera un hiver affamé.
-        </p>
-        </SceneBox>
-
         <ActionBox title="Trois façons d'aider, à combiner ou à choisir">
+          <p className="mb-3">Les écureuils ont caché leurs réserves de noisettes, glands et pommes de pin un peu partout dans et sous le village, comme chaque année. Sauf que cette année, à cause de la brume, plus personne ne se souvient de rien. Sans ces provisions, le village entier passera un hiver affamé.</p>
           <p className="mb-4">Ce chapitre fonctionne comme une petite enquête collective : chaque méthode permet de retrouver une partie des provisions. Plus l'enfant en essaie, plus la fête finale sera belle — mais une seule suffit pour avancer dans l'histoire.</p>
           <ul className="list-disc pl-5 space-y-3 mb-4">
             <li><strong>Suivre son nez</strong> (le vrai super-pouvoir du renard) : le héros renifle méthodiquement le sol du village à la recherche de l'odeur discrète des noisettes enterrées. <em>1D20 + Flair (+5), réussite à 10.</em> En cas de réussite, il déterre d'un coup trois cachettes complètes, sous les cris de joie des petits écureuils qui le suivent comme une procession.</li>
@@ -109,24 +98,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : le labyrinthe d'épines
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          La Ronceraie n'est pas un simple buisson : c'est un véritable labyrinthe végétal, fait de ronces entremêlées aussi hautes qu'un adulte, aux épines longues comme des aiguilles à tricoter. Peu d'animaux osent s'y aventurer, même en période normale.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Tu t'arrêtes devant un mur de ronces si dense qu'on dirait une barrière tissée exprès pour décourager les curieux. Au loin, tout au centre de ce labyrinthe épineux, une petite lueur dorée pulse doucement, comme un cœur qui bat au ralenti — c'est sans doute le Gland du Rire dont parlait Noisette.<br/><br/>
           Mais ce n'est pas la seule chose qu'on entend. Portés par le vent entre les branches piquantes, de petits sanglots étouffés parviennent jusqu'à toi, hoquetants, désespérés. Quelqu'un, quelque part là-dedans, pleure depuis longtemps, et personne n'est jamais venu voir pourquoi."
         </ReadAloud>
-
-        <AmbianceBox title="Pour planter le décor de la Ronceraie">
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> des tunnels sombres creusés dans les ronces, des mûres grises qui pendent partout comme de petites billes ternes, des gouttes de rosée qui brillent sur les épines comme de minuscules perles de verre.</li>
-            <li><strong>Ce qu'on entend :</strong> des grattements de petites pattes, le sifflement du vent entre les épines, et ces sanglots étouffés, de plus en plus proches à mesure qu'on avance vers le centre.</li>
-            <li><strong>Ce qu'on sent :</strong> la mûre trop mûre, presque fermentée, et la terre humide sous les ronces.</li>
-          </ul>
-        </AmbianceBox>
 
         <ActionBox title="Traverser les ronces : deux approches possibles">
           <ul className="list-disc pl-5 space-y-3">
@@ -144,10 +120,9 @@ export default function Part2() {
 
         <InfoBox title="Profil de Piquillon">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> un tout jeune hérisson, minuscule, aux piquants encore mous et emmêlés de brindilles et de feuilles mortes.</li>
-            <li><strong>Caractère :</strong> craintif et très dur sur lui-même. Il a honte de s'être laissé piéger et a peur qu'on se moque de lui — ce qui, bien sûr, n'arrivera jamais ici.</li>
-            <li><strong>Comment le jouer :</strong> toute petite voix, il renifle entre chaque phrase et commence presque toujours par un « Je... je... » hésitant.</li>
-            <li><strong>Ce qu'il voulait faire :</strong> il avait repéré le Gland du Rire tout seul et voulait, courageusement mais maladroitement, le ramener au Grand Chêne pour se faire bien voir des grands. Résultat : coincé depuis des heures, et de plus en plus triste.</li>
+            <li><strong>Apparence :</strong> un tout jeune hérisson, minuscule, piquants emmêlés de brindilles.</li>
+            <li><strong>Voix :</strong> toute petite, il renifle et commence souvent par « Je... je... ». Craintif, honteux de s'être fait piéger.</li>
+            <li><strong>Ce qu'il voulait faire :</strong> ramener seul le Gland du Rire au Grand Chêne pour se faire bien voir — résultat, coincé depuis des heures.</li>
           </ul>
         </InfoBox>
 
@@ -195,11 +170,6 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la brume qui monte jusqu'aux genoux
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Pour atteindre la Grotte aux Échos et le deuxième Gland d'Or, il faut traverser un vallon encaissé, encore plus embrumé que le reste de la forêt — comme si la brume elle-même avait décidé de s'y installer pour de bon.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Le sentier plonge entre deux parois rocheuses couvertes de mousse grise, et aussitôt, une brume épaisse comme du coton monte jusqu'à tes genoux, puis jusqu'à ton ventre. Tu n'y vois plus qu'à trois pas devant toi, sauf dans le halo doux que projette Lumi, posée sur ton épaule comme un petit phare tremblant.<br/><br/>
@@ -208,10 +178,9 @@ export default function Part2() {
 
         <InfoBox title="Profil de Filandre, l'Araignée de Brume">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> une grande araignée grise, presque translucide dans la brume, aux pattes fines et élégantes et aux huit yeux d'un bleu pâle, comme de la glace.</li>
-            <li><strong>Caractère :</strong> plus vaniteuse que méchante. Elle est fière, terriblement fière de sa toile, qu'elle considère comme une véritable œuvre d'art. Elle se vexe facilement si on la critique, et fond littéralement sous les compliments.</li>
-            <li><strong>Comment la jouer :</strong> voix sifflante, elle étire démesurément tous les « s » de ses phrases. Elle aime parler d'elle-même à la troisième personne quand elle se sent flattée.</li>
-            <li><strong>Pourquoi elle garde le passage :</strong> une voix qu'elle n'a jamais vue lui a promis, en échange de sa surveillance, qu'on ne détruirait jamais sa précieuse toile. Elle ne sait rien d'autre sur son commanditaire, et le regrette presque un peu si on prend le temps de lui parler gentiment après le combat.</li>
+            <li><strong>Apparence :</strong> grande araignée grise, translucide dans la brume, huit yeux bleu pâle.</li>
+            <li><strong>Voix :</strong> sifflante, elle étire tous les « s ». Plus vaniteuse que méchante — terriblement fière de sa toile, fond sous les compliments.</li>
+            <li><strong>Pourquoi elle garde le passage :</strong> une voix inconnue lui a promis qu'on ne toucherait jamais à sa toile en échange de sa surveillance.</li>
           </ul>
         </InfoBox>
 

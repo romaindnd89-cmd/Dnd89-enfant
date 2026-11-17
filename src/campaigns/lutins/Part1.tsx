@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -20,32 +20,21 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : l'entrée du château
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Le château de Chantefarce se dresse au sommet d'une colline couverte de trèfles, visible de loin grâce à ses tourelles un peu penchées et ses drapeaux à pois multicolores qui claquent joyeusement au vent. Une haute grille de fer forgé en barre pourtant l'entrée, et il va falloir d'abord s'en occuper.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous voilà tous réunis devant l'immense grille du château, celle-là même dont parlait l'invitation en lettres tordues. Ses barreaux de fer forgé dessinent des visages grimaçants qui vous tirent la langue chaque fois que le vent souffle un peu plus fort, comme animés d'une vie propre. Au milieu, trônant fièrement, une énorme serrure a été sculptée en forme de grande bouche souriante, toutes dents dehors.<br/><br/>
           Dès que l'un d'entre vous ose s'approcher pour la toucher, la grille entière se met soudain à frémir, puis à glousser, et enfin à carrément pouffer de rire, dans un grand bruit métallique de ferraille secouée. Elle vous chatouille littéralement, rien qu'en vous voyant approcher ! Au-dessus de vos têtes, perchés dans les douves et sur les créneaux, de petits bonnets rouges à grelots apparaissent furtivement entre les pierres, puis disparaissent aussitôt dans un concert discret de rires étouffés et de « chut, chut, ils vont nous voir ! »."
         </ReadAloud>
 
-        <AmbianceBox title="Pour planter le décor dès le départ">
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> des murs entièrement couverts de lierre fleuri, des tours légèrement penchées comme un peu grises, des drapeaux à pois de toutes les couleurs. Aux fenêtres, des bonnets à grelots surgissent et disparaissent en un éclair. Sur la grille elle-même, une pancarte en bois annonce fièrement : « Défense d'entrer sans rire. Les grincheux feront demi-tour. »</li>
-            <li><strong>Ce qu'on entend :</strong> le tintement incessant de petits grelots, des « chut ! » étouffés qui finissent toujours par un fou rire, et parfois un couinement suraigu de lutin qui se prend lui-même par surprise.</li>
-            <li><strong>Ce qu'on sent :</strong> le chocolat chaud et la barbe à papa, étrangement, alors qu'on ne voit nulle part de quoi les préparer — ça fait partie des petits mystères délicieux du château.</li>
-            <li><strong>Comment jouer Grelot :</strong> petite voix pointue et joyeuse, il parle en rimes quand il y pense, et oublie complètement d'en faire le reste du temps, sans aucune logique apparente.</li>
-          </ul>
+        <AmbianceBox title="Comment jouer Grelot">
+          <p>Petite voix pointue et joyeuse, il parle en rimes quand il y pense, et oublie complètement d'en faire le reste du temps, sans aucune logique apparente.</p>
         </AmbianceBox>
 
         <InfoBox title="Profil de Grelot, le lutin portier">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> un lutin pas plus haut qu'une botte, coiffé d'un gigantesque bonnet rouge à pompon qui semble peser plus lourd que lui, portant un trousseau de fausses clés qui ne servent absolument à rien.</li>
-            <li><strong>Caractère :</strong> terriblement fier de son poste de portier, qu'il considère comme le plus important du royaume, et absolument catastrophique pour garder le moindre secret — il adore trop parler.</li>
-            <li><strong>Ce qu'il sait :</strong> il connaît par cœur toutes les devinettes du roi Pirouette, qu'il répète en boucle depuis des années sans jamais s'en lasser.</li>
-            <li><strong>Ce qu'il veut vraiment :</strong> qu'on le complimente sur son sens de l'accueil. Un seul mot gentil et il devient d'une complaisance absolue.</li>
+            <li><strong>Apparence :</strong> pas plus haut qu'une botte, énorme bonnet rouge à pompon.</li>
+            <li><strong>Caractère :</strong> terriblement fier de son poste, et incapable de garder le moindre secret — il adore trop parler.</li>
+            <li><strong>Son faible :</strong> un compliment sur son sens de l'accueil, et il devient totalement complaisant.</li>
           </ul>
         </InfoBox>
 
@@ -99,11 +88,6 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la bataille de farine
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Derrière une lourde porte de bois qui sent déjà bon le pain chaud, la cuisine du château s'étend, immense, bien plus grande que n'importe quelle cuisine ordinaire : une cheminée où tiendrait aisément un cheval tout entier, des rangées de casseroles de cuivre qui montent jusqu'au plafond comme des échelles brillantes.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Au centre de la pièce trône un gâteau à trois étages, absolument gigantesque, décoré de bougies multicolores qui n'ont jamais été allumées. Tout autour, retranchés derrière de véritables barricades de sacs de sucre et de farine, les lutins marmitons ont préparé leurs munitions avec un sérieux militaire parfaitement comique : des boules de farine bien compactées, et des tartes à la crème entières, prêtes à voler.<br/><br/>
@@ -112,10 +96,9 @@ export default function Part1() {
 
         <InfoBox title="Profil de Dame Louche, cheffe cuisinière du château">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> une lutine imposante, coiffée d'une toque blanche au moins trois fois plus haute que sa propre tête, armée en permanence d'une énorme louche en bois qu'elle brandit comme une épée de commandement.</li>
-            <li><strong>Caractère :</strong> grosse voix autoritaire de général en chef, elle donne des ordres de bataille à ses marmitons avec un sérieux absolu — totalement disproportionné pour une bataille de farine, ce qui fait tout le charme comique du personnage.</li>
-            <li><strong>Son point faible secret :</strong> elle ne résiste absolument pas à un compliment sincère sur sa cuisine. Mentionnez-le, et toute son attitude de général change instantanément.</li>
-            <li><strong>Ce qu'elle protège :</strong> le fameux gâteau à trois étages, préparé spécialement pour le concours annuel des farces, qui a lieu justement aujourd'hui.</li>
+            <li><strong>Apparence :</strong> imposante, toque blanche géante, énorme louche brandie comme une épée.</li>
+            <li><strong>Voix :</strong> grosse voix autoritaire de général en chef — un sérieux comiquement disproportionné pour une bataille de farine.</li>
+            <li><strong>Son point faible :</strong> un compliment sincère sur sa cuisine, et toute son attitude change instantanément.</li>
           </ul>
         </InfoBox>
 
@@ -181,11 +164,6 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : des livres qui battent vraiment des ailes
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Dans la bibliothèque du château, les livres ne restent décidément jamais bien longtemps à leur place sur les étagères : ils volent, par petits groupes, comme des oiseaux de papier, en battant littéralement des pages avec un bruissement caractéristique.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous poussez la grande porte sculptée de la bibliothèque, et un froissement général s'élève aussitôt dans la pièce : des dizaines de petits livres de poche s'envolent en escadrille désordonnée, comme un nuage d'oiseaux de papier affolés par votre arrivée. Au-dessus, les gros dictionnaires, bien plus lourds, planent beaucoup plus lentement, avec une majesté un peu pataude, comme de grosses oies un peu fatiguées.<br/><br/>
@@ -194,10 +172,9 @@ export default function Part1() {
 
         <InfoBox title="Profil de Maître Parchemin, le vieux bibliothécaire">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> un lutin très, très âgé, à la barbe si longue qu'elle traîne jusqu'au sol et s'accroche régulièrement dans les roulettes des petites échelles.</li>
-            <li><strong>Caractère :</strong> sourd comme un pot (ce qui est une source infinie de quiproquos comiques) et absolument obsédé par le silence dans sa bibliothèque — alors même qu'il est, sans s'en rendre compte, le plus bruyant de tous les habitants du château.</li>
-            <li><strong>Ses quiproquos favoris :</strong> il comprend systématiquement tout de travers. Si on lui parle d'un « trésor », il propose de l'eau. Si on mentionne une « quête », il répond qu'il n'a pas de question particulière à poser aujourd'hui.</li>
-            <li><strong>Ce qu'il sait vraiment :</strong> malgré ses airs distraits, il connaît par cœur chaque recoin de sa bibliothèque, et sait exactement comment apprivoiser le Grand Livre des Blagues — mais il préfère, par principe, laisser les enfants le découvrir par eux-mêmes.</li>
+            <li><strong>Apparence :</strong> très âgé, barbe si longue qu'elle traîne au sol.</li>
+            <li><strong>Caractère :</strong> sourd comme un pot, obsédé par le silence — alors qu'il est lui-même le plus bruyant du château.</li>
+            <li><strong>Ses quiproquos :</strong> il comprend tout de travers (« un trésor ? » il propose de l'eau) — improvisez-en librement.</li>
           </ul>
         </InfoBox>
 

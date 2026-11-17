@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
 
 export default function Part4() {
   return (
@@ -20,11 +20,6 @@ export default function Part4() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la salle du trône de racines
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Grisaille se retourne enfin, lentement, comme si elle avait tout son temps — ou comme si, au fond, plus rien ne pressait vraiment pour elle depuis longtemps.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Grisaille est une vieille taupe toute ronde, enveloppée dans une cape de brume qui semble faite du même gris que tout ce qu'elle a volé à la forêt. De grosses lunettes rondes, bien trop grandes pour son petit museau, glissent sans cesse sur son nez. Quand elle te voit enfin bien en face, elle se redresse d'un coup sur son trône, et autour d'elle, de fines racines sombres se dressent comme des tentacules menaçants, prêtes à réagir au moindre geste brusque.<br/><br/>
@@ -34,18 +29,15 @@ export default function Part4() {
 
         <InfoBox title="Profil de Grisaille, la taupe-sorcière">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Apparence :</strong> une vieille taupe toute ronde, au pelage gris sombre (qui était peut-être, autrefois, un joli gris perle), avec de grosses lunettes rondes qu'elle n'arrête pas de remonter sur son nez d'un geste nerveux.</li>
-            <li><strong>Caractère réel, sous la colère de façade :</strong> immensément seule, et depuis très, très longtemps. Elle n'est pas cruelle par nature : elle a simplement fini par se convaincre que, puisque personne ne se souvenait d'elle, autant que plus personne ne se souvienne de rien du tout.</li>
-            <li><strong>Son vrai secret :</strong> elle vit sous cette colline depuis des décennies, invisible aux yeux de tous les animaux de la surface, qui l'ont oubliée sans même l'avoir vraiment connue.</li>
-            <li><strong>Ce qui peut vraiment l'atteindre :</strong> qu'on lui demande son nom avec sincérité, qu'on lui chante la Chanson de Grisefeuille, qu'on lui offre quelque chose (le caillou-cœur trouvé au chapitre 8, une noisette, même le Gland du Rire pour la faire sourire une seule fois), qu'on s'assoie à sa table devant la deuxième tasse, ou qu'on lui souhaite tout simplement, et sans se moquer, un très joyeux anniversaire en retard.</li>
+            <li><strong>Apparence :</strong> une vieille taupe toute ronde, grosses lunettes qu'elle remonte sans cesse d'un geste nerveux.</li>
+            <li><strong>Sous la colère de façade :</strong> immensément seule depuis toujours. Pas cruelle par nature — elle s'est juste convaincue que, puisque personne ne se souvient d'elle, autant que plus personne ne se souvienne de rien.</li>
+            <li><strong>Ce qui peut l'atteindre :</strong> demander son nom avec sincérité, lui chanter la Chanson de Grisefeuille, lui offrir quelque chose, s'asseoir à sa table devant la deuxième tasse, ou lui souhaiter un joyeux anniversaire en retard.</li>
           </ul>
         </InfoBox>
 
-        <AmbianceBox title="Pour bien jouer ce moment">
+        <AmbianceBox title="Comment jouer Grisaille">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> une grande salle sous la colline, un trône fait de racines tressées, des centaines de bougies éteintes alignées tout autour, poussiéreuses depuis des années. La seule vraie lumière vient du Gland de l'Amitié, serré contre Grisaille comme une petite veilleuse. Au plafond, la Brume d'Oubli tourne lentement sur elle-même, comme un nuage pris au piège dans une bouteille invisible.</li>
-            <li><strong>Ce qu'on entend :</strong> les racines qui craquent doucement, et de temps en temps, un reniflement discret que Grisaille essaie tant bien que mal de cacher derrière une toux forcée.</li>
-            <li><strong>Comment jouer Grisaille :</strong> commencez par une grosse voix qui se veut intimidante, qui parle fort pour masquer la peur. Dès que quelqu'un se montre gentil avec elle, laissez la voix devenir toute petite et hésitante, presque enfantine.</li>
+            <li>Commencez par une grosse voix qui se veut intimidante, qui parle fort pour masquer la peur. Dès que quelqu'un se montre gentil avec elle, laissez la voix devenir toute petite et hésitante, presque enfantine.</li>
             <li><strong>Si l'enfant hésite sur quoi faire :</strong> Lumi peut chuchoter doucement à l'oreille du héros : « Regarde bien ses yeux, derrière ses lunettes... tu crois vraiment qu'elle est en colère ? Ou plutôt qu'elle a très, très peur ? »</li>
           </ul>
         </AmbianceBox>
@@ -53,13 +45,8 @@ export default function Part4() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           Le vrai chemin de l'aventure : offrir son amitié à Grisaille
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          C'est ici que se révèle tout le secret de l'histoire. Le héros n'a nul besoin de se battre : il doit simplement montrer à Grisaille qu'on peut se souvenir d'elle, pour de vrai, sans qu'elle ait besoin de jeter le moindre sortilège pour qu'on la remarque. Encouragez vivement l'enfant à trouver, par lui-même, un geste gentil parmi ceux qui suivent — ou à en inventer un autre tout seul, encore mieux.
-        </p>
-        </SceneBox>
-
         <ActionBox title="Les gestes qui peuvent tout changer (l'enfant peut en tenter plusieurs)">
+          <p className="mb-3">C'est ici que se révèle tout le secret de l'histoire. Le héros n'a nul besoin de se battre : il doit simplement montrer à Grisaille qu'on peut se souvenir d'elle, pour de vrai, sans qu'elle ait besoin de jeter le moindre sortilège pour qu'on la remarque. Encouragez vivement l'enfant à trouver, par lui-même, un geste gentil parmi ceux qui suivent — ou à en inventer un autre tout seul, encore mieux.</p>
           <ul className="list-disc pl-5 space-y-3">
             <li><strong>Lui parler doucement et lui demander son nom</strong> comme si c'était la chose la plus naturelle du monde : <em>1D20 + Cœur (+5), réussite à 10.</em></li>
             <li><strong>Lui offrir un objet trouvé en chemin :</strong> l'écharpe rouge de Mémé, une noisette grillée, le caillou-cœur des Mottes Grises, ou même le Gland du Rire pour tenter de la faire sourire une seule fois. Aucun jet n'est nécessaire si l'enfant propose sincèrement ce geste.</li>
@@ -105,24 +92,14 @@ export default function Part4() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la course contre les premiers flocons
         </h3>
-        <SceneBox>
-        <p className="mb-4 text-slate-700">
-          Les trois Glands d'Or sont enfin réunis. Mais dehors, dans le ciel gris, les tout premiers flocons commencent déjà à tomber, timides d'abord, puis de plus en plus nombreux. Il faut courir, vite, jusqu'au Grand Chêne-Mémoire, avant que la neige ne recouvre tout et ne scelle l'oubli pour de bon.
-        </p>
-        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Tu jaillis hors du terrier dans un grand bond, les trois Glands d'Or serrés précieusement contre toi, Lumi en éclaireuse juste devant ton museau, Piquillon roulé en boule bien calé sur ton dos, et Grisaille qui trottine courageusement sur tes talons malgré ses petites pattes de taupe peu habituées à la course en plein air. La forêt est encore grise tout autour de vous, et de gros flocons blancs tombent de plus en plus vite, de plus en plus serrés.<br/><br/>
           Devant toi se dresse enfin le Grand Chêne, immense, majestueux, endormi depuis cette fameuse nuit où tout a basculé. Ses branches nues, sans la moindre feuille, se tendent vers le ciel comme pour implorer de l'aide. À ses pieds, entre ses plus grosses racines, trois petits creux parfaitement ronds attendent patiemment leurs trois Glands d'Or depuis des siècles, peut-être même depuis la toute première fois que la forêt a eu besoin de se souvenir de quelque chose."
         </ReadAloud>
 
-        <AmbianceBox title="Pour planter le décor de cette dernière course">
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> de gros flocons gris qui tombent sans le moindre bruit et recouvrent peu à peu tout le paysage d'un voile blanc et silencieux.</li>
-            <li><strong>Ce qu'on entend :</strong> le vent qui se lève doucement, les pas pressés de toute la petite troupe, les respirations qui se font de plus en plus courtes à mesure que la course avance.</li>
-            <li><strong>Ce qu'on sent :</strong> la neige qui approche, cette odeur particulière et piquante qui annonce le grand froid de l'hiver.</li>
-            <li><strong>Comment le jouer :</strong> accélérez clairement le rythme de votre voix ! Phrases courtes, ton pressé. Comptez les flocons à voix haute pour accentuer la tension (« La neige arrive déjà aux chevilles… maintenant aux genoux… »). Puis, une fois le troisième Gland enfin planté, marquez un grand silence, et reprenez votre lecture très, très lentement pour le moment final.</li>
-          </ul>
+        <AmbianceBox title="Comment jouer cette course">
+          <p>Accélérez clairement le rythme de votre voix ! Phrases courtes, ton pressé. Comptez les flocons à voix haute pour accentuer la tension (« La neige arrive déjà aux chevilles… maintenant aux genoux… »). Puis, une fois le troisième Gland enfin planté, marquez un grand silence, et reprenez votre lecture très, très lentement pour le moment final.</p>
         </AmbianceBox>
 
         <ActionBox title="La course contre la neige : trois obstacles à franchir vite">
