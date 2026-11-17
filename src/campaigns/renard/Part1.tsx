@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, LootBox } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -44,15 +44,24 @@ export default function Part1() {
           Rien ne te parle, rien ne te demande rien. C'est juste la forêt, telle qu'elle est devenue, et telle qu'elle était avant. Tu pourrais continuer tout droit. Ou tu pourrais t'arrêter, et regarder d'un peu plus près."
         </ReadAloud>
 
-        <ActionBox title="S'arrêter et regarder (aucun jet, juste de la curiosité)">
-          <p className="mb-3">Proposez à l'enfant de choisir ce qu'il veut examiner de plus près, parmi ce que la narration vient de décrire — ou autre chose encore, s'il invente sa propre trouvaille. Il n'y a rien à réussir ni à rater ici : chaque choix donne juste une petite récompense d'ambiance, pour le plaisir de regarder.</p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>La toile de rosée :</strong> en s'approchant tout près, on y voit son propre reflet, minuscule et renversé, dans chaque goutte — des dizaines de petits renards qui regardent.</li>
-            <li><strong>Le fil de laine rouge dans le nid :</strong> le héros peut le garder, sans aucun effet de jeu particulier — juste un petit bout de couleur à glisser dans son pelage, pour le trajet.</li>
-            <li><strong>Les champignons en éventail :</strong> en soufflant doucement dessus, une poussière argentée s'envole et retombe comme une mini pluie d'étoiles, avant de disparaître.</li>
-            <li><strong>Rien de tout ça :</strong> si l'enfant préfère avancer sans s'arrêter, c'est très bien aussi — certains héros préfèrent marcher.</li>
-          </ul>
+        <ActionBox title="Fouiller un peu (un vrai moment d'exploration)">
+          <p className="mb-3">Ces trois trouvailles ne sont pas de la simple décoration : ce sont de <strong>vrais objets</strong> qui serviront plus loin dans l'aventure. Laissez l'enfant explorer et ramasser ce qu'il veut (il peut tout prendre). Chaque objet se note sur la fiche, dans le sac à dos.</p>
         </ActionBox>
+
+        <LootBox item="Goutte de rosée (dans une coquille de gland)">
+          <p className="italic mb-2">"Tu approches le museau de la toile : chaque perle de rosée te renvoie ton reflet, minuscule et renversé. Tu en recueilles délicatement une grosse goutte bien fraîche dans une coquille de gland vide."</p>
+          <p><strong>Effet :</strong> une réserve d'eau pure. Au <strong>chapitre 5</strong>, la verser sur les ronces les assouplit : <strong>+3</strong> au jet pour traverser la Ronceraie sans se piquer. (Ou pour étancher une petite soif en chemin.)</p>
+        </LootBox>
+
+        <LootBox item="Fil de laine rouge">
+          <p className="italic mb-2">"Au fond du vieux nid tombé, un unique fil de laine rouge est resté accroché — la même couleur, exactement, que l'écharpe de Mémé. Tu l'enroules autour de ta patte."</p>
+          <p><strong>Effet :</strong> un petit bout de courage et de maison. Une fois dans l'aventure, le serrer contre soi donne <strong>+2 à un jet de Cœur</strong>. Il prend tout son sens au <strong>chapitre 9</strong>, face à Grisaille.</p>
+        </LootBox>
+
+        <LootBox item="Champignon-lanterne">
+          <p className="italic mb-2">"Tu souffles sur les petits champignons en éventail : une poussière argentée s'envole, et l'un d'eux se met à luire d'une douce lumière bleutée. Tu le cueilles : il tient dans la patte comme une mini-lanterne."</p>
+          <p><strong>Effet :</strong> une source de lumière. Au <strong>chapitre 8</strong>, dans le terrier sombre de Grisaille, le frotter l'allume une fois : <strong>+2</strong> à un jet d'infiltration pour voir où l'on met les pattes.</p>
+        </LootBox>
 
         <ActionBox title="Sur le chemin : Monsieur Blaireau et les lunettes introuvables">
           <p className="mb-3">Près du vieux pommier, Monsieur Blaireau tourne en rond, le museau collé au sol, en marmonnant sans cesse la même phrase.</p>
@@ -63,6 +72,28 @@ export default function Part1() {
             <li><strong>Si l'enfant tente de le convaincre avec un jet :</strong> <strong>1D20 + Cœur (+5)</strong>, réussite à 8. À la réussite, Monsieur Blaireau garde ses lunettes sur le nez pendant tout le reste de la scène, assez longtemps pour donner un indice utile : « Tiens, en parlant de choses qu'on perd... j'ai vu Mémé Rouquine filer vers le Grand Saule, toute seule, en fredonnant un air que je ne connaissais pas. »</li>
           </ul>
         </ActionBox>
+
+        <ActionBox title="Un peu plus loin : les deux lapins qui ne se reconnaissent plus">
+          <p className="mb-3">Sur le petit chemin de terre, deux lapins se font face, immobiles, le regard flou. Ce sont Frisette et Grisou, frère et sœur, inséparables depuis toujours. Aujourd'hui, ils se regardent comme deux inconnus.</p>
+          <p className="italic mb-3">Frisette : « Pardon... je crois qu'on ne s'est jamais rencontrés ? » — Grisou : « Non, je ne pense pas, madame. Bonne journée. »</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Leur faire remarquer qu'ils ont la même tache blanche sur l'oreille gauche</strong> (jet de <strong>Flair, 1D20 + 5</strong>, réussite à 9) : les deux lapins se figent, puis éclatent de rire en même temps, le même rire exactement. « Grisou ?! » « FRISETTE ?! » Ils se sautent dessus pour un câlin. Ce souvenir retrouvé redonne une pointe de couleur rose à leurs oreilles pendant quelques secondes — la toute première preuve que l'oubli n'est pas forcément définitif.</li>
+            <li><strong>Sans réussir le jet :</strong> les lapins restent polis et distants, mais remercient le renard d'avoir essayé, et l'un d'eux glisse : « Au fait... vous n'auriez pas vu une vieille dame renarde qui fredonnait tout bas ? Elle est passée par là, vers le grand arbre. »</li>
+          </ul>
+        </ActionBox>
+
+        <ActionBox title="Avant le Grand Saule : le garde-manger que Papa Renard ne retrouve plus">
+          <p className="italic mb-3">Un peu plus loin, Papa Renard (le propre père du héros, lui aussi touché par l'oubli) creuse n'importe où dans le jardin, sans méthode, en soufflant de la terre grise dans tous les sens. « J'avais caché nos provisions pour l'hiver... quelque part... sous quelque chose... mais quoi ? Et où ?! »</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Suivre son propre nez</strong> (le super-pouvoir du héros) : <strong>1D20 + Flair (+5)</strong>, réussite à 10. L'odeur discrète de noisette grillée mène tout droit à la bonne cachette, sous la troisième pierre plate près du pommier.</li>
+            <li><strong>Aider en creusant ensemble</strong> (Courage, 1D20 + 3, réussite à 12) : plus long, mais ça marche aussi.</li>
+          </ul>
+        </ActionBox>
+
+        <LootBox item="3 Noisettes grillées">
+          <p className="italic mb-2">"Sous la pierre, tout un trésor de noisettes bien dorées ! Papa Renard, soulagé sans trop savoir pourquoi, t'ébouriffe la fourrure d'un geste tendre et mécanique, avant de repartir, déjà un peu perdu, vers une autre direction."</p>
+          <p><strong>Effet :</strong> ce sont les 3 noisettes de la fiche de personnage. Chacune mangée pendant un repos ou un combat redonne <strong>3 PV</strong>.</p>
+        </LootBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La rencontre principale : Mémé Rouquine au pied du Grand Saule

@@ -1,5 +1,23 @@
 import React from 'react';
-import { Eye, Trophy, Compass } from 'lucide-react';
+import { Eye, Trophy, Compass, Backpack } from 'lucide-react';
+
+/** Objet à ramasser : du vrai butin, avec un effet concret pour la suite de
+ *  l'aventure. À noter sur la fiche du héros (sac à dos). Le passage en
+ *  italique se lit à voix haute ; le reste (nom de l'objet, effet) est pour toi. */
+export function LootBox({ children, item }: { children: React.ReactNode; item: string }) {
+  return (
+    <div className="my-6 rounded-2xl bg-amber-50 border-2 border-amber-300 overflow-hidden shadow-sm">
+      <div className="bg-amber-100/70 px-4 py-2 border-b border-amber-300 flex flex-wrap items-center gap-2">
+        <Backpack className="w-5 h-5 text-amber-700 shrink-0" />
+        <span className="font-bold text-amber-900 font-display">🎒 {item}</span>
+        <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-amber-600 text-white">
+          À noter sur la fiche du héros
+        </span>
+      </div>
+      <div className="p-4 sm:p-6 text-amber-900 space-y-2">{children}</div>
+    </div>
+  );
+}
 
 function Kicker({ emoji, text, className }: { emoji: string; text: string; className: string }) {
   return (

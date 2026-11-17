@@ -119,7 +119,8 @@ export default function Part3() {
         </InfoBox>
 
         <ActionBox title="Passage 1 : le couloir qui craque">
-          <p>Un long couloir au sol instable, jonché de petites pierres qui roulent sous la moindre patte posée de travers. <strong>1D20 + Agilité (+4), réussite à 10</strong> pour avancer sans faire de bruit.</p>
+          <p className="mb-2">Un long couloir au sol instable, jonché de petites pierres qui roulent sous la moindre patte posée de travers, dans le noir presque complet. <strong>1D20 + Agilité (+4), réussite à 10</strong> pour avancer sans faire de bruit.</p>
+          <p>Si le héros a ramassé le <strong>Champignon-lanterne</strong> au chapitre 1, il peut le frotter pour y voir où il met les pattes : <strong>+2</strong> à ce jet (la lumière bleutée est trop douce pour réveiller les gardiens).</p>
         </ActionBox>
 
         <ActionBox title="Passage 2 : les Mottes Grises endormies">

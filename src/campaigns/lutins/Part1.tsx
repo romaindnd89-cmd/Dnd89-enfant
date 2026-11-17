@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, LootBox } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -30,10 +30,14 @@ export default function Part1() {
           <p className="mb-3">Laissez les enfants regarder autour d'eux quelques instants avant que l'aventure ne s'accélère. Voici quelques détails à offrir si l'équipe observe la colline, sans qu'aucun ne soit obligatoire :</p>
           <ul className="list-disc pl-5 space-y-2">
             <li>Un vieux cadran solaire de pierre, sculpté en forme de visage qui tire la langue à midi pile — personne n'a jamais compris pourquoi, pas même les lutins.</li>
-            <li>Des trèfles à quatre feuilles poussent par dizaines sur toute la colline, comme si le château entier portait chance. Chaque enfant peut en cueillir un, juste pour le plaisir.</li>
             <li>Au loin, de la fumée de cheminée s'échappe en formant de petits ronds parfaits, un par un, comme si quelqu'un, à l'intérieur, fumait la pipe en bulles de savon.</li>
           </ul>
         </ActionBox>
+
+        <LootBox item="Trèfle à quatre feuilles (un par enfant)">
+          <p className="italic mb-2">"La colline en est couverte ! Chaque héros en cueille un et le glisse sous son bonnet ou dans sa poche. On dirait que le château tout entier porte chance."</p>
+          <p><strong>Effet :</strong> un vrai porte-bonheur. <strong>Une fois</strong> dans l'aventure, un enfant peut écraser son trèfle pour <strong>relancer un dé raté</strong> (le sien ou celui d'un ami) et garder le nouveau résultat.</p>
+        </LootBox>
 
         <AmbianceBox title="Comment jouer Grelot">
           <p>Petite voix pointue et joyeuse, il parle en rimes quand il y pense, et oublie complètement d'en faire le reste du temps, sans aucune logique apparente.</p>

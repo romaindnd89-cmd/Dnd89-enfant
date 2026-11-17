@@ -107,7 +107,7 @@ export default function Part2() {
         <ActionBox title="Traverser les ronces : deux approches possibles">
           <ul className="list-disc pl-5 space-y-3">
             <li><strong>Se faufiler avec agilité</strong> entre les épines, en se tortillant comme une couleuvre : <em>1D20 + Agilité (+4), réussite à 10.</em> En cas d'échec, une épine particulièrement traîtresse griffe le flanc du héros (<strong>-2 PV</strong>), mais on continue sans problème.</li>
-            <li><strong>Mouiller les ronces</strong> avec un peu d'eau du ruisseau (si le héros a pensé à en garder dans ses pattes ou dans une feuille creuse) : les épines humides deviennent bien plus souples. <em>Bonus de +3 au jet d'Agilité</em> si cette idée est proposée par l'enfant lui-même — récompensez toujours l'ingéniosité.</li>
+            <li><strong>Mouiller les ronces</strong> pour les assouplir : <em>+3 au jet d'Agilité.</em> Deux façons d'avoir de l'eau : verser la <strong>Goutte de rosée</strong> ramassée au chapitre 1, ou en rapporter du ruisseau du chapitre 3 dans une feuille creuse. Récompensez aussi toute autre idée maligne de l'enfant.</li>
           </ul>
         </ActionBox>
 

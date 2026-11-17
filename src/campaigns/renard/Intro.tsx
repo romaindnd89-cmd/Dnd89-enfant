@@ -75,11 +75,15 @@ export default function Intro() {
         ]}
       />
 
-      <InfoBox title="Rappel des règles super simples">
-        <ul className="list-disc pl-5 space-y-1">
-          <li>Pour réussir une action difficile, l'enfant lance le <strong>D20</strong> et ajoute le talent qui va bien. <strong>10 ou plus = réussite.</strong></li>
-          <li>Les <strong>PV</strong> (points de vie) descendent quand on est touché et remontent avec le repos ou une noisette. À 0 PV, on ne « meurt » pas : on est juste trop fatigué et un ami vient nous aider (on ne bloque jamais l'histoire).</li>
-          <li>Utilise le bouton <strong>🎲 Lanceur de dés</strong> en bas à droite si vous n'avez pas de vrais dés !</li>
+      <InfoBox title="La boîte à outils du jeu de rôle (version enfant)">
+        <p className="mb-2">Voici toutes les mécaniques utilisées dans l'aventure. Tu n'as rien à apprendre par cœur : chaque encadré te rappelle quoi faire au bon moment. C'est un vrai petit Donjons & Dragons, juste plus doux.</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>🎲 Le jet de dé et le DD :</strong> pour une action difficile, l'enfant lance le <strong>D20</strong> et ajoute le talent qui convient. On compare à un <strong>nombre de réussite (le DD)</strong> : s'il l'atteint ou le dépasse, c'est gagné. (Pas de vrais dés ? Le bouton <strong>🎲</strong> en bas de l'écran les remplace.)</li>
+          <li><strong>✌️ Avantage et désavantage :</strong> quand la situation aide beaucoup le héros (un ami lui tient la patte, un bon objet), il lance <strong>deux D20 et garde le meilleur</strong> (avantage). Quand tout joue contre lui (le noir, la peur), il en lance deux et garde le <strong>moins bon</strong> (désavantage).</li>
+          <li><strong>❤️ Les points de vie (PV) et le repos :</strong> ils descendent quand on est touché. On en regagne en se <strong>reposant</strong> un moment (un petit répit entre deux scènes rend quelques PV) ou en mangeant une noisette. À <strong>0 PV</strong>, on ne « meurt » jamais : on est juste trop fatigué, et un ami vient aider — l'histoire ne se bloque pas.</li>
+          <li><strong>🎒 Le sac à dos et les objets :</strong> tout ce que le héros ramasse se note sur sa fiche. Ce ne sont pas des babioles : un objet trouvé tôt (une goutte de rosée, un champignon-lanterne…) sert souvent bien plus loin dans l'aventure. Encouragez l'enfant à fouiller et à ramasser !</li>
+          <li><strong>🌀 Les états (ce qui change pour un tour) :</strong> parfois le héros est <em>collé</em>, <em>ébloui</em>, <em>ralenti</em> ou <em>endormi</em>. L'encadré explique à chaque fois comment s'en libérer — en général, un petit jet au tour suivant.</li>
+          <li><strong>⚔️ L'initiative (en combat) :</strong> au début d'un combat, un jet de D20 décide qui agit en premier, le héros ou le monstre.</li>
         </ul>
       </InfoBox>
     </section>
