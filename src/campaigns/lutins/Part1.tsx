@@ -34,9 +34,13 @@ export default function Part1() {
           </ul>
         </ActionBox>
 
-        <LootBox item="Trèfle à quatre feuilles (un par enfant)">
-          <p className="italic mb-2">"La colline en est couverte ! Chaque héros en cueille un et le glisse sous son bonnet ou dans sa poche. On dirait que le château tout entier porte chance."</p>
-          <p><strong>Effet :</strong> un vrai porte-bonheur. <strong>Une fois</strong> dans l'aventure, un enfant peut écraser son trèfle pour <strong>relancer un dé raté</strong> (le sien ou celui d'un ami) et garder le nouveau résultat.</p>
+        <ActionBox title="Chercher un vrai trèfle à quatre feuilles">
+          <p>La colline est couverte de trèfles, mais les vrais trèfles à <strong>quatre</strong> feuilles sont rares et bien cachés. Chaque enfant qui veut tenter sa chance lance <strong>1D20 + Malice</strong>, réussite à 11. <em>Réussite →</em> il déniche le sien (encadré ci-dessous). <em>Échec →</em> rien pour cette fois, mais il pourra réessayer plus tard dans une autre salle couverte d'herbe.</p>
+        </ActionBox>
+
+        <LootBox item="Trèfle à quatre feuilles">
+          <p className="italic mb-2">"Entre mille trèfles ordinaires, tes doigts se referment sur le bon : quatre feuilles, bien vertes ! Tu le glisses précieusement sous ton bonnet."</p>
+          <p><strong>Récompense d'un jet de Malice réussi.</strong> <strong>Une fois</strong> dans l'aventure, l'écraser permet de <strong>relancer un dé raté</strong> (le sien ou celui d'un ami) et de garder le nouveau résultat.</p>
         </LootBox>
 
         <AmbianceBox title="Comment jouer Grelot">

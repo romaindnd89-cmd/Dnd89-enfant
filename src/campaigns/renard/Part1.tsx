@@ -85,23 +85,28 @@ export default function Part1() {
           <p><strong>Effet :</strong> les 3 noisettes de la fiche. Chacune mangée (au repos ou en combat) redonne <strong>3 PV</strong>.</p>
         </LootBox>
 
-        <ActionBox title="S'il fouille l'herbe et les buissons">
-          <p>Trois trouvailles brillent dans la clairière, chacune bien réelle et utile plus tard. L'enfant peut tout prendre, ou juste ce qui l'attire — chaque objet se note dans le sac à dos de sa fiche.</p>
+        <ActionBox title="S'il fouille la clairière : trois trouvailles à mériter">
+          <p className="mb-3">Trois choses brillent dans l'herbe grise — mais attrape-les qui peut ! Ce ne sont pas des cadeaux : chacune demande un vrai petit effort (un jet de dé), avec sa réussite et son échec. On ne ramasse pas tout d'un coup : parfois ça marche, parfois non, et c'est justement ça qui rend la fouille amusante. Ne montrez l'encadré « objet » qu'en cas de <strong>réussite</strong>.</p>
+          <ul className="list-disc pl-5 space-y-3">
+            <li><strong>La goutte de rosée</strong> est perchée tout en haut d'une toile d'araignée tendue entre deux branches. L'atteindre sans tout faire tomber demande de l'équilibre. <strong>Jet d'Agilité (1D20 + 4), réussite à 10.</strong><br/><em>Réussite →</em> tu gagnes la <strong>Goutte de rosée</strong> (ci-dessous). <em>Échec →</em> la toile cède, la goutte s'écrase au sol : tant pis, tu trouveras de l'eau au ruisseau du chapitre 3.</li>
+            <li><strong>Le fil de laine rouge</strong> est coincé tout au fond d'un buisson d'épines. Il faut le démêler sans se piquer. <strong>Jet de Malice (1D20 + 3), réussite à 9.</strong><br/><em>Réussite →</em> tu gagnes le <strong>Fil de laine rouge</strong>. <em>Échec →</em> une épine te pique (−1 PV) et le fil se déchire : abandonne-le.</li>
+            <li><strong>Le champignon qui luit :</strong> parmi des dizaines de champignons tout gris, un seul brille vraiment, et il faut un bon nez pour le repérer. <strong>Jet de Flair (1D20 + 5), réussite à 10.</strong><br/><em>Réussite →</em> tu gagnes le <strong>Champignon-lanterne</strong>. <em>Échec →</em> tu cueilles un champignon parfaitement ordinaire, qui refuse de s'allumer.</li>
+          </ul>
         </ActionBox>
 
         <LootBox item="Goutte de rosée (dans une coquille de gland)">
-          <p className="italic mb-2">"Sur une toile d'araignée intacte, chaque perle de rosée te renvoie ton reflet minuscule et renversé. Tu en recueilles une grosse goutte bien fraîche dans une coquille de gland vide."</p>
-          <p><strong>Effet :</strong> une réserve d'eau pure. Au <strong>chapitre 5</strong>, la verser sur les ronces les assouplit : <strong>+3</strong> pour traverser la Ronceraie sans se piquer.</p>
+          <p className="italic mb-2">"Tu gardes l'équilibre tout en haut de la toile et recueilles une grosse goutte bien fraîche dans une coquille de gland vide."</p>
+          <p><strong>Récompense d'un jet d'Agilité réussi.</strong> Au <strong>chapitre 5</strong>, la verser sur les ronces les assouplit : <strong>+3</strong> pour traverser la Ronceraie sans se piquer.</p>
         </LootBox>
 
         <LootBox item="Fil de laine rouge">
-          <p className="italic mb-2">"Dans un vieux nid tombé au sol, un unique fil de laine rouge est resté accroché — exactement la couleur de l'écharpe de Mémé. Tu l'enroules autour de ta patte."</p>
-          <p><strong>Effet :</strong> un petit bout de maison. Une fois dans l'aventure, le serrer donne <strong>+2 à un jet de Cœur</strong> — décisif au <strong>chapitre 9</strong>, face à Grisaille.</p>
+          <p className="italic mb-2">"Tu dégages le fil des épines sans y laisser un poil. C'est exactement la couleur de l'écharpe de Mémé. Tu l'enroules autour de ta patte."</p>
+          <p><strong>Récompense d'un jet de Malice réussi.</strong> Une fois dans l'aventure, le serrer donne <strong>+2 à un jet de Cœur</strong> — décisif au <strong>chapitre 9</strong>, face à Grisaille.</p>
         </LootBox>
 
         <LootBox item="Champignon-lanterne">
-          <p className="italic mb-2">"Tu souffles sur de petits champignons en éventail : une poussière argentée s'envole, et l'un d'eux se met à luire d'une douce lumière bleutée. Tu le cueilles comme une mini-lanterne."</p>
-          <p><strong>Effet :</strong> une source de lumière. Au <strong>chapitre 8</strong>, dans le terrier sombre, le frotter une fois donne <strong>+2</strong> à un jet d'infiltration.</p>
+          <p className="italic mb-2">"Ton nez ne t'a pas trompé : le bon champignon se met à luire d'une douce lumière bleutée dès que tu le touches. Tu le cueilles comme une mini-lanterne."</p>
+          <p><strong>Récompense d'un jet de Flair réussi.</strong> Au <strong>chapitre 8</strong>, dans le terrier sombre, le frotter une fois donne <strong>+2</strong> à un jet d'infiltration.</p>
         </LootBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
