@@ -111,3 +111,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .scene-star, .scene-crystal, .scene-window { animation: none; }
 }
+
+/* Les chapitres atterrissent sous la barre collante (Retour / Chapitres) */
+section[id] {
+  scroll-margin-top: 11rem;
+}

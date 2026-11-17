@@ -1,12 +1,13 @@
 import React from 'react';
 import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
-import { Chapter } from '../../components/CampaignLayout';
 
 export default function Epilogue() {
   return (
     <div className="space-y-8">
-      <section>
-        <Chapter id="epilogue" emoji="🎲" title="ÉPILOGUE : ET APRÈS ?" />
+      <section id="epilogue">
+        <h2 className="font-display text-4xl font-bold text-orange-700 mb-6 border-b-4 border-orange-200 pb-2 mt-16">
+          ÉPILOGUE : ET APRÈS ?
+        </h2>
 
         <ReadAloud title="Pour terminer en beauté :">
           "L'hiver est passé, tout doux et tout blanc. Au printemps, Grisefeuille est plus belle que jamais, et personne n'a oublié personne. Mais une forêt pleine de mémoire, c'est aussi une forêt pleine de nouvelles histoires qui t'attendent…"

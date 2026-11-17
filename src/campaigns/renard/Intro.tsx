@@ -15,7 +15,7 @@ const theme: SheetTheme = {
 
 export default function Intro() {
   return (
-    <section id="intro" className="scroll-mt-44">
+    <section id="intro">
       <h2 className="font-display text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
         <BookOpen className="w-8 h-8 text-orange-500" />
         LIVRE D'AVENTURE : LE RENARDEAU ET LA FORÊT QUI OUBLIE
@@ -78,7 +78,7 @@ export default function Intro() {
       <InfoBox title="La boîte à outils du jeu de rôle (version enfant)">
         <p className="mb-2">Voici toutes les mécaniques utilisées dans l'aventure. Tu n'as rien à apprendre par cœur : chaque encadré te rappelle quoi faire au bon moment. C'est un vrai petit Donjons & Dragons, juste plus doux.</p>
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>🎲 Le jet de dé et le DD :</strong> pour une action difficile, l'enfant lance le <strong>D20</strong> et ajoute le talent qui convient. On compare à un <strong>nombre de réussite (le DD)</strong> : s'il l'atteint ou le dépasse, c'est gagné. (Pas de vrais dés ? Le bouton <strong>🎲</strong> en bas de l'écran les remplace.)</li>
+          <li><strong>🎲 Le jet de dé et le DD :</strong> pour une action difficile, l'enfant lance le <strong>D20</strong> et ajoute le talent qui convient. On compare à un <strong>nombre de réussite (le DD)</strong> : s'il l'atteint ou le dépasse, c'est gagné. (Pas de vrais dés ? Le bouton <strong>🎲</strong> en bas de l'écran les remplace.) <em>Exemple : le renard veut sauter une branche (DD 10). L'enfant lance le D20 : il fait 7. Il ajoute son Agilité (+4) : 11. 11 est plus grand que 10, c'est réussi !</em></li>
           <li><strong>✌️ Avantage et désavantage :</strong> quand la situation aide beaucoup le héros (un ami lui tient la patte, un bon objet), il lance <strong>deux D20 et garde le meilleur</strong> (avantage). Quand tout joue contre lui (le noir, la peur), il en lance deux et garde le <strong>moins bon</strong> (désavantage).</li>
           <li><strong>❤️ Les points de vie (PV) et le repos :</strong> ils descendent quand on est touché. On en regagne en se <strong>reposant</strong> un moment (un petit répit entre deux scènes rend quelques PV) ou en mangeant une noisette. À <strong>0 PV</strong>, on ne « meurt » jamais : on est juste trop fatigué, et un ami vient aider — l'histoire ne se bloque pas.</li>
           <li><strong>🎒 Le sac à dos et les objets :</strong> tout ce que le héros ramasse se note sur sa fiche. Ce ne sont pas des babioles : un objet trouvé tôt (une goutte de rosée, un champignon-lanterne…) sert souvent bien plus loin dans l'aventure. Encouragez l'enfant à fouiller et à ramasser !</li>

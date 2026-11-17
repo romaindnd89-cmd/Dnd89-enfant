@@ -1,12 +1,13 @@
 import React from 'react';
 import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
-import { Chapter } from '../../components/CampaignLayout';
 
 export default function Epilogue() {
   return (
     <div className="space-y-8">
-      <section>
-        <Chapter id="epilogue" emoji="🎲" title="ÉPILOGUE : LA GRANDE FÊTE" />
+      <section id="epilogue">
+        <h2 className="font-display text-4xl font-bold text-emerald-700 mb-6 border-b-4 border-emerald-200 pb-2 mt-16">
+          ÉPILOGUE : LA GRANDE FÊTE
+        </h2>
 
         <ReadAloud title="Pour terminer en beauté :">
           "Ce soir-là, le château de Chantefarce brille de toutes ses fenêtres. Dame Louche sert du gâteau, Maître Parchemin raconte des blagues que personne ne comprend, le chevalier Trois-Lutins danse en perdant ses morceaux. Quand vous repartez, les poches pleines et le ventre aussi, Grelot vous rattrape à la grille : « Revenez quand vous voulez ! On a déjà inventé de nouvelles farces. Et cette fois… on ne vous dira pas où sont les seaux de confettis ! »"

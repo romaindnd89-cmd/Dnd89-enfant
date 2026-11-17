@@ -19,7 +19,6 @@ import WorldBackdrop from './components/WorldBackdrop';
 import PortalGate from './components/PortalGate';
 import SparkleCursor from './components/SparkleCursor';
 import TrophyShelf from './components/TrophyShelf';
-import { readProgressCount } from './hooks/useProgress';
 import { WORLDS, WorldKey } from './theme/worlds';
 import FantasyScene from './components/FantasyScene';
 
@@ -39,8 +38,6 @@ interface Campaign {
   /** Lueur de la carte au survol (classe Tailwind littérale) */
   glow: string;
   component: React.ComponentType<{ onBack: () => void }>;
-  progressId?: string;
-  totalChapters?: number;
 }
 
 const kidsCampaigns: Campaign[] = [
@@ -102,8 +99,6 @@ const kidsCampaigns: Campaign[] = [
     world: 'renard',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(249,115,22,0.7)]',
     component: RenardCampaign,
-    progressId: 'renard',
-    totalChapters: 12,
   },
   {
     id: 'c3',
@@ -115,8 +110,6 @@ const kidsCampaigns: Campaign[] = [
     world: 'lutins',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(52,211,153,0.7)]',
     component: LutinsCampaign,
-    progressId: 'lutins',
-    totalChapters: 8,
   },
 ];
 
@@ -364,8 +357,6 @@ interface CampaignCardProps {
 function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
   const w = WORLDS[campaign.world];
   const [coverFailed, setCoverFailed] = useState(false);
-  const count = campaign.progressId ? readProgressCount(campaign.progressId) : 0;
-  const total = campaign.totalChapters ?? 0;
 
   return (
     <motion.article
@@ -421,23 +412,6 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
             {campaign.players}
           </span>
         </div>
-
-        {count > 0 && total > 0 && (
-          <div className="mb-5">
-            <div className="flex items-center justify-between mb-1 text-xs text-slate-400">
-              <span>Aventure en cours</span>
-              <span className="tabular-nums">
-                {count}/{total}
-              </span>
-            </div>
-            <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-amber-300 to-amber-500"
-                style={{ width: `${Math.round((count / total) * 100)}%` }}
-              />
-            </div>
-          </div>
-        )}
 
         <span className="inline-flex items-center gap-2 font-display text-sm tracking-[0.18em] uppercase text-amber-300 group-hover:text-amber-200 transition-colors">
           Franchir le portail

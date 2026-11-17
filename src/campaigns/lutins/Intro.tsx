@@ -15,7 +15,7 @@ const theme: SheetTheme = {
 
 export default function Intro() {
   return (
-    <section id="intro" className="scroll-mt-44">
+    <section id="intro">
       <h2 className="font-display text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
         <BookOpen className="w-8 h-8 text-emerald-600 shrink-0" />
         LIVRE D'AVENTURE : LE TRÉSOR DES LUTINS FARCEURS
