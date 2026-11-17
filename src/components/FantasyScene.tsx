@@ -1,4 +1,5 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { prefersReduced } from '../lib/motion';
 import { motion } from 'motion/react';
 import { WORLDS, WorldKey, World } from '../theme/worlds';
 
@@ -138,7 +139,7 @@ export default function FantasyScene({
   useEffect(() => {
     if (!animated) return;
     if (!window.matchMedia('(pointer: fine)').matches) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (prefersReduced()) return;
     const onMove = (e: MouseEvent) => {
       const el = svgRef.current;
       if (!el) return;

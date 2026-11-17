@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useMotionReduced } from '../lib/motion';
 
 interface Spark {
   id: number;
@@ -20,10 +21,10 @@ export default function SparkleCursor() {
   const [sparks, setSparks] = useState<Spark[]>([]);
   const lastRef = useRef(0);
   const idRef = useRef(0);
+  const reduced = useMotionReduced();
 
   useEffect(() => {
     const fine = window.matchMedia('(pointer: fine)').matches;
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) return;
 
     const spawn = (x: number, y: number, size: number) => {
@@ -57,7 +58,7 @@ export default function SparkleCursor() {
       window.removeEventListener('mousemove', onMove);
       window.removeEventListener('pointerdown', onDown);
     };
-  }, []);
+  }, [reduced]);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[55]" aria-hidden="true">

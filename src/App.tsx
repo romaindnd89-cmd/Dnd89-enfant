@@ -21,6 +21,7 @@ import PortalGate from './components/PortalGate';
 import SparkleCursor from './components/SparkleCursor';
 import FlyingDragons from './components/FlyingDragons';
 import WalkingParade from './components/WalkingParade';
+import MotionToggle from './components/MotionToggle';
 import DragonForestBanner from './components/DragonForestBanner';
 import DragonSprite from './components/DragonSprite';
 import TrophyShelf from './components/TrophyShelf';
@@ -223,8 +224,11 @@ export default function App() {
               Dnd89 <span className="text-amber-300">&</span> Dragons
             </span>
           </button>
-          <div className="hidden sm:block font-display text-xs tracking-[0.25em] uppercase text-amber-100/70">
-            Le portail des aventures
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:block font-display text-xs tracking-[0.25em] uppercase text-amber-100/70">
+              Le portail des aventures
+            </div>
+            <MotionToggle />
           </div>
         </div>
       </header>

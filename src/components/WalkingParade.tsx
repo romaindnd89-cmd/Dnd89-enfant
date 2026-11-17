@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import DragonSprite from './DragonSprite';
+import { useMotionReduced } from '../lib/motion';
 
 /**
  * Une petite troupe qui traverse le bas de l'écran : un dragon qui court,
@@ -18,10 +19,7 @@ const WALKERS = [
 const SIZES: Record<string, number> = { fox: 52, elf: 62, knight: 64, wizard: 68, firefly: 38 };
 
 export default function WalkingParade() {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    setReduced(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  }, []);
+  const reduced = useMotionReduced();
   if (reduced) return null;
 
   return (

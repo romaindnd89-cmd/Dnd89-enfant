@@ -51,9 +51,7 @@ body {
 @keyframes shiny-move {
   to { background-position: 250% center; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .shiny-title { animation: none; }
-}
+:root[data-motion="off"] .shiny-title { animation: none; }
 
 /* Reflet lumineux qui balaie une carte au survol */
 .card-shine {
@@ -108,9 +106,7 @@ body {
   55% { opacity: 0.95; }
   70% { opacity: 0.8; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .scene-star, .scene-crystal, .scene-window { animation: none; }
-}
+:root[data-motion="off"] .scene-star, :root[data-motion="off"] .scene-crystal, :root[data-motion="off"] .scene-window { animation: none; }
 
 /* Les chapitres atterrissent sous la barre collante (Retour / Chapitres) */
 section[id] {
@@ -178,11 +174,8 @@ section[id] {
   background: repeating-linear-gradient(90deg, rgba(245,158,11,0.9) 0 6px, transparent 6px 12px);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .dragon-sprite, .dragon-banner-img, .dragon-flight-ltr, .dragon-flight-rtl, .dragon-bob,
-  .particle-rise, .particle-fall, .particle-wander, .logo-wiggle { animation: none !important; }
-  .ambient-particles { display: none; }
-}
+:root[data-motion="off"] .dragon-sprite, :root[data-motion="off"] .dragon-banner-img, :root[data-motion="off"] .dragon-flight-ltr, :root[data-motion="off"] .dragon-flight-rtl, :root[data-motion="off"] .dragon-bob, :root[data-motion="off"] .particle-rise, :root[data-motion="off"] .particle-fall, :root[data-motion="off"] .particle-wander, :root[data-motion="off"] .logo-wiggle { animation: none !important; }
+:root[data-motion="off"] .ambient-particles { display: none; }
 
 /* Dragon dessiné : bande de 4 images qui défile */
 .dragon-sprite {
@@ -284,10 +277,8 @@ section[id] {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .cloud-drift, .shooting-star, .card-dragon-inner, .dice-wobble { animation: none !important; }
-  section[id] > h2 { animation: none !important; }
-}
+:root[data-motion="off"] .cloud-drift, :root[data-motion="off"] .shooting-star, :root[data-motion="off"] .card-dragon-inner, :root[data-motion="off"] .dice-wobble { animation: none !important; }
+:root[data-motion="off"] section[id] > h2 { animation: none !important; }
 
 /* ===== Troupe qui marche, forêt à étages, éclosion ===== */
 .parade-walker {
@@ -399,8 +390,5 @@ section[id] {
 button { transition: transform 0.15s ease; }
 button:active { transform: scale(0.97); }
 
-@media (prefers-reduced-motion: reduce) {
-  .parade-walker, .parade-hop, .parade-float, .pf-far, .pf-mid, .pf-near, .hero-flyer,
-  .egg-hatch, .egg-wobble, .box-icon { animation: none !important; }
-  .egg-hatch { background-position: 100% 0; }
-}
+:root[data-motion="off"] .parade-walker, :root[data-motion="off"] .parade-hop, :root[data-motion="off"] .parade-float, :root[data-motion="off"] .pf-far, :root[data-motion="off"] .pf-mid, :root[data-motion="off"] .pf-near, :root[data-motion="off"] .hero-flyer, :root[data-motion="off"] .egg-hatch, :root[data-motion="off"] .egg-wobble, :root[data-motion="off"] .box-icon { animation: none !important; }
+:root[data-motion="off"] .egg-hatch { background-position: 100% 0; }

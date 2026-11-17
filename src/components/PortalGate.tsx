@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { prefersReduced } from '../lib/motion';
 import { motion } from 'motion/react';
 import { WORLDS } from '../theme/worlds';
 import FantasyScene from './FantasyScene';
@@ -156,7 +157,7 @@ export default function PortalGate({ onEnter }: PortalGateProps) {
   const enter = () => {
     if (entering) return;
     setEntering(true);
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduced = prefersReduced();
     window.setTimeout(onEnter, reduced ? 0 : 1250);
   };
 

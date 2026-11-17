@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import DragonSprite from './DragonSprite';
+import { useMotionReduced } from '../lib/motion';
 
 interface Flyer {
   top: number;     // % de la hauteur
@@ -33,11 +34,7 @@ export default function FlyingDragons() {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
   const [bursts, setBursts] = useState<Burst[]>([]);
   const idRef = useRef(0);
-  const [reduced, setReduced] = useState(false);
-
-  useEffect(() => {
-    setReduced(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  }, []);
+  const reduced = useMotionReduced();
 
   useEffect(() => {
     const onDown = (e: PointerEvent) => {
