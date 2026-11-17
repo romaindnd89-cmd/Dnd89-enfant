@@ -151,5 +151,5 @@ export const DRAGON_TIPS: string[] = [
   "Un conseil de dragon : laisse l'enfant inventer, même des choses rigolotes !",
   "Besoin d'une phrase pour décrire un combat ? Je t'en souffle une !",
   "N'oublie pas : à 0 point de vie, on se repose, on ne perd jamais !",
-  "Fais des voix rigolotes pour les personnages, ça adore les enfants !",
+  "Fais des voix rigolotes pour les personnages : les enfants adorent ça !",
 ];

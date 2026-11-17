@@ -25,7 +25,7 @@ export default function DragonHelper() {
     const showTimer = setInterval(() => {
       setBubble(randomOf(DRAGON_TIPS));
       hideTimer = setTimeout(() => setBubble(null), 6000);
-    }, 22000);
+    }, 60000);
     // première apparition après 4s
     const first = setTimeout(() => {
       setBubble(randomOf(DRAGON_TIPS));

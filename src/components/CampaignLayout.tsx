@@ -225,7 +225,7 @@ export function Chapter({
   const { isDone, toggle, theme } = useChapterCtx();
   const d = isDone(id);
   return (
-    <div id={id} className="scroll-mt-28 flex items-start gap-3 mb-6 mt-12 border-b-2 border-slate-200 pb-2">
+    <div id={id} className="scroll-mt-44 flex items-start gap-3 mb-6 mt-12 border-b-2 border-slate-200 pb-2">
       <button
         onClick={() => toggle(id)}
         className={`mt-1.5 shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all ${

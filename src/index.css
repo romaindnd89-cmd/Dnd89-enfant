@@ -52,7 +52,6 @@ body {
     0 0 0 1px rgba(99,102,241,0.08),
     0 20px 60px -15px rgba(10,14,40,0.55),
     inset 0 1px 0 rgba(255,255,255,0.8);
-  backdrop-filter: blur(4px);
 }
 
 .hide-scrollbar::-webkit-scrollbar { display: none; }
@@ -90,17 +89,21 @@ body {
   to { background-position: -60% 0; }
 }
 
-/* Impression : on n'imprime QUE la fiche de personnage */
+/* Impression de la fiche de personnage : la fiche est clonée dans #print-root,
+   et tout le reste de la page est retiré de l'impression (une seule page A4). */
+#print-root { display: none; }
 @media print {
-  body * { visibility: hidden; }
-  .print-sheet, .print-sheet * { visibility: visible; }
-  .print-sheet {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    box-shadow: none !important;
-    border: none !important;
+  @page { size: A4 portrait; margin: 10mm; }
+  body:has(#print-root:not(:empty)) { background: #fff !important; }
+  body:has(#print-root:not(:empty)) > *:not(#print-root) { display: none !important; }
+  #print-root:not(:empty) { display: block; }
+  #print-root, #print-root * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  .no-print { display: none !important; }
+  #print-root .print-sheet {
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }

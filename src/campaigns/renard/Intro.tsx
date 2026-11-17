@@ -14,7 +14,7 @@ const theme: SheetTheme = {
 
 export default function Intro() {
   return (
-    <section id="intro" className="scroll-mt-28">
+    <section id="intro" className="scroll-mt-44">
       <h2 className="font-display text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
         <BookOpen className="w-8 h-8 text-orange-500" />
         LIVRE D'AVENTURE : LE RENARDEAU ET LA FORÊT QUI OUBLIE
