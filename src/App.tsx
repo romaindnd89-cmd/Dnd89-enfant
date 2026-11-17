@@ -19,6 +19,7 @@ import DragonHelper from './components/DragonHelper';
 import WorldBackdrop from './components/WorldBackdrop';
 import PortalGate from './components/PortalGate';
 import SparkleCursor from './components/SparkleCursor';
+import FlyingDragons from './components/FlyingDragons';
 import TrophyShelf from './components/TrophyShelf';
 import { WORLDS, WorldKey } from './theme/worlds';
 import FantasyScene from './components/FantasyScene';
@@ -193,6 +194,7 @@ export default function App() {
         <>
           <DiceRoller />
           <DragonHelper />
+          <FlyingDragons />
         </>
       )}
 
@@ -201,7 +203,7 @@ export default function App() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <button className="flex items-center gap-3 text-left" onClick={goHome}>
             <motion.div
-              className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border border-amber-300/50 bg-slate-900/60"
+              className="logo-wiggle w-12 h-12 rounded-full flex items-center justify-center text-2xl border border-amber-300/50 bg-slate-900/60"
               animate={{
                 boxShadow: [
                   '0 0 14px 2px rgba(251,191,36,0.25)',

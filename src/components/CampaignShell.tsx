@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, List, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import MiniDragon, { DRAGON_SKINS } from './MiniDragon';
 
 export interface ShellSection {
   id: string;
@@ -25,6 +26,31 @@ export default function CampaignShell({
   children: React.ReactNode;
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dragonRef = useRef<HTMLDivElement>(null);
+  const trailRef = useRef<HTMLDivElement>(null);
+
+  // Le petit dragon de la barre avance au fil de la lecture
+  useEffect(() => {
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      if (dragonRef.current) dragonRef.current.style.left = `${pct * 100}%`;
+      if (trailRef.current) trailRef.current.style.width = `${pct * 100}%`;
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -37,7 +63,7 @@ export default function CampaignShell({
   return (
     <div className="max-w-4xl mx-auto pb-24 relative">
       {/* Navigation flottante */}
-      <div className="sticky top-24 z-40 flex justify-between items-center mb-8 bg-slate-50/90 backdrop-blur-sm py-2">
+      <div className="sticky top-24 z-40 flex justify-between items-center mb-10 bg-slate-50/90 backdrop-blur-sm py-2 relative">
         <button
           onClick={onBack}
           aria-label="Retour aux aventures"
@@ -55,6 +81,21 @@ export default function CampaignShell({
           <List className="w-5 h-5" />
           <span className="hidden sm:inline">Chapitres</span>
         </button>
+
+        {/* Piste du petit dragon : il suit la lecture */}
+        <div className="absolute left-3 right-3 -bottom-3 h-6 pointer-events-none" aria-hidden="true">
+          <div className="absolute left-0 right-0 top-1/2 h-px bg-amber-300/30" />
+          <div
+            ref={trailRef}
+            className="absolute left-0 top-1/2 h-[3px] -mt-px progress-dragon-trail rounded-full"
+            style={{ width: '0%' }}
+          />
+          <div ref={dragonRef} className="absolute top-0 -ml-5" style={{ left: '0%' }}>
+            <div className="dragon-bob">
+              <MiniDragon size={40} skin={DRAGON_SKINS[1]} fireDelay={1} />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Menu des chapitres (Overlay) */}

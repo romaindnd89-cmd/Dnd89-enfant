@@ -116,3 +116,91 @@ body {
 section[id] {
   scroll-margin-top: 11rem;
 }
+
+/* ===== Dragons et particules vivantes ===== */
+.dragon-wing {
+  transform-box: fill-box;
+  transform-origin: 20% 90%;
+  animation: dragon-flap 0.38s ease-in-out infinite alternate;
+}
+@keyframes dragon-flap {
+  from { transform: rotate(-26deg); }
+  to { transform: rotate(14deg); }
+}
+.dragon-fire {
+  transform-box: fill-box;
+  transform-origin: 0% 50%;
+  opacity: 0;
+  animation: dragon-fire 7s ease-out infinite;
+}
+@keyframes dragon-fire {
+  0%, 82%, 100% { opacity: 0; transform: scale(0.2); }
+  86% { opacity: 1; transform: scale(1.2); }
+  94% { opacity: 0.8; transform: scale(1.7) translateX(4px); }
+  98% { opacity: 0; transform: scale(2) translateX(8px); }
+}
+.dragon-flight-ltr,
+.dragon-flight-rtl {
+  position: absolute;
+  left: 0;
+  will-change: transform;
+  opacity: 0;
+}
+.dragon-flight-ltr { animation: dragon-fly-right linear infinite; }
+.dragon-flight-rtl { animation: dragon-fly-left linear infinite; }
+@keyframes dragon-fly-right {
+  0% { transform: translate3d(-20vw, 0, 0); opacity: 1; }
+  100% { transform: translate3d(120vw, 0, 0); opacity: 1; }
+}
+@keyframes dragon-fly-left {
+  0% { transform: translate3d(120vw, 0, 0); opacity: 1; }
+  100% { transform: translate3d(-20vw, 0, 0); opacity: 1; }
+}
+.dragon-bob { animation: dragon-bob 3.2s ease-in-out infinite; }
+@keyframes dragon-bob {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
+}
+.dragon-loop .dragon-inner { animation: dragon-loop 0.8s ease-in-out 1; }
+@keyframes dragon-loop {
+  to { transform: rotate(-360deg) scale(1.15); }
+}
+
+.particle-rise { animation: particle-rise linear infinite; opacity: 0; will-change: transform; }
+@keyframes particle-rise {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  10% { opacity: 0.95; }
+  100% { transform: translate3d(var(--drift, 30px), -108vh, 0); opacity: 0; }
+}
+.particle-fall { animation: particle-fall linear infinite; opacity: 0; will-change: transform; }
+@keyframes particle-fall {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  8% { opacity: 0.9; }
+  50% { transform: translate3d(calc(var(--drift, 40px) * 0.6), 55vh, 0) rotate(180deg); }
+  100% { transform: translate3d(var(--drift, 40px), 108vh, 0) rotate(420deg); opacity: 0; }
+}
+.particle-wander { animation: particle-wander ease-in-out infinite; will-change: transform, opacity; }
+@keyframes particle-wander {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.1; }
+  25% { transform: translate3d(var(--drift, 30px), -26px, 0); opacity: 1; }
+  50% { transform: translate3d(calc(var(--drift, 30px) * -0.4), -50px, 0); opacity: 0.25; }
+  75% { transform: translate3d(calc(var(--drift, 30px) * 0.7), -20px, 0); opacity: 1; }
+}
+
+/* Petites vies : le logo respire, les cartes flottent */
+.logo-wiggle { animation: logo-wiggle 5s ease-in-out infinite; }
+@keyframes logo-wiggle {
+  0%, 85%, 100% { transform: rotate(0deg) scale(1); }
+  89% { transform: rotate(-12deg) scale(1.15); }
+  93% { transform: rotate(10deg) scale(1.15); }
+  97% { transform: rotate(-4deg) scale(1.05); }
+}
+.progress-dragon-trail {
+  background: repeating-linear-gradient(90deg, rgba(245,158,11,0.9) 0 6px, transparent 6px 12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dragon-wing, .dragon-fire, .dragon-flight-ltr, .dragon-flight-rtl, .dragon-bob,
+  .particle-rise, .particle-fall, .particle-wander, .logo-wiggle { animation: none !important; }
+  .ambient-particles { display: none; }
+}
