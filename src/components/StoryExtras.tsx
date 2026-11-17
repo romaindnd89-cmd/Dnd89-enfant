@@ -1,5 +1,40 @@
 import React from 'react';
-import { Eye, Trophy, Compass, Backpack } from 'lucide-react';
+import { Eye, Trophy, Compass, Backpack, Signpost, Swords } from 'lucide-react';
+
+/** Point de choix : on présente à l'enfant ce qu'il voit, et on le laisse
+ *  décider librement de ce qu'il fait, dans l'ordre qu'il veut. Le cœur du jeu
+ *  de rôle. À lire à voix haute, puis on attend la réponse de l'enfant. */
+export function ChoicePrompt({ children, title = 'À toi de jouer : que fais-tu ?' }: { children: React.ReactNode; title?: string }) {
+  return (
+    <div className="my-6 rounded-2xl bg-sky-50 border-2 border-sky-300 overflow-hidden shadow-sm">
+      <div className="bg-sky-100/70 px-4 py-2 border-b border-sky-300 flex flex-wrap items-center gap-2">
+        <Signpost className="w-5 h-5 text-sky-700 shrink-0" />
+        <span className="font-bold text-sky-900 font-display">🧭 {title}</span>
+        <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-sky-600 text-white">
+          🔊 Lis les choix à l'enfant, puis laisse-le décider
+        </span>
+      </div>
+      <div className="p-4 sm:p-6 text-sky-900 space-y-2">{children}</div>
+    </div>
+  );
+}
+
+/** Tutoriel d'une mécanique (combat, jet...), pensé pour un MJ qui n'a jamais
+ *  joué : explication pas à pas avec un exemple chiffré concret. */
+export function HowTo({ children, title }: { children: React.ReactNode; title: string }) {
+  return (
+    <div className="my-6 rounded-2xl bg-slate-50 border-2 border-slate-300 overflow-hidden shadow-sm">
+      <div className="bg-slate-200/70 px-4 py-2 border-b border-slate-300 flex flex-wrap items-center gap-2">
+        <Swords className="w-5 h-5 text-slate-700 shrink-0" />
+        <span className="font-bold text-slate-800 font-display">{title}</span>
+        <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-slate-600 text-white">
+          📖 Pour toi, MJ débutant — à lire une fois
+        </span>
+      </div>
+      <div className="p-4 sm:p-6 text-slate-700 space-y-2">{children}</div>
+    </div>
+  );
+}
 
 /** Objet à ramasser : du vrai butin, avec un effet concret pour la suite de
  *  l'aventure. À noter sur la fiche du héros (sac à dos). Le passage en

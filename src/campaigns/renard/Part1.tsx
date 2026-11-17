@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox, LootBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, LootBox, ChoicePrompt, HowTo } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -32,71 +32,80 @@ export default function Part1() {
         </AmbianceBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
-          La promenade : le chemin du Grand Saule
+          Exploration libre : la petite clairière du vieux pommier
         </h3>
         <p className="mb-4 text-slate-700">
-          Avant d'arriver jusqu'à Mémé Rouquine, laissez l'enfant trottiner à son rythme. Ce n'est pas une course : c'est l'occasion de simplement traverser la forêt, de regarder autour de soi, de sentir ce monde gris sans qu'il se passe forcément quelque chose à chaque pas. Lisez le texte ci-dessous d'une traite, lentement, puis laissez l'enfant dire ce qui l'intrigue.
+          Voici le premier vrai moment de liberté de l'aventure, et le plus important à bien jouer. Vous allez <strong>décrire ce que le héros voit</strong>, puis <strong>demander à l'enfant ce qu'il veut faire</strong> — et le laisser choisir. Il n'y a pas d'ordre imposé : il peut aller voir qui il veut, dans l'ordre qu'il veut, fouiller, ou même filer droit au but. Rien n'est obligatoire. C'est ça, le jeu de rôle : l'enfant décide, vous racontez ce qui arrive.
         </p>
 
         <ReadAloud title="La narration à voix haute :">
-          "Le chemin serpente entre les troncs, et tu prends ton temps. L'herbe, d'habitude verte et piquante sous tes coussinets, est devenue toute molle, comme de la cendre froide. Tu passes devant une toile d'araignée tissée entre deux branches basses : elle est intacte, parfaite, ornée de minuscules perles de rosée qui, elles, n'ont pas perdu une seule goutte de leur éclat — comme si la pluie, au moins, se souvenait encore comment briller.<br/><br/>
-          Un peu plus loin, un vieux nid d'oiseau est tombé au milieu du chemin, vide depuis longtemps, tapissé de mousse grise et d'un unique fil de laine rouge — un fil qui vient peut-être d'une écharpe tricotée, ou d'un bonnet perdu, il y a bien longtemps. Tu renifles une odeur de champignon humide qui monte d'un tronc couché, couvert de petites pousses en forme d'éventail, toutes grises elles aussi, mais dont les bords, quand la lumière les frôle juste comme il faut, semblent presque vouloir redevenir orangés.<br/><br/>
-          Rien ne te parle, rien ne te demande rien. C'est juste la forêt, telle qu'elle est devenue, et telle qu'elle était avant. Tu pourrais continuer tout droit. Ou tu pourrais t'arrêter, et regarder d'un peu plus près."
+          "Le chemin serpente entre les troncs, et tu prends ton temps. L'herbe, d'habitude verte et piquante sous tes coussinets, est devenue toute molle, comme de la cendre froide. Au bout du sentier, le chemin s'ouvre sur une petite clairière que tu connais bien : c'est le carrefour du vieux pommier, là où tout le monde se croise d'habitude.<br/><br/>
+          Mais ce matin, tout y est de travers. Près du pommier, sur ta gauche, <strong>un vieux blaireau tourne en rond</strong>, le museau collé au sol, en marmonnant tout seul. Au milieu du chemin, <strong>deux lapins se font face, immobiles</strong>, comme deux statues qui ne se voient pas. Un peu plus loin, dans le potager, <strong>une silhouette creuse la terre</strong> dans tous les sens en soufflant des nuages de poussière grise. Et dans l'herbe, çà et là, <strong>quelque chose accroche la lumière</strong> : des petits éclats, des gouttes, des reflets.<br/><br/>
+          Tout au fond, derrière la clairière, tu aperçois enfin les longues branches tombantes du <strong>Grand Saule</strong>, là où Mémé Rouquine a l'habitude de s'asseoir."
         </ReadAloud>
 
-        <ActionBox title="Fouiller un peu (un vrai moment d'exploration)">
-          <p className="mb-3">Ces trois trouvailles ne sont pas de la simple décoration : ce sont de <strong>vrais objets</strong> qui serviront plus loin dans l'aventure. Laissez l'enfant explorer et ramasser ce qu'il veut (il peut tout prendre). Chaque objet se note sur la fiche, dans le sac à dos.</p>
-        </ActionBox>
+        <ChoicePrompt>
+          <p className="mb-2">Lisez ces possibilités à l'enfant, comme un petit menu, puis demandez-lui simplement : <strong>« Et toi, qu'est-ce que tu veux faire en premier ? »</strong></p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Aller voir le <strong>vieux blaireau</strong> qui marmonne près du pommier ?</li>
+            <li>T'approcher des <strong>deux lapins</strong> plantés sur le chemin ?</li>
+            <li>Rejoindre la <strong>silhouette qui creuse</strong> le potager, là-bas ?</li>
+            <li><strong>Fouiller l'herbe et les buissons</strong>, puisque quelque chose brille ?</li>
+            <li>Ou filer <strong>tout droit vers le Grand Saule</strong>, sans t'arrêter ?</li>
+          </ul>
+          <p className="mt-2 text-sm">Jouez chaque choix dans l'ordre que l'enfant décide. Quand il a fait le tour de ce qui l'intéresse (ou dès qu'il veut avancer), il rejoint le Grand Saule, plus bas.</p>
+        </ChoicePrompt>
 
-        <LootBox item="Goutte de rosée (dans une coquille de gland)">
-          <p className="italic mb-2">"Tu approches le museau de la toile : chaque perle de rosée te renvoie ton reflet, minuscule et renversé. Tu en recueilles délicatement une grosse goutte bien fraîche dans une coquille de gland vide."</p>
-          <p><strong>Effet :</strong> une réserve d'eau pure. Au <strong>chapitre 5</strong>, la verser sur les ronces les assouplit : <strong>+3</strong> au jet pour traverser la Ronceraie sans se piquer. (Ou pour étancher une petite soif en chemin.)</p>
-        </LootBox>
-
-        <LootBox item="Fil de laine rouge">
-          <p className="italic mb-2">"Au fond du vieux nid tombé, un unique fil de laine rouge est resté accroché — la même couleur, exactement, que l'écharpe de Mémé. Tu l'enroules autour de ta patte."</p>
-          <p><strong>Effet :</strong> un petit bout de courage et de maison. Une fois dans l'aventure, le serrer contre soi donne <strong>+2 à un jet de Cœur</strong>. Il prend tout son sens au <strong>chapitre 9</strong>, face à Grisaille.</p>
-        </LootBox>
-
-        <LootBox item="Champignon-lanterne">
-          <p className="italic mb-2">"Tu souffles sur les petits champignons en éventail : une poussière argentée s'envole, et l'un d'eux se met à luire d'une douce lumière bleutée. Tu le cueilles : il tient dans la patte comme une mini-lanterne."</p>
-          <p><strong>Effet :</strong> une source de lumière. Au <strong>chapitre 8</strong>, dans le terrier sombre de Grisaille, le frotter l'allume une fois : <strong>+2</strong> à un jet d'infiltration pour voir où l'on met les pattes.</p>
-        </LootBox>
-
-        <ActionBox title="Sur le chemin : Monsieur Blaireau et les lunettes introuvables">
-          <p className="mb-3">Près du vieux pommier, Monsieur Blaireau tourne en rond, le museau collé au sol, en marmonnant sans cesse la même phrase.</p>
-          <p className="italic mb-3">"Je cherche... je cherche... mais je ne sais plus quoi je cherche ! Ah si : mes lunettes ! Je ne vois plus rien sans mes lunettes !"</p>
-          <p className="mb-3">Ses lunettes rondes sont posées bien en évidence... sur son propre nez.</p>
+        <ActionBox title="S'il va voir le blaireau : les lunettes introuvables">
+          <p className="italic mb-3">"Tu t'approches du vieux blaireau. « Je cherche... je cherche... mais je ne sais plus quoi je cherche ! Ah si : mes lunettes ! Je ne vois plus rien sans mes lunettes ! »" Ses lunettes rondes sont posées bien en évidence... sur son propre nez.</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Si l'enfant le lui dit directement :</strong> aucun jet nécessaire. Monsieur Blaireau est ravi pendant deux secondes pile, puis oublie aussitôt et recommence à chercher. C'est triste et un peu drôle en même temps : n'hésitez pas à le jouer avec tendresse plutôt qu'avec moquerie.</li>
-            <li><strong>Si l'enfant tente de le convaincre avec un jet :</strong> <strong>1D20 + Cœur (+5)</strong>, réussite à 8. À la réussite, Monsieur Blaireau garde ses lunettes sur le nez pendant tout le reste de la scène, assez longtemps pour donner un indice utile : « Tiens, en parlant de choses qu'on perd... j'ai vu Mémé Rouquine filer vers le Grand Saule, toute seule, en fredonnant un air que je ne connaissais pas. »</li>
+            <li><strong>Si l'enfant le lui dit directement :</strong> aucun jet nécessaire. Monsieur Blaireau est ravi pendant deux secondes pile, puis oublie aussitôt et recommence à chercher — triste et drôle à la fois, à jouer avec tendresse.</li>
+            <li><strong>Si l'enfant tente de le rassurer avec un jet :</strong> <strong>1D20 + Cœur (+5)</strong>, réussite à 8. À la réussite, le blaireau garde ses lunettes assez longtemps pour lâcher un indice : « Tiens, en parlant de choses qu'on perd... j'ai vu Mémé Rouquine filer vers le Grand Saule, toute seule, en fredonnant un air étrange. »</li>
           </ul>
         </ActionBox>
 
-        <ActionBox title="Un peu plus loin : les deux lapins qui ne se reconnaissent plus">
-          <p className="mb-3">Sur le petit chemin de terre, deux lapins se font face, immobiles, le regard flou. Ce sont Frisette et Grisou, frère et sœur, inséparables depuis toujours. Aujourd'hui, ils se regardent comme deux inconnus.</p>
-          <p className="italic mb-3">Frisette : « Pardon... je crois qu'on ne s'est jamais rencontrés ? » — Grisou : « Non, je ne pense pas, madame. Bonne journée. »</p>
+        <ActionBox title="S'il va voir les lapins : deux inconnus qui s'aimaient">
+          <p className="italic mb-3">"Les deux lapins ne te voient même pas arriver. Ce sont Frisette et Grisou, frère et sœur, inséparables depuis toujours — mais aujourd'hui ils se regardent comme deux étrangers. « Pardon... on s'est déjà rencontrés ? » demande l'un. « Non, je ne crois pas, bonne journée », répond l'autre."</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Leur faire remarquer qu'ils ont la même tache blanche sur l'oreille gauche</strong> (jet de <strong>Flair, 1D20 + 5</strong>, réussite à 9) : les deux lapins se figent, puis éclatent de rire en même temps, le même rire exactement. « Grisou ?! » « FRISETTE ?! » Ils se sautent dessus pour un câlin. Ce souvenir retrouvé redonne une pointe de couleur rose à leurs oreilles pendant quelques secondes — la toute première preuve que l'oubli n'est pas forcément définitif.</li>
-            <li><strong>Sans réussir le jet :</strong> les lapins restent polis et distants, mais remercient le renard d'avoir essayé, et l'un d'eux glisse : « Au fait... vous n'auriez pas vu une vieille dame renarde qui fredonnait tout bas ? Elle est passée par là, vers le grand arbre. »</li>
+            <li><strong>Leur montrer qu'ils ont la même tache blanche sur l'oreille</strong> (<strong>Flair, 1D20 + 5</strong>, réussite à 9) : ils se figent, puis éclatent du même rire. « Grisou ?! » « FRISETTE ?! » Câlin. Une pointe de rose revient sur leurs oreilles — la première preuve que l'oubli n'est pas définitif.</li>
+            <li><strong>Sans réussir :</strong> ils restent polis et distants, mais l'un glisse : « Au fait... une vieille dame renarde qui fredonnait est passée par là, vers le grand arbre. »</li>
           </ul>
         </ActionBox>
 
-        <ActionBox title="Avant le Grand Saule : le garde-manger que Papa Renard ne retrouve plus">
-          <p className="italic mb-3">Un peu plus loin, Papa Renard (le propre père du héros, lui aussi touché par l'oubli) creuse n'importe où dans le jardin, sans méthode, en soufflant de la terre grise dans tous les sens. « J'avais caché nos provisions pour l'hiver... quelque part... sous quelque chose... mais quoi ? Et où ?! »</p>
+        <ActionBox title="S'il rejoint la silhouette qui creuse : c'est Papa Renard">
+          <p className="italic mb-3">"En t'approchant, tu reconnais ton propre papa ! Mais lui ne te reconnaît pas. Il creuse partout, affolé : « J'avais caché nos provisions pour l'hiver... quelque part... sous quelque chose... mais quoi ? Et où ?! »"</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Suivre son propre nez</strong> (le super-pouvoir du héros) : <strong>1D20 + Flair (+5)</strong>, réussite à 10. L'odeur discrète de noisette grillée mène tout droit à la bonne cachette, sous la troisième pierre plate près du pommier.</li>
-            <li><strong>Aider en creusant ensemble</strong> (Courage, 1D20 + 3, réussite à 12) : plus long, mais ça marche aussi.</li>
+            <li><strong>Suivre son propre nez</strong> (ton super-pouvoir) : <strong>1D20 + Flair (+5)</strong>, réussite à 10. L'odeur de noisette grillée mène droit à la cachette, sous la troisième pierre plate.</li>
+            <li><strong>Creuser avec lui</strong> (Courage, 1D20 + 3, réussite à 12) : plus long, mais ça marche aussi.</li>
           </ul>
         </ActionBox>
 
         <LootBox item="3 Noisettes grillées">
-          <p className="italic mb-2">"Sous la pierre, tout un trésor de noisettes bien dorées ! Papa Renard, soulagé sans trop savoir pourquoi, t'ébouriffe la fourrure d'un geste tendre et mécanique, avant de repartir, déjà un peu perdu, vers une autre direction."</p>
-          <p><strong>Effet :</strong> ce sont les 3 noisettes de la fiche de personnage. Chacune mangée pendant un repos ou un combat redonne <strong>3 PV</strong>.</p>
+          <p className="italic mb-2">"Sous la pierre, un petit trésor de noisettes dorées ! Papa Renard, soulagé sans savoir pourquoi, t'ébouriffe la fourrure d'un geste tendre, puis repart, déjà un peu perdu, dans une autre direction."</p>
+          <p><strong>Effet :</strong> les 3 noisettes de la fiche. Chacune mangée (au repos ou en combat) redonne <strong>3 PV</strong>.</p>
+        </LootBox>
+
+        <ActionBox title="S'il fouille l'herbe et les buissons">
+          <p>Trois trouvailles brillent dans la clairière, chacune bien réelle et utile plus tard. L'enfant peut tout prendre, ou juste ce qui l'attire — chaque objet se note dans le sac à dos de sa fiche.</p>
+        </ActionBox>
+
+        <LootBox item="Goutte de rosée (dans une coquille de gland)">
+          <p className="italic mb-2">"Sur une toile d'araignée intacte, chaque perle de rosée te renvoie ton reflet minuscule et renversé. Tu en recueilles une grosse goutte bien fraîche dans une coquille de gland vide."</p>
+          <p><strong>Effet :</strong> une réserve d'eau pure. Au <strong>chapitre 5</strong>, la verser sur les ronces les assouplit : <strong>+3</strong> pour traverser la Ronceraie sans se piquer.</p>
+        </LootBox>
+
+        <LootBox item="Fil de laine rouge">
+          <p className="italic mb-2">"Dans un vieux nid tombé au sol, un unique fil de laine rouge est resté accroché — exactement la couleur de l'écharpe de Mémé. Tu l'enroules autour de ta patte."</p>
+          <p><strong>Effet :</strong> un petit bout de maison. Une fois dans l'aventure, le serrer donne <strong>+2 à un jet de Cœur</strong> — décisif au <strong>chapitre 9</strong>, face à Grisaille.</p>
+        </LootBox>
+
+        <LootBox item="Champignon-lanterne">
+          <p className="italic mb-2">"Tu souffles sur de petits champignons en éventail : une poussière argentée s'envole, et l'un d'eux se met à luire d'une douce lumière bleutée. Tu le cueilles comme une mini-lanterne."</p>
+          <p><strong>Effet :</strong> une source de lumière. Au <strong>chapitre 8</strong>, dans le terrier sombre, le frotter une fois donne <strong>+2</strong> à un jet d'infiltration.</p>
         </LootBox>
 
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
-          La rencontre principale : Mémé Rouquine au pied du Grand Saule
+          Quand l'enfant le décide : Mémé Rouquine au pied du Grand Saule
         </h3>
         <InfoBox title="Profil de Mémé Rouquine">
           <p className="mb-3">Au bout du chemin, sous les longues branches tombantes du Grand Saule, une silhouette familière est assise, immobile, le regard perdu dans le vide gris.</p>
@@ -201,6 +210,17 @@ export default function Part1() {
         <ReadAloud title="La narration à voix haute (si le combat se déclenche) :">
           "Les trois corbeaux tournent la tête vers toi d'un seul mouvement, tous en même temps, comme actionnés par un même fil invisible. « Un renard qui se souvient ? CROÂ ! Interdit ! La patronne n'aime pas ça du tout ! » Dans un envol de plumes grasses et de petite fumée noire, ils s'élancent vers toi, leurs serres tendues en avant. Le vent de leurs ailes sent le feu de cheminée éteint depuis trop longtemps."
         </ReadAloud>
+
+        <HowTo title="Ton tout premier combat : comment ça marche (avec un exemple)">
+          <p className="mb-2">C'est le premier combat de l'aventure. Vous n'avez jamais joué ? Pas de panique, un combat se joue au <strong>tour par tour</strong>, chacun son tour, et il ne faut que <strong>deux dés</strong> : le <strong>D20</strong> (le dé à 20 faces) et le <strong>D6</strong> (le dé à 6 faces, un dé ordinaire). Pas de vrais dés ? Le bouton <strong>🎲</strong> en bas de l'écran les contient tous.</p>
+          <p className="mb-2"><strong>À chaque tour, pour attaquer, deux lancers :</strong></p>
+          <ol className="list-decimal pl-5 space-y-2 mb-2">
+            <li><strong>Est-ce que je touche ?</strong> On lance le <strong>D20</strong> et on ajoute le talent. Si le total atteint la difficulté du monstre (ici <strong>11</strong>), c'est touché.</li>
+            <li><strong>Combien de dégâts ?</strong> Si c'est touché, on lance le <strong>D6</strong> : le résultat est le nombre de points de vie que le monstre perd.</li>
+          </ol>
+          <p className="mb-1"><strong>Exemple complet, pas à pas :</strong></p>
+          <p className="italic">Le renard griffe un corbeau. L'enfant lance le D20 : il fait <strong>9</strong>. Il ajoute son Courage (<strong>+3</strong>) → total <strong>12</strong>. 12, c'est plus que 11 : <strong>touché !</strong> Il lance alors le D6 pour les dégâts : il fait <strong>4</strong>. Le corbeau, qui avait 5 points de vie, n'en a plus qu'<strong>1</strong>. Au tour suivant, une seule égratignure suffira à le faire fuir. Ensuite, c'est au tour des corbeaux d'attaquer, puis de nouveau au héros, et ainsi de suite jusqu'à la fin.</p>
+        </HowTo>
 
         <CombatBox title="Statistiques des ennemis (× 3)">
           <p className="font-bold mb-2">Suie, Charbon et Cendrar (chacun séparément)</p>

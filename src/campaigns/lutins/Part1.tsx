@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox, LootBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, LootBox, HowTo } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -128,6 +128,13 @@ export default function Part1() {
             <li><strong>L'attraper discrètement</strong> (Agilité, réussite à 11) : l'équipe dispose désormais d'une « arme spéciale » pour la bataille : un lancer de confiture collante peut, une fois pendant le combat, empêcher complètement un marmiton d'attaquer pendant un tour entier (il est trop occupé à essayer de se décoller les doigts).</li>
           </ul>
         </ActionBox>
+
+        <HowTo title="Votre première bataille : comment ça marche (avec un exemple)">
+          <p className="mb-2">Jamais joué ? Une bataille se joue <strong>chacun son tour, autour de la table</strong>, et il ne faut qu'un seul dé pour attaquer : le <strong>D20</strong> (le dé à 20 faces — le bouton <strong>🎲</strong> en bas de l'écran le contient). Ici, pas de calcul de dégâts compliqué : il suffit de <strong>toucher</strong> un marmiton <strong>2 fois</strong> pour le mettre hors jeu.</p>
+          <p className="mb-2"><strong>À son tour, un enfant dit ce qu'il fait, puis lance le D20 :</strong> il ajoute <strong>+3</strong> si l'action correspond à son talent. Si le total atteint <strong>10</strong>, c'est touché (une touche de marquée).</p>
+          <p className="mb-1"><strong>Exemple :</strong></p>
+          <p className="italic">C'est le tour de Léa, qui joue l'Acrobate. Elle décide de lancer une boule de farine : elle lance le D20 et fait <strong>8</strong>, +3 d'Agilité → <strong>11</strong>. 11 ≥ 10 : <strong>touché !</strong> Le marmiton a reçu sa première tarte. Encore une touche et il quittera la bataille en riant. Ensuite, c'est au tour du voisin de Léa, et ainsi de suite.</p>
+        </HowTo>
 
         <CombatBox title="La bataille de farine : les lutins marmitons et Dame Louche">
           <p className="font-bold mb-2">Les Marmitons (un par enfant présent à la table) et Dame Louche</p>
