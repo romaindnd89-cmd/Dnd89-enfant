@@ -219,3 +219,72 @@ section[id] {
   to { background-position: 100% 50%; }
 }
 .dragon-hero { filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.35)); }
+
+/* Nuages et étoiles filantes du fond */
+.cloud-drift {
+  left: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.16), rgba(255,255,255,0) 70%);
+  filter: blur(6px);
+  animation: cloud-drift linear infinite;
+  will-change: transform;
+}
+@keyframes cloud-drift {
+  from { transform: translate3d(-40vw, 0, 0); }
+  to { transform: translate3d(130vw, 0, 0); }
+}
+.shooting-star {
+  width: 90px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.95));
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.6);
+  opacity: 0;
+  transform: rotate(30deg);
+  animation: shooting-star ease-out infinite;
+}
+@keyframes shooting-star {
+  0%, 88% { opacity: 0; transform: translate3d(0, 0, 0) rotate(30deg); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(240px, 140px, 0) rotate(30deg); }
+}
+
+/* Dragon des cartes : il flotte, puis s'envole un instant au survol */
+.card-dragon-inner { animation: card-dragon-float 3.4s ease-in-out infinite; transition: transform 0.6s ease; }
+@keyframes card-dragon-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+.group:hover .card-dragon { animation: card-dragon-away 1.6s ease-in-out; }
+@keyframes card-dragon-away {
+  0% { transform: scaleX(-1) translate(0, 0); }
+  45% { transform: scaleX(-1) translate(-30px, -26px) rotate(-12deg); }
+  100% { transform: scaleX(-1) translate(0, 0); }
+}
+
+/* Le bouton de dé se secoue de temps en temps pour dire « lance-moi » */
+.dice-wobble { animation: dice-wobble 7s ease-in-out infinite; }
+@keyframes dice-wobble {
+  0%, 90%, 100% { transform: rotate(0deg) scale(1); }
+  92% { transform: rotate(-14deg) scale(1.08); }
+  94% { transform: rotate(12deg) scale(1.08); }
+  96% { transform: rotate(-8deg) scale(1.04); }
+  98% { transform: rotate(4deg) scale(1.02); }
+}
+
+/* Titres de chapitre : apparition au défilement (navigateurs compatibles) */
+@supports (animation-timeline: view()) {
+  section[id] > h2 {
+    animation: title-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55%;
+  }
+  @keyframes title-in {
+    from { opacity: 0; transform: translateX(-24px); letter-spacing: 0.08em; }
+    to { opacity: 1; transform: none; letter-spacing: normal; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud-drift, .shooting-star, .card-dragon-inner, .dice-wobble { animation: none !important; }
+  section[id] > h2 { animation: none !important; }
+}

@@ -21,6 +21,7 @@ import PortalGate from './components/PortalGate';
 import SparkleCursor from './components/SparkleCursor';
 import FlyingDragons from './components/FlyingDragons';
 import DragonForestBanner from './components/DragonForestBanner';
+import DragonSprite from './components/DragonSprite';
 import TrophyShelf from './components/TrophyShelf';
 import { WORLDS, WorldKey } from './theme/worlds';
 import FantasyScene from './components/FantasyScene';
@@ -405,6 +406,12 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
         <div className="absolute inset-0 ring-1 ring-inset ring-amber-200/10" />
+        {/* Petit dragon qui garde la porte, et qui s'envole quand on approche */}
+        <div className="card-dragon absolute right-3 top-3 pointer-events-none" style={{ transform: 'scaleX(-1)' }} aria-hidden="true">
+          <div className="card-dragon-inner">
+            <DragonSprite size={52} tint={index} speed={0.55 + (index % 3) * 0.1} />
+          </div>
+        </div>
         <h3 className="absolute left-5 right-5 bottom-4 font-display text-xl sm:text-2xl font-bold text-amber-50 tracking-wide leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
           {campaign.title}
         </h3>

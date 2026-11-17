@@ -13,8 +13,8 @@ const COLORS = ['#fbbf24', '#34d399', '#818cf8', '#f472b6', '#38bdf8'];
 
 /**
  * Traînée d'étincelles magiques qui suit le curseur.
- * Désactivée sur écrans tactiles (pas de souris) et si l'utilisateur
- * préfère les animations réduites.
+ * Sur téléphone, chaque toucher lâche une petite gerbe d'étincelles.
+ * Désactivée si l'utilisateur préfère les animations réduites.
  */
 export default function SparkleCursor() {
   const [sparks, setSparks] = useState<Spark[]>([]);
@@ -24,28 +24,39 @@ export default function SparkleCursor() {
   useEffect(() => {
     const fine = window.matchMedia('(pointer: fine)').matches;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!fine || reduced) return;
+    if (reduced) return;
 
-    const onMove = (e: MouseEvent) => {
-      const now = performance.now();
-      if (now - lastRef.current < 45) return; // throttle
-      lastRef.current = now;
+    const spawn = (x: number, y: number, size: number) => {
       const id = idRef.current++;
-      const spark: Spark = {
-        id,
-        x: e.clientX,
-        y: e.clientY,
-        hue: Math.floor(Math.random() * COLORS.length),
-        size: 6 + Math.random() * 8,
-      };
+      const spark: Spark = { id, x, y, hue: Math.floor(Math.random() * COLORS.length), size };
       setSparks((s) => [...s, spark]);
       setTimeout(() => {
         setSparks((s) => s.filter((sp) => sp.id !== id));
       }, 800);
     };
 
-    window.addEventListener('mousemove', onMove);
-    return () => window.removeEventListener('mousemove', onMove);
+    const onMove = (e: MouseEvent) => {
+      const now = performance.now();
+      if (now - lastRef.current < 45) return; // throttle
+      lastRef.current = now;
+      spawn(e.clientX, e.clientY, 6 + Math.random() * 8);
+    };
+
+    // Un toucher (ou un clic) lâche une petite gerbe d'étincelles
+    const onDown = (e: PointerEvent) => {
+      for (let k = 0; k < 7; k++) {
+        const ang = (k / 7) * Math.PI * 2 + Math.random();
+        const r = 10 + Math.random() * 26;
+        spawn(e.clientX + Math.cos(ang) * r, e.clientY + Math.sin(ang) * r, 5 + Math.random() * 7);
+      }
+    };
+
+    if (fine) window.addEventListener('mousemove', onMove);
+    window.addEventListener('pointerdown', onDown);
+    return () => {
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('pointerdown', onDown);
+    };
   }, []);
 
   return (

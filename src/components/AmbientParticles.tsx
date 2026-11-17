@@ -37,6 +37,28 @@ export default function AmbientParticles({ world }: { world: WorldKey }) {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none ambient-particles">
+      {/* Nuages qui dérivent lentement */}
+      {[0, 1, 2].map((c) => (
+        <span
+          key={`c${c}`}
+          className="cloud-drift absolute rounded-full"
+          style={{
+            top: `${10 + c * 22}%`,
+            width: 220 + c * 90,
+            height: 46 + c * 14,
+            animationDuration: `${70 + c * 28}s`,
+            animationDelay: `${-c * 31}s`,
+          }}
+        />
+      ))}
+      {/* Étoiles filantes */}
+      {[0, 1].map((c) => (
+        <span
+          key={`s${c}`}
+          className="shooting-star absolute"
+          style={{ top: `${8 + c * 14}%`, left: `${35 + c * 30}%`, animationDelay: `${c * 6 + 3}s`, animationDuration: `${12 + c * 5}s` }}
+        />
+      ))}
       {items.map((p, i) => {
         if (kind === 'embers') {
           return (

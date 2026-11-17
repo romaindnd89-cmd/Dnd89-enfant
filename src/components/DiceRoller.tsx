@@ -69,7 +69,7 @@ export default function DiceRoller() {
       <motion.button
         onClick={() => setOpen(true)}
         aria-label="Ouvrir le lanceur de dés"
-        className="fixed bottom-5 right-5 z-[60] w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-xl flex items-center justify-center"
+        className="dice-wobble fixed bottom-5 right-5 z-[60] w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-xl flex items-center justify-center"
         whileHover={{ scale: 1.08, rotate: 8 }}
         whileTap={{ scale: 0.92 }}
         animate={{
