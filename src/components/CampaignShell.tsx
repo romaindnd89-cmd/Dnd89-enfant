@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, List, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import MiniDragon, { DRAGON_SKINS } from './MiniDragon';
+import DragonSprite from './DragonSprite';
+import DragonForestBanner from './DragonForestBanner';
 
 export interface ShellSection {
   id: string;
@@ -90,9 +91,9 @@ export default function CampaignShell({
             className="absolute left-0 top-1/2 h-[3px] -mt-px progress-dragon-trail rounded-full"
             style={{ width: '0%' }}
           />
-          <div ref={dragonRef} className="absolute top-0 -ml-5" style={{ left: '0%' }}>
+          <div ref={dragonRef} className="absolute top-0 -ml-6" style={{ left: '0%' }}>
             <div className="dragon-bob">
-              <MiniDragon size={40} skin={DRAGON_SKINS[1]} fireDelay={1} />
+              <DragonSprite size={46} tint={1} speed={0.5} />
             </div>
           </div>
         </div>
@@ -146,6 +147,8 @@ export default function CampaignShell({
       </AnimatePresence>
 
       {children}
+
+      <DragonForestBanner className="mt-4" />
     </div>
   );
 }

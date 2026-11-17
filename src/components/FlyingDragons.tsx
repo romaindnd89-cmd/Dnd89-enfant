@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import MiniDragon, { DRAGON_SKINS } from './MiniDragon';
+import DragonSprite from './DragonSprite';
 
 interface Flyer {
   top: number;     // % de la hauteur
@@ -18,10 +18,10 @@ interface Burst {
 }
 
 const FLYERS: Flyer[] = [
-  { top: 16, size: 44, dur: 26, delay: 2, ltr: true, skin: 0 },
-  { top: 48, size: 34, dur: 34, delay: 12, ltr: false, skin: 1 },
-  { top: 72, size: 40, dur: 30, delay: 22, ltr: true, skin: 2 },
-  { top: 30, size: 28, dur: 40, delay: 30, ltr: false, skin: 3 },
+  { top: 16, size: 72, dur: 26, delay: 2, ltr: true, skin: 0 },
+  { top: 48, size: 56, dur: 34, delay: 12, ltr: false, skin: 1 },
+  { top: 72, size: 64, dur: 30, delay: 22, ltr: true, skin: 2 },
+  { top: 30, size: 48, dur: 40, delay: 30, ltr: false, skin: 3 },
 ];
 
 /**
@@ -83,7 +83,7 @@ export default function FlyingDragons() {
               style={{ transform: f.ltr ? undefined : 'scaleX(-1)' }}
             >
               <div className="dragon-inner">
-                <MiniDragon size={f.size} skin={DRAGON_SKINS[f.skin]} fireDelay={i * 2.3} flapSpeed={0.3 + (i % 3) * 0.06} />
+                <DragonSprite size={f.size} tint={f.skin} speed={0.45 + (i % 3) * 0.08} />
               </div>
             </div>
           </div>

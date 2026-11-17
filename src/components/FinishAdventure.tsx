@@ -25,6 +25,14 @@ export default function FinishAdventure({ trophyId }: { trophyId: string }) {
   return (
     <>
       <div className="my-12 text-center">
+        <motion.img
+          src="/art/dragon-hero.png"
+          alt=""
+          aria-hidden="true"
+          className="dragon-hero mx-auto w-40 sm:w-52 mb-2 select-none"
+          animate={{ y: [0, -12, 0], rotate: [-2, 2, -2] }}
+          transition={{ duration: 3.4, repeat: Infinity, ease: 'easeInOut' }}
+        />
         <motion.button
           onClick={celebrate}
           whileHover={{ scale: 1.04 }}

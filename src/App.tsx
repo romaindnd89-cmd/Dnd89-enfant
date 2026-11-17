@@ -20,6 +20,7 @@ import WorldBackdrop from './components/WorldBackdrop';
 import PortalGate from './components/PortalGate';
 import SparkleCursor from './components/SparkleCursor';
 import FlyingDragons from './components/FlyingDragons';
+import DragonForestBanner from './components/DragonForestBanner';
 import TrophyShelf from './components/TrophyShelf';
 import { WORLDS, WorldKey } from './theme/worlds';
 import FantasyScene from './components/FantasyScene';
@@ -333,6 +334,8 @@ export default function App() {
                       />
                     ))}
                   </div>
+
+                  <DragonForestBanner className="mt-10 -mb-4" />
                 </motion.div>
               )}
 
