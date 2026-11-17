@@ -6,133 +6,168 @@ import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExt
 export default function Part3() {
   return (
     <div className="space-y-12">
+      {/* ============================================================ */}
       {/* CHAPITRE 7 */}
+      {/* ============================================================ */}
       <section>
         <Chapter id="chap7" emoji="🎵" title="CHAPITRE 7 : LA GROTTE AUX ÉCHOS (Le Gland de la Chanson)" />
-
-        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
-          La Scène : La caverne qui répète tout
-        </h3>
-        <p className="mb-4 text-slate-700">
-          À l'intérieur de la grotte, chaque son se répète : « bonjour… bonjour… bonjour… » Au fond, posé sur un rocher, le <strong>Gland de la Chanson</strong> scintille. Mais trois cristaux de couleur gardent le passage : pour avancer, il faut leur chanter la bonne mélodie, dans le bon ordre.
+        <p className="text-slate-500 font-medium mb-8 italic">
+          Lieu : la Grotte aux Échos, nichée entre deux rochers moussus au fond du vallon.<br/>
+          Ambiance : magique et sonore, un peu solennelle — c'est le chapitre de la musique retrouvée.<br/>
+          Durée de jeu conseillée : 20 à 30 minutes, selon le temps passé sur le jeu de mémoire.
         </p>
 
-        <AmbianceBox>
+        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
+          Scène d'ouverture : la caverne qui répète tout ce qu'on lui dit
+        </h3>
+        <p className="mb-4 text-slate-700">
+          À l'intérieur de la grotte, chaque son se répète, encore et encore, de plus en plus doucement, comme si la pierre elle-même n'arrivait pas à se décider à laisser partir les bruits une bonne fois pour toutes.
+        </p>
+
+        <ReadAloud title="La narration à voix haute :">
+          "Tu avances de quelques pas et dis « bonjour » presque pour tester l'endroit. La grotte te répond aussitôt : « bonjour... bonjour... bonjour... » de plus en plus bas, comme une vague de voix qui s'éloigne dans le noir. Lumi glousse de surprise et laisse échapper un petit « hiii ! » que la caverne lui renvoie aussitôt en cascade, ce qui la fait rire encore plus fort.<br/><br/>
+          Les parois sont couvertes de stalactites alignées, hautes et fines comme les tuyaux d'un gigantesque orgue de pierre. Des flaques d'eau parfaitement immobiles reflètent la faible lumière de Lumi comme de petits miroirs noirs. Et là, tout au fond, trois énormes cristaux colorés — un bleu profond, un jaune éclatant, un rouge sombre — sont les seules vraies couleurs de toute la grotte, peut-être même de toute la forêt à cet instant précis.<br/><br/>
+          Entre eux, posé sur un rocher plat comme sur un petit piédestal, le Gland de la Chanson scintille doucement, presque timidement, comme s'il attendait patiemment qu'on vienne le chercher depuis des années."
+        </ReadAloud>
+
+        <AmbianceBox title="Pour planter le décor de la grotte">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> des stalactites alignées comme les tuyaux d'un orgue, des flaques lisses comme des miroirs, et trois gros cristaux (un bleu, un jaune, un rouge) : ce sont les seules couleurs de toute la grotte.</li>
-            <li><strong>Ce qu'on entend :</strong> chaque bruit revient trois fois, de plus en plus doucement. Des gouttes tombent en rythme : ploc… ploc-ploc… ploc.</li>
-            <li><strong>Ce qu'on sent :</strong> la pierre froide et l'eau pure.</li>
-            <li><strong>Comment le jouer :</strong> répétez la fin de vos propres phrases en écho, de plus en plus bas (« Bienvenue… venue… nue… »). Invitez l'enfant à crier son nom pour entendre l'écho : c'est toujours un succès.</li>
-            <li><strong>La voix de la grotte :</strong> douce et chantante. C'est l'écho de tous les animaux qui ont chanté ici autrefois.</li>
+            <li><strong>Ce qu'on voit :</strong> des stalactites alignées comme les tuyaux d'un orgue, des flaques lisses comme des miroirs, et les trois cristaux, seules couleurs de toute la grotte.</li>
+            <li><strong>Ce qu'on entend :</strong> chaque bruit revient en écho, trois fois, de plus en plus doucement. Des gouttes tombent en rythme : ploc… ploc-ploc… ploc, comme une horloge un peu détraquée.</li>
+            <li><strong>Ce qu'on sent :</strong> la pierre froide et l'eau pure, sans aucune autre odeur — c'est presque étrange après tout ce qu'on a senti dans la forêt.</li>
+            <li><strong>Comment le jouer :</strong> répétez systématiquement la fin de vos propres phrases en écho, de plus en plus bas (« Bienvenue… venue… nue… »). Invitez l'enfant à crier son propre nom pour entendre l'écho lui répondre : c'est presque toujours un grand moment de la partie, laissez-lui le temps d'essayer plusieurs fois.</li>
           </ul>
         </AmbianceBox>
 
-        <ReadAloud title="La Narration à voix haute :">
-          "Une voix douce résonne dans la pierre : « Bienvenue, petit renard. La brume a volé la chanson de la forêt. Pour prendre le Gland, tu dois la lui rendre. Écoute bien… et répète. » Les trois cristaux s'allument l'un après l'autre en faisant chacun une note : un <strong>bleu</strong>, un <strong>jaune</strong>, un <strong>rouge</strong>. À toi de les rallumer dans le même ordre en touchant chaque cristal."
+        <InfoBox title="La voix de la grotte elle-même">
+          <p>Une voix douce et chantante, sans corps visible, semble venir des parois elles-mêmes. C'est, en quelque sorte, l'écho de tous les animaux qui ont chanté ici depuis toujours — un gardien immatériel plutôt qu'un vrai personnage, à jouer d'une voix calme et un peu éthérée, presque comme un murmure qui emplirait toute la pièce.</p>
+        </InfoBox>
+
+        <ReadAloud title="Ce que dit la voix de la grotte :">
+          "« Bienvenue, petit renard. » La phrase résonne de partout à la fois, douce comme une berceuse. « La brume grise a volé la chanson de toute la forêt, note après note, jusqu'à ce qu'il n'en reste presque plus rien. Pour prendre le Gland qui dort ici, tu dois d'abord la lui rendre, cette chanson. Écoute bien… et répète, exactement comme tu l'entends. » Les trois cristaux s'allument l'un après l'autre en faisant chacun résonner une note claire et pure : un <strong>bleu</strong>, un <strong>jaune</strong>, un <strong>rouge</strong>. À toi de les faire briller à nouveau, dans le bon ordre, en les touchant un par un."
         </ReadAloud>
 
-        <ActionBox title="Le Jeu de Mémoire (le vrai, pour l'enfant !)">
-          <p className="mb-4">Ce chapitre se joue <strong>pour de vrai</strong> : le MJ fait une petite séquence (couleurs, tapes dans les mains, ou notes) et l'enfant doit la répéter. On augmente la difficulté à chaque étape, comme dans le jeu « Jacques a dit ».</p>
+        <ActionBox title="Le jeu de mémoire (à jouer vraiment, pas juste avec des dés !)">
+          <p className="mb-4">Ce chapitre se joue <strong>pour de vrai</strong>, comme au jeu « Jacques a dit » : le MJ invente une petite séquence (des couleurs à nommer, des tapes dans les mains, des notes chantonnées) et l'enfant doit la répéter fidèlement. On augmente la difficulté à chaque manche.</p>
           <ul className="list-disc pl-5 space-y-2 mb-4">
-            <li><strong>Niveau 1 :</strong> Bleu – Jaune (2 notes).</li>
-            <li><strong>Niveau 2 :</strong> Bleu – Jaune – Rouge (3 notes).</li>
-            <li><strong>Niveau 3 :</strong> Rouge – Bleu – Jaune – Rouge (4 notes).</li>
+            <li><strong>Niveau 1 :</strong> Bleu – Jaune (2 éléments).</li>
+            <li><strong>Niveau 2 :</strong> Bleu – Jaune – Rouge (3 éléments).</li>
+            <li><strong>Niveau 3 :</strong> Rouge – Bleu – Jaune – Rouge (4 éléments).</li>
           </ul>
-          <p className="mb-2">Si l'enfant se trompe, pas de panique : Lumi re-chante la séquence et on recommence. Pour les plus grands, on peut remplacer par un jet de <strong>Flair (1D20 + 5)</strong> à chaque niveau.</p>
-          <p className="italic text-slate-700">
-            Quand les trois cristaux brillent ensemble, ils jouent la vraie <strong>Chanson de Grisefeuille</strong>, et le <strong>Gland de la Chanson</strong> roule jusqu'à tes pattes. 🎶 <strong>Deuxième Gland d'Or récupéré !</strong>
-          </p>
+          <p className="mb-2">Si l'enfant se trompe, aucune pénalité : Lumi re-chante gentiment toute la séquence depuis le début, et on recommence calmement, sans stress ni compte à rebours.</p>
+          <p>Pour les enfants qui préfèrent les dés plutôt que le jeu de mémoire en vrai, on peut remplacer chaque niveau par un simple jet de <strong>Flair (1D20 + 5)</strong>, réussite à 8, 11 puis 14.</p>
         </ActionBox>
 
-        <VictoryBox title="Le Gland de la Chanson (à lire, ou à chanter !)">
-          <p className="italic">"Les trois cristaux s'illuminent ensemble, et toute la grotte se met à chanter. Les stalactites tintent comme des clochettes, les gouttes battent la mesure. Tu reconnais l'air : c'est celui que Mémé Rouquine fredonnait ce matin ! Et cette fois, les paroles reviennent :"</p>
-          <p className="italic text-center font-medium leading-relaxed">
+        <VictoryBox title="Le Gland de la Chanson (à lire, ou mieux encore, à chanter !)">
+          <p className="italic mb-3">"Quand les trois cristaux brillent enfin ensemble, d'une seule et même lumière, ils se mettent à jouer la véritable <strong>Chanson de Grisefeuille</strong> — et tu la reconnais aussitôt, le cœur serré : c'est exactement l'air que fredonnait Mémé Rouquine, ce matin-là, sans même s'en rendre compte. Cette fois, les paroles reviennent, portées par l'écho de toute la grotte :"</p>
+          <p className="italic text-center font-medium leading-relaxed mb-3">
             « Feuille d'or et feuille rousse,<br/>
             Le vent chante et la terre est douce.<br/>
             Qui se souvient n'est jamais seul,<br/>
             Sous le grand chêne et le tilleul. »
           </p>
-          <p><strong>Récompenses :</strong> le <strong>Gland de la Chanson</strong> (2 sur 3). Le renard connaît maintenant la <strong>Chanson de Grisefeuille</strong> : une fois dans l'aventure, la chanter redonne <strong>4 PV</strong> à lui ou à un ami. Elle servira aussi devant Grisaille.</p>
+          <p><strong>Récompenses :</strong> le <strong>Gland de la Chanson</strong> (2 sur 3 !) roule jusque dans les pattes du héros. Il connaît désormais, par cœur, la <strong>Chanson de Grisefeuille</strong> tout entière : une fois dans l'aventure, la chanter à voix haute redonne <strong>4 PV</strong> au héros ou à un ami blessé. Elle servira aussi, plus tard, devant Grisaille elle-même — retenez bien ce détail.</p>
         </VictoryBox>
 
-        <SideQuestBox title="Mi-Bémol, la chauve-souris">
-          <p className="italic">"Au plafond, la tête en bas, une petite chauve-souris chantonne : « Dors, mon petit, la nuit est… la nuit est… oh, zut ! » Elle recommence, et bute toujours au même endroit."</p>
-          <p><strong>Mi-Bémol</strong> (voix aiguë, un peu endormie) a oublié la fin de la berceuse qu'elle chante à ses petits. L'enfant <strong>invente la suite</strong> : n'importe quelle fin convient, surtout si elle rime ou si elle est drôle. Pas de jet de dé.</p>
-          <p><strong>Récompense :</strong> Mi-Bémol connaît toutes les galeries de la colline. Elle montre au renard une entrée secrète du terrier de Grisaille : <strong>+2 à tous les jets d'infiltration du chapitre 8</strong>.</p>
+        <SideQuestBox title="Mi-Bémol, la chauve-souris qui a perdu la fin de sa berceuse">
+          <p className="italic mb-3">"Tout en haut, accrochée la tête en bas au plafond de la grotte, une toute petite chauve-souris chantonne inlassablement : « Dors, mon petit, la nuit est… la nuit est… oh, zut, encore raté ! » Elle recommence depuis le début, bute exactement au même endroit, recommence encore."</p>
+          <p className="mb-3"><strong>Mi-Bémol</strong> (voix aiguë et un peu endormie, comme si elle n'était jamais tout à fait réveillée) a oublié la toute fin de la berceuse qu'elle chante chaque soir à ses petits, blottis quelque part plus haut dans les failles de la grotte.</p>
+          <p className="mb-3">L'enfant <strong>invente lui-même la suite</strong> de la berceuse : n'importe quelle fin convient parfaitement, surtout si elle rime un peu ou fait sourire. Aucun jet de dé n'est nécessaire ici, seulement de l'imagination.</p>
+          <p><strong>Récompense :</strong> ravie, Mi-Bémol explique qu'elle connaît par cœur toutes les galeries creusées sous la colline voisine — y compris certaines que même les habitants du coin ignorent. Elle montre discrètement au héros une entrée secrète menant tout droit vers le terrier de Grisaille : <strong>+2</strong> à tous les jets d'infiltration tentés au chapitre suivant.</p>
         </SideQuestBox>
 
-        <InfoBox title="2 Glands d'Or sur 3 !">
-          <p>En sortant de la grotte, la Feuille d'Or brille maintenant très fort et pointe vers le nord, vers une colline pelée pleine de trous : le <strong>Terrier de Grisaille</strong>. Lumi tremble un peu : « C'est là… c'est là qu'elle garde le dernier Gland. Sois prudent, mon ami. »</p>
+        <InfoBox title="Note pour le MJ — 2 Glands d'Or sur 3 !">
+          <p>En sortant de la grotte, la Feuille d'Or du héros brille maintenant beaucoup plus fort qu'au début de l'aventure, et pointe sans équivoque vers le nord, vers une colline pelée, trouée de partout comme un gigantesque fromage : le <strong>Terrier de Grisaille</strong>. Lumi tremble légèrement en la voyant au loin : « C'est là… c'est bien là-dedans qu'elle garde le dernier Gland. Sois prudent, mon ami. Et surtout, souviens-toi : on ne sait pas encore pourquoi elle fait tout ça. »</p>
         </InfoBox>
       </section>
 
+      {/* ============================================================ */}
       {/* CHAPITRE 8 */}
+      {/* ============================================================ */}
       <section>
         <Chapter id="chap8" emoji="🕳️" title="CHAPITRE 8 : LE TERRIER DE GRISAILLE" />
-
-        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
-          La Scène : Dans les galeries sombres
-        </h3>
-        <p className="mb-4 text-slate-700">
-          Le terrier de la taupe-sorcière est un labyrinthe de tunnels. Des <strong>racines d'ombre</strong> rampent sur les murs, et des petites créatures grises montent la garde. Ici, mieux vaut la <strong>discrétion</strong> que la bagarre. Lumi doit cacher sa lumière dans la fourrure du renard pour ne pas se faire repérer.
+        <p className="text-slate-500 font-medium mb-8 italic">
+          Lieu : le labyrinthe de galeries sous la colline pelée, au nord de la forêt.<br/>
+          Ambiance : feutrée, un peu oppressante, mais jamais vraiment effrayante — on sent déjà, sans le dire, qu'il y a une tristesse cachée là-dessous.<br/>
+          Durée de jeu conseillée : 25 à 35 minutes. C'est le chapitre d'infiltration, le plus long avant le grand final.
         </p>
 
-        <AmbianceBox>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> des tunnels ronds, des racines qui pendent du plafond, quelques champignons qui luisent d'une lumière pâle. Le long des murs, des étagères creusées dans la terre, remplies d'objets perdus : boutons, rubans, une moufle, des dessins d'enfants animaux.</li>
-            <li><strong>Le détail qui compte :</strong> dans une petite pièce, une table est mise pour deux. L'une des tasses est propre. L'autre est couverte de poussière : personne n'est jamais venu. Laissez l'enfant le remarquer, sans l'expliquer.</li>
-            <li><strong>Ce qu'on entend :</strong> des gouttes, les pas mous des Mottes Grises (« flotch… flotch… »), et au loin une voix qui parle toute seule.</li>
-            <li><strong>Ce qu'on sent :</strong> la terre humide et le thé froid.</li>
-            <li><strong>Comment le jouer :</strong> chuchotez. Demandez à l'enfant de chuchoter aussi : s'il parle fort, une Motte tourne la tête.</li>
-            <li><strong>Les Mottes Grises :</strong> elles ne sont pas méchantes, juste obéissantes. Elles parlent peu et lentement (« Qui… va… là ? ») et se laissent facilement distraire.</li>
-          </ul>
-        </AmbianceBox>
+        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
+          Scène d'ouverture : des tunnels qui respirent doucement
+        </h3>
+        <p className="mb-4 text-slate-700">
+          Le terrier de la vieille taupe-sorcière n'est pas un simple trou dans le sol : c'est tout un labyrinthe de galeries rondes, creusées avec une patience infinie au fil des décennies, qui s'enfoncent profondément sous la colline.
+        </p>
 
-        <ReadAloud title="La Narration à voix haute :">
-          "L'air sent la terre humide et le vieux chagrin. Dans la pénombre, tu entends des pas lourds et une voix qui marmonne toute seule : « Personne ne se souvient… alors personne ne se souviendra… voilà, voilà… » Ce sont les gardiens de Grisaille : des <strong>Mottes Grises</strong>, de petits tas de boue animés. Si tu fais trop de bruit, ils donneront l'alerte."
+        <ReadAloud title="La narration à voix haute :">
+          "L'entrée du terrier ressemble à une bouche sombre et ronde, bordée de racines qui pendent comme de longs cheveux emmêlés. L'air qui en sort sent la terre humide et, étrangement, le thé froid — comme si quelqu'un, en bas, buvait sans cesse une tasse qu'il oubliait aussitôt sur une table.<br/><br/>
+          Tu descends prudemment, Lumi cachée tout contre ta fourrure pour ne pas trahir ta présence par sa lumière. Les tunnels sont ronds, tapissés de racines qui pendouillent du plafond bas, et de-ci de-là, quelques champignons phosphorescents diffusent une lueur pâle et fantomatique qui suffit tout juste à distinguer le chemin.<br/><br/>
+          Le long des parois, de petites étagères creusées à même la terre s'alignent, remplies de toutes sortes d'objets trouvés et perdus : boutons dépareillés, rubans décolorés, une seule moufle sans sa paire, et même des dessins d'enfants animaux, griffonnés à la craie sur de l'écorce. On dirait presque un petit musée bricolé, triste et tendre à la fois."
         </ReadAloud>
 
-        <ActionBox title="L'Infiltration : trois passages discrets">
-          <p className="mb-4">Pour atteindre le cœur du terrier, l'enfant doit franchir trois obstacles en silence. À chaque fois, il choisit sa méthode.</p>
-          <ul className="list-disc pl-5 space-y-2 mb-4">
-            <li><strong>Le couloir qui craque :</strong> avancer sans faire de bruit. Lance <strong>1D20 + Agilité (+4)</strong>.</li>
-            <li><strong>Les Mottes Grises endormies :</strong> les contourner, ou les distraire en roulant une noisette au loin (Malice, 1D20 + 3).</li>
-            <li><strong>La porte de racines :</strong> trouver le bon passage grâce à l'odorat (Flair, 1D20 + 5).</li>
-          </ul>
-          <p className="mb-2"><strong>Si l'alerte est donnée</strong> (deux échecs), ce n'est pas perdu : le renard peut souffler dans le <strong>sifflet en gland</strong> ! Les écureuils de Noisette déboulent par les tunnels et font diversion. Place aux retrouvailles et au grand final.</p>
-          <p className="italic text-slate-700">
-            Au bout du dernier tunnel, une grande salle ronde s'ouvre. Au centre, sur un trône de racines, se tient <strong>Grisaille</strong>, la taupe-sorcière. Dans ses pattes brille le dernier Gland d'Or : celui de l'<strong>Amitié</strong>.
-          </p>
+        <AmbianceBox title="Un détail important à glisser, sans l'expliquer">
+          <p className="mb-2">Dans une petite pièce latérale, à mi-chemin, une table toute simple est mise pour deux. L'une des deux tasses posées dessus est propre et semble avoir servi récemment. L'autre est entièrement recouverte d'une fine couche de poussière grise : visiblement, personne ne s'en est jamais servi, pas une seule fois.</p>
+          <p>Laissez l'enfant le remarquer par lui-même s'il explore cette pièce, sans jamais l'expliquer directement. C'est un indice silencieux sur la solitude de Grisaille, qui prendra tout son sens au chapitre 9.</p>
+        </AmbianceBox>
+
+        <ActionBox title="Exploration optionnelle : la petite bibliothèque de Monsieur Lombric">
+          <p className="mb-3">Derrière une toute petite porte ronde, presque invisible dans la pénombre, se cache une minuscule bibliothèque souterraine. Un vieux ver de terre, portant d'étonnantes petites lunettes rondes, range méticuleusement des carnets les uns après les autres. « Chut ! » glisse-t-il sans même lever les yeux. « On ne court pas dans les archives, jeune renard, et on ne parle pas trop fort non plus. »</p>
+          <p className="mb-3"><strong>Monsieur Lombric</strong> (voix pincée, extrêmement poli, presque cérémonieux) garde précieusement les carnets personnels de Grisaille. Si le héros se montre aimable avec lui (<em>1D20 + Cœur +5, réussite à 8</em>) ou prend le temps de l'aider à ranger une pile de carnets qui menace de s'effondrer, il accepte, à contrecœur mais avec émotion, de lui laisser lire une seule page :</p>
+          <p className="italic mb-3 pl-4 border-l-4 border-slate-300">« Cher journal. Aujourd'hui, c'était mon anniversaire. J'ai préparé un gâteau aux racines, tout spécialement, avec la recette de ma propre mère. J'ai même mis deux tasses sur la table, comme chaque année, au cas où. J'ai attendu jusqu'au soir, sans bouger. Personne n'est venu, bien sûr, parce que personne ne sait seulement que j'existe, ici, sous cette colline. Demain, j'essaierai un nouveau sortilège. Peut-être que celui-là marchera mieux. »</p>
+          <p><strong>Récompense :</strong> en lisant ces mots, l'enfant comprend d'un coup, sans qu'on ait besoin de le lui expliquer, pourquoi Grisaille a pu en arriver à lancer la Brume d'Oubli. Au chapitre 9, il gagne <strong>+3</strong> à tous ses jets de Cœur face à elle, et s'il pense à lui souhaiter un bon anniversaire en retard, c'est une <strong>réussite automatique</strong>, quelle que soit l'épreuve en cours à ce moment-là.</p>
         </ActionBox>
 
-        <CombatBox title="Si vraiment ça tourne au combat (gardiens)">
-          <p className="font-bold mb-2">Les Mottes Grises (× 2, seulement si repéré)</p>
+        <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
+          L'infiltration : trois passages à franchir en silence
+        </h3>
+        <p className="mb-4 text-slate-700">
+          Plus on s'enfonce, plus on entend une voix qui marmonne sans cesse, toute seule, dans les profondeurs du terrier. Ce sont les <strong>Mottes Grises</strong>, de petits tas de boue animés que Grisaille a chargés de monter la garde, qui patrouillent lentement dans les derniers couloirs avant la grande salle du trône.
+        </p>
+
+        <InfoBox title="Profil des Mottes Grises (gardiennes obéissantes)">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>PV :</strong> 6 chacune. <strong>CA :</strong> 10.</li>
-            <li><strong>Attaque :</strong> <em>Coup de boue</em> (1D4). Lentes et maladroites.</li>
-            <li><strong>Point faible :</strong> elles se défont dès qu'on les asperge d'eau ou qu'on les fait rouler dans une pente.</li>
+            <li><strong>Apparence :</strong> de petits tas de terre et de boue grise, à peu près de la taille d'un gros chien, sans visage distinct, juste deux trous sombres qui font office d'yeux.</li>
+            <li><strong>Caractère :</strong> pas méchantes du tout, simplement obéissantes jusqu'à l'absurde. Elles parlent peu, très lentement, et se laissent facilement distraire par absolument n'importe quoi.</li>
+            <li><strong>Leur mission :</strong> empêcher quiconque d'atteindre la salle du trône sans prévenir Grisaille — rien de plus, rien de moins.</li>
+          </ul>
+        </InfoBox>
+
+        <ActionBox title="Passage 1 : le couloir qui craque">
+          <p>Un long couloir au sol instable, jonché de petites pierres qui roulent sous la moindre patte posée de travers. <strong>1D20 + Agilité (+4), réussite à 10</strong> pour avancer sans faire de bruit.</p>
+        </ActionBox>
+
+        <ActionBox title="Passage 2 : les Mottes Grises endormies">
+          <p className="mb-2">Deux Mottes somnolent, à moitié affalées contre une paroi, la garde visiblement très relâchée.</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Les contourner en silence :</strong> 1D20 + Agilité (+4), réussite à 11.</li>
+            <li><strong>Les distraire</strong> en faisant rouler une noisette au loin dans un couloir voisin : 1D20 + Malice (+3), réussite à 9. Une méthode plus fiable et plus amusante à décrire.</li>
+          </ul>
+        </ActionBox>
+
+        <ActionBox title="Passage 3 : la porte de racines">
+          <p>Un enchevêtrement de racines pendantes dissimule plusieurs passages possibles, dont un seul mène vraiment vers la salle du trône. <strong>1D20 + Flair (+5), réussite à 10</strong> pour repérer, à l'odeur, le bon chemin — celui qui sent vaguement le thé froid et la cire de bougie.</p>
+        </ActionBox>
+
+        <InfoBox title="Si l'alerte est donnée (deux échecs ou plus)">
+          <p className="mb-2">Rien n'est perdu pour autant : le héros peut souffler dans le <strong>sifflet en gland</strong> obtenu au chapitre 4 ! Un grondement sourd parcourt aussitôt les tunnels : les écureuils de Noisette, répondant à l'appel à travers tout le réseau de galeries, déboulent par dizaines et font une diversion mémorable, chargeant les Mottes Grises à grand renfort de noisettes lancées et de cris de guerre suraigus.</p>
+          <p>Place alors directement à la grande salle, sans combat supplémentaire nécessaire.</p>
+        </InfoBox>
+
+        <CombatBox title="Si vraiment ça tourne au combat (gardiens repérés)">
+          <p className="font-bold mb-2">Les Mottes Grises (× 2, uniquement si le héros est repéré)</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>PV :</strong> 6 chacune. <strong>Difficulté pour les toucher :</strong> 10.</li>
+            <li><strong>Attaque — coup de boue :</strong> 1D4 de dégâts. Lentes et maladroites, elles ratent souvent.</li>
+            <li><strong>Point faible :</strong> elles se défont littéralement en pataugeoire dès qu'on les asperge d'eau ou qu'on les fait rouler dans une pente — un bon jet de Malice (réussite à 9) suffit à les neutraliser d'un coup, sans dégâts des deux côtés.</li>
           </ul>
         </CombatBox>
 
-        <VictoryBox title="Si les Mottes Grises sont vaincues (à lire à voix haute)">
-          <p className="italic">"La dernière Motte vacille, fait « flotch », et s'étale en un petit tas de boue tout à fait ordinaire. Au sommet du tas, il reste un caillou en forme de cœur. C'est tout ce qui la faisait tenir debout. Le tunnel est libre."</p>
-          <p><strong>Butin :</strong> le <strong>caillou-cœur</strong>. Il ne sert à rien en combat, mais c'est un joli cadeau à offrir à quelqu'un de très seul (voir chapitre 9).</p>
-          <p><strong>Si le renard est tombé à 0 PV :</strong> les Mottes le portent jusqu'à la salle du trône et le déposent, tout crotté, aux pieds de Grisaille. L'histoire continue au chapitre 9, avec 3 PV.</p>
-        </VictoryBox>
+        <ReadAloud title="L'arrivée dans la grande salle (à lire pour conclure le chapitre) :">
+          "Au bout du dernier tunnel, enfin, une vaste salle ronde s'ouvre devant toi, bien plus grande que tout ce que tu as traversé jusqu'ici. Au centre, sur un trône entièrement tressé de racines noueuses, une silhouette toute ronde se tient immobile, le dos tourné. Dans ses petites pattes, serré contre elle comme un trésor ou peut-être comme un doudou, brille faiblement — très faiblement — le dernier Gland d'Or : celui de l'<strong>Amitié</strong>."
+        </ReadAloud>
 
-        <VictoryBox title="Si les écureuils arrivent en renfort (à lire à voix haute)">
-          <p className="italic">"Tu souffles dans le sifflet en gland. D'abord, rien. Puis un grondement monte dans les tunnels : des dizaines de petites pattes ! Les écureuils de Noisette déboulent de partout en lançant des noisettes. « Par ici, les tas de boue ! Attrapez-nous si vous pouvez ! » Les Mottes Grises leur courent après, lentement, dans la mauvaise direction. Noisette te fait un clin d'œil : « File, petit renard. On s'occupe du reste ! »"</p>
-        </VictoryBox>
-
-        <SideQuestBox title="Monsieur Lombric et le journal de Grisaille">
-          <p className="italic">"Derrière une petite porte ronde, tu découvres une bibliothèque minuscule. Un ver de terre à lunettes range des carnets, un par un. « Chut ! » dit-il. « On ne court pas dans les archives. »"</p>
-          <p><strong>Monsieur Lombric</strong> (voix pincée, très poli) garde les carnets de Grisaille. Si le renard est aimable avec lui (1D20 + Cœur +5, réussite à 8) ou l'aide à ranger une pile, il lui laisse lire une page :</p>
-          <p className="italic">« Cher journal. Aujourd'hui, c'était mon anniversaire. J'ai fait un gâteau aux racines et j'ai mis deux tasses. J'ai attendu jusqu'au soir. Personne n'est venu, parce que personne ne sait que j'existe. Demain, j'essaierai un nouveau sortilège. »</p>
-          <p><strong>Récompense :</strong> l'enfant comprend pourquoi Grisaille a lancé la Brume d'Oubli. Au chapitre 9, il gagne <strong>+3 à ses jets de Cœur</strong> face à elle, et s'il lui souhaite un bon anniversaire, c'est une <strong>réussite automatique</strong>.</p>
-        </SideQuestBox>
-
-        <InfoBox title="Note pour le MJ — préparer le final">
-          <p>Le chapitre 9 est le cœur de l'histoire. Rappelez-vous : <strong>Grisaille n'est pas une vraie méchante, juste une taupe très seule.</strong> Le combat est possible, mais la vraie victoire est de l'écouter et de lui offrir une amitié. Préparez-vous à jouer l'émotion plutôt que la bagarre.</p>
+        <InfoBox title="Note pour le MJ — préparer le grand final du chapitre 9">
+          <p>Rappelez-vous bien ceci avant d'attaquer le prochain chapitre : <strong>Grisaille n'est pas une vraie méchante, juste une taupe terriblement seule.</strong> Le combat reste possible si l'enfant le souhaite, mais la vraie victoire — celle que l'histoire récompense le mieux — consiste à l'écouter et à lui offrir une véritable amitié. Préparez-vous à jouer l'émotion avant tout, bien plus que la bagarre.</p>
         </InfoBox>
       </section>
     </div>

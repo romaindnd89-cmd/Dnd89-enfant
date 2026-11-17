@@ -6,148 +6,226 @@ import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExt
 export default function Part1() {
   return (
     <div className="space-y-12">
+      {/* ============================================================ */}
       {/* SALLE 1 */}
+      {/* ============================================================ */}
       <section>
         <Chapter id="chap1" emoji="🚪" title="SALLE 1 : LA GRILLE QUI CHATOUILLE" />
-
-        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
-          La scène : l'entrée du château
-        </h3>
-        <p className="mb-4 text-slate-700">
-          Une haute grille de fer forgé barre le chemin. Ses barreaux dessinent des visages qui tirent la langue. Au milieu, une énorme serrure en forme de bouche souriante. Dès qu'on la touche, la grille glousse et se met à chatouiller !
+        <p className="text-slate-500 font-medium mb-8 italic">
+          Lieu : l'entrée fortifiée du château de Chantefarce.<br/>
+          Ambiance : fête foraine un peu décatie, pleine de bonne humeur cachée derrière des airs de mystère.<br/>
+          Durée de jeu conseillée : 10 à 15 minutes. C'est la salle d'ouverture : installez bien le ton léger de toute l'aventure.
         </p>
 
-        <AmbianceBox>
+        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
+          Scène d'ouverture : l'entrée du château
+        </h3>
+        <p className="mb-4 text-slate-700">
+          Le château de Chantefarce se dresse au sommet d'une colline couverte de trèfles, visible de loin grâce à ses tourelles un peu penchées et ses drapeaux à pois multicolores qui claquent joyeusement au vent. Une haute grille de fer forgé en barre pourtant l'entrée, et il va falloir d'abord s'en occuper.
+        </p>
+
+        <ReadAloud title="La narration à voix haute :">
+          "Vous voilà tous réunis devant l'immense grille du château, celle-là même dont parlait l'invitation en lettres tordues. Ses barreaux de fer forgé dessinent des visages grimaçants qui vous tirent la langue chaque fois que le vent souffle un peu plus fort, comme animés d'une vie propre. Au milieu, trônant fièrement, une énorme serrure a été sculptée en forme de grande bouche souriante, toutes dents dehors.<br/><br/>
+          Dès que l'un d'entre vous ose s'approcher pour la toucher, la grille entière se met soudain à frémir, puis à glousser, et enfin à carrément pouffer de rire, dans un grand bruit métallique de ferraille secouée. Elle vous chatouille littéralement, rien qu'en vous voyant approcher ! Au-dessus de vos têtes, perchés dans les douves et sur les créneaux, de petits bonnets rouges à grelots apparaissent furtivement entre les pierres, puis disparaissent aussitôt dans un concert discret de rires étouffés et de « chut, chut, ils vont nous voir ! »."
+        </ReadAloud>
+
+        <AmbianceBox title="Pour planter le décor dès le départ">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> des murs couverts de lierre, des tours un peu penchées, des drapeaux à pois. Aux fenêtres, des bonnets à grelots apparaissent et disparaissent. Sur la grille, une pancarte : « Défense d'entrer sans rire ».</li>
-            <li><strong>Ce qu'on entend :</strong> des grelots, des « chut ! » étouffés, des rires qu'on essaie de retenir.</li>
-            <li><strong>Ce qu'on sent :</strong> le chocolat chaud et la barbe à papa.</li>
-            <li><strong>Comment jouer Grelot,</strong> le lutin portier : petite voix pointue, il parle en rimes quand il y pense, et oublie d'en faire le reste du temps. Il est très fier de son poste et terriblement mauvais pour garder un secret.</li>
+            <li><strong>Ce qu'on voit :</strong> des murs entièrement couverts de lierre fleuri, des tours légèrement penchées comme un peu grises, des drapeaux à pois de toutes les couleurs. Aux fenêtres, des bonnets à grelots surgissent et disparaissent en un éclair. Sur la grille elle-même, une pancarte en bois annonce fièrement : « Défense d'entrer sans rire. Les grincheux feront demi-tour. »</li>
+            <li><strong>Ce qu'on entend :</strong> le tintement incessant de petits grelots, des « chut ! » étouffés qui finissent toujours par un fou rire, et parfois un couinement suraigu de lutin qui se prend lui-même par surprise.</li>
+            <li><strong>Ce qu'on sent :</strong> le chocolat chaud et la barbe à papa, étrangement, alors qu'on ne voit nulle part de quoi les préparer — ça fait partie des petits mystères délicieux du château.</li>
+            <li><strong>Comment jouer Grelot :</strong> petite voix pointue et joyeuse, il parle en rimes quand il y pense, et oublie complètement d'en faire le reste du temps, sans aucune logique apparente.</li>
           </ul>
         </AmbianceBox>
 
-        <ReadAloud title="La narration à voix haute :">
-          "Un bonnet rouge surgit entre deux barreaux. Dessous, un lutin pas plus haut qu'une botte vous regarde de haut en bas. « Halte-là, les grands dadais ! Je suis Grelot, portier du château. Pour entrer, c'est facile comme tout : il faut trouver la clé… et la clé, c'est une réponse ! Si vous vous trompez, ma grille vous chatouille. Si vous trouvez… elle vous chatouille aussi, mais gentiment. Hi hi ! »"
+        <InfoBox title="Profil de Grelot, le lutin portier">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Apparence :</strong> un lutin pas plus haut qu'une botte, coiffé d'un gigantesque bonnet rouge à pompon qui semble peser plus lourd que lui, portant un trousseau de fausses clés qui ne servent absolument à rien.</li>
+            <li><strong>Caractère :</strong> terriblement fier de son poste de portier, qu'il considère comme le plus important du royaume, et absolument catastrophique pour garder le moindre secret — il adore trop parler.</li>
+            <li><strong>Ce qu'il sait :</strong> il connaît par cœur toutes les devinettes du roi Pirouette, qu'il répète en boucle depuis des années sans jamais s'en lasser.</li>
+            <li><strong>Ce qu'il veut vraiment :</strong> qu'on le complimente sur son sens de l'accueil. Un seul mot gentil et il devient d'une complaisance absolue.</li>
+          </ul>
+        </InfoBox>
+
+        <ReadAloud title="Ce que dit Grelot, en surgissant entre deux barreaux :">
+          "Un bonnet rouge surgit brusquement entre deux barreaux, suivi d'un visage tout rond aux joues roses. « Halte-là, les grands dadais ! » lance le petit lutin avec un sérieux tout à fait théâtral. « Je suis Grelot, portier officiel et incontesté de ce château depuis — attendez, je compte — depuis très, très longtemps ! Pour entrer, c'est facile comme tout, foi de lutin : il faut trouver la clé, et la clé, figurez-vous, c'est une réponse ! Si vous vous trompez, ma grille vous chatouille un bon coup. Si vous trouvez juste... elle vous chatouille quand même, hein, mais gentiment cette fois. Hi hi ! »"
         </ReadAloud>
 
-        <ActionBox title="L'épreuve : la devinette de Grelot">
-          <p className="mb-3">Toute l'équipe réfléchit ensemble. C'est le moment d'installer l'entraide : rappelez que chacun peut proposer une idée.</p>
+        <ActionBox title="L'épreuve collective : la devinette de Grelot">
+          <p className="mb-3">Toute l'équipe réfléchit ensemble, à voix haute, en se coupant la parole si besoin — c'est exactement le moment d'installer l'esprit d'entraide qui va porter toute l'aventure. Rappelez bien que chaque enfant peut proposer une idée, même la plus farfelue.</p>
           <ul className="list-disc pl-5 space-y-3 mb-3">
-            <li><strong>Grelot demande :</strong> <em>« J'ai des dents mais je ne mange jamais. Je tourne sans avoir le tournis. Et sans moi, vous restez dehors. Qui suis-je ? »</em></li>
-            <li><strong>Réponse :</strong> une clé.</li>
-            <li><strong>Mauvaise réponse :</strong> la grille chatouille le héros le plus proche. L'équipe perd <strong>1 Rire</strong>, et Grelot donne un indice (« Ça se range dans une poche… ou sous un paillasson ! »).</li>
-            <li><strong>S'ils sèchent :</strong> un jet de <strong>Malice</strong> (1D20, +3 pour le Magicien), réussite à 10 : Grelot laisse échapper la réponse sans faire exprès, puis se couvre la bouche.</li>
+            <li><strong>Grelot demande, en se grattant pensivement le menton :</strong> <em>« J'ai des dents mais je ne mange jamais de gâteau. J'ai un trou mais je ne pleure jamais. Je tourne sans avoir le tournis. Et sans moi, vous restez tous dehors, bien fait pour vous ! Qui suis-je ? »</em></li>
+            <li><strong>Réponse attendue :</strong> une clé.</li>
+            <li><strong>Mauvaise réponse :</strong> la grille chatouille joyeusement le héros le plus proche. L'équipe perd <strong>1 Rire</strong> commun, et Grelot, loin d'être méchant, donne aussitôt un indice tout bête : « Ça se range dans une poche... ou carrément sous un paillasson, si on est tête en l'air ! »</li>
+            <li><strong>S'ils sèchent complètement :</strong> un jet de <strong>Malice</strong> (1D20, +3 pour le Magicien), réussite à 10 : Grelot, trop content de parler, laisse carrément échapper la réponse sans s'en rendre compte, puis se couvre précipitamment la bouche des deux mains.</li>
           </ul>
-          <p><strong>Le piège caché :</strong> un seau de confettis est en équilibre au-dessus de la grille. L'<strong>Éclaireur</strong> peut le repérer avec son pouvoir. Sinon, le premier qui entre lance <strong>1D20 + Agilité</strong> (réussite à 10) pour l'esquiver. Raté : il ressemble à un gâteau d'anniversaire, et l'équipe perd 1 Rire… en riant.</p>
         </ActionBox>
 
-        <VictoryBox>
-          <p className="italic">"« Une clé ! Bravo ! » Grelot tape dans ses mains, et la grosse serrure éclate de rire. La grille s'ouvre toute seule en grinçant un petit air de fanfare. Grelot ôte son bonnet : deux pièces dorées en tombent. « C'est pour vous. Le roi a dit : une salle, des pièces. Mais chut… je ne vous ai pas dit qu'il y en avait six, de salles. Oh, zut. »"</p>
-          <p><strong>Récompense :</strong> <strong>2 pièces en chocolat</strong> pour le trésor de l'équipe.</p>
-        </VictoryBox>
-      </section>
-
-      {/* SALLE 2 */}
-      <section>
-        <Chapter id="chap2" emoji="🥧" title="SALLE 2 : LA CUISINE EN FOLIE" />
-
-        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
-          La scène : la bataille de farine
-        </h3>
-        <p className="mb-4 text-slate-700">
-          La cuisine du château est immense : une cheminée où tiendrait un cheval, des casseroles de cuivre jusqu'au plafond. Sur la table trône un gâteau à trois étages. Tout autour, les <strong>lutins marmitons</strong> ont préparé leurs munitions : des boules de farine et des tartes à la crème.
-        </p>
-
-        <AmbianceBox>
+        <ActionBox title="Le piège caché du seau de confettis">
+          <p className="mb-2">Un gros seau rempli de confettis multicolores est en équilibre précaire tout en haut de la grille, suspendu par une ficelle usée, bien visible si on lève le nez au bon moment.</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> un nuage de farine qui flotte dans la lumière, des traces de petits pieds blancs partout, des louches plantées comme des drapeaux. Les marmitons sont cachés derrière des barricades de sacs de sucre.</li>
-            <li><strong>Ce qu'on entend :</strong> des casseroles qui s'entrechoquent, « Feu à volonté ! », le « pof » des boules de farine.</li>
-            <li><strong>Ce qu'on sent :</strong> le caramel, la vanille et le pain chaud.</li>
-            <li><strong>Comment jouer Dame Louche,</strong> la cheffe : grosse voix autoritaire, elle donne des ordres de général (« Marmitons ! Tartes en position ! »). Elle a un faible : elle ne résiste pas à un compliment sur sa cuisine.</li>
-            <li><strong>Leur tactique :</strong> chaque lutin vise un enfant différent. Un lutin qui rit trop fort lâche ses munitions et quitte la bataille.</li>
+            <li><strong>Le repérer à temps</strong> (l'Éclaireur peut utiliser son pouvoir Œil de Lynx pour une réussite automatique, sinon jet de Malice ou de Flair collectif, réussite à 10) : le groupe esquive le piège en riant d'avance.</li>
+            <li><strong>Si personne ne le repère, ou si on préfère foncer sans réfléchir :</strong> le premier enfant qui pousse la grille déclenche le mécanisme. <em>1D20 + Agilité</em> (réussite à 10) pour esquiver d'un bond de côté. En cas d'échec, celui ou celle qui est touché ressemble soudain à un gâteau d'anniversaire ambulant, couvert de confettis des pieds à la tête — l'équipe perd <strong>1 Rire</strong>, mais tout le monde, y compris la victime, finit généralement par éclater de rire malgré elle.</li>
           </ul>
-        </AmbianceBox>
+        </ActionBox>
 
-        <ReadAloud title="La narration à voix haute :">
-          "Vous poussez la porte… POF ! Une boule de farine explose juste à côté. « Intrus dans ma cuisine ! » tonne une lutine coiffée d'une toque plus grande qu'elle. « Personne ne touche à mon gâteau sans passer par mes marmitons ! » Derrière les sacs de sucre, des petits bras se lèvent, une tarte à la crème dans chaque main."
-        </ReadAloud>
-
-        <CombatBox title="La bataille : les lutins marmitons">
-          <p className="font-bold mb-2">Les Marmitons (un par enfant) et Dame Louche</p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Pour mettre un marmiton hors jeu :</strong> il faut le toucher <strong>2 fois</strong> (Dame Louche : 3 fois). Chaque jet réussi à <strong>10 ou plus</strong> compte pour une touche.</li>
-            <li><strong>Leur attaque :</strong> à la fin de chaque tour de table, le MJ lance <strong>1D6</strong>. Sur 1 ou 2, une tarte fait mouche : l'équipe perd <strong>1 Rire</strong>.</li>
-          </ul>
-          <p className="font-bold mt-3 mb-1">Ce que les héros peuvent faire :</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Lancer une boule de farine</strong> (Agilité).</li>
-            <li><strong>Avancer derrière un couvercle de marmite</strong> pour protéger un ami (Courage) : le prochain 1D6 du MJ est annulé.</li>
-            <li><strong>Jouer un tour</strong> : faire glisser un marmiton sur du beurre, lui retourner sa propre tarte (Malice).</li>
-            <li><strong>Le faire rire ou le complimenter</strong> (Cœur) : une réussite suffit, il sort de la bataille en gloussant.</li>
-          </ul>
-        </CombatBox>
-
-        <VictoryBox>
-          <p className="italic">"Le dernier marmiton s'assoit par terre, plié de rire, de la crème jusqu'aux oreilles. Dame Louche lève sa louche… puis la baisse, et sourit. « Bien joué, les terreurs. Ça faisait longtemps qu'on ne s'était pas autant amusés. » Elle coupe le grand gâteau en parts égales : une pour chaque héros, une pour chaque lutin. Et dans les parts, quelque chose brille."</p>
-          <p><strong>Récompenses :</strong> <strong>3 pièces en chocolat</strong> cachées dans le gâteau, et l'équipe récupère <strong>2 Rires</strong>.</p>
-          <p><strong>Si l'équipe tombe à 0 Rire :</strong> tout le monde est blanc de farine, lutins compris. Dame Louche déclare match nul, exige une grimace de groupe, et rend 3 Rires. Le gâteau est partagé quand même.</p>
+        <VictoryBox title="La grille s'ouvre ! (à lire à voix haute)">
+          <p className="italic mb-3">"« Une clé ! Bravo, bravo, bien joué ! » Grelot tape des deux mains avec un enthousiasme débordant, et la grosse serrure en forme de bouche éclate elle-même de rire, montrant toutes ses dents sculptées dans un grand concert de grincements joyeux. La grille s'ouvre toute seule, lentement, en grinçant un petit air de fanfare bancale, comme si elle jouait exprès une musique d'entrée triomphale, juste pour vous.<br/><br/>
+          Grelot ôte précipitamment son énorme bonnet pour saluer — et deux pièces dorées en tombent directement à vos pieds avec un petit tintement. « C'est pour vous, cadeau de la maison ! Le roi a dit : une salle, des pièces, c'est la règle. Mais chut, surtout, ne répétez à personne qu'il y en a six, des salles, hein... Oh, zut, je viens de le dire moi-même. Doublement zut. »"</p>
+          <p><strong>Récompense :</strong> <strong>2 pièces en chocolat</strong> pour le trésor commun de l'équipe, à déposer tout de suite dans le bol prévu à cet effet.</p>
         </VictoryBox>
 
-        <SideQuestBox title="Monsieur Chaussette, le chat du château">
-          <p className="italic">"Sur le rebord du four tiède, un gros chat gris dort en rond. Sous sa patte, on aperçoit un reflet doré."</p>
-          <p><strong>Monsieur Chaussette</strong> ne parle pas : il bâille, s'étire et ronronne très fort. Pour récupérer la pièce sans le fâcher :</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Le gratter derrière l'oreille</strong> jusqu'à ce qu'il se retourne (Cœur, réussite à 10). L'Ami des bêtes réussit automatiquement.</li>
-            <li><strong>Glisser la main tout doucement</strong> (Agilité, réussite à 12).</li>
-            <li><strong>L'attirer avec un bol de crème</strong> (Malice, réussite à 8).</li>
+        <SideQuestBox title="Le chat de garde qui dort sur l'interrupteur des douves">
+          <p className="italic mb-3">"Juste à côté de la grille, à moitié caché dans une niche de pierre, un gros matou roux ronfle paisiblement, une patte posée mollement sur un étrange levier en bois sculpté en forme de poisson. Une petite plaque, à moitié effacée, indique : « Pont-levis des douves — NE PAS actionner sans la permission du roi. »"</p>
+          <ul className="list-disc pl-5 space-y-1 mb-3">
+            <li>Il n'y a en réalité rien d'obligatoire ici : c'est un détail d'ambiance amusant pour les enfants curieux. S'ils insistent pour actionner le levier malgré l'avertissement (<em>Malice, réussite à 12</em>), le pont-levis s'abaisse dans un grand fracas... sur des douves complètement vides et sèches depuis des années, remplies seulement de pâquerettes. Le chat se réveille en sursaut, bâille longuement, puis se rendort aussitôt, parfaitement indifférent.</li>
           </ul>
-          <p><strong>Récompense :</strong> <strong>1 pièce en chocolat</strong> de plus. En cas d'échec, le chat s'en va dignement en emportant la pièce… puis la laisse tomber à la porte, parce qu'un chat ne mange pas de chocolat.</p>
         </SideQuestBox>
       </section>
 
-      {/* SALLE 3 */}
+      {/* ============================================================ */}
+      {/* SALLE 2 */}
+      {/* ============================================================ */}
       <section>
-        <Chapter id="chap3" emoji="📚" title="SALLE 3 : LA BIBLIOTHÈQUE DES LIVRES VOLANTS" />
-
-        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
-          La scène : des livres qui battent des pages
-        </h3>
-        <p className="mb-4 text-slate-700">
-          Dans la bibliothèque, les livres ne restent pas sur les étagères : ils volent comme des oiseaux, en battant des pages. Le plus gros de tous, le <strong>Grand Livre des Blagues</strong>, tourne en rond tout en haut, sous la coupole. Entre ses pages, deux pièces dorées servent de marque-pages.
+        <Chapter id="chap2" emoji="🥧" title="SALLE 2 : LA CUISINE EN FOLIE" />
+        <p className="text-slate-500 font-medium mb-8 italic">
+          Lieu : les grandes cuisines du château, en pleine effervescence.<br/>
+          Ambiance : bataille de farine joyeuse et bruyante, à jouer comme une vraie scène de film comique.<br/>
+          Durée de jeu conseillée : 20 à 30 minutes. Premier vrai affrontement de l'aventure, pensé pour être chaotique et drôle.
         </p>
 
-        <AmbianceBox>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Ce qu'on voit :</strong> des étagères hautes comme des arbres, des échelles à roulettes, de la poussière qui danse dans les rayons de lumière. Les petits livres volent en bandes, les dictionnaires planent lentement, lourds comme des oies.</li>
-            <li><strong>Ce qu'on entend :</strong> un froissement d'ailes de papier, des « chuuut » venus de nulle part, parfois un livre qui éternue un nuage de poussière.</li>
-            <li><strong>Ce qu'on sent :</strong> le vieux papier, la cire et l'encre.</li>
-            <li><strong>Comment jouer Maître Parchemin,</strong> le lutin bibliothécaire : très vieux, barbe jusqu'aux pieds, sourd comme un pot. Il comprend tout de travers (« Un trésor ? Non merci, je n'ai pas soif ») et chuchote alors que c'est lui qui fait le plus de bruit.</li>
-          </ul>
-        </AmbianceBox>
+        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
+          Scène d'ouverture : la bataille de farine
+        </h3>
+        <p className="mb-4 text-slate-700">
+          Derrière une lourde porte de bois qui sent déjà bon le pain chaud, la cuisine du château s'étend, immense, bien plus grande que n'importe quelle cuisine ordinaire : une cheminée où tiendrait aisément un cheval tout entier, des rangées de casseroles de cuivre qui montent jusqu'au plafond comme des échelles brillantes.
+        </p>
 
         <ReadAloud title="La narration à voix haute :">
-          "Un vieux lutin descend d'une échelle, un doigt sur la bouche. « CHUUUT ! » crie-t-il à tue-tête. « Ici, on ne fait pas de bruit ! Vous voulez le Grand Livre des Blagues ? Il est farouche. Il ne se pose que si on l'apprivoise. Et il ne s'ouvre que si on lui raconte quelque chose de drôle. Bonne chance, les jeunes gens. Comment ? Non, je n'ai pas dit bonne chasse ! »"
+          "Au centre de la pièce trône un gâteau à trois étages, absolument gigantesque, décoré de bougies multicolores qui n'ont jamais été allumées. Tout autour, retranchés derrière de véritables barricades de sacs de sucre et de farine, les lutins marmitons ont préparé leurs munitions avec un sérieux militaire parfaitement comique : des boules de farine bien compactées, et des tartes à la crème entières, prêtes à voler.<br/><br/>
+          Un nuage de farine flotte en permanence dans la lumière poussiéreuse des fenêtres, et le sol est constellé de petites empreintes de pieds blancs qui vont dans tous les sens, preuve d'une agitation sans fin. Au-dessus de chaque barricade, de petites louches en bois dépassent comme des drapeaux de guerre miniatures. Tout au fond, une lutine à la toque gigantesque, bien plus grande que les autres marmitons réunis, surveille le champ de bataille d'un œil d'aigle."
         </ReadAloud>
 
-        <ActionBox title="L'épreuve d'équipe : attraper le Grand Livre">
-          <p className="mb-3">C'est un défi collectif : l'équipe doit obtenir <strong>3 réussites avant 3 échecs</strong>. Chaque enfant propose une action différente, à tour de rôle. Réussite à 10.</p>
-          <ul className="list-disc pl-5 space-y-2 mb-3">
-            <li><strong>Faire la courte échelle</strong> ou porter un ami sur ses épaules (Courage).</li>
-            <li><strong>Grimper aux étagères</strong> ou sauter d'une échelle à l'autre (Agilité).</li>
-            <li><strong>Appâter le livre</strong> avec un beau marque-page, ou bricoler un filet avec un rideau (Malice).</li>
-            <li><strong>Chanter une berceuse</strong> pour calmer les livres, ou leur parler gentiment (Cœur).</li>
+        <InfoBox title="Profil de Dame Louche, cheffe cuisinière du château">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Apparence :</strong> une lutine imposante, coiffée d'une toque blanche au moins trois fois plus haute que sa propre tête, armée en permanence d'une énorme louche en bois qu'elle brandit comme une épée de commandement.</li>
+            <li><strong>Caractère :</strong> grosse voix autoritaire de général en chef, elle donne des ordres de bataille à ses marmitons avec un sérieux absolu — totalement disproportionné pour une bataille de farine, ce qui fait tout le charme comique du personnage.</li>
+            <li><strong>Son point faible secret :</strong> elle ne résiste absolument pas à un compliment sincère sur sa cuisine. Mentionnez-le, et toute son attitude de général change instantanément.</li>
+            <li><strong>Ce qu'elle protège :</strong> le fameux gâteau à trois étages, préparé spécialement pour le concours annuel des farces, qui a lieu justement aujourd'hui.</li>
           </ul>
-          <p className="mb-3"><strong>À chaque échec :</strong> une nuée de petits livres vient chatouiller les héros avec leurs pages. L'équipe perd <strong>1 Rire</strong>.</p>
-          <p><strong>Pour ouvrir le livre (pour de vrai !) :</strong> une fois le livre attrapé, chaque enfant doit raconter une blague, faire une grimace ou imiter un animal. Dès que quelqu'un autour de la table rit, le livre s'ouvre.</p>
+        </InfoBox>
+
+        <ReadAloud title="Ce que dit Dame Louche, en surgissant d'une barricade :">
+          "« Intrus dans MA cuisine ! » tonne la lutine en se redressant de toute sa hauteur. « Personne, mais alors personne, ne touche à mon gâteau sans d'abord passer par mes valeureux marmitons ! Marmitons ! Tartes en position de tir ! » Derrière les sacs de sucre, une dizaine de petits bras se lèvent d'un même mouvement bien entraîné, une tarte à la crème brandie dans chaque main, prêts à faire feu à son signal."
+        </ReadAloud>
+
+        <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
+          Exploration avant la bataille : la réserve secrète
+        </h3>
+        <ActionBox title="Repérer la réserve de munitions de secours (optionnel)">
+          <p className="mb-2">Avant que la bataille ne s'engage pour de bon, un enfant attentif peut remarquer, sur une étagère haute, un pot de confiture particulièrement collant.</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>L'attraper discrètement</strong> (Agilité, réussite à 11) : l'équipe dispose désormais d'une « arme spéciale » pour la bataille : un lancer de confiture collante peut, une fois pendant le combat, empêcher complètement un marmiton d'attaquer pendant un tour entier (il est trop occupé à essayer de se décoller les doigts).</li>
+          </ul>
         </ActionBox>
 
-        <VictoryBox>
-          <p className="italic">"Le Grand Livre des Blagues se pose enfin sur vos genoux, tout tiède, en ronronnant comme un chat. Il s'ouvre dans un éclat de rire, et les deux pièces dorées glissent entre ses pages. Sur la première, quelqu'un a écrit à la plume : « Qu'est-ce qui est jaune et qui attend ? » Maître Parchemin se penche : « Comment ? Un jongleur de dents ? » Et tous les livres de la bibliothèque se mettent à rire en même temps."</p>
-          <p><strong>Récompense :</strong> <strong>2 pièces en chocolat</strong>. (La réponse de la blague : Jonathan. Les lutins la trouvent hilarante.)</p>
+        <CombatBox title="La bataille de farine : les lutins marmitons et Dame Louche">
+          <p className="font-bold mb-2">Les Marmitons (un par enfant présent à la table) et Dame Louche</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Pour mettre un marmiton hors jeu :</strong> il faut le toucher <strong>2 fois</strong> (Dame Louche, elle, en demande <strong>3</strong>). Chaque jet réussi à <strong>10 ou plus</strong> compte pour une touche.</li>
+            <li><strong>Leur attaque, en fin de chaque tour de table :</strong> le MJ lance <strong>1D6</strong>. Sur un résultat de 1 ou 2, une tarte fait mouche sur un héros au hasard : l'équipe perd <strong>1 Rire</strong> commun.</li>
+            <li><strong>Règle spéciale du terrain — le sol glissant :</strong> toute la cuisine est recouverte de farine renversée. Un enfant qui rate un jet d'Agilité (pas seulement d'attaque) glisse comiquement et atterrit sur les fesses, sans aucun dégât, mais sans pouvoir agir ce tour-ci.</li>
+          </ul>
+          <p className="font-bold mt-3 mb-1">Ce que les héros peuvent faire, au choix, à chaque tour :</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Lancer une boule de farine</strong> (Agilité).</li>
+            <li><strong>S'abriter derrière un couvercle de marmite géant</strong> pour protéger un ami (Courage) : le prochain 1D6 du MJ est entièrement annulé.</li>
+            <li><strong>Jouer un bon tour</strong> : faire glisser un marmiton sur une flaque de beurre fondu, ou lui retourner sa propre tarte sur la tête (Malice).</li>
+            <li><strong>Le complimenter ou le faire rire</strong> (Cœur) : une seule réussite suffit à le faire sortir de la bataille, écroulé de rire, totalement inoffensif.</li>
+          </ul>
+        </CombatBox>
+
+        <VictoryBox title="La fin de la bataille (à lire à voix haute)">
+          <p className="italic mb-3">"Le dernier marmiton encore debout finit par s'asseoir par terre, complètement plié de rire, de la crème jusqu'aux oreilles et de la farine jusque dans les sourcils. Dame Louche lève solennellement sa grande louche pour un dernier coup théâtral... puis, finalement, la baisse lentement, et un large sourire fend son visage encore crispé de bataille. « Bien joué, les terreurs. Ça faisait des lunes qu'on ne s'était pas autant amusés, par ici. » Elle découpe alors le grand gâteau en parts parfaitement égales : une pour chaque héros, une pour chaque marmiton fatigué. Et dans certaines parts, quelque chose brille étrangement au milieu de la crème."</p>
+          <p><strong>Récompenses :</strong> <strong>3 pièces en chocolat</strong> cachées astucieusement dans le gâteau, et l'équipe entière récupère <strong>2 Rires</strong> grâce à cette joyeuse réconciliation sucrée.</p>
+          <p><strong>Si l'équipe tombe à 0 Rire pendant la bataille :</strong> tout le monde se retrouve blanc de farine des pieds à la tête, marmitons compris, ce qui est en soi assez drôle pour que Dame Louche déclare spontanément un match nul de bon cœur. Elle exige simplement une grimace de groupe collective avant de rendre généreusement <strong>3 Rires</strong> à l'équipe. Le gâteau est partagé exactement pareil.</p>
+        </VictoryBox>
+
+        <SideQuestBox title="Monsieur Chaussette, le gros chat endormi sur le four">
+          <p className="italic mb-3">"Sur le rebord encore tiède du grand four, un gros chat gris dort paisiblement, roulé en boule parfaite. Sous l'une de ses pattes repliées, on devine, en regardant bien, le reflet discret d'une pièce dorée."</p>
+          <p className="mb-3"><strong>Monsieur Chaussette</strong> ne parle évidemment pas — c'est un chat, après tout — mais il bâille longuement, s'étire avec une lenteur royale, et ronronne très fort dès qu'on s'adresse à lui avec douceur. Pour récupérer discrètement la pièce sans le fâcher ni le réveiller tout à fait :</p>
+          <ul className="list-disc pl-5 space-y-1 mb-3">
+            <li><strong>Le gratter délicatement derrière l'oreille</strong> jusqu'à ce qu'il se retourne de lui-même (Cœur, réussite à 10). L'Ami des bêtes réussit ici automatiquement, quel que soit le jet.</li>
+            <li><strong>Glisser la patte tout doucement</strong> sous sa patte à lui, millimètre par millimètre (Agilité, réussite à 12).</li>
+            <li><strong>L'attirer plus loin avec un petit bol de crème</strong> chipée discrètement sur le gâteau (Malice, réussite à 8).</li>
+          </ul>
+          <p><strong>Récompense :</strong> <strong>1 pièce en chocolat</strong> de plus pour le trésor commun. En cas d'échec, le chat s'en va dignement, sans se presser, en emportant la pièce entre ses dents... avant de la laisser tomber sans façon juste devant la porte, parce qu'un chat, aussi malicieux soit-il, ne mange décidément pas de chocolat.</p>
+        </SideQuestBox>
+      </section>
+
+      {/* ============================================================ */}
+      {/* SALLE 3 */}
+      {/* ============================================================ */}
+      <section>
+        <Chapter id="chap3" emoji="📚" title="SALLE 3 : LA BIBLIOTHÈQUE DES LIVRES VOLANTS" />
+        <p className="text-slate-500 font-medium mb-8 italic">
+          Lieu : la grande bibliothèque ronde du château, sous une coupole de verre.<br/>
+          Ambiance : feutrée et un peu magique, avec juste ce qu'il faut de loufoquerie pour contrebalancer le calme.<br/>
+          Durée de jeu conseillée : 15 à 25 minutes, selon l'énergie comique déployée par les enfants.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
+          Scène d'ouverture : des livres qui battent vraiment des ailes
+        </h3>
+        <p className="mb-4 text-slate-700">
+          Dans la bibliothèque du château, les livres ne restent décidément jamais bien longtemps à leur place sur les étagères : ils volent, par petits groupes, comme des oiseaux de papier, en battant littéralement des pages avec un bruissement caractéristique.
+        </p>
+
+        <ReadAloud title="La narration à voix haute :">
+          "Vous poussez la grande porte sculptée de la bibliothèque, et un froissement général s'élève aussitôt dans la pièce : des dizaines de petits livres de poche s'envolent en escadrille désordonnée, comme un nuage d'oiseaux de papier affolés par votre arrivée. Au-dessus, les gros dictionnaires, bien plus lourds, planent beaucoup plus lentement, avec une majesté un peu pataude, comme de grosses oies un peu fatiguées.<br/><br/>
+          Tout en haut, juste sous la coupole de verre qui laisse entrer une lumière poussiéreuse et dorée, le plus imposant de tous les ouvrages de la bibliothèque tourne en rond sans jamais se poser : c'est le Grand Livre des Blagues en personne, reconnaissable entre mille à sa reliure dorée gravée de petits personnages hilares. Entre ses pages entrouvertes qui battent doucement l'air, on devine deux pièces dorées qui servent, visiblement, de marque-pages depuis des années."
+        </ReadAloud>
+
+        <InfoBox title="Profil de Maître Parchemin, le vieux bibliothécaire">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Apparence :</strong> un lutin très, très âgé, à la barbe si longue qu'elle traîne jusqu'au sol et s'accroche régulièrement dans les roulettes des petites échelles.</li>
+            <li><strong>Caractère :</strong> sourd comme un pot (ce qui est une source infinie de quiproquos comiques) et absolument obsédé par le silence dans sa bibliothèque — alors même qu'il est, sans s'en rendre compte, le plus bruyant de tous les habitants du château.</li>
+            <li><strong>Ses quiproquos favoris :</strong> il comprend systématiquement tout de travers. Si on lui parle d'un « trésor », il propose de l'eau. Si on mentionne une « quête », il répond qu'il n'a pas de question particulière à poser aujourd'hui.</li>
+            <li><strong>Ce qu'il sait vraiment :</strong> malgré ses airs distraits, il connaît par cœur chaque recoin de sa bibliothèque, et sait exactement comment apprivoiser le Grand Livre des Blagues — mais il préfère, par principe, laisser les enfants le découvrir par eux-mêmes.</li>
+          </ul>
+        </InfoBox>
+
+        <ReadAloud title="Ce que dit Maître Parchemin, un doigt sur la bouche :">
+          "Un vieux lutin descend lentement d'une échelle à roulettes, un doigt levé sur ses lèvres ridées. « CHUUUT ! » crie-t-il à tue-tête, de toutes ses forces, apparemment incapable de voir la contradiction. « Ici, on ne fait pas de bruit, jeunes gens ! Vous voulez le Grand Livre des Blagues, c'est bien ça ? Il est farouche comme un chat sauvage, celui-là. Il ne se pose jamais que si on l'apprivoise correctement. Et il ne s'ouvre que si on lui raconte quelque chose de véritablement drôle. Bonne chance, les jeunes gens. Comment ? Non, je n'ai pas dit bonne chasse, voyons, quelle drôle d'idée ! »"
+        </ReadAloud>
+
+        <ActionBox title="L'épreuve d'équipe : attraper le Grand Livre des Blagues">
+          <p className="mb-3">C'est un défi collectif qui se joue en plusieurs manches : l'équipe doit obtenir <strong>3 réussites avant d'accumuler 3 échecs</strong>. Chaque enfant propose une action différente, à tour de rôle, réussite à 10.</p>
+          <ul className="list-disc pl-5 space-y-2 mb-3">
+            <li><strong>Faire la courte échelle</strong> à un ami, ou porter quelqu'un sur ses épaules pour atteindre plus haut (Courage).</li>
+            <li><strong>Grimper agilement aux étagères</strong> ou sauter d'une échelle roulante à l'autre en plein mouvement (Agilité).</li>
+            <li><strong>Appâter le livre</strong> avec un très beau marque-page tout neuf, ou bricoler un filet improvisé avec un vieux rideau poussiéreux (Malice).</li>
+            <li><strong>Chanter une berceuse</strong> pour apaiser les livres affolés, ou simplement leur parler très gentiment, comme à de vrais êtres vivants (Cœur).</li>
+          </ul>
+          <p className="mb-3"><strong>À chaque échec de la manche :</strong> une petite nuée de livres facétieux vient chatouiller les héros avec leurs pages en plein vol. L'équipe perd <strong>1 Rire</strong> commun à chaque fois, mais rien de plus grave.</p>
+          <p><strong>Pour ouvrir le livre une fois attrapé (pour de vrai, cette fois !) :</strong> chaque enfant, à tour de rôle, doit raconter une vraie blague, faire une grimace mémorable ou imiter un animal de son choix. Dès que quelqu'un autour de la table éclate de rire — n'importe qui, même un adulte qui regarde — le livre s'ouvre tout seul dans un grand frisson de pages.</p>
+        </ActionBox>
+
+        <SideQuestBox title="La petite souris bibliothécaire et son dictionnaire perdu">
+          <p className="italic mb-3">"Tout en bas d'une étagère, une minuscule souris grise, des lunettes de lecture sur le bout du nez, tourne en rond d'un air affolé parmi des piles de livres éparpillés. « Mon dictionnaire des synonymes ! Il s'est envolé avec les autres, et sans lui, je ne sais plus du tout comment dire autrement 'catastrophe' ! »"</p>
+          <ul className="list-disc pl-5 space-y-1 mb-3">
+            <li><strong>Retrouver le bon livre</strong> parmi la nuée qui vole encore dans la pièce (Flair, réussite à 11, en reniflant l'encre particulière de ce dictionnaire précis).</li>
+          </ul>
+          <p><strong>Récompense :</strong> ravie, la petite souris griffonne sur un bout de papier une information précieuse glanée dans de vieux almanachs du château : « Au fond de la Galerie des Armures, méfiez-vous du grand escalier. Il n'aime pas qu'on le descende sans prévenir, si vous voyez ce que je veux dire. » L'équipe gagne ainsi un indice utile et un petit <strong>bonus de +2</strong> au prochain jet d'Agilité tenté dans la salle suivante.</p>
+        </SideQuestBox>
+
+        <VictoryBox title="Le livre s'ouvre enfin ! (à lire à voix haute)">
+          <p className="italic mb-3">"Le Grand Livre des Blagues se pose enfin, tout doucement, sur les genoux tendus de l'équipe, encore tiède d'avoir tant volé, et se met à ronronner comme un gros chat satisfait. Il s'ouvre d'un coup dans un grand éclat de rire sonore qui semble venir du papier lui-même, et les deux pièces dorées glissent gentiment entre ses pages pour tomber dans vos mains. Sur la toute première page, quelqu'un a écrit autrefois, à la plume et d'une écriture tremblante : « Qu'est-ce qui est jaune et qui attend patiemment ? » Maître Parchemin, qui vous a suivis sans se presser, se penche par-dessus votre épaule : « Comment ? Un jongleur de dents, dites-vous ? Quelle drôle d'idée, vraiment ! » Et tous les autres livres de la bibliothèque, comme pris d'un fou rire collectif et irrépressible, se mettent à rire en chœur avec vous."</p>
+          <p><strong>Récompense :</strong> <strong>2 pièces en chocolat</strong> pour le trésor commun. (La vraie réponse de la blague, pour ceux qui se posent la question : Jonathan. Les lutins la trouvent absolument hilarante, sans qu'on sache vraiment pourquoi.)</p>
         </VictoryBox>
 
         <InfoBox title="Note pour le MJ — la pause de la mi-temps">
-          <p>Vous êtes à la moitié. Si les enfants s'agitent, c'est le bon moment pour une vraie pause : comptez ensemble les pièces du trésor de l'équipe et cochez les salles terminées dans le sommaire.</p>
+          <p>Vous êtes exactement à la moitié de l'aventure. Si les enfants commencent à s'agiter ou à fatiguer un peu, c'est le moment idéal pour une vraie pause : comptez ensemble, à voix haute, les pièces déjà réunies dans le trésor de l'équipe, et cochez les salles terminées dans le sommaire pour marquer le coup avant de repartir à l'assaut des trois dernières salles.</p>
         </InfoBox>
       </section>
     </div>
