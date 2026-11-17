@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
 
 export default function Part2() {
   return (
@@ -20,9 +20,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : un village sens dessus dessous
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           En haut d'un hêtre si vieux que son tronc pourrait contenir une maison entière, les écureuils de la forêt ont bâti, au fil des générations, un vrai petit village : des maisonnettes creusées dans l'écorce, reliées par des ponts de corde tressée et des toboggans d'écorce lisse. Normalement, c'est l'endroit le plus joyeux et le plus bruyant de toute la forêt. Aujourd'hui, c'est surtout le plus bruyant.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Dès que tu poses la patte sur la première plateforme de bois, une véritable nuée d'écureuils affolés déboule de toutes les maisonnettes à la fois, en couinant si fort que tu dois reculer d'un pas. « Un visiteur ! Au secours ! On a tout oublié ! On va avoir froid ! On va avoir faim tout l'hiver ! » Les petites boules de poils grises tournent en rond, se cognent les unes dans les autres, laissent tomber des brindilles qu'elles ramassaient on ne sait pour quoi faire.<br/><br/>
@@ -53,9 +55,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La grande mission d'entraide : retrouver les provisions d'hiver
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Les écureuils ont caché leurs réserves de noisettes, glands et pommes de pin un peu partout dans et sous le village, comme chaque année. Sauf que cette année, à cause de la brume, plus personne ne se souvient de rien. Sans ces provisions, le village entier passera un hiver affamé.
         </p>
+        </SceneBox>
 
         <ActionBox title="Trois façons d'aider, à combiner ou à choisir">
           <p className="mb-4">Ce chapitre fonctionne comme une petite enquête collective : chaque méthode permet de retrouver une partie des provisions. Plus l'enfant en essaie, plus la fête finale sera belle — mais une seule suffit pour avancer dans l'histoire.</p>
@@ -105,9 +109,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : le labyrinthe d'épines
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           La Ronceraie n'est pas un simple buisson : c'est un véritable labyrinthe végétal, fait de ronces entremêlées aussi hautes qu'un adulte, aux épines longues comme des aiguilles à tricoter. Peu d'animaux osent s'y aventurer, même en période normale.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Tu t'arrêtes devant un mur de ronces si dense qu'on dirait une barrière tissée exprès pour décourager les curieux. Au loin, tout au centre de ce labyrinthe épineux, une petite lueur dorée pulse doucement, comme un cœur qui bat au ralenti — c'est sans doute le Gland du Rire dont parlait Noisette.<br/><br/>
@@ -189,9 +195,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la brume qui monte jusqu'aux genoux
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Pour atteindre la Grotte aux Échos et le deuxième Gland d'Or, il faut traverser un vallon encaissé, encore plus embrumé que le reste de la forêt — comme si la brume elle-même avait décidé de s'y installer pour de bon.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Le sentier plonge entre deux parois rocheuses couvertes de mousse grise, et aussitôt, une brume épaisse comme du coton monte jusqu'à tes genoux, puis jusqu'à ton ventre. Tu n'y vois plus qu'à trois pas devant toi, sauf dans le halo doux que projette Lumi, posée sur ton épaule comme un petit phare tremblant.<br/><br/>

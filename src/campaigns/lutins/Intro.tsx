@@ -26,12 +26,10 @@ export default function Intro() {
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
         Prologue : La légende de Chantefarce
       </h3>
-      <p className="mb-4 text-slate-700">
-        Au sommet d'une colline couverte de trèfles se dresse le vieux <strong>château de Chantefarce</strong>. Plus aucun roi n'y habite depuis longtemps. À la place, il est rempli de <strong>lutins farceurs</strong> : de petits bonshommes hauts comme trois pommes, coiffés de bonnets à grelots, qui passent leurs journées à inventer des blagues.
-      </p>
-      <p className="mb-4 text-slate-700">
+      <ReadAloud title="À lire à voix haute, pour ouvrir le livre :">
+        Au sommet d'une colline couverte de trèfles se dresse le vieux <strong>château de Chantefarce</strong>. Plus aucun roi n'y habite depuis longtemps. À la place, il est rempli de <strong>lutins farceurs</strong> : de petits bonshommes hauts comme trois pommes, coiffés de bonnets à grelots, qui passent leurs journées à inventer des blagues.<br/><br/>
         Leur roi, <strong>Pirouette Iᵉʳ</strong>, possède un trésor fabuleux : un coffre rempli de <strong>pièces d'or en chocolat</strong>. Mais un trésor que personne ne cherche, c'est ennuyeux. Alors les lutins ont caché des pièces dans tout le château, posé des pièges rigolos dans chaque salle, et envoyé une invitation aux enfants les plus courageux du pays : vous !
-      </p>
+      </ReadAloud>
 
       <ReadAloud title="À lire à voix haute pour commencer :">
         "Ce matin, chacun de vous a trouvé sous son oreiller une minuscule enveloppe verte, fermée par un grelot. Dedans, une carte écrite en lettres tordues : « Avis aux courageux ! Le trésor de Chantefarce attend ceux qui sauront rire, ruser et s'entraider. Venez nombreux. Venez ensemble. Signé : le roi Pirouette. P.-S. : Attention où vous mettez les pieds. Hi hi hi ! »<br/><br/>
@@ -67,9 +65,9 @@ export default function Intro() {
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
         Choisir son héros
       </h3>
-      <p className="mb-4 text-slate-700">
-        Chaque enfant choisit un rôle différent (à 6, tous les rôles sont pris ; à 3 ou 4, on choisit ses préférés). Chaque rôle a un <strong>talent</strong> (+3 aux jets qui lui correspondent) et un <strong>pouvoir</strong> utilisable <strong>une fois</strong> dans l'aventure.
-      </p>
+      <InfoBox title="Comment ça marche">
+        <p>Chaque enfant choisit un rôle différent (à 6, tous les rôles sont pris ; à 3 ou 4, on choisit ses préférés). Chaque rôle a un <strong>talent</strong> (+3 aux jets qui lui correspondent) et un <strong>pouvoir</strong> utilisable <strong>une fois</strong> dans l'aventure.</p>
+      </InfoBox>
 
       <CharacterSheet
         heroEmoji="🍀"

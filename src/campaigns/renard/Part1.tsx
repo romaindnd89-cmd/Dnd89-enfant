@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -20,12 +20,14 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : le terrier qui ne sent plus rien
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Le terrier de la famille Renard est creusé sous les racines d'un vieux châtaignier, à trois bonds du ruisseau. D'habitude, à cette heure de la matinée, il sent la mousse tiède, le pain d'écorce que Mémé fait griller, et cette odeur un peu sucrée des feuilles d'automne qui macèrent dehors. C'est l'odeur du foyer. C'est l'odeur qui dit : tout va bien, tu es chez toi.
         </p>
         <p className="mb-4 text-slate-700">
           Ce matin, il n'y a plus d'odeur du tout.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Tu ouvres un œil. Puis l'autre. Il fait étrangement clair dans le terrier, comme si le jour s'était levé trop vite, sans prévenir. Tu te redresses sur tes quatre pattes, et c'est là que tu remarques la première chose bizarre : ta fourrure, d'habitude d'un roux éclatant, a la couleur d'un vieux journal mouillé.<br/><br/>
@@ -45,9 +47,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           Exploration libre : trois rencontres sur le chemin de la clairière
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Avant d'arriver jusqu'à Mémé Rouquine, laissez l'enfant trottiner à son rythme vers la clairière du Grand Saule. Trois petites scènes peuvent se jouer dans l'ordre qu'il veut, ou pas du tout s'il préfère foncer droit au but — rien n'est obligatoire, mais chacune enrichit la suite de l'histoire.
         </p>
+        </SceneBox>
 
         <ActionBox title="Rencontre A : Monsieur Blaireau et les lunettes introuvables">
           <p className="mb-3">Près du vieux pommier, Monsieur Blaireau tourne en rond, le museau collé au sol, en marmonnant sans cesse la même phrase.</p>
@@ -80,9 +84,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           La rencontre principale : Mémé Rouquine au pied du Grand Saule
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Au bout du chemin, sous les longues branches tombantes du Grand Saule, une silhouette familière est assise, immobile, le regard perdu dans le vide gris.
         </p>
+        </SceneBox>
 
         <InfoBox title="Profil de Mémé Rouquine">
           <ul className="list-disc pl-5 space-y-2">
@@ -144,9 +150,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la clairière des épouvantails
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           En suivant le nord comme l'a indiqué Mémé, le héros et Lumi débouchent sur une clairière ronde, autrefois utilisée pour les fêtes des moissons. Aujourd'hui, elle ressemble à un décor de fête qu'on aurait abandonné en pleine nuit.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "La clairière s'ouvre devant vous comme une immense pièce sans toit. De vieux épouvantails de paille montent une garde un peu penchée, leurs chapeaux troués laissant passer le vent avec un sifflement grêle. Entre eux, des citrouilles qui auraient dû être orange sont devenues grises comme des pierres, et certaines, fendues par le temps, laissent échapper un peu de paille humide.<br/><br/>
@@ -166,9 +174,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           Exploration avant le combat : trois façons d'aborder la clairière
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Le combat n'est pas obligé d'éclater tout de suite. Laissez l'enfant observer la scène et proposer une approche — voici trois pistes selon ce qu'il choisit d'essayer.
         </p>
+        </SceneBox>
 
         <ActionBox title="Approche A : l'approche discrète (se faufiler entre les épouvantails)">
           <p className="mb-2">Le héros peut tenter de longer les épouvantails à couvert pour atteindre directement le tas d'objets volés sans se battre.</p>
@@ -259,9 +269,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : un ruisseau qui n'est pas tout à fait silencieux
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Après la clairière, le sentier descend en pente douce vers un ruisseau peu profond, bordé de galets ronds et de hautes herbes grises. C'est un endroit qui, d'ordinaire, chante tout seul.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Le ruisseau murmure, glougloute et... oui, c'est bien ça : il parle ! Pas des mots très clairs, plutôt des bribes qui ressemblent à des conseils marmonnés entre deux clapotis : « par ici... non, pas par là... prudence, petit... »<br/><br/>

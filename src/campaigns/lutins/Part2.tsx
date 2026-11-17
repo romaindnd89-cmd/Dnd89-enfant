@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
 
 export default function Part2() {
   return (
@@ -20,9 +20,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : l'escalier farceur
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Au sortir de la bibliothèque, un grand escalier de pierre monte en spirale vers une longue galerie bordée d'armures. De chaque côté des marches, de vieux portraits de lutins à moustaches extravagantes semblent suivre les visiteurs des yeux avec une attention suspecte.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous vous engagez tous sur le grand escalier, un peu impressionnés par sa hauteur et par les portraits qui vous fixent de chaque côté. Puis, exactement au milieu de la montée, sans le moindre avertissement, les marches s'aplatissent brusquement dans un grand « FLOP ! » sonore. L'escalier tout entier devient, en un clin d'œil, un long toboggan de pierre parfaitement lisse !<br/><br/>
@@ -97,9 +99,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : le labyrinthe des reflets
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           La longue galerie débouche, sans transition, sur une salle parfaitement ronde, entièrement couverte de miroirs du sol au plafond. Certains étirent les silhouettes en hauteur, d'autres les aplatissent comme des crêpes, d'autres encore donnent carrément un nez de carotte à qui ose s'en approcher de trop près.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous entrez tous ensemble dans cette curieuse salle ronde, et aussitôt, des centaines de reflets de vous-mêmes vous entourent de partout à la fois, chacun déformé d'une façon différente et plus ridicule que la précédente. La porte de sortie, celle par laquelle vous devriez logiquement continuer votre chemin, se reflète elle aussi, encore et encore, dans tous les miroirs environnants — mais laquelle, parmi toutes ces portes identiques, est la vraie ?<br/><br/>
@@ -160,9 +164,11 @@ export default function Part2() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la salle du trône
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Derrière la vraie porte, une salle absolument immense s'ouvre devant vous, remplie de centaines de lutins assis sur des gradins improvisés, comme au cirque un jour de grande représentation. Tout au fond, sur un trône fait d'une pile de coussins multicolores soigneusement empilés, trône fièrement le roi Pirouette Iᵉʳ en personne.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "À vos pieds, posé juste devant le trône royal, un coffre absolument gigantesque attend, cerclé de bandes dorées et fermé par trois énormes serrures parfaitement alignées. Sur chacune d'elles, un mot a été gravé avec soin : <strong>RIRE</strong>, <strong>RUSE</strong>, <strong>PARTAGE</strong>. L'air sent délicieusement le chocolat, très fort, beaucoup plus fort que partout ailleurs dans le château — ça vient visiblement du coffre lui-même.<br/><br/>

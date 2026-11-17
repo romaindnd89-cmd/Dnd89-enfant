@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
 
 export default function Part3() {
   return (
@@ -20,9 +20,11 @@ export default function Part3() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la caverne qui répète tout ce qu'on lui dit
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           À l'intérieur de la grotte, chaque son se répète, encore et encore, de plus en plus doucement, comme si la pierre elle-même n'arrivait pas à se décider à laisser partir les bruits une bonne fois pour toutes.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Tu avances de quelques pas et dis « bonjour » presque pour tester l'endroit. La grotte te répond aussitôt : « bonjour... bonjour... bonjour... » de plus en plus bas, comme une vague de voix qui s'éloigne dans le noir. Lumi glousse de surprise et laisse échapper un petit « hiii ! » que la caverne lui renvoie aussitôt en cascade, ce qui la fait rire encore plus fort.<br/><br/>
@@ -95,9 +97,11 @@ export default function Part3() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : des tunnels qui respirent doucement
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Le terrier de la vieille taupe-sorcière n'est pas un simple trou dans le sol : c'est tout un labyrinthe de galeries rondes, creusées avec une patience infinie au fil des décennies, qui s'enfoncent profondément sous la colline.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "L'entrée du terrier ressemble à une bouche sombre et ronde, bordée de racines qui pendent comme de longs cheveux emmêlés. L'air qui en sort sent la terre humide et, étrangement, le thé froid — comme si quelqu'un, en bas, buvait sans cesse une tasse qu'il oubliait aussitôt sur une table.<br/><br/>
@@ -120,9 +124,11 @@ export default function Part3() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           L'infiltration : trois passages à franchir en silence
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Plus on s'enfonce, plus on entend une voix qui marmonne sans cesse, toute seule, dans les profondeurs du terrier. Ce sont les <strong>Mottes Grises</strong>, de petits tas de boue animés que Grisaille a chargés de monter la garde, qui patrouillent lentement dans les derniers couloirs avant la grande salle du trône.
         </p>
+        </SceneBox>
 
         <InfoBox title="Profil des Mottes Grises (gardiennes obéissantes)">
           <ul className="list-disc pl-5 space-y-2">

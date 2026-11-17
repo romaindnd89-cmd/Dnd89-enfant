@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
 
 export default function Part1() {
   return (
@@ -20,9 +20,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : l'entrée du château
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Le château de Chantefarce se dresse au sommet d'une colline couverte de trèfles, visible de loin grâce à ses tourelles un peu penchées et ses drapeaux à pois multicolores qui claquent joyeusement au vent. Une haute grille de fer forgé en barre pourtant l'entrée, et il va falloir d'abord s'en occuper.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous voilà tous réunis devant l'immense grille du château, celle-là même dont parlait l'invitation en lettres tordues. Ses barreaux de fer forgé dessinent des visages grimaçants qui vous tirent la langue chaque fois que le vent souffle un peu plus fort, comme animés d'une vie propre. Au milieu, trônant fièrement, une énorme serrure a été sculptée en forme de grande bouche souriante, toutes dents dehors.<br/><br/>
@@ -97,9 +99,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la bataille de farine
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Derrière une lourde porte de bois qui sent déjà bon le pain chaud, la cuisine du château s'étend, immense, bien plus grande que n'importe quelle cuisine ordinaire : une cheminée où tiendrait aisément un cheval tout entier, des rangées de casseroles de cuivre qui montent jusqu'au plafond comme des échelles brillantes.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Au centre de la pièce trône un gâteau à trois étages, absolument gigantesque, décoré de bougies multicolores qui n'ont jamais été allumées. Tout autour, retranchés derrière de véritables barricades de sacs de sucre et de farine, les lutins marmitons ont préparé leurs munitions avec un sérieux militaire parfaitement comique : des boules de farine bien compactées, et des tartes à la crème entières, prêtes à voler.<br/><br/>
@@ -177,9 +181,11 @@ export default function Part1() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : des livres qui battent vraiment des ailes
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Dans la bibliothèque du château, les livres ne restent décidément jamais bien longtemps à leur place sur les étagères : ils volent, par petits groupes, comme des oiseaux de papier, en battant littéralement des pages avec un bruissement caractéristique.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Vous poussez la grande porte sculptée de la bibliothèque, et un froissement général s'élève aussitôt dans la pièce : des dizaines de petits livres de poche s'envolent en escadrille désordonnée, comme un nuage d'oiseaux de papier affolés par votre arrivée. Au-dessus, les gros dictionnaires, bien plus lourds, planent beaucoup plus lentement, avec une majesté un peu pataude, comme de grosses oies un peu fatiguées.<br/><br/>

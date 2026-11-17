@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 import { Chapter } from '../../components/CampaignLayout';
-import { AmbianceBox, VictoryBox, SideQuestBox } from '../../components/StoryExtras';
+import { AmbianceBox, VictoryBox, SideQuestBox, SceneBox } from '../../components/StoryExtras';
 
 export default function Part4() {
   return (
@@ -20,9 +20,11 @@ export default function Part4() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la salle du trône de racines
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Grisaille se retourne enfin, lentement, comme si elle avait tout son temps — ou comme si, au fond, plus rien ne pressait vraiment pour elle depuis longtemps.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Grisaille est une vieille taupe toute ronde, enveloppée dans une cape de brume qui semble faite du même gris que tout ce qu'elle a volé à la forêt. De grosses lunettes rondes, bien trop grandes pour son petit museau, glissent sans cesse sur son nez. Quand elle te voit enfin bien en face, elle se redresse d'un coup sur son trône, et autour d'elle, de fines racines sombres se dressent comme des tentacules menaçants, prêtes à réagir au moindre geste brusque.<br/><br/>
@@ -51,9 +53,11 @@ export default function Part4() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">
           Le vrai chemin de l'aventure : offrir son amitié à Grisaille
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           C'est ici que se révèle tout le secret de l'histoire. Le héros n'a nul besoin de se battre : il doit simplement montrer à Grisaille qu'on peut se souvenir d'elle, pour de vrai, sans qu'elle ait besoin de jeter le moindre sortilège pour qu'on la remarque. Encouragez vivement l'enfant à trouver, par lui-même, un geste gentil parmi ceux qui suivent — ou à en inventer un autre tout seul, encore mieux.
         </p>
+        </SceneBox>
 
         <ActionBox title="Les gestes qui peuvent tout changer (l'enfant peut en tenter plusieurs)">
           <ul className="list-disc pl-5 space-y-3">
@@ -101,9 +105,11 @@ export default function Part4() {
         <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
           Scène d'ouverture : la course contre les premiers flocons
         </h3>
+        <SceneBox>
         <p className="mb-4 text-slate-700">
           Les trois Glands d'Or sont enfin réunis. Mais dehors, dans le ciel gris, les tout premiers flocons commencent déjà à tomber, timides d'abord, puis de plus en plus nombreux. Il faut courir, vite, jusqu'au Grand Chêne-Mémoire, avant que la neige ne recouvre tout et ne scelle l'oubli pour de bon.
         </p>
+        </SceneBox>
 
         <ReadAloud title="La narration à voix haute :">
           "Tu jaillis hors du terrier dans un grand bond, les trois Glands d'Or serrés précieusement contre toi, Lumi en éclaireuse juste devant ton museau, Piquillon roulé en boule bien calé sur ton dos, et Grisaille qui trottine courageusement sur tes talons malgré ses petites pattes de taupe peu habituées à la course en plein air. La forêt est encore grise tout autour de vous, et de gros flocons blancs tombent de plus en plus vite, de plus en plus serrés.<br/><br/>
