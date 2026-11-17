@@ -207,19 +207,21 @@ export default function App() {
       <header className="bg-slate-950/55 backdrop-blur-xl border-b border-amber-200/15 sticky top-0 z-50 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.8)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <button className="flex items-center gap-3 text-left" onClick={goHome}>
-            <motion.div
-              className="logo-wiggle w-12 h-12 rounded-full flex items-center justify-center text-2xl border border-amber-300/50 bg-slate-900/60"
+            <motion.img
+              src="/art/dragon-front.png"
+              alt=""
+              aria-hidden="true"
+              draggable={false}
+              className="logo-wiggle w-14 h-14 object-contain select-none shrink-0"
               animate={{
-                boxShadow: [
-                  '0 0 14px 2px rgba(251,191,36,0.25)',
-                  '0 0 26px 4px rgba(251,191,36,0.5)',
-                  '0 0 14px 2px rgba(251,191,36,0.25)',
+                filter: [
+                  'drop-shadow(0 0 6px rgba(251,191,36,0.35))',
+                  'drop-shadow(0 0 14px rgba(251,191,36,0.85))',
+                  'drop-shadow(0 0 6px rgba(251,191,36,0.35))',
                 ],
               }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              🐉
-            </motion.div>
+            />
             <span className="font-display text-xl sm:text-2xl font-bold tracking-wide text-amber-50 drop-shadow-[0_2px_8px_rgba(251,191,36,0.35)]">
               Dnd89 <span className="text-amber-300">&</span> Dragons
             </span>
