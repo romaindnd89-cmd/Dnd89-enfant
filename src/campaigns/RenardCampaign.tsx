@@ -7,6 +7,7 @@ import Part2 from './renard/Part2';
 import Part3 from './renard/Part3';
 import Part4 from './renard/Part4';
 import Epilogue from './renard/Epilogue';
+import FinishAdventure from '../components/FinishAdventure';
 
 const chapters: ChapterRef[] = [
   { id: 'intro', label: '📖 Prologue & Fiche' },
@@ -87,6 +88,7 @@ export default function RenardCampaign({ onBack }: { onBack: () => void }) {
         <Part3 />
         <Part4 />
         <Epilogue />
+        <FinishAdventure trophyId="renard" />
       </div>
     </CampaignLayout>
   );

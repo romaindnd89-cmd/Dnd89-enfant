@@ -8,6 +8,7 @@ import Part2 from './etoile/Part2';
 import Part3 from './etoile/Part3';
 import Part4 from './etoile/Part4';
 import Epilogue from './etoile/Epilogue';
+import FinishAdventure from '../components/FinishAdventure';
 
 export default function EtoileCampaign({ onBack }: { onBack: () => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -129,6 +130,7 @@ export default function EtoileCampaign({ onBack }: { onBack: () => void }) {
         <Part3 />
         <Part4 />
         <Epilogue />
+        <FinishAdventure trophyId="etoile" />
       </div>
     </div>
   );

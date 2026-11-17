@@ -8,6 +8,7 @@ import Chapitre2 from './moustaches/Chapitre2';
 import Chapitre3 from './moustaches/Chapitre3';
 import Chapitre4 from './moustaches/Chapitre4';
 import Illustrations from './moustaches/Illustrations';
+import FinishAdventure from '../components/FinishAdventure';
 
 export default function RoyaumeDesMoustaches({ onBack }: { onBack: () => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -117,6 +118,7 @@ export default function RoyaumeDesMoustaches({ onBack }: { onBack: () => void })
         <Chapitre3 />
         <Chapitre4 />
         <Illustrations />
+        <FinishAdventure trophyId="moustaches" />
       </div>
     </div>
   );

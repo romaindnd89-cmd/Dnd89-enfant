@@ -7,6 +7,7 @@ import Part1 from './aube/Part1';
 import Part2 from './aube/Part2';
 import Part3 from './aube/Part3';
 import Part4 from './aube/Part4';
+import FinishAdventure from '../components/FinishAdventure';
 
 export default function AubeCampaign({ onBack }: { onBack: () => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -133,6 +134,7 @@ export default function AubeCampaign({ onBack }: { onBack: () => void }) {
         <Part2 />
         <Part3 />
         <Part4 />
+        <FinishAdventure trophyId="aube" />
       </div>
     </div>
   );

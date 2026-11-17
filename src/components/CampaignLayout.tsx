@@ -1,7 +1,11 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { ArrowLeft, List, X, Check, CheckCircle2, Circle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useProgress } from '../hooks/useProgress';
+import { useTrophies } from '../hooks/useTrophies';
+import { TROPHIES, TrophyDef } from '../data/trophies';
+import { bigCelebration } from '../lib/celebrate';
+import TrophyModal from './TrophyModal';
 
 export interface ChapterRef {
   id: string;
@@ -45,12 +49,31 @@ export default function CampaignLayout({
   onBack,
   children,
 }: CampaignLayoutProps) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDone, toggle, done, reset } = useProgress(campaignId);
+  const { award } = useTrophies();
+  const [trophy, setTrophy] = useState<TrophyDef | null>(null);
+  const celebratedRef = useRef(false);
 
   const total = chapters.length;
   const completed = chapters.filter((c) => done.includes(c.id)).length;
   const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+  // Fin d'aventure : tous les chapitres cochés → confettis + trophée
+  useEffect(() => {
+    if (total > 0 && completed === total && !celebratedRef.current) {
+      celebratedRef.current = true;
+      const def = TROPHIES[campaignId];
+      if (def && award(def.id)) {
+        bigCelebration();
+        setTrophy(def);
+      }
+    }
+    // si on décoche, on réarme la célébration pour la prochaine fois
+    if (completed < total) {
+      celebratedRef.current = false;
+    }
+  }, [completed, total, campaignId, award]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -178,6 +201,10 @@ export default function CampaignLayout({
 
         {children}
       </div>
+
+      <AnimatePresence>
+        {trophy && <TrophyModal trophy={trophy} onClose={() => setTrophy(null)} />}
+      </AnimatePresence>
     </Ctx.Provider>
   );
 }

@@ -13,7 +13,10 @@ import AubeCampaign from './campaigns/AubeCampaign';
 import RenardCampaign from './campaigns/RenardCampaign';
 import ParentGuide from './components/ParentGuide';
 import DiceRoller from './components/DiceRoller';
+import DragonHelper from './components/DragonHelper';
 import GlowBackground from './components/GlowBackground';
+import SparkleCursor from './components/SparkleCursor';
+import TrophyShelf from './components/TrophyShelf';
 import { readProgressCount } from './hooks/useProgress';
 
 type AgeGroup = 'kids' | 'normal' | 'expert';
@@ -120,7 +123,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-transparent font-sans selection:bg-emerald-200 selection:text-emerald-900">
       <GlowBackground />
+      <SparkleCursor />
       <DiceRoller />
+      <DragonHelper />
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -253,8 +258,8 @@ export default function App() {
                       className="space-y-8"
                     >
                       <div className="text-center max-w-2xl mx-auto mb-12">
-                        <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-                          Bienvenue dans le Repaire des Petits Dragons ! ✨
+                        <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
+                          <span className="shiny-title">Bienvenue dans le Repaire des Petits Dragons !</span> ✨
                         </h2>
                         <p className="text-lg text-slate-600 font-medium">
                           Des aventures douces, colorées et pleines de magie, spécialement conçues pour initier les plus jeunes (5-8 ans) au jeu de rôle.
@@ -277,6 +282,8 @@ export default function App() {
                         <ChevronRight className="w-8 h-8 opacity-50 group-hover:opacity-100 transition-opacity hidden sm:block" />
                       </button>
 
+                      <TrophyShelf />
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {kidsCampaigns.map((campaign, index) => (
                           <motion.div
@@ -292,6 +299,7 @@ export default function App() {
                                 Bientôt
                               </div>
                             )}
+                            <div className="card-shine pointer-events-none absolute inset-0 rounded-3xl z-[5]" />
                             <div className="absolute -right-6 -top-6 text-8xl opacity-40 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500 pointer-events-none">
                               {Array.from(campaign.emoji)[0]}
                             </div>

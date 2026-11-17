@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useEffect } from 'react';
+import { motion, useMotionValue, useSpring } from 'motion/react';
 
 /**
  * Fond lumineux animé et doux : des halos de couleur qui flottent
@@ -25,10 +25,50 @@ const defaultOrbs: Orb[] = [
 ];
 
 export default function GlowBackground({ orbs = defaultOrbs }: { orbs?: Orb[] }) {
+  // Halo lumineux qui suit la souris (adouci par un ressort)
+  const mx = useMotionValue(-1000);
+  const my = useMotionValue(-1000);
+  const sx = useSpring(mx, { damping: 30, stiffness: 120 });
+  const sy = useSpring(my, { damping: 30, stiffness: 120 });
+
+  useEffect(() => {
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    const onMove = (e: MouseEvent) => {
+      mx.set(e.clientX);
+      my.set(e.clientY);
+    };
+    window.addEventListener('mousemove', onMove);
+    return () => window.removeEventListener('mousemove', onMove);
+  }, [mx, my]);
+
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Voile dégradé de base */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-emerald-50/40" />
+
+      {/* Aurore mouvante */}
+      <motion.div
+        className="absolute -inset-1/4 opacity-40"
+        style={{
+          background:
+            'conic-gradient(from 0deg at 50% 50%, #c7d2fe, #bbf7d0, #fde68a, #fbcfe8, #bae6fd, #c7d2fe)',
+          filter: 'blur(90px)',
+        }}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+      />
+
+      {/* Halo qui suit la souris */}
+      <motion.div
+        className="absolute w-[380px] h-[380px] rounded-full"
+        style={{
+          x: sx,
+          y: sy,
+          marginLeft: -190,
+          marginTop: -190,
+          background: 'radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 70%)',
+        }}
+      />
 
       {orbs.map((orb, i) => (
         <motion.div

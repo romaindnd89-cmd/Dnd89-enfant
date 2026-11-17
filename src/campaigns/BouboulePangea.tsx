@@ -8,6 +8,7 @@ import Chapitre3 from './bouboule/Chapitre3';
 import Chapitre4 from './bouboule/Chapitre4';
 import Chapitre5 from './bouboule/Chapitre5';
 import Epilogue from './bouboule/Epilogue';
+import FinishAdventure from '../components/FinishAdventure';
 
 export default function BouboulePangea({ onBack }: { onBack: () => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,6 +104,7 @@ export default function BouboulePangea({ onBack }: { onBack: () => void }) {
         <Chapitre4 />
         <Chapitre5 />
         <Epilogue />
+        <FinishAdventure trophyId="bouboule" />
       </div>
     </div>
   );
