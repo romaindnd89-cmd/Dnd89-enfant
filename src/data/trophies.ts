@@ -16,6 +16,14 @@ export const TROPHIES: Record<string, TrophyDef> = {
     gradient: 'from-amber-400 to-orange-600',
     message: "Tu as rapporté les 3 Glands d'Or et rendu ses couleurs à la forêt. Quel héros !",
   },
+  lutins: {
+    id: 'lutins',
+    title: 'Rois de la Farce',
+    adventure: 'Le Trésor des Lutins Farceurs',
+    emoji: '🍫',
+    gradient: 'from-emerald-400 to-teal-600',
+    message: 'Vous avez déjoué tous les pièges des lutins, et surtout, vous avez partagé le trésor. Bravo à toute l\'équipe !',
+  },
   moustaches: {
     id: 'moustaches',
     title: 'Héros de Miaou-Ville',

@@ -30,6 +30,12 @@ interface CharacterSheetProps {
   hp: number;
   abilities: { name: string; desc: string }[];
   startItems: string[];
+  /** Zone de dessin plus petite à l'impression, pour les fiches qui ont beaucoup de texte */
+  compactPrint?: boolean;
+  /** Libellés personnalisables (par défaut : points de vie / PV / Mes pouvoirs) */
+  hpLabel?: string;
+  hpUnit?: string;
+  abilitiesLabel?: string;
 }
 
 /**
@@ -50,6 +56,10 @@ export default function CharacterSheet({
   hp,
   abilities,
   startItems,
+  compactPrint,
+  hpLabel = 'Points de vie',
+  hpUnit = 'PV',
+  abilitiesLabel = 'Mes pouvoirs',
 }: CharacterSheetProps) {
   const sheetRef = useRef<HTMLDivElement>(null);
 
@@ -95,7 +105,7 @@ export default function CharacterSheet({
           {/* Portrait à dessiner */}
           <div>
             <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2 print:mb-1">Mon portrait (à dessiner)</p>
-            <div className="h-32 print:h-72 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 flex items-center justify-center text-slate-300 text-4xl">
+            <div className={`h-32 ${compactPrint ? 'print:h-40' : 'print:h-72'} rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 flex items-center justify-center text-slate-300 text-4xl`}>
               <span className="print:hidden">✏️</span>
             </div>
           </div>
@@ -117,19 +127,19 @@ export default function CharacterSheet({
 
           {/* Points de vie */}
           <div className="flex items-center gap-3 flex-wrap">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wide">Points de vie</span>
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wide">{hpLabel}</span>
             <div className="flex items-center gap-1">
               {Array.from({ length: hp }).map((_, i) => (
                 <Heart key={i} className="w-6 h-6 print:w-5 print:h-5 text-rose-400 fill-rose-400" />
               ))}
             </div>
-            <span className="font-display font-bold text-rose-500">{hp} PV</span>
+            <span className="font-display font-bold text-rose-500">{hp} {hpUnit}</span>
           </div>
 
           {/* Capacités spéciales */}
           <div>
             <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2 print:mb-1 flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5" /> Mes pouvoirs
+              <Sparkles className="w-3.5 h-3.5" /> {abilitiesLabel}
             </p>
             <div className="space-y-2 print:space-y-1">
               {abilities.map((a) => (
