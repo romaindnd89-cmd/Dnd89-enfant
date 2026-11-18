@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox, ActionBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -21,9 +20,7 @@ export default function Intro() {
         LIVRE D'AVENTURE : LE TRÉSOR DES LUTINS FARCEURS
       </h2>
 
-      <ReadingLegend />
-
-      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+      <InfoBox title="Résumé de toute l'aventure (pour le MJ, avec les secrets)">
         <p className="mb-2">Une aventure <strong>d'équipe pour 3 à 6 enfants</strong>, en 6 salles. Dans chaque salle, les héros déjouent une farce des lutins et gagnent des <strong>pièces en chocolat</strong>. Il n'y a pas de vrais méchants : les lutins veulent surtout jouer, et vérifier que les enfants savent <strong>s'entraider et partager</strong>.</p>
         <p className="mb-2">Le secret de la fin : le grand coffre ne s'ouvre que si l'équipe accepte de <strong>partager le trésor</strong> avec les lutins.</p>
         <p className="font-bold">Durée : 1h15 à 1h45, avec 6 batailles rigolotes. Difficulté : 1,5/5. Dès 5 ans. Idéal pour un anniversaire.</p>

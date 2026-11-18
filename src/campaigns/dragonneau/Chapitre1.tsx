@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 import EggHatch from '../../components/EggHatch';
 
 export default function Chapitre1() {
@@ -80,6 +80,10 @@ export default function Chapitre1() {
 
       <CombatBox title="Mécaniques de Combat (Les Pies Voleuses)">
         <p className="mb-2">C'est un combat de <strong>poursuite</strong> : les pies ne cherchent pas à blesser, elles veulent voler. Rappel : D20 + talent pour toucher, D6 pour les dégâts.</p>
+        <FirstRound>
+        <p><strong>Le Chevalier</strong> attaque une pie voleuse (5 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>3</strong>. Une pie voleuse avait 5 PV : il lui en reste <strong>2</strong>.</p>
+        <p>Au tour d'une pie voleuse, le MJ lance un D20 : <strong>6</strong>. Il faut <strong>10</strong> ou plus pour toucher le chevalier : c'est moins : <strong>raté !</strong> La pie rate sa cible et s'emmêle les ailes. (Avec 10 ou plus, la pie aurait volé un objet au lieu de faire des dégâts.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 2 Pies Voleuses</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Points de Vie (PV) :</strong> 5 chacune. <strong>Classe d'Armure (CA) :</strong> 11.</li>

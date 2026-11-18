@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre7() {
   return (
@@ -38,6 +38,10 @@ export default function Chapitre7() {
 
       <CombatBox title="Mécaniques de Combat (Les Échos Moqueurs)">
         <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
+        <FirstRound>
+        <p><strong>Le petit renard</strong> attaque un Écho moqueur (4 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Un Écho moqueur avait 4 PV : il tombe à 0, il est <strong>K.O.</strong></p>
+        <p>Au tour d'un Écho moqueur, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> Les griffes d'ombre traversent le vide. (Avec 11 ou plus, le petit renard aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Échos Moqueurs</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>PV :</strong> 4 chacun. <strong>CA :</strong> 12.</li>

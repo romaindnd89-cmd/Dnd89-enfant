@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -53,6 +53,10 @@ export default function Chapitre3() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Les Dictionnaires Gloutons)">
+        <FirstRound>
+        <p><strong>Léa, l'Acrobate,</strong> lance le D20 pour attaquer un dictionnaire glouton : elle fait <strong>8</strong>, +3 parce que c'est son talent (Agilité) = <strong>11</strong>. 11 atteint 10 : <strong>une touche !</strong> Il en faut 2 en tout : il en reste donc une à faire.</p>
+        <p>À la fin du tour de table, le MJ lance le D6 : il fait <strong>4</strong>. Il fallait 1 ou 2, donc rien ne se passe : l'équipe garde tous ses Rires. (Avec 1 ou 2, un héros aurait perdu 1 Rire.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Dictionnaires Gloutons</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Pour en refermer un :</strong> 2 touches (un jet à 10 ou plus).</li>

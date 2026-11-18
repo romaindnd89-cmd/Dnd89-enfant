@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre8() {
   return (
@@ -64,6 +64,10 @@ export default function Chapitre8() {
       </InfoBox>
 
       <CombatBox title="Mécaniques de Combat (uniquement si le héros est repéré)">
+        <FirstRound>
+        <p><strong>Le petit renard</strong> attaque une Motte Grise (6 PV, CA 10). Il lance le D20 et fait <strong>8</strong>. Il ajoute son Courage (+3) : 8 + 3 = <strong>11</strong>. 11 atteint la CA 10 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une Motte Grise avait 6 PV : il lui en reste <strong>2</strong>.</p>
+        <p>Au tour d'une Motte Grise, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> La motte glisse et s'écrase par terre. (Avec 11 ou plus, le petit renard aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 2 Mottes Grises</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 6 chacune.</li>

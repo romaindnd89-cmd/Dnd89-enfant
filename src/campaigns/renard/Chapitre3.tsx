@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -51,6 +51,10 @@ export default function Chapitre3() {
 
       <CombatBox title="Mécaniques de Combat (Les Grenouilles Éclaboussantes)">
         <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
+        <FirstRound>
+        <p><strong>Le petit renard</strong> attaque une grenouille (4 PV, CA 10). Il lance le D20 et fait <strong>8</strong>. Il ajoute son Courage (+3) : 8 + 3 = <strong>11</strong>. 11 atteint la CA 10 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une grenouille avait 4 PV : il tombe à 0, il est <strong>K.O.</strong></p>
+        <p>Au tour d'une grenouille, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> Le jet d'eau passe au-dessus de ton oreille. (Avec 11 ou plus, le petit renard aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemies : 3 Grenouilles Éclaboussantes</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>PV :</strong> 4 chacune. <strong>CA :</strong> 10.</li>

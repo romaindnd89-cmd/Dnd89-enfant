@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre10() {
   return (
@@ -50,6 +50,10 @@ export default function Chapitre10() {
 
       <CombatBox title="Mécaniques de Combat (Les Ombres de Neige)">
         <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
+        <FirstRound>
+        <p><strong>Le petit renard</strong> attaque une Ombre de Neige (6 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une Ombre de Neige avait 6 PV : il lui en reste <strong>2</strong>.</p>
+        <p>Au tour d'une Ombre de Neige, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> Le souffle glacé s'éparpille en flocons. (Avec 11 ou plus, le petit renard aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemies : 3 Ombres de Neige</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>PV :</strong> 6 chacune. <strong>CA :</strong> 11.</li>

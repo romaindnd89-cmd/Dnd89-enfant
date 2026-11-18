@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre6() {
   return (
@@ -58,6 +58,10 @@ export default function Chapitre6() {
       <CombatBox title="Mécaniques de Combat (le Chancelier Gribouille, la Couronne sur la tête)">
         <p className="mb-4">C'est le combat le plus dur de l'histoire. Le héros peut utiliser tout son Panache. <strong>Initiative :</strong> D20 + Courage pour le héros, D20 +3 pour le Chancelier.</p>
 
+        <FirstRound>
+        <p>Le Chancelier a une <strong>CA de 15</strong> tant que son Bouclier de Sérieux est actif. Le détective tente d'abord un coup d'épée : il lance le D20 et fait <strong>7</strong>, +3 de Courage = <strong>10</strong>. 10 n'atteint pas 15 : <strong>raté</strong>. Ce n'est pas grave : ce combat se gagne autrement.</p>
+        <p>Il tente alors une blague (Option B, CHARME DD 13). Il lance le D20 : <strong>11</strong>, +3 de Charme = <strong>14</strong>. 14 atteint 13 : <strong>réussi !</strong> Toute la salle éclate de rire, et <strong>un anneau de brume se brise</strong>. Il en reste deux. Quand les trois sont brisés, la CA du Chancelier tombe à 11 et l'épée devient redoutable.</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">L'Ennemi : Gribouille le Très Sérieux</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 24.</li>

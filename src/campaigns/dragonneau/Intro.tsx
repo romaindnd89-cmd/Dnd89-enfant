@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox, ActionBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const knightTheme: SheetTheme = {
@@ -30,9 +29,7 @@ export default function Intro() {
         LIVRE D'AVENTURE : LE DRAGONNEAU PERDU
       </h2>
 
-      <ReadingLegend />
-
-      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+      <InfoBox title="Résumé de toute l'aventure (pour le MJ, avec les secrets)">
         <p className="mb-2">Une aventure d'<strong>initiation pour 2 joueurs</strong> (deux enfants, ou un enfant et un parent) qui n'ont jamais joué au jeu de rôle. En 4 chapitres, les deux héros retrouvent <strong>Braisillon</strong>, un bébé dragon qui s'est enfui la nuit de sa naissance, avant que la Grande Torche du village ne s'éteigne.</p>
         <p className="mb-2">Il n'y a <strong>pas de vrai méchant</strong> : Braisillon a juste peur de son propre feu. Chaque héros a son propre talent, et l'aventure est faite pour que <strong>les deux soient utiles à chaque chapitre</strong>.</p>
         <p className="font-bold">Durée : 1h30 à 2h, avec 7 combats gentils. Difficulté : 1/5. Dès 6 ans.</p>

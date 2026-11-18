@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre2() {
   return (
@@ -54,9 +54,12 @@ export default function Chapitre2() {
 
       <CombatBox title="Mécaniques de Combat (Ton tout premier combat)">
         <p className="mb-2">Un combat se joue au <strong>tour par tour</strong>, avec seulement deux dés : le <strong>D20</strong> pour savoir si on touche, le <strong>D6</strong> pour les dégâts. (Le bouton 🎲 en bas de l'écran contient tous les dés.)</p>
-        <p className="italic mb-4"><strong>Exemple :</strong> le renard griffe un corbeau. L'enfant lance le D20 : il fait 9. Il ajoute son Courage (+3) → 12. 12 est plus grand que la CA du corbeau (11) : touché ! Il lance le D6 : 4. Le corbeau, qui avait 5 PV, n'en a plus qu'1.</p>
         <p className="mb-4">Commence par l'initiative : D20, à 10 ou plus le héros agit en premier.</p>
 
+        <FirstRound>
+        <p><strong>Le petit renard</strong> attaque un corbeau (Suie) (5 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>3</strong>. Un corbeau (Suie) avait 5 PV : il lui en reste <strong>2</strong>.</p>
+        <p>Au tour d'un corbeau (Suie), le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> Le bec noir se referme dans le vide. (Avec 11 ou plus, le petit renard aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Corbeaux de Suie</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 5 chacun (Cendrar en a 6).</li>

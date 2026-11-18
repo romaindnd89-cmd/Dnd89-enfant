@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -94,6 +94,10 @@ export default function Chapitre3() {
       <CombatBox title="Mécaniques de Combat (quatre canetons et le Colonel Colvert)">
         <p className="mb-4">Combat drôle, plus bruyant que dangereux. Initiative : D20 + Courage pour le héros, D20 pour le Colonel.</p>
 
+        <FirstRound>
+        <p><strong>Le détective</strong> attaque un caneton Casse-Cou (4 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong> +1 = 5. Un caneton Casse-Cou avait 4 PV : il tombe à 0, il est <strong>K.O.</strong></p>
+        <p>Au tour d'un caneton Casse-Cou, le MJ lance un D20 : <strong>7</strong>, +2 = <strong>9</strong>. Il faut <strong>13</strong> ou plus pour toucher le détective : c'est moins : <strong>raté !</strong> La cuillère rate de peu. (Avec 13 ou plus, le détective aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 4 Canetons Casse-Cou et le Colonel Colvert</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Canetons Casse-Cou (× 4) :</strong> 4 PV chacun, CA 12. Attaque à +2, 1D4 de dégâts (coup de cuillère). Ils attaquent <strong>en bande</strong> : si deux sont à côté, ils ajoutent +1 à leur attaque.</li>

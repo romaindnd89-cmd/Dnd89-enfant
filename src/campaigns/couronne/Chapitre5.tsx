@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre4() {
   return (
@@ -116,6 +116,10 @@ export default function Chapitre4() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Brutus et deux gardes distraits)">
+        <FirstRound>
+        <p><strong>Le détective</strong> attaque Brutus (6 PV, CA 13). Il lance le D20 et fait <strong>11</strong>. Il ajoute son Courage (+3) : 11 + 3 = <strong>14</strong>. 14 atteint la CA 13 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong> +1 = 5. Brutus avait 6 PV : il lui en reste <strong>1</strong>.</p>
+        <p>Au tour de Brutus, le MJ lance un D20 : <strong>6</strong>, +3 = <strong>9</strong>. Il faut <strong>13</strong> ou plus pour toucher le détective : c'est moins : <strong>raté !</strong> Le chihuahua ne mord qu'un coin de manteau. (Avec 13 ou plus, le détective aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : Brutus et deux Gardes du Château</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Brutus :</strong> 6 PV, CA 13. Attaque à +3, 1D4 de dégâts. Si Gaston s'approche, il s'enfuit en jappant.</li>

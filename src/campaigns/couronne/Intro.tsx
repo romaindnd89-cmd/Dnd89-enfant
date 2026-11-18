@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox, ActionBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -21,9 +20,7 @@ export default function Intro() {
         LIVRE D'AVENTURE : LA COURONNE DU RIRE
       </h2>
 
-      <ReadingLegend />
-
-      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+      <InfoBox title="Résumé de toute l'aventure (pour le MJ, avec les secrets)">
         <p className="mb-2">Une enquête <strong>drôle et pleine de surprises</strong> pour <strong>un héros</strong>, un cran au-dessus des histoires d'initiation. La Couronne du roi a disparu la veille du Grand Banquet. Le héros, accompagné d'une oie bavarde et très gourmande, mène l'enquête à travers huit étapes : une forêt de brigands poètes, une rivière où les canards sont en grève, un marché où tout le monde ment, un château piégé, des cachots, une course contre la montre et un grand banquet...</p>
         <p className="mb-2"><strong>Attention, spoilers pour le MJ :</strong> le héros va être <strong>trahi</strong> par son propre coéquipier, puis découvrir que <strong>celui qui lui a confié l'enquête est le vrai coupable</strong>. Ne le dis pas à l'enfant : laisse-le deviner, il y a des indices partout. L'oie, elle, aura une chance de se racheter.</p>
         <p className="font-bold">Durée : 3h15 à 4h30 (trois séances conseillées : chapitres 1 à 3, 4 à 6, puis 7 et 8). Difficulté : 3/5. Dès 8 ans.</p>

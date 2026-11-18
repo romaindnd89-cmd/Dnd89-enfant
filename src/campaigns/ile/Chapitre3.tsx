@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -42,6 +42,10 @@ export default function Chapitre3() {
 
       <CombatBox title="Mécaniques de Combat (Le duel contre Barbe-Rose)">
         <p className="mb-2"><strong>Rappel :</strong> D20 + talent pour toucher, 1D6 de dégâts. Quand Barbe-Rose attaque, le MJ lance un D20 : à 11 ou plus, elle touche le mousse.</p>
+        <FirstRound>
+        <p><strong>Le mousse</strong> attaque Barbe-Rose (12 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Barbe-Rose avait 12 PV : il lui en reste <strong>8</strong>.</p>
+        <p>Au tour de Barbe-Rose, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le mousse : c'est moins : <strong>raté !</strong> La louche passe au-dessus du chapeau. (Avec 11 ou plus, le mousse aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : Barbe-Rose, Grumeau et Pétoche</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Barbe-Rose :</strong> 12 PV, CA 12. Attaque (Coup de louche) : touche à 11 ou plus, 1D6 de dégâts. Chaque fois qu'elle est touchée, sa barbe de papier se décolle un peu.</li>

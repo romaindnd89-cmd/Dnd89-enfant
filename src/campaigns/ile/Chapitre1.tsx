@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre1() {
   return (
@@ -43,6 +43,10 @@ export default function Chapitre1() {
 
       <CombatBox title="Mécaniques de Combat (Les Crabes Pirates)">
         <p className="mb-2"><strong>Rappel :</strong> D20 + talent pour toucher, 1D6 de dégâts. Quand un crabe attaque, le MJ lance un D20 : à 11 ou plus, il touche le mousse.</p>
+        <FirstRound>
+        <p><strong>Le mousse</strong> attaque un crabe pirate (4 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Un crabe pirate avait 4 PV : il tombe à 0, il est <strong>K.O.</strong></p>
+        <p>Au tour d'un crabe pirate, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le mousse : c'est moins : <strong>raté !</strong> La pince claque dans le sable. (Avec 11 ou plus, le mousse aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Crabes Pirates</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Points de Vie (PV) :</strong> 4 chacun. <strong>Classe d'Armure (CA) :</strong> 11.</li>

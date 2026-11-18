@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre7() {
   return (
@@ -115,6 +115,10 @@ export default function Chapitre7() {
       </InfoBox>
 
       <CombatBox title="Mécaniques de Combat (trois Cravates Grises)">
+        <FirstRound>
+        <p><strong>Le détective</strong> attaque une Cravate Grise (9 PV, CA 13). Il lance le D20 et fait <strong>11</strong>. Il ajoute son Courage (+3) : 11 + 3 = <strong>14</strong>. 14 atteint la CA 13 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong> +1 = 5. Une Cravate Grise avait 9 PV : il lui en reste <strong>4</strong>.</p>
+        <p>Au tour d'une Cravate Grise, le MJ lance un D20 : <strong>6</strong>, +3 = <strong>9</strong>. Il faut <strong>13</strong> ou plus pour toucher le détective : c'est moins : <strong>raté !</strong> La cravate fouette l'air. (Avec 13 ou plus, le détective aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Cravates Grises</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Cravate Grise (× 3) :</strong> 9 PV chacune, CA 13. Attaque à +3, 1D6 de dégâts. Elles attaquent en ligne : si deux sont alignées, la deuxième ajoute +1.</li>

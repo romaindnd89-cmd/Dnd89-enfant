@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre2() {
   return (
@@ -44,8 +44,11 @@ export default function Chapitre2() {
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LA BATAILLE DE FARINE (Combat)</h3>
       <CombatBox title="Mécaniques de Combat (Votre première bataille)">
         <p className="mb-2">Une bataille se joue <strong>chacun son tour, autour de la table</strong>, avec un seul dé : le <strong>D20</strong> (le bouton 🎲 en bas de l'écran le contient). Pas de calcul de dégâts : il suffit de <strong>toucher</strong> un marmiton <strong>2 fois</strong> pour le mettre hors jeu.</p>
-        <p className="italic mb-4"><strong>Exemple :</strong> c'est le tour de Léa, l'Acrobate. Elle lance une boule de farine : elle fait 8 au D20, +3 de talent → 11. 11 est plus grand que 10 : touché ! Le marmiton a reçu sa première tarte. Encore une touche et il quitte la bataille en riant. Ensuite, c'est au tour du voisin de Léa.</p>
 
+        <FirstRound>
+        <p><strong>Léa, l'Acrobate,</strong> lance le D20 pour attaquer un marmiton : elle fait <strong>8</strong>, +3 parce que c'est son talent (Agilité) = <strong>11</strong>. 11 atteint 10 : <strong>une touche !</strong> Il en faut 2 en tout : il en reste donc une à faire.</p>
+        <p>À la fin du tour de table, le MJ lance le D6 : il fait <strong>4</strong>. Il fallait 1 ou 2, donc rien ne se passe : l'équipe garde tous ses Rires. (Avec 1 ou 2, un héros aurait perdu 1 Rire.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : les Marmitons (un par enfant) et Dame Louche</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Pour mettre un marmiton hors jeu :</strong> le toucher 2 fois (Dame Louche : 3 fois). Un jet à 10 ou plus est une touche.</li>

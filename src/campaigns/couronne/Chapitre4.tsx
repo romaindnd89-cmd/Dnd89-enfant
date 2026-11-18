@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -112,6 +112,10 @@ export default function Chapitre3() {
 
       <CombatBox title="Mécaniques de Combat (La Bagarre de Légumes)">
         <p className="mb-4">Combat drôle, en pleine rue. Initiative : D20 + Courage. Rappel : attaque = D20 + talent contre la CA ; les ennemis lancent D20 + leur bonus contre la CA du héros (13).</p>
+        <FirstRound>
+        <p><strong>Le détective</strong> attaque Maître Concombre (10 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong> +1 = 5. Maître Concombre avait 10 PV : il lui en reste <strong>5</strong>.</p>
+        <p>Au tour de Maître Concombre, le MJ lance un D20 : <strong>6</strong>, +3 = <strong>9</strong>. Il faut <strong>13</strong> ou plus pour toucher le détective : c'est moins : <strong>raté !</strong> La courgette s'écrase sur un étal. (Avec 13 ou plus, le détective aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : Maître Concombre et 2 Gros-Bras</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Maître Concombre :</strong> 10 PV, CA 12. Attaque à +3, 1D6 de dégâts (coup de courgette).</li>

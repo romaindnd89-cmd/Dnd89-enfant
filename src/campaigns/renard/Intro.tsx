@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -21,9 +20,7 @@ export default function Intro() {
         LIVRE D'AVENTURE : LE RENARDEAU ET LA FORÊT QUI OUBLIE
       </h2>
 
-      <ReadingLegend />
-
-      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+      <InfoBox title="Résumé de toute l'aventure (pour le MJ, avec les secrets)">
         <p className="mb-2">Le petit renard est le seul à avoir gardé ses souvenirs. Sa mission : retrouver les <strong>3 Glands d'Or</strong> cachés dans la forêt et les rapporter au Grand Chêne-Mémoire <strong>avant la première neige</strong>, sinon l'oubli deviendra définitif.</p>
         <p className="mb-2">La coupable est <strong>Grisaille</strong>, une vieille taupe-sorcière très seule. Elle n'est pas vraiment méchante : elle a lancé la Brume d'Oubli parce que, à force d'être oubliée de tous, elle a préféré que plus personne ne se souvienne de rien. Le secret de l'aventure : <strong>on ne la vainc pas en se battant, mais en lui rendant une amie</strong>.</p>
         <p className="font-bold">Durée : 2h15 à 3h, avec 8 combats (plusieurs sessions possibles). Difficulté : 2/5. Dès 6 ans.</p>
