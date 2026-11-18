@@ -5,7 +5,7 @@ import React, { useMemo } from 'react';
  * lentement de gauche à droite, des lucioles dansent par-dessus, et les bords
  * se fondent dans le décor.
  */
-export default function DragonForestBanner({ className = '' }: { className?: string }) {
+export default function DragonForestBanner({ className = '', hero = false, children }: { className?: string; hero?: boolean; children?: React.ReactNode }) {
   const flies = useMemo(
     () =>
       Array.from({ length: 9 }).map((_, i) => ({
@@ -20,8 +20,9 @@ export default function DragonForestBanner({ className = '' }: { className?: str
   );
 
   return (
-    <div className={`dragon-banner relative h-44 sm:h-56 w-full overflow-hidden pointer-events-none ${className}`} aria-hidden="true">
-      <div className="dragon-banner-img absolute inset-0" />
+    <div className={`${hero ? 'dragon-banner-hero rounded-2xl' : 'dragon-banner'} relative w-full overflow-hidden ${hero ? 'min-h-[17rem] sm:min-h-[20rem]' : 'h-44 sm:h-56 pointer-events-none'} ${className}`} aria-hidden={hero ? undefined : true}>
+      <div className="dragon-banner-img absolute inset-0 pointer-events-none" />
+      {hero && <div className="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-950/35 to-slate-950/70 pointer-events-none" />}
       {flies.map((f, i) => (
         <span
           key={i}
@@ -39,6 +40,7 @@ export default function DragonForestBanner({ className = '' }: { className?: str
           }}
         />
       ))}
+      {children}
     </div>
   );
 }

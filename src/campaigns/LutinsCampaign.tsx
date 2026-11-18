@@ -9,6 +9,7 @@ import Chapitre4 from './lutins/Chapitre4';
 import Chapitre5 from './lutins/Chapitre5';
 import Chapitre6 from './lutins/Chapitre6';
 import Epilogue from './lutins/Epilogue';
+import Galerie from './lutins/Galerie';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
@@ -20,6 +21,7 @@ const sections: ShellSection[] = [
   { id: 'chap5', label: 'Salle 5 : La Salle des Miroirs', className: 'hover:bg-violet-50 text-violet-700' },
   { id: 'chap6', label: 'Salle 6 : Le Trésor du Roi Pirouette', className: 'hover:bg-yellow-50 text-yellow-700' },
   { id: 'epilogue', label: 'Épilogue : La Grande Fête', className: 'hover:bg-emerald-50 text-emerald-700' },
+  { id: 'galerie', label: '🖼️ Galerie : lieux, personnages, objets', className: 'hover:bg-emerald-50 text-emerald-700' },
 ];
 
 export default function LutinsCampaign({ onBack }: { onBack: () => void }) {
@@ -46,6 +48,7 @@ export default function LutinsCampaign({ onBack }: { onBack: () => void }) {
         <Chapitre5 />
         <Chapitre6 />
         <Epilogue />
+        <Galerie />
         <FinishAdventure trophyId="lutins" />
       </div>
     </CampaignShell>

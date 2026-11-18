@@ -7,6 +7,7 @@ import Chapitre2 from './dragonneau/Chapitre2';
 import Chapitre3 from './dragonneau/Chapitre3';
 import Chapitre4 from './dragonneau/Chapitre4';
 import Epilogue from './dragonneau/Epilogue';
+import Galerie from './dragonneau/Galerie';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
@@ -16,6 +17,7 @@ const sections: ShellSection[] = [
   { id: 'chap3', label: 'Chapitre 3 : Les Grottes de Cristal', className: 'hover:bg-sky-50 text-sky-700' },
   { id: 'chap4', label: 'Chapitre 4 : Le Nid du Mont Braise', className: 'hover:bg-rose-50 text-rose-700' },
   { id: 'epilogue', label: 'Épilogue : La Fête des Flammes', className: 'hover:bg-orange-50 text-orange-700' },
+  { id: 'galerie', label: '🖼️ Galerie : lieux, personnages, objets', className: 'hover:bg-orange-50 text-orange-700' },
 ];
 
 export default function DragonneauCampaign({ onBack }: { onBack: () => void }) {
@@ -40,6 +42,7 @@ export default function DragonneauCampaign({ onBack }: { onBack: () => void }) {
         <Chapitre3 />
         <Chapitre4 />
         <Epilogue />
+        <Galerie />
         <FinishAdventure trophyId="dragonneau" />
       </div>
     </CampaignShell>

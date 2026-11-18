@@ -283,19 +283,20 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Titre */}
-            <div className="text-center max-w-2xl mx-auto mt-4 mb-10">
-              <p className="font-display text-amber-200/80 tracking-[0.35em] text-xs uppercase mb-3">
-                Bienvenue de l'autre côté
-              </p>
-              <h2 className="font-display text-3xl sm:text-5xl font-bold leading-tight tracking-wide mb-4">
-                <span className="shiny-title">Choisissez votre monde</span>
-              </h2>
-              <p className="text-lg text-slate-100 leading-relaxed drop-shadow-[0_1px_6px_rgba(2,6,23,0.95)]">
-                Chaque aventure est une porte vers un autre monde. Le parent raconte, l'enfant décide, les dés
-                font le reste.
-              </p>
-            </div>
+            {/* Bannière d'accueil : la forêt de dragons qui défile, le titre devant */}
+            <DragonForestBanner hero className="mt-2 mb-8">
+              <div className="relative z-10 flex flex-col items-center justify-center text-center px-5 py-10 sm:py-14 min-h-[17rem] sm:min-h-[20rem]">
+                <p className="font-display text-amber-200/90 tracking-[0.35em] text-xs uppercase mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                  Bienvenue de l'autre côté
+                </p>
+                <h2 className="font-display text-3xl sm:text-5xl font-bold leading-tight tracking-wide mb-4 drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)]">
+                  <span className="shiny-title">Choisissez votre monde</span>
+                </h2>
+                <p className="text-base sm:text-lg text-slate-50 leading-relaxed max-w-xl drop-shadow-[0_2px_8px_rgba(2,6,23,0.95)]">
+                  Chaque aventure est une porte vers un autre monde. Le parent raconte, l'enfant décide, les dés font le reste.
+                </p>
+              </div>
+            </DragonForestBanner>
 
             {/* Onglets */}
             <div className="glass-dark backdrop-blur-md rounded-2xl p-1.5 mb-8 grid grid-cols-3 gap-1.5">
@@ -368,7 +369,6 @@ export default function App() {
                     ))}
                   </div>
 
-                  <DragonForestBanner className="mt-10 -mb-4" />
                 </motion.div>
               )}
 

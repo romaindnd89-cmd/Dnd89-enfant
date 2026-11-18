@@ -11,6 +11,7 @@ import Chapitre6 from './couronne/Chapitre6';
 import Chapitre7 from './couronne/Chapitre7';
 import Chapitre8 from './couronne/Chapitre8';
 import Epilogue from './couronne/Epilogue';
+import Galerie from './couronne/Galerie';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
@@ -24,6 +25,7 @@ const sections: ShellSection[] = [
   { id: 'chap7', label: 'Chapitre 7 : La Course vers le Palais', className: 'hover:bg-orange-50 text-orange-700' },
   { id: 'chap8', label: 'Chapitre 8 : Le Grand Banquet', className: 'hover:bg-yellow-50 text-yellow-700' },
   { id: 'epilogue', label: 'Épilogue : Le Royaume qui Rit', className: 'hover:bg-fuchsia-50 text-fuchsia-700' },
+  { id: 'galerie', label: '🖼️ Galerie : lieux, personnages, objets', className: 'hover:bg-fuchsia-50 text-fuchsia-700' },
 ];
 
 export default function CouronneCampaign({ onBack }: { onBack: () => void }) {
@@ -52,6 +54,7 @@ export default function CouronneCampaign({ onBack }: { onBack: () => void }) {
         <Chapitre7 />
         <Chapitre8 />
         <Epilogue />
+        <Galerie />
         <FinishAdventure trophyId="couronne" />
       </div>
     </CampaignShell>

@@ -13,6 +13,7 @@ import Chapitre8 from './renard/Chapitre8';
 import Chapitre9 from './renard/Chapitre9';
 import Chapitre10 from './renard/Chapitre10';
 import Epilogue from './renard/Epilogue';
+import Galerie from './renard/Galerie';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
@@ -28,6 +29,7 @@ const sections: ShellSection[] = [
   { id: 'chap9', label: 'Chapitre 9 : Grisaille la Taupe-Sorcière', className: 'hover:bg-slate-50 text-slate-700' },
   { id: 'chap10', label: 'Chapitre 10 : Le Réveil du Grand Chêne', className: 'hover:bg-emerald-50 text-emerald-700' },
   { id: 'epilogue', label: 'Épilogue & Médailles', className: 'hover:bg-orange-50 text-orange-700' },
+  { id: 'galerie', label: '🖼️ Galerie : lieux, personnages, objets', className: 'hover:bg-orange-50 text-orange-700' },
 ];
 
 export default function RenardCampaign({ onBack }: { onBack: () => void }) {
@@ -58,6 +60,7 @@ export default function RenardCampaign({ onBack }: { onBack: () => void }) {
         <Chapitre9 />
         <Chapitre10 />
         <Epilogue />
+        <Galerie />
         <FinishAdventure trophyId="renard" />
       </div>
     </CampaignShell>

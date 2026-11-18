@@ -392,3 +392,11 @@ button:active { transform: scale(0.97); }
 
 :root[data-motion="off"] .parade-walker, :root[data-motion="off"] .parade-hop, :root[data-motion="off"] .parade-float, :root[data-motion="off"] .pf-far, :root[data-motion="off"] .pf-mid, :root[data-motion="off"] .pf-near, :root[data-motion="off"] .hero-flyer, :root[data-motion="off"] .egg-hatch, :root[data-motion="off"] .egg-wobble, :root[data-motion="off"] .box-icon { animation: none !important; }
 :root[data-motion="off"] .egg-hatch { background-position: 100% 0; }
+
+/* Cartes d'objets imprimées (galerie) : 2 par ligne, à découper */
+.print-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8mm; }
+.print-cards .print-card { break-inside: avoid; page-break-inside: avoid; border: 2px dashed #888 !important; box-shadow: none !important; }
+@media print { .print-cards button { display: none !important; } }
+
+/* Bannière d'accueil : même image qui défile, plein cadre, titre par-dessus */
+.dragon-banner-hero { box-shadow: 0 20px 50px -20px rgba(0,0,0,0.8); border: 1px solid rgba(253, 230, 138, 0.25); }

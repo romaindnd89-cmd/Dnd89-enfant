@@ -6,6 +6,7 @@ import Chapitre1 from './ile/Chapitre1';
 import Chapitre2 from './ile/Chapitre2';
 import Chapitre3 from './ile/Chapitre3';
 import Epilogue from './ile/Epilogue';
+import Galerie from './ile/Galerie';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
@@ -14,6 +15,7 @@ const sections: ShellSection[] = [
   { id: 'chap2', label: 'Acte 2 : La Jungle qui Ronfle', className: 'hover:bg-emerald-50 text-emerald-700' },
   { id: 'chap3', label: 'Acte 3 : Le Trésor qui Respire', className: 'hover:bg-amber-50 text-amber-700' },
   { id: 'epilogue', label: 'Épilogue et médailles', className: 'hover:bg-cyan-50 text-cyan-700' },
+  { id: 'galerie', label: '🖼️ Galerie : lieux, personnages, objets', className: 'hover:bg-cyan-50 text-cyan-700' },
 ];
 
 export default function IleCampaign({ onBack }: { onBack: () => void }) {
@@ -37,6 +39,7 @@ export default function IleCampaign({ onBack }: { onBack: () => void }) {
         <Chapitre2 />
         <Chapitre3 />
         <Epilogue />
+        <Galerie />
         <FinishAdventure trophyId="ile" />
       </div>
     </CampaignShell>
