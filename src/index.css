@@ -1,12 +1,402 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+  /* Texte courant : une serif de livre, très lisible à voix haute */
+  --font-sans: "Lora", Georgia, "Times New Roman", serif;
+  /* Titres : capitales gravées, style grimoire */
+  --font-display: "Cinzel", Georgia, serif;
+  --font-fantasy: "Cinzel", Georgia, serif;
 }
 
 body {
-  background-color: #f8fafc;
+  background-color: #020617;
   color: #334155;
 }
+
+/* Panneau de lecture : papier ancien avec un grain, lisible par-dessus le décor sombre.
+   Attention : pas de backdrop-filter ni de transform ici, sinon les menus en
+   position fixe placés à l'intérieur ne restent plus collés à l'écran. */
+.parchment-panel {
+  background-color: #f7f1e5;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.42  0 0 0 0 0.31  0 0 0 0 0.16  0 0 0 0.10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),
+    radial-gradient(120% 80% at 50% 0%, #fdfaf3 0%, #f7f1e5 55%, #efe6d4 100%);
+  border: 1px solid rgba(180, 140, 70, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(253, 230, 138, 0.12),
+    0 30px 80px -20px rgba(0, 0, 0, 0.8),
+    inset 0 0 60px rgba(120, 80, 30, 0.10);
+}
+
+/* Verre sombre : cartes et panneaux de l'accueil */
+.glass-dark {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(2, 6, 23, 0.82));
+  border: 1px solid rgba(253, 230, 138, 0.16);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Titre doré dont le reflet glisse lentement */
+.shiny-title {
+  background-image: linear-gradient(100deg, #fde68a, #fff7d6, #f59e0b, #fde68a, #fff7d6);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shiny-move 9s linear infinite;
+}
+@keyframes shiny-move {
+  to { background-position: 250% center; }
+}
+:root[data-motion="off"] .shiny-title { animation: none; }
+
+/* Reflet lumineux qui balaie une carte au survol */
+.card-shine {
+  background: linear-gradient(110deg, transparent 35%, rgba(253, 230, 138, 0.22) 50%, transparent 65%);
+  background-size: 250% 100%;
+  background-position: 160% 0;
+  opacity: 0;
+}
+.group:hover .card-shine {
+  opacity: 1;
+  animation: card-shine-move 1s ease;
+}
+@keyframes card-shine-move {
+  from { background-position: 160% 0; }
+  to { background-position: -60% 0; }
+}
+
+/* Impression de la fiche de personnage : la fiche est clonée dans #print-root,
+   et tout le reste de la page est retiré de l'impression (une seule page A4). */
+#print-root { display: none; }
+@media print {
+  @page { size: A4 portrait; margin: 10mm; }
+  body:has(#print-root:not(:empty)) { background: #fff !important; }
+  body:has(#print-root:not(:empty)) > *:not(#print-root) { display: none !important; }
+  #print-root:not(:empty) { display: block; }
+  #print-root, #print-root * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  #print-root .print-sheet {
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Animations des décors illustrés (FantasyScene) */
+.scene-star { animation: scene-twinkle 3.2s ease-in-out infinite; }
+@keyframes scene-twinkle {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+.scene-crystal { animation: scene-pulse 3.6s ease-in-out infinite; }
+@keyframes scene-pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+.scene-window { animation: scene-flicker 4.5s ease-in-out infinite; }
+@keyframes scene-flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.75; }
+  55% { opacity: 0.95; }
+  70% { opacity: 0.8; }
+}
+:root[data-motion="off"] .scene-star, :root[data-motion="off"] .scene-crystal, :root[data-motion="off"] .scene-window { animation: none; }
+
+/* Les chapitres atterrissent sous la barre collante (Retour / Chapitres) */
+section[id] {
+  scroll-margin-top: 11rem;
+}
+
+/* ===== Dragons et particules vivantes ===== */
+.dragon-flight-ltr,
+.dragon-flight-rtl {
+  position: absolute;
+  left: 0;
+  will-change: transform;
+  opacity: 0;
+}
+.dragon-flight-ltr { animation: dragon-fly-right linear infinite; }
+.dragon-flight-rtl { animation: dragon-fly-left linear infinite; }
+@keyframes dragon-fly-right {
+  0% { transform: translate3d(-20vw, 0, 0); opacity: 1; }
+  100% { transform: translate3d(120vw, 0, 0); opacity: 1; }
+}
+@keyframes dragon-fly-left {
+  0% { transform: translate3d(120vw, 0, 0); opacity: 1; }
+  100% { transform: translate3d(-20vw, 0, 0); opacity: 1; }
+}
+.dragon-bob { animation: dragon-bob 3.2s ease-in-out infinite; }
+@keyframes dragon-bob {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
+}
+.dragon-loop .dragon-inner { animation: dragon-loop 0.8s ease-in-out 1; }
+@keyframes dragon-loop {
+  to { transform: rotate(-360deg) scale(1.15); }
+}
+
+.particle-rise { animation: particle-rise linear infinite; opacity: 0; will-change: transform; }
+@keyframes particle-rise {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  10% { opacity: 0.95; }
+  100% { transform: translate3d(var(--drift, 30px), -108vh, 0); opacity: 0; }
+}
+.particle-fall { animation: particle-fall linear infinite; opacity: 0; will-change: transform; }
+@keyframes particle-fall {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  8% { opacity: 0.9; }
+  50% { transform: translate3d(calc(var(--drift, 40px) * 0.6), 55vh, 0) rotate(180deg); }
+  100% { transform: translate3d(var(--drift, 40px), 108vh, 0) rotate(420deg); opacity: 0; }
+}
+.particle-wander { animation: particle-wander ease-in-out infinite; will-change: transform, opacity; }
+@keyframes particle-wander {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.1; }
+  25% { transform: translate3d(var(--drift, 30px), -26px, 0); opacity: 1; }
+  50% { transform: translate3d(calc(var(--drift, 30px) * -0.4), -50px, 0); opacity: 0.25; }
+  75% { transform: translate3d(calc(var(--drift, 30px) * 0.7), -20px, 0); opacity: 1; }
+}
+
+/* Petites vies : le logo respire, les cartes flottent */
+.logo-wiggle { animation: logo-wiggle 5s ease-in-out infinite; }
+@keyframes logo-wiggle {
+  0%, 85%, 100% { transform: rotate(0deg) scale(1); }
+  89% { transform: rotate(-12deg) scale(1.15); }
+  93% { transform: rotate(10deg) scale(1.15); }
+  97% { transform: rotate(-4deg) scale(1.05); }
+}
+.progress-dragon-trail {
+  background: repeating-linear-gradient(90deg, rgba(245,158,11,0.9) 0 6px, transparent 6px 12px);
+}
+
+:root[data-motion="off"] .dragon-sprite, :root[data-motion="off"] .dragon-banner-img, :root[data-motion="off"] .dragon-flight-ltr, :root[data-motion="off"] .dragon-flight-rtl, :root[data-motion="off"] .dragon-bob, :root[data-motion="off"] .particle-rise, :root[data-motion="off"] .particle-fall, :root[data-motion="off"] .particle-wander, :root[data-motion="off"] .logo-wiggle { animation: none !important; }
+:root[data-motion="off"] .ambient-particles { display: none; }
+
+/* Dragon dessiné : bande de 4 images qui défile */
+.dragon-sprite {
+  background-image: url('/art/dragon-fly.png');
+  background-size: 400% 100%;
+  background-repeat: no-repeat;
+  animation: dragon-sprite-flap 0.5s steps(4, end) infinite;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.35));
+}
+@keyframes dragon-sprite-flap {
+  from { background-position: 0% 0; }
+  to { background-position: 133.3333% 0; }
+}
+
+/* Bandeau de dragons : l'image glisse lentement, les bords se fondent */
+.dragon-banner {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
+    linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
+    linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  mask-composite: intersect;
+}
+.dragon-banner-img {
+  background-image: url('/art/dragon-forest.webp');
+  background-size: cover;
+  background-position: 0% 50%;
+  animation: dragon-banner-pan 38s ease-in-out infinite alternate;
+}
+@keyframes dragon-banner-pan {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+.dragon-hero { filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.35)); }
+
+/* Nuages et étoiles filantes du fond */
+.cloud-drift {
+  left: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.16), rgba(255,255,255,0) 70%);
+  filter: blur(6px);
+  animation: cloud-drift linear infinite;
+  will-change: transform;
+}
+@keyframes cloud-drift {
+  from { transform: translate3d(-40vw, 0, 0); }
+  to { transform: translate3d(130vw, 0, 0); }
+}
+.shooting-star {
+  width: 90px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.95));
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.6);
+  opacity: 0;
+  transform: rotate(30deg);
+  animation: shooting-star ease-out infinite;
+}
+@keyframes shooting-star {
+  0%, 88% { opacity: 0; transform: translate3d(0, 0, 0) rotate(30deg); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(240px, 140px, 0) rotate(30deg); }
+}
+
+/* Dragon des cartes : il flotte, puis s'envole un instant au survol */
+.card-dragon-inner { animation: card-dragon-float 3.4s ease-in-out infinite; transition: transform 0.6s ease; }
+@keyframes card-dragon-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+.group:hover .card-dragon { animation: card-dragon-away 1.6s ease-in-out; }
+@keyframes card-dragon-away {
+  0% { transform: scaleX(-1) translate(0, 0); }
+  45% { transform: scaleX(-1) translate(-30px, -26px) rotate(-12deg); }
+  100% { transform: scaleX(-1) translate(0, 0); }
+}
+
+/* Le bouton de dé se secoue de temps en temps pour dire « lance-moi » */
+.dice-wobble { animation: dice-wobble 7s ease-in-out infinite; }
+@keyframes dice-wobble {
+  0%, 90%, 100% { transform: rotate(0deg) scale(1); }
+  92% { transform: rotate(-14deg) scale(1.08); }
+  94% { transform: rotate(12deg) scale(1.08); }
+  96% { transform: rotate(-8deg) scale(1.04); }
+  98% { transform: rotate(4deg) scale(1.02); }
+}
+
+/* Titres de chapitre : apparition au défilement (navigateurs compatibles) */
+@supports (animation-timeline: view()) {
+  section[id] > h2 {
+    animation: title-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55%;
+  }
+  @keyframes title-in {
+    from { opacity: 0; transform: translateX(-24px); letter-spacing: 0.08em; }
+    to { opacity: 1; transform: none; letter-spacing: normal; }
+  }
+}
+
+:root[data-motion="off"] .cloud-drift, :root[data-motion="off"] .shooting-star, :root[data-motion="off"] .card-dragon-inner, :root[data-motion="off"] .dice-wobble { animation: none !important; }
+:root[data-motion="off"] section[id] > h2 { animation: none !important; }
+
+/* ===== Troupe qui marche, forêt à étages, éclosion ===== */
+.parade-walker {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  will-change: transform;
+  animation: parade-walk 110s linear infinite both;
+}
+@keyframes parade-walk {
+  0% { transform: translate3d(-25vw, 0, 0); }
+  55% { transform: translate3d(125vw, 0, 0); }
+  100% { transform: translate3d(125vw, 0, 0); }
+}
+.parade-hop { animation: parade-hop 0.55s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+@keyframes parade-hop {
+  from { transform: translateY(0) rotate(-2.5deg); }
+  to { transform: translateY(-7px) rotate(2.5deg); }
+}
+.parade-float { animation: parade-float 2.4s ease-in-out infinite; filter: drop-shadow(0 0 10px rgba(253,224,71,0.95)); }
+@keyframes parade-float {
+  0%, 100% { transform: translate(0, 0) rotate(-6deg); }
+  50% { transform: translate(8px, -14px) rotate(6deg); }
+}
+
+.parallax-forest { --sy: 0; }
+.pf-layer {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  will-change: background-position, transform;
+}
+.pf-far {
+  height: 30%;
+  background-image: url('/art/forest-far.webp');
+  background-size: auto 100%;
+  opacity: 0.7;
+  animation: pf-slide-a 120s linear infinite alternate;
+  transform: translateY(calc(var(--sy) * -0.01px));
+}
+.pf-mid {
+  height: 55%;
+  background-image: url('/art/forest-mid.webp');
+  background-size: auto 100%;
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to top, #000 45%, transparent);
+  mask-image: linear-gradient(to top, #000 45%, transparent);
+  animation: pf-slide-b 90s linear infinite alternate;
+  transform: translateY(calc(var(--sy) * -0.02px));
+}
+.pf-near {
+  height: 44%;
+  background-image: url('/art/forest-near.webp');
+  background-size: auto 100%;
+  opacity: 0.9;
+  -webkit-mask-image: linear-gradient(to top, #000 55%, transparent 98%);
+  mask-image: linear-gradient(to top, #000 55%, transparent 98%);
+  animation: pf-slide-c 60s ease-in-out infinite alternate;
+  transform: translateY(calc(var(--sy) * -0.035px));
+}
+@keyframes pf-slide-a { from { background-position: 0 100%; } to { background-position: -420px 100%; } }
+@keyframes pf-slide-b { from { background-position: 0 100%; } to { background-position: 560px 100%; } }
+@keyframes pf-slide-c { from { background-position: 0 100%; } to { background-position: -700px 100%; } }
+
+/* Dragon qui traverse la bannière d'une aventure */
+.hero-flyer { animation: hero-fly 15s linear infinite; will-change: transform; }
+@keyframes hero-fly {
+  from { transform: translateX(-20%); }
+  to { transform: translateX(120%); }
+}
+.hero-flyer > div { display: inline-block; }
+
+/* Éclosion : l'œuf tremble, se fendille, puis le dragonneau sort */
+.egg-hatch {
+  background-image: url('/art/egg-hatch.png');
+  background-size: 400% 100%;
+  background-repeat: no-repeat;
+  animation: egg-frames 9s steps(1, end) infinite;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.3));
+}
+@keyframes egg-frames {
+  0% { background-position: 0% 0; }
+  36% { background-position: 33.3333% 0; }
+  54% { background-position: 66.6667% 0; }
+  68% { background-position: 100% 0; }
+  100% { background-position: 100% 0; }
+}
+.egg-wobble { animation: egg-wobble 9s ease-in-out infinite; transform-origin: 50% 95%; }
+@keyframes egg-wobble {
+  0%, 4%, 36%, 100% { transform: rotate(0deg); }
+  8% { transform: rotate(-5deg); }
+  12% { transform: rotate(5deg); }
+  16% { transform: rotate(-4deg); }
+  20% { transform: rotate(4deg); }
+  26% { transform: rotate(-6deg); }
+  30% { transform: rotate(6deg); }
+  70% { transform: translateY(0) scale(1); }
+  74% { transform: translateY(-10px) scale(1.04); }
+  80% { transform: translateY(0) scale(1); }
+}
+
+/* Icônes des encadrés qui respirent, boutons qui réagissent au toucher */
+.box-icon { animation: box-icon 3.6s ease-in-out infinite; }
+@keyframes box-icon {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.18) rotate(-6deg); }
+}
+button { transition: transform 0.15s ease; }
+button:active { transform: scale(0.97); }
+
+:root[data-motion="off"] .parade-walker, :root[data-motion="off"] .parade-hop, :root[data-motion="off"] .parade-float, :root[data-motion="off"] .pf-far, :root[data-motion="off"] .pf-mid, :root[data-motion="off"] .pf-near, :root[data-motion="off"] .hero-flyer, :root[data-motion="off"] .egg-hatch, :root[data-motion="off"] .egg-wobble, :root[data-motion="off"] .box-icon { animation: none !important; }
+:root[data-motion="off"] .egg-hatch { background-position: 100% 0; }
+
+/* Cartes d'objets imprimées (galerie) : 2 par ligne, à découper */
+.print-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8mm; }
+.print-cards .print-card { break-inside: avoid; page-break-inside: avoid; border: 2px dashed #888 !important; box-shadow: none !important; }
+@media print { .print-cards button { display: none !important; } }
+
+/* Bannière d'accueil : même image qui défile, plein cadre, titre par-dessus */
+.dragon-banner-hero { box-shadow: 0 20px 50px -20px rgba(0,0,0,0.8); border: 1px solid rgba(253, 230, 138, 0.25); }

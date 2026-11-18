@@ -8,6 +8,7 @@ import Part2 from './etoile/Part2';
 import Part3 from './etoile/Part3';
 import Part4 from './etoile/Part4';
 import Epilogue from './etoile/Epilogue';
+import FinishAdventure from '../components/FinishAdventure';
 
 export default function EtoileCampaign({ onBack }: { onBack: () => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function EtoileCampaign({ onBack }: { onBack: () => void }) {
   return (
     <div className="max-w-4xl mx-auto pb-24 relative">
       {/* Header fixe avec navigation */}
-      <div className="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-4 px-4 flex justify-between items-center mb-8">
+      <div className="sticky top-[88px] z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-4 px-4 flex justify-between items-center mb-8">
         <button 
           onClick={onBack}
           className="flex items-center gap-2 text-slate-500 hover:text-slate-800 font-bold transition-colors"
@@ -129,6 +130,7 @@ export default function EtoileCampaign({ onBack }: { onBack: () => void }) {
         <Part3 />
         <Part4 />
         <Epilogue />
+        <FinishAdventure trophyId="etoile" />
       </div>
     </div>
   );

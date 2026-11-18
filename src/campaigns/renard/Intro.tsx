@@ -1,0 +1,93 @@
+import React from 'react';
+import { ReadAloud, InfoBox } from '../../components/StoryBlocks';
+import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
+import ReadingLegend from '../../components/ReadingLegend';
+import { BookOpen } from 'lucide-react';
+
+const theme: SheetTheme = {
+  bannerGradient: 'from-orange-400 to-amber-600',
+  statBox: 'border-orange-100 bg-orange-50/60',
+  statValue: 'text-orange-600',
+  dot: 'bg-orange-400',
+  accentText: 'text-orange-600',
+  button: 'bg-orange-600 hover:bg-orange-700',
+};
+
+export default function Intro() {
+  return (
+    <section id="intro">
+      <h2 className="font-display text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+        <BookOpen className="w-8 h-8 text-orange-500" />
+        LIVRE D'AVENTURE : LE RENARDEAU ET LA FORÊT QUI OUBLIE
+      </h2>
+
+      <ReadingLegend />
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4 flex items-center gap-2">
+        <span className="text-orange-500">🍂</span> Prologue : La Légende du Grand Chêne-Mémoire
+      </h3>
+      <ReadAloud title="À lire à voix haute, pour ouvrir le livre :">
+        Il était une fois une forêt si belle qu'on l'appelait <strong>Grisefeuille-la-Dorée</strong>. À l'automne, ses arbres se couvraient de feuilles rouges, oranges et jaunes, et le vent les faisait danser comme une pluie de pièces d'or. Mais le vrai trésor de la forêt n'était pas sa couleur : c'était sa <strong>mémoire</strong>.<br/><br/>
+        Au cœur de Grisefeuille se dresse le <strong>Grand Chêne-Mémoire</strong>, le plus vieil arbre du monde. Dans ses racines profondes sont gardés les trois plus précieux souvenirs de la forêt, enfermés dans trois <strong>Glands d'Or</strong> : le Gland du <strong>Rire</strong>, le Gland de la <strong>Chanson</strong> et le Gland de l'<strong>Amitié</strong>. Tant qu'ils brillent, les animaux se souviennent de ceux qu'ils aiment, des chansons du soir et des rires d'été.<br/><br/>
+        Mais une nuit, tout a changé. Une <strong>brume grise</strong> s'est levée du fond des terriers. Au matin, les couleurs avaient disparu, les oiseaux avaient oublié leurs chansons, et les trois Glands d'Or s'étaient envolés. La forêt commençait à oublier… et bientôt, elle oublierait tout, pour toujours.
+      </ReadAloud>
+
+      <ReadAloud title="À lire à voix haute pour commencer :">
+        "Cette nuit-là, tu t'es endormi tout au fond de ton terrier, un petit renardeau roulé en boule, serrant très fort contre ton cœur une feuille dorée que ta grand-mère t'avait offerte. Et c'est peut-être pour ça… que toi, tu n'as rien oublié.<br/><br/>
+        Quand tu ouvres les yeux, la forêt n'est plus qu'un dessin au crayon gris. Les arbres, l'herbe, le ciel : tout a perdu ses couleurs. Autour de toi, les animaux marchent sans savoir où ils vont, le regard tout flou. Dans ta patte, ta feuille brille encore, chaude et dorée, comme un petit soleil. Une toute petite lumière s'approche en voletant… et une voix minuscule chuchote : « Enfin ! Quelqu'un qui se souvient ! »"
+      </ReadAloud>
+
+      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+        <p className="mb-2">Le petit renard est le seul à avoir gardé ses souvenirs. Sa mission : retrouver les <strong>3 Glands d'Or</strong> cachés dans la forêt et les rapporter au Grand Chêne-Mémoire <strong>avant la première neige</strong>, sinon l'oubli deviendra définitif.</p>
+        <p className="mb-2">La coupable est <strong>Grisaille</strong>, une vieille taupe-sorcière très seule. Elle n'est pas vraiment méchante : elle a lancé la Brume d'Oubli parce que, à force d'être oubliée de tous, elle a préféré que plus personne ne se souvienne de rien. Le secret de l'aventure : <strong>on ne la vainc pas en se battant, mais en lui rendant une amie</strong>.</p>
+        <p className="font-bold">Durée : 2h15 à 3h, avec 8 combats (plusieurs sessions possibles). Difficulté : 2/5. Dès 6 ans.</p>
+      </InfoBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4 flex items-center gap-2">
+        <span className="text-orange-500">🧭</span> Ton compagnon : Lumi la Luciole
+      </h3>
+      <InfoBox title="À savoir sur Lumi">
+        <p>Pendant toute l'aventure, une petite luciole nommée <strong>Lumi</strong> vole aux côtés de l'enfant. Elle brille d'une lumière douce et dorée. Lumi connaît beaucoup de secrets, mais elle est toute petite : elle a besoin du courage du héros. Sa lumière <strong>fait peur aux créatures de la brume</strong> et se ravive chaque fois qu'on approche d'un Gland d'Or. Tu peux la présenter à l'enfant avec tes propres mots, ou directement pendant la première scène du chapitre 1.</p>
+      </InfoBox>
+
+      <CharacterSheet
+        heroEmoji="🦊"
+        heroTitle="Le Renardeau"
+        subtitle="Le seul à se souvenir — dès 6 ans"
+        theme={theme}
+        hp={10}
+        stats={[
+          { label: 'Courage', emoji: '🔥', value: '+3' },
+          { label: 'Agilité', emoji: '🤸', value: '+4', note: 'pour bondir' },
+          { label: 'Flair', emoji: '👃', value: '+5', note: 'ton super-pouvoir' },
+          { label: 'Malice', emoji: '🦊', value: '+3' },
+          { label: 'Cœur', emoji: '💛', value: '+5', note: 'pour les amis' },
+        ]}
+        abilities={[
+          { name: 'Bond du Renard', desc: "tu sautes très loin ou très haut. Lance 1D20 + Agilité." },
+          { name: 'Super-Flair', desc: "tu sens les choses cachées et tu devines les mensonges. Lance 1D20 + Flair." },
+          { name: 'Petit Malin', desc: "une fois par aventure, tu peux relancer un dé raté." },
+        ]}
+        startItems={[
+          'La Feuille d’Or : ta boussole magique. Elle brille plus fort quand un souvenir est tout près.',
+          '3 Noisettes grillées : si tu en manges une, tu récupères 3 PV.',
+          'Une écharpe rouge, tricotée par Mémé Rouquine.',
+          'Ta fourrure agile : pour te toucher, un monstre doit faire 11 ou plus au D20 (ta CA).',
+        ]}
+      />
+
+      <InfoBox title="La boîte à outils du jeu de rôle (version enfant)">
+        <p className="mb-2">Voici toutes les mécaniques utilisées dans l'aventure. Tu n'as rien à apprendre par cœur : chaque encadré te rappelle quoi faire au bon moment. C'est un vrai petit Donjons & Dragons, juste plus doux.</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>🎲 Le jet de dé et le DD :</strong> pour une action difficile, l'enfant lance le <strong>D20</strong> et ajoute le talent qui convient. On compare à un <strong>nombre de réussite (le DD)</strong> : s'il l'atteint ou le dépasse, c'est gagné. (Pas de vrais dés ? Le bouton <strong>🎲</strong> en bas de l'écran les remplace.) <em>Exemple : le renard veut sauter une branche (DD 10). L'enfant lance le D20 : il fait 7. Il ajoute son Agilité (+4) : 11. 11 est plus grand que 10, c'est réussi !</em></li>
+          <li><strong>✌️ Avantage et désavantage :</strong> quand la situation aide beaucoup le héros (un ami lui tient la patte, un bon objet), il lance <strong>deux D20 et garde le meilleur</strong> (avantage). Quand tout joue contre lui (le noir, la peur), il en lance deux et garde le <strong>moins bon</strong> (désavantage).</li>
+          <li><strong>❤️ Les points de vie (PV) et le repos :</strong> ils descendent quand on est touché. On en regagne en se <strong>reposant</strong> un moment (un petit répit entre deux scènes rend quelques PV) ou en mangeant une noisette. À <strong>0 PV</strong>, on ne « meurt » jamais : on est juste trop fatigué, et un ami vient aider — l'histoire ne se bloque pas.</li>
+          <li><strong>🎒 Le sac à dos et les objets :</strong> tout ce que le héros ramasse se note sur sa fiche. Ce ne sont pas des babioles : un objet trouvé tôt (une goutte de rosée, un champignon-lanterne…) sert souvent bien plus loin dans l'aventure. Encouragez l'enfant à fouiller et à ramasser !</li>
+          <li><strong>🌀 Les états (ce qui change pour un tour) :</strong> parfois le héros est <em>collé</em>, <em>ébloui</em>, <em>ralenti</em> ou <em>endormi</em>. L'encadré explique à chaque fois comment s'en libérer — en général, un petit jet au tour suivant.</li>
+          <li><strong>⚔️ L'initiative (en combat) :</strong> au début d'un combat, un jet de D20 décide qui agit en premier, le héros ou le monstre.</li>
+          <li><strong>🛡️ Quand un monstre attaque :</strong> le MJ lance un D20. À <strong>11 ou plus</strong> (la « CA » du renard, sa difficulté à toucher), le monstre touche et le héros perd des PV (le dé de dégâts est indiqué dans la fiche du monstre).</li>
+        </ul>
+      </InfoBox>
+    </section>
+  );
+}

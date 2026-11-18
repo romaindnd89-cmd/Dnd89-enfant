@@ -8,6 +8,7 @@ import Chapitre2 from './moustaches/Chapitre2';
 import Chapitre3 from './moustaches/Chapitre3';
 import Chapitre4 from './moustaches/Chapitre4';
 import Illustrations from './moustaches/Illustrations';
+import FinishAdventure from '../components/FinishAdventure';
 
 export default function RoyaumeDesMoustaches({ onBack }: { onBack: () => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function RoyaumeDesMoustaches({ onBack }: { onBack: () => void })
   return (
     <div className="max-w-4xl mx-auto pb-24 relative">
       {/* Header fixe avec navigation */}
-      <div className="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-4 px-4 flex justify-between items-center mb-8">
+      <div className="sticky top-[88px] z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-4 px-4 flex justify-between items-center mb-8">
         <button 
           onClick={onBack}
           className="flex items-center gap-2 text-slate-500 hover:text-slate-800 font-bold transition-colors"
@@ -117,6 +118,7 @@ export default function RoyaumeDesMoustaches({ onBack }: { onBack: () => void })
         <Chapitre3 />
         <Chapitre4 />
         <Illustrations />
+        <FinishAdventure trophyId="moustaches" />
       </div>
     </div>
   );

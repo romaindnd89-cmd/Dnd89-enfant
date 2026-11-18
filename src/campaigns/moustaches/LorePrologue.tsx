@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox } from '../../components/StoryBlocks';
+import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen, Download, Printer } from 'lucide-react';
 
 export default function LorePrologue() {
@@ -49,6 +50,8 @@ export default function LorePrologue() {
         <BookOpen className="w-8 h-8 text-emerald-500" />
         LE LORE : LE ROYAUME DE MIAOU-VILLE
       </h2>
+
+      <ReadingLegend />
       <InfoBox title="Pour le Maître du Jeu">
         <p className="italic mb-4">(Cette partie est pour toi, le Maître du Jeu, pour bien comprendre le monde, mais tu peux aussi lui résumer l'histoire avant de commencer à jouer).</p>
         <p className="mb-4">Le monde d'Aïlouros est un monde pacifique où les animaux marchent sur deux pattes, parlent, et vivent comme des humains au Moyen-Âge, mais avec la magie en plus.</p>
