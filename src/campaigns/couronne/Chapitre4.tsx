@@ -1,108 +1,160 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
-export default function Chapitre4() {
+export default function Chapitre3() {
   return (
     <section id="chap4">
-      <h2 className="font-display text-4xl font-bold text-rose-700 mb-6 border-b-4 border-rose-200 pb-2 mt-16">
-        CHAPITRE 4 : LE CHÂTEAU DU BARON CORNICHON
+      <h2 className="font-display text-4xl font-bold text-amber-700 mb-6 border-b-4 border-amber-200 pb-2 mt-16">
+        CHAPITRE 4 : LE MARCHÉ AUX MENTEURS
       </h2>
-      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : Le château du Baron Cornichon, sur la colline<br/>Ambiance : Infiltration comique, pièges absurdes, puis un coup de théâtre : la trahison.</p>
+      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : Le Marché aux Menteurs, à la sortie de la forêt<br/>Ambiance : Un marché coloré où tout le monde ment, joyeusement. Chapitre d'enquête et de bagout, sans combat obligatoire.</p>
 
       <InfoBox title="Synopsis du Chapitre pour le Maître du Jeu">
-        <p>Le héros s'introduit dans le château par le fossé, la cour ou la cuisine. Il y croise des gardes ridicules et un chien qui se prend pour un lion, puis trouve, dans la salle du trésor, une <strong>couronne sous verre</strong>. C'est un piège : <strong>Gaston le trahit</strong> en échange d'un sac de maïs doré, et le Baron fait prisonnier le héros. <strong>Prépare cette scène avec soin :</strong> joue-la avec humour mais laisse un vrai moment de silence quand l'oie parle.</p>
+        <p>Au marché, <strong>tous les marchands mentent par métier</strong>. Le héros doit démêler le vrai du faux pour apprendre où est caché le butin du Baron Cornichon. Un pickpocket lui vole un objet, qu'il faut récupérer. <strong>Préparation de la trahison :</strong> pendant ce chapitre, Gaston disparaît quelques minutes et revient avec des miettes de maïs doré sur le bec : un inconnu lui a promis un sac de grain doré. Le héros peut le remarquer (MALICE, DD 13).</p>
       </InfoBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : L'ENTRÉE DANS LE CHÂTEAU (Exploration)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : LES MARCHANDS MENTEURS (Exploration et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "Le château du Baron Cornichon ressemble à une pile de crêpes qu'un géant aurait posées de travers. Les tourelles penchent, les fenêtres sont trop petites, et un drapeau en forme de cornichon flotte au sommet. Un fossé vert l'entoure, rempli d'une eau trouble, où l'on aperçoit parfois une grosse carpe bouger. Un pont-levis est levé, mais derrière la haie, tu entends un garde chanter : « Je suis le garde, je garde, je garde... »"<br/><br/>
-        "Tu vois trois options : une petite porte de cuisine entrouverte, dont sort une odeur de soupe au chou ; un mur recouvert de lierre qui monte jusqu'à une fenêtre ouverte ; et un tuyau d'évacuation assez large pour qu'on s'y glisse. Gaston, lui, regarde ailleurs en lissant ses plumes, un peu trop calme. Que fais-tu ?"
+        "Le Marché aux Menteurs est une explosion de couleurs, de cris et de mensonges. Un marchand te propose « des pommes bleues, cueillies sur la Lune ». Un autre t'assure que ses chaussures sont « magiques, ou en tout cas, ils sentent magique ». Une vieille dame brandit une pancarte : « TOUT CE QUE JE DIS EST FAUX. » Elle t'interpelle : « Bonjour, détective, je m'appelle Madame Pivoine, et ceci est une pancarte parfaitement honnête. » Gaston se penche vers toi : « Elle ment. Ou elle dit la vérité. Je renonce. »"<br/><br/>
+        "Au bout de l'allée, trois étals attirent ton regard : celui du poissonnier Moustache, celui de la fleuriste Madame Pivoine, et celui d'un vendeur de chapeaux, Maître Cloche. Tous les trois affirment avoir vu le Baron Cornichon la veille, mais ils donnent trois versions différentes. Plus loin, un petit homme discret se glisse entre les passants, les mains dans ses poches pleines. Que fais-tu ?"
       </ReadAloud>
 
-      <InfoBox title="Profil des gardes et du chien du Baron">
+      <InfoBox title="Profil des marchands et du pickpocket">
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Les gardes du château :</strong> ils croient que « garder » veut dire « parler tout seul pour rester éveillé ». Ils racontent leurs vacances à voix haute et ne voient rien.</li>
-          <li><strong>Brutus le chien :</strong> un minuscule chihuahua à collier clouté, qui aboie comme un lion, mais qui a peur de tout ce qui est plus gros que lui, y compris l'oie Gaston.</li>
+          <li><strong>Moustache le poissonnier :</strong> immense moustache de crevette, ment toujours avec un grand sourire, mais jamais sur le prix.</li>
+          <li><strong>Madame Pivoine :</strong> vieille dame, ment sur tout sauf sur ce qui lui fait mal.</li>
+          <li><strong>Maître Cloche :</strong> chapeaux ridicules, ment par réflexe mais très mal : il se touche l'oreille quand il ment.</li>
+          <li><strong>Doigts-de-Fée :</strong> le pickpocket, petit, rapide, un peu honteux. Il vole par habitude, rend si on le surprend, et adore les blagues.</li>
         </ul>
       </InfoBox>
 
       <ActionBox title="Options d'Exploration et Mécaniques (Bac à sable)">
-        <h4 className="font-bold text-lg mb-2">1. Entrer par la cuisine (Test de CHARME - DD 12)</h4>
+        <h4 className="font-bold text-lg mb-2">1. Jouer au jeu « Vrai ou Menteur » : interroger les trois marchands (Test de MALICE - DD 13, un jet par marchand)</h4>
+        <p className="mb-2">Chaque marchand dit une phrase. Au héros de deviner celle qui est vraie. Lis-les à voix haute, puis laisse l'enfant réfléchir et choisir avant de lancer le dé.</p>
+        <ul className="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>Moustache :</strong> « Le Baron a acheté dix kilos de poisson. » <em>(Faux : il a acheté 10 kilos de fromage.)</em></li>
+          <li><strong>Madame Pivoine :</strong> « Le Baron a acheté un masque et trois mètres de corde. » <em>(Vrai.)</em></li>
+          <li><strong>Maître Cloche :</strong> « Le Baron a offert un chapeau au roi hier. » <em>(Faux, et il se touche l'oreille.)</em></li>
+        </ul>
+        <p className="mb-6"><strong>Réussite :</strong> le héros démasque les mensonges. Il comprend que le Baron prépare quelque chose avec un masque et de la corde, et qu'il a acheté beaucoup de fromage (le fromage de la miette !). <strong>Échec :</strong> il a des doutes, mais un marchand gagne sa confiance : il perd 5 écus en achetant des « pommes bleues ».</p>
+
+        <h4 className="font-bold text-lg mb-2">2. Remarquer que Gaston a disparu un moment (Test de MALICE - DD 13)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li>Un cuisinier surveille sa soupe : « Je suis occupé, mais si tu m'aides, je ne te dénonce pas ! »</li>
-          <li><strong>Réussite :</strong> le héros goûte la soupe (« Délicieuse ! ») et entre sans histoire. Il rejoint l'escalier central sans être vu.</li>
-          <li><strong>Échec :</strong> la soupe est affreuse. Le héros fait la grimace, le cuisinier crie : un garde arrive. Le héros peut l'éviter (COURAGE, DD 12) ou le combattre.</li>
+          <li><strong>Réussite :</strong> le héros voit Gaston revenir d'une ruelle, avec des <strong>miettes de maïs doré sur le bec</strong>. « Une collation. Mes affaires. » Le héros peut lui poser la question (CHARME, DD 12) : « Un monsieur voulait mes conseils d'expert. » (Préparation de la trahison : si le héros a remarqué ça, il gagnera un avantage au chapitre 5.)</li>
+          <li><strong>Échec :</strong> il ne remarque rien.</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">2. Escalader le lierre (Test de COURAGE - DD 13, +2 avec le grappin renforcé)</h4>
+        <h4 className="font-bold text-lg mb-2">3. Rattraper Doigts-de-Fée, le pickpocket (Test de COURAGE - DD 12, puis CHARME)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Réussite :</strong> il atteint la fenêtre et entre dans une chambre qui sent le fromage. Il peut fouiller discrètement (<strong>Loot : une Clé de Cave</strong>).</li>
-          <li><strong>Échec :</strong> le lierre cède, le héros chute dans le fossé (−2 PV, et la carpe lui mordille la botte). Il peut réessayer ou changer de route.</li>
+          <li>Le pickpocket a volé <strong>la loupe</strong> du héros pendant qu'il discutait. Le héros peut poursuivre la course, fonçant entre les étals de fruits et de chapeaux.</li>
+          <li><strong>Réussite :</strong> il rattrape Doigts-de-Fée au milieu d'une pyramide de melons. Un baratin réussi (CHARME, DD 12) le fait rire, et il rend la loupe, plus un cadeau : <strong>Loot : une Fausse Moustache</strong> (utile au chapitre 4 : +2 pour passer pour un autre).</li>
+          <li><strong>Échec :</strong> le héros glisse sur un melon (−1 PV) et perd la loupe pour le moment. Il la retrouve plus tard dans un étal du marché.</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">3. Se glisser par le tuyau (Test de MALICE - DD 12)</h4>
-        <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Réussite :</strong> il rampe sans bruit jusqu'à une salle d'armes, pleine d'épées rouillées et d'une armure qui lui fait un coucou.</li>
-          <li><strong>Échec :</strong> il se coince. Gaston doit le tirer, en râlant. Le héros perd un tour et 1 PV.</li>
-        </ul>
-
-        <h4 className="font-bold text-lg mb-2">4. Remarquer que Gaston est bizarre (Test de MALICE - DD 13, si ce n'est pas déjà fait)</h4>
-        <p>Si le héros a déjà remarqué le maïs sur le bec de Gaston au chapitre 3, il a un <strong>avantage</strong> ici (il lance deux D20 et garde le meilleur). <strong>Réussite :</strong> il comprend que Gaston cache quelque chose. S'il lui pose la question, l'oie jure sur sa vanité qu'elle est « un modèle de loyauté ». (Le héros peut alors garder sa potion de pomme en réserve pour la trahison.)</p>
+        <h4 className="font-bold text-lg mb-2">4. Faire des achats (aucun jet)</h4>
+        <p>Le héros peut dépenser ses écus : <strong>Potion de Panache</strong> (15 écus, rend 1 Panache), <strong>Potion de pomme</strong> (5 écus, rend 5 PV), <strong>Grappin renforcé</strong> (10 écus, +2 pour escalader). Chaque marchand ment sur ses prix : lance un jet de CHARME (DD 11) pour avoir le vrai prix.</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LES COULOIRS ET LE CHIEN BRUTUS (Combat facultatif)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LE CONCOURS DE MENSONGES (Épreuve de bagout)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "Les couloirs du château sont tapissés de portraits du Baron, tous avec la même moue. Au détour d'un escalier, une boule de poils aboie de toutes ses forces. « GRRR ! GRRR ! » Brutus, le chihuahua, te fonce dessus en montrant ses dents minuscules. Il aboie si fort que deux gardes viennent voir : « Qu'y a-t-il, Brutus ? » « GRRR ! » « Ah, d'accord, c'est un intrus. Euh... où ça ? »"
+        "Au centre du marché, sur une estrade décorée de guirlandes, un homme en redingote violette agite une cloche. « Mesdames et messieurs, c'est l'heure du célèbre Concours de Mensonges ! Le gagnant remporte un panier de fruits, un diplôme et le titre envié de Grand Menteur du Marché ! » La foule applaudit. Trois concurrents montent sur l'estrade : un grand moustachu qui prétend avoir dompté un dragon, une vieille dame qui jure avoir été reine des mers, et un petit enfant qui dit avoir inventé le sommeil. Le présentateur te cherche du regard : « Un volontaire dans le public ? Vous, détective ! »"
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (Brutus et deux gardes distraits)">
-        <h4 className="font-bold text-lg mb-2">Les Ennemis : Brutus et deux Gardes du Château</h4>
-        <ul className="list-disc pl-5 space-y-1 mb-6">
-          <li><strong>Brutus :</strong> 6 PV, CA 13. Attaque à +3, 1D4 de dégâts. Si Gaston s'approche, il s'enfuit en jappant.</li>
-          <li><strong>Garde du château (× 2) :</strong> 10 PV chacun, CA 12. Attaque à +3, 1D6 de dégâts. Ils attaquent un tour sur deux (ils oublient pourquoi ils sont là).</li>
-        </ul>
+      <ActionBox title="Le concours (Épreuve en trois manches)">
+        <p className="mb-4">Le héros peut participer, refuser, ou envoyer Gaston (ce qui est drôle). S'il participe, c'est un <strong>concours de baratin en trois manches</strong> : l'enfant invente un mensonge de plus en plus énorme, puis lance le dé.</p>
 
-        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
-        <ul className="list-disc pl-5 space-y-3 mb-4">
-          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1.</li>
-          <li><strong>Option B - Les portraits (MALICE - DD 12) :</strong> le héros décroche un grand portrait qui tombe sur un garde : il perd son tour et 1D6 PV.</li>
-          <li><strong>Option C - Gaston contre Brutus :</strong> si le héros lui demande, Gaston fait peur au chien (il siffle fort). Brutus s'enfuit.</li>
-          <li><strong>Option D - Baratin (CHARME - DD 13) :</strong> le héros convainc les gardes qu'il est un cousin du Baron, venu pour la fête. Ils le saluent et s'en vont chercher un goûter.</li>
-        </ul>
-        <p className="italic">Si le héros n'arrive pas à les éviter et tombe à 0 PV, le KO comique est « réveillé par un seau d'eau, 5 PV, un Panache en moins », et on passe directement à la scène 3 (le Baron le trouve).</p>
-      </CombatBox>
+        <h4 className="font-bold text-lg mb-2">Manche 1 : le petit mensonge (Test de CHARME - DD 11)</h4>
+        <p className="mb-4">« Je suis détective depuis 200 ans. » Un mensonge court, simple, à dire avec aplomb. <strong>Réussite :</strong> la foule applaudit poliment.</p>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LA SALLE DU TRÉSOR ET LA TRAHISON (Roleplay)</h3>
+        <h4 className="font-bold text-lg mb-2">Manche 2 : le mensonge détaillé (Test de CHARME - DD 12)</h4>
+        <p className="mb-4">Le héros doit inventer une histoire fantaisiste avec trois détails absurdes. <strong>+3 si l'histoire fait vraiment rire le MJ.</strong> <strong>Réussite :</strong> la foule rit.</p>
+
+        <h4 className="font-bold text-lg mb-2">Manche 3 : le mensonge incroyable (Test de CHARME - DD 13)</h4>
+        <p className="mb-4">Le grand final : le mensonge le plus fou possible. <strong>Réussite :</strong> la foule se lève et acclame le héros.</p>
+
+        <p><strong>Résultat :</strong> 3 réussites : <strong>Grand Menteur du Marché</strong> (Loot : un Diplôme, qui donne +2 à tous les jets de bagout au marché, et <strong>2 Panache</strong>). 2 réussites : <strong>deuxième place</strong> (un panier de fruits, +1 Panache). 0 ou 1 réussite : la foule siffle gentiment, mais Gaston explique que « c'était un mensonge de génie, en fait ». Dans tous les cas, <strong>gagne un Panache</strong> pour avoir osé monter sur scène.</p>
+      </ActionBox>
+
+            <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : MADAME ZUT, LA VOYANTE (Rencontre et Prophétie)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "Au bout d'un long couloir, une grande porte est entrouverte. Au centre d'une salle ronde, sous une cloche de verre, brille la Couronne du Rire. Elle est dorée, elle scintille, elle est exactement comme sur les tableaux. Gaston s'approche, bouche bée. « Mon Dieu... Mon enquête est terminée. » Tu t'approches de la cloche, la main tendue, le cœur battant."<br/><br/>
-        "Et là, derrière toi, un déclic. Tu te retournes : la porte vient de se refermer. Gaston est en train de reculer, lentement, vers un coin de la salle, les yeux baissés. Un homme grand, en cape violette, sort de l'ombre en battant des mains. « Bravo, bravo ! Je vous attendais ! » Le Baron Cornichon sourit. Dans une main, il tient un grand sac de toile. Tu entends le tintement de grains. « Gaston ? Les dix kilos de maïs doré, comme promis. » L'oie baisse la tête. « Désolé, détective. Dix kilos. Tu comprends. Dix kilos. »"
+        "Dans un coin du marché, à l'écart des étals, une petite tente violette est décorée d'étoiles dorées et d'un panneau : « MADAME ZUT, VOYANTE (SATISFAITE OU REMBOURSÉE, SAUF SI VRAI) ». Une femme à turban, entourée de plumes, te fait signe d'entrer. L'intérieur sent l'encens et la barbe à papa. Au centre, sur une table ronde, une boule de cristal tourne toute seule. « Assieds-toi, détective. Je t'attendais. Ou plutôt, j'attendais ton oie. Je vois... je vois... une plume blanche. »"
       </ReadAloud>
 
-      <InfoBox title="Profil du Baron Cornichon et de la trahison">
+      <InfoBox title="Profil de Madame Zut">
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Le Baron Cornichon :</strong> grand, élégant, cape violette, rire communicatif, mais très vexé d'être soupçonné par le roi. Il a tendu un piège pour attraper « le voleur » qui s'en prend à son château (en réalité, il pense que c'est le héros).</li>
-          <li><strong>La trahison de Gaston :</strong> pendant le chapitre 3, le Baron l'a payée en promesse de maïs doré pour qu'il l'avertisse de l'arrivée du « détective du Chancelier ». L'oie ne pensait pas que ça irait si loin. <strong>Joue-la mal à l'aise : elle ment mal, hésite, et finit par craquer.</strong></li>
-          <li><strong>La couronne sous verre :</strong> c'est une fausse couronne, en fromage doré et colorant. C'est le piège du Baron pour attirer le voleur.</li>
+          <li><strong>Apparence :</strong> grand turban à franges, bagues sur tous les doigts, sourire de comédienne.</li>
+          <li><strong>Caractère :</strong> théâtrale, mystérieuse, très drôle. Elle improvise la moitié de ses prédictions, mais l'autre moitié est <strong>étonnamment vraie</strong>.</li>
+          <li><strong>Son secret :</strong> elle est la tante de Doigts-de-Fée, et sait <em>vraiment</em> deviner certaines choses. Elle joue la voyante pour s'amuser, mais ce soir, elle est sérieuse.</li>
         </ul>
       </InfoBox>
 
-      <ActionBox title="La trahison : les réactions du héros">
-        <p className="mb-4">Laisse d'abord le temps à l'enfant de réagir (colère, tristesse, rire...). Voici les actions possibles, mais il peut aussi improviser.</p>
+      <ActionBox title="L'Arbre de Dialogue et les Résolutions">
+        <p className="mb-4">Lis la prophétie lentement, avec une voix mystérieuse. Elle annonce, sans le dire, <strong>la trahison de Gaston</strong>, et sa <strong>rédemption</strong>.</p>
+        <p className="italic mb-4">« Je vois une plume blanche, qui te trahira... et une plume blanche, qui te sauvera. Je vois un homme en gris, qui sourit trop peu. Je vois un grand banquet, une couronne, et un éclat de rire qui brise les chaînes. Attention, détective : la première plume n'est pas celle que tu crois. Et la deuxième, tu la tiens déjà. »</p>
 
-        <h4 className="font-bold text-lg mb-2">Option A : S'enfuir par la fenêtre (Test de COURAGE - DD 15, ou avec Panache)</h4>
-        <p className="mb-6"><strong>Réussite :</strong> il saute dans les douves, échappe à deux gardes... et se fait attraper à la sortie par une dizaine de lanciers. De toute façon, il sera capturé : mais il garde son sac et ses objets. <strong>Échec :</strong> il est capturé et confisque son sac à gadgets (il le retrouvera au chapitre 5).</p>
+        <h4 className="font-bold text-lg mb-2">Option A : Prendre la prophétie au sérieux (Test de MALICE - DD 12)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> le héros comprend qu'elle parle de son entourage. Il peut garder Gaston à l'œil (avantage pour remarquer sa trahison au chapitre 5). Mais il ne saura pas laquelle des « plumes blanches » est la traîtresse. <strong>Gagne un point de Panache.</strong></li>
+          <li><strong>Échec :</strong> il trouve ça trop vague.</li>
+        </ul>
 
-        <h4 className="font-bold text-lg mb-2">Option B : Parler au Baron et plaider son innocence (Test de CHARME - DD 14)</h4>
-        <p className="mb-6"><strong>Réussite :</strong> le Baron hésite, mais ses gardes entrent déjà. Il dit : « Je vous écouterai, je le promets, mais dans une cellule. » Le héros est conduit au cachot <strong>sans ses menottes</strong> et garde ses objets. <strong>Échec :</strong> « Tous les voleurs disent ça ! » Il est menotté et fouillé.</p>
+        <h4 className="font-bold text-lg mb-2">Option B : Poser une question précise (Test de CHARME - DD 13)</h4>
+        <p className="mb-6"><strong>Réussite :</strong> Madame Zut avoue : « Ton oie sera tentée. Ce sera de ma faute si tu ne l'arrêtes pas : je n'ai pas le droit de te dire plus. » Elle tend au héros une <strong>amulette en maïs doré</strong> en plastique, sans valeur... sauf qu'elle apaise l'oie (+2 pour parler à Gaston avant la trahison).</p>
 
-        <h4 className="font-bold text-lg mb-2">Option C : Parler à Gaston (Roleplay)</h4>
-        <p className="mb-2">C'est la scène émotionnelle du chapitre. Laisse l'enfant dire ce qu'il pense. Gaston murmure : « Dix kilos de maïs... j'ai pas pu résister. Tu es un bon détective. Je suis un mauvais oiseau. » Si le héros est vraiment touchant, l'oie a les larmes aux yeux.</p>
-        <p><strong>Gagne un point de Panache</strong> pour avoir osé parler à celui qui l'a trahi.</p>
+        <h4 className="font-bold text-lg mb-2">Option C : Se moquer de la prophétie (aucun jet)</h4>
+        <p>Madame Zut sourit : « Tu verras. » Elle ne se vexe pas. Le héros n'a pas d'avantage, mais la prophétie reste dans un coin de sa tête. (Si le héros fait une blague, <strong>+1 Panache</strong> : Madame Zut adore ça.)</p>
       </ActionBox>
 
-      <ReadAloud title="Texte à lire à voix haute (la capture)">
-        "Un garde ouvre une trappe sous tes pieds, et tu tombes dans un toboggan de pierre, qui t'amène dans le noir, entre deux rires, dans un grand « SPLOUCH ». Au-dessus de toi, la trappe se referme. Tu entends encore, très faiblement, la voix de Gaston : « ...je suis désolé... » Puis le silence. Tu es dans les cachots du château, dans une cellule sale, sans aucune idée de la suite. Mais en regardant bien dans le noir, tu aperçois que tu n'es pas seul."
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : LE VRAI RENSEIGNEMENT (Rencontre et Roleplay)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Madame Pivoine te fait signe de venir. Elle baisse la voix. « Détective, je vais te dire une vérité, la seule de ma vie. Le Baron Cornichon n'est pas du tout celui que l'on croit. Il vit dans un château sur la colline, il aime les chapeaux, il a toujours une cape violette. Et... » Elle regarde autour d'elle. « ...quelqu'un a payé tout le marché hier pour qu'on te raconte que le voleur, c'est lui. Je ne sais pas qui. Un monsieur sérieux, il ne rigolait pas, il m'a fait peur. » Elle reprend sa pancarte. « Évidemment, je mens. »"
       </ReadAloud>
+
+      <ActionBox title="L'Arbre de Dialogue et les Résolutions">
+        <h4 className="font-bold text-lg mb-2">Option A : Croire Madame Pivoine (Test de MALICE - DD 12)</h4>
+        <p className="mb-6"><strong>Réussite :</strong> le héros comprend qu'elle a dit la vérité, qu'on a acheté tout le marché pour accuser le Baron. <strong>Indice n°4 :</strong> quelqu'un a payé pour détourner l'enquête vers le Baron. Le héros garde le doute, tout en suivant la piste du château.</p>
+
+        <h4 className="font-bold text-lg mb-2">Option B : Ne pas la croire (aucun jet)</h4>
+        <p className="mb-6">Le héros suit simplement la piste du Baron comme prévu. Il ne perd rien, mais il passera à côté d'un indice (et la révélation du chapitre 6 sera plus surprenante).</p>
+
+        <h4 className="font-bold text-lg mb-2">Option C : Lui demander qui a payé (Test de CHARME - DD 14)</h4>
+        <p>Elle hésite, puis souffle : « Il avait des gants gris, et il sentait l'encre. Mais je mens. » C'est la même description que celle des brigands : <strong>deux témoignages indépendants pointent vers la même personne</strong>. Gagne un point de Panache pour avoir recoupé les indices.</p>
+      </ActionBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 5 : LA TAVERNE DU HÉRISSON QUI RIT (Repos et Roleplay)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Le soleil descend lentement quand vous arrivez à une grande auberge au bord du marché : « AU HÉRISSON QUI RIT », annonce une enseigne représentant un hérisson hilare. À l'intérieur, une salle chaleureuse, pleine de monde, de chansons, de fumée et d'odeurs de soupe. Au fond, un barde à moustache joue de la guitare en chantant : « Il était un petit détective, qui cherchait, qui cherchait, qui cherchait... » Une aubergiste ronde et souriante te tend un bol : « Pour le courage, mon petit. C'est offert. » Tu t'assois, les pieds fatigués, le cœur un peu plus léger. Gaston s'installe à côté de toi, étrangement silencieuse."
+      </ReadAloud>
+
+      <ActionBox title="Options d'Exploration et Mécaniques (Repos et rencontres)">
+        <h4 className="font-bold text-lg mb-2">1. Se reposer (aucun jet)</h4>
+        <p className="mb-6">Le héros peut manger, boire et se reposer : <strong>il regagne 6 PV</strong> et <strong>1 Panache</strong>. Il peut aussi acheter une potion ou un objet.</p>
+
+        <h4 className="font-bold text-lg mb-2">2. Écouter le barde (Test de CHARME - DD 11)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li>Le barde, Maître Lyre, chante une chanson sur le détective, et invite le héros à improviser un couplet.</li>
+          <li><strong>Réussite :</strong> la salle applaudit, et le barde offre au héros <strong>Loot : une Chanson de Courage</strong> (utilisable une fois : +3 à un jet de COURAGE).</li>
+          <li><strong>Échec :</strong> la salle rit, mais gentiment. Le héros gagne +1 Panache pour son audace.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">3. Parler à l'aubergiste (Test de MALICE ou CHARME - DD 12)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li>L'aubergiste, Madame Bouillon, connaît les secrets de la région. Elle murmure : « Le Baron Cornichon ? Un brave homme. Il vient ici chaque semaine pour rire avec nous. Les gens disent que le Chancelier le déteste, parce qu'il rit trop. »</li>
+          <li><strong>Réussite :</strong> elle ajoute : « Ces derniers jours, le Chancelier a envoyé des hommes en gris poser des questions. Ils sont partis sans rien boire. » (Indice supplémentaire sur le Chancelier.)</li>
+          <li><strong>Échec :</strong> elle propose simplement une deuxième soupe.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">4. Parler à Gaston en tête-à-tête (Roleplay)</h4>
+        <p>Gaston picore ses légumes, l'air triste. Si le héros lui demande ce qui ne va pas (CHARME - DD 11), elle répond sans le regarder : « Rien. J'ai juste un peu faim. J'ai... envie de maïs. » Elle sourit tristement. <strong>Scène clé pour le MJ :</strong> c'est la dernière occasion de renforcer le lien avant la trahison. Si le héros lui parle avec sincérité, <strong>gagne un point de Panache</strong>. Si le héros a déjà remarqué le maïs sur son bec, il peut lui poser la question directe : elle ment mal, rougit, et change de sujet.</p>
+      </ActionBox>
+
+      <ReadAloud title="Texte à lire à voix haute (fin du chapitre)">
+        "Au soir, le marché ferme, les marchands comptent leurs mensonges, et le soleil se couche sur les collines. Là-haut, sur la plus haute, se dresse le château du Baron Cornichon : des tourelles tordues, un fossé rempli d'eau verte, et une lumière allumée dans une seule fenêtre. Gaston renifle. « Un château... mal décoré. Je suggère qu'on y entre, évidemment, avec le meilleur détective : moi. » Tu soupires. Il reste un peu plus d'une journée pour retrouver la Couronne."
+      </ReadAloud>
+
+      <InfoBox title="Note pour le MJ : le récapitulatif des indices">
+        <p>À ce stade, le héros peut avoir collecté jusqu'à quatre indices sur le Chancelier (tache d'encre, doigts tachés d'encre, brigands payés par un homme en gris, marché payé par un homme sérieux). <strong>Ne les relie pas à sa place.</strong> Si l'enfant en parle, accueille sa théorie avec un grand sourire, mais ne la confirme pas : il y a encore la trahison et le chapitre 5 pour que tout s'éclaire.</p>
+      </InfoBox>
     </section>
   );
 }

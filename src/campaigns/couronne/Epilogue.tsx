@@ -12,6 +12,19 @@ export default function Epilogue() {
         "Le lendemain, sur la façade du château, on pose une nouvelle pancarte dorée : « AGENCE DÉTECTIVE (ET OIE) : ENQUÊTES, MYSTÈRES ET BLAGUES. » Au-dessus de la boulangerie, ton bureau a un nouveau fauteuil, une nouvelle vitre et un nouveau coussin pour l'oie. Dehors, le royaume rit comme jamais, et chaque habitant, du roi au dernier balayeur, a une histoire à raconter sur le jour où le Chancelier a gloussé. Quelqu'un frappe à ta porte. Tu soupires, tu souris, tu enfiles ton manteau. Il y a une nouvelle affaire à résoudre."
       </ReadAloud>
 
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">Le lendemain : ce qui est devenu de chacun</h3>
+      <InfoBox title="Le sort des personnages (à lire à voix haute ou à adapter)">
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Le roi Gaspard :</strong> il décrète une semaine de fête, et un nouveau règlement : « Un rire par jour, ou une soupe. » Il a toujours une baignoire dans la salle du trône.</li>
+          <li><strong>Le Baron Cornichon :</strong> il devient le conseiller en chef du roi (le poste de Chancelier est libre !), et ouvre son château au public chaque dimanche : portraits, bibliothèque qui mord et chien Brutus compris.</li>
+          <li><strong>Gribouille :</strong> il est devenu bouffon royal en formation. Il ne rit pas encore comme les autres, mais il rit.</li>
+          <li><strong>Gaston :</strong> si elle a été pardonnée, elle est promue Détective Royal en second et possède enfin son champ de maïs doré. Sinon, elle ouvre une école de détectives pour oies, et la liste d'attente est longue.</li>
+          <li><strong>Les brigands poètes :</strong> ils ouvrent le Café-Poésie « Les Rimes en Fuite ».</li>
+          <li><strong>Les canards syndiqués :</strong> ils obtiennent du pain avec du beurre et un chapeau chacun.</li>
+          <li><strong>Madame Zut :</strong> elle prédit un grand avenir au héros. Elle n'a pas tort.</li>
+        </ul>
+      </InfoBox>
+
       <ActionBox title="Lance 1D6 : quelle sera ta prochaine enquête ?">
         <ul className="list-none pl-0 space-y-2">
           <li><strong>1 →</strong> 🧀 Le Grand Fromage du Roi a disparu. Il sentait vraiment très fort. Il a dû partir tout seul.</li>
@@ -25,7 +38,7 @@ export default function Epilogue() {
 
       <InfoBox title="🏅 Les médailles du détective (à remettre à voix haute)">
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>Nez de Fin Limier</strong> : tu as trouvé au moins 4 indices avant la révélation du chapitre 5.</li>
+          <li><strong>Nez de Fin Limier</strong> : tu as trouvé au moins 4 indices avant la révélation du chapitre 6.</li>
           <li><strong>Maître du Baratin</strong> : tu as battu les brigands à leur propre jeu de rimes.</li>
           <li><strong>Cœur d'Or</strong> : tu as pardonné à Gaston, ou tu l'as écoutée.</li>
           <li><strong>Roi du Rire</strong> : tu as fait rire pour briser au moins un anneau du Chancelier.</li>

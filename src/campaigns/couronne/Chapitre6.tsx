@@ -1,125 +1,144 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
-export default function Chapitre6() {
+export default function Chapitre5() {
   return (
     <section id="chap6">
-      <h2 className="font-display text-4xl font-bold text-yellow-700 mb-6 border-b-4 border-yellow-200 pb-2 mt-16">
-        CHAPITRE 6 : LE GRAND BANQUET
+      <h2 className="font-display text-4xl font-bold text-violet-700 mb-6 border-b-4 border-violet-200 pb-2 mt-16">
+        CHAPITRE 6 : LES CACHOTS ET LA GRANDE SURPRISE
       </h2>
-      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : La grande salle de banquet du palais de Pétaouchnok<br/>Ambiance : Le grand final : un procès, un démasquage, un combat contre le Chancelier et beaucoup de rires. Prends ton temps.</p>
+      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : Les cachots du château du Baron Cornichon<br/>Ambiance : Humour de cellule et émotion : le héros est au plus bas, puis tout se retourne. C'est le rebondissement central.</p>
 
       <InfoBox title="Synopsis du Chapitre pour le Maître du Jeu">
-        <p>Quatre temps : (1) <strong>le retour de Gaston</strong>, que le héros peut pardonner ou non ; (2) <strong>le procès</strong>, où le héros présente ses preuves pour convaincre le roi ; (3) <strong>le combat final</strong> contre le Chancelier, qui met la Couronne et devient très sérieux ; (4) <strong>le dénouement</strong>. Le Chancelier est protégé par un « Bouclier de Sérieux » : <strong>chaque blague et chaque rire l'affaiblit</strong>. C'est la solution de l'histoire.</p>
+        <p>Le héros est dans une cellule, avec deux prisonniers farfelus. Le Baron vient l'interroger : <strong>il n'est pas le voleur</strong>. Il a lui-même été accusé par une lettre anonyme, et il a tendu un piège pour attraper le vrai coupable. Il montre une <strong>lettre signée « G. »</strong>, avec une tache d'encre violette. Le héros comprend <strong>que le Chancelier Gribouille, qui lui a confié l'enquête, est le vrai voleur</strong>. Il faut s'évader, avec ou sans le Baron, avant le Grand Banquet (dans quelques heures).</p>
       </InfoBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : LE RETOUR DE GASTON (Rencontre et Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : LA CELLULE (Exploration et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "Gaston se pose maladroitement dans l'herbe, trébuche, se relève. Son chapeau melon est de travers, plus que d'habitude. Elle n'ose pas te regarder. « Je... je voulais te dire. J'ai jeté le maïs. Je l'ai jeté dans les douves. Après. Pas avant. Je sais que ça ne change rien. » Elle renifle. « Je suis un mauvais oiseau. Un très mauvais détective. Mais... j'ai suivi le Chancelier cette nuit. J'ai entendu des choses. » Elle relève enfin la tête. « Je sais où est la Couronne. »"
+        "Il fait noir, froid et ça sent le chou. Au fond de la cellule, deux silhouettes te regardent. « Un nouveau ! » dit une voix grinçante. Une lueur apparaît : un petit homme tout ridé, au visage couvert de moisissure verte, allume une bougie sur sa propre barbe. « Je suis Monsieur Moisi, voleur retraité. Depuis trente ans ici, je connais tous les murs. » À côté de lui, un énorme troll en tablier, la tête dans les mains, pleure doucement. « Je m'appelle Boudin. Je suis le cuisinier. J'ai brûlé la tarte du Baron. »"<br/><br/>
+        "Tu regardes autour de toi : la porte de fer est solide, un petit soupirail laisse passer la lumière de la lune, et dans un coin, des ossements de poulet forment un dessin bizarre. Une pierre du mur semble branler un peu. Que fais-tu ?"
       </ReadAloud>
 
-      <InfoBox title="Ce que sait Gaston">
+      <InfoBox title="Profil des prisonniers">
         <ul className="list-disc pl-5 space-y-2">
-          <li>Pendant que le héros était au cachot, Gaston a espionné le palais. Il a vu le Chancelier <strong>cacher la Couronne dans le fond de la grande soupière du banquet</strong>, sous un couvercle en forme de fromage.</li>
-          <li>Il a aussi entendu le plan : <strong>le Chancelier accusera le Baron en public, puis posera la Couronne sur sa propre tête « pour protéger le royaume »</strong>.</li>
-          <li>Il est sincèrement désolé. <strong>C'est au héros de décider de la suite.</strong></li>
+          <li><strong>Monsieur Moisi :</strong> très vieux voleur, toujours à moitié endormi. Il connaît le plan des cachots par cœur, mais se perd à chaque phrase. Il parle en parenthèses.</li>
+          <li><strong>Boudin le troll cuisinier :</strong> immense, sensible, fond en larmes à tout propos. Il peut forcer la porte, mais seulement s'il se sent aimé.</li>
+        </ul>
+      </InfoBox>
+
+      <ActionBox title="Options d'Exploration et Mécaniques (Bac à sable)">
+        <h4 className="font-bold text-lg mb-2">1. Parler à Monsieur Moisi (Test de CHARME - DD 12)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> il donne l'itinéraire : « Il y a un passage derrière la pierre branlante, qui mène aux cuisines. De là, l'escalier central. (Moi, je ne le prends plus, mes genoux...). »</li>
+          <li><strong>Échec :</strong> il se perd dans son histoire et s'endort.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">2. Consoler Boudin (Test de CHARME - DD 11)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> Boudin sèche ses larmes, et se propose de défoncer la porte quand le héros sera prêt. Il devient un allié pour le prochain combat (+2 aux attaques du héros ce soir-là).</li>
+          <li><strong>Échec :</strong> il pleure encore plus fort, mais le héros gagne un point de Panache pour sa gentillesse.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">3. Fouiller la cellule (Test de MALICE - DD 13)</h4>
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Réussite : Loot : un Crochet de serrurier</strong> caché dans les ossements, qui donne +3 pour crocheter la porte.</li>
+          <li><strong>Échec :</strong> il ne trouve que des os de poulet. (Il gagne l'envie de manger du poulet.)</li>
+        </ul>
+      </ActionBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LE BARON TOMBE DES NUES (Rencontre et Rebondissement)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "La porte s'ouvre dans un grincement. Le Baron Cornichon entre, tout seul, sans garde, sa cape violette repliée sur le bras. Il s'assoit sur un tabouret en face de toi, soupire, et sort de sa poche un papier froissé. « Détective. Je dois vous avouer quelque chose : je me suis trompé. Votre oie m'a livré le détective du Chancelier, et j'ai cru tenir le voleur. Mais en vous regardant... vous ne ressemblez pas à un voleur. Vous ressemblez à quelqu'un qui a été manipulé. Comme moi. »"<br/><br/>
+        "Il te tend le papier. C'est une lettre, écrite d'une main soignée : « Baron Cornichon, le roi vous soupçonne de vouloir la Couronne. Pour vous défendre, préparez un piège dans votre château. Un voleur viendra. Signé : G. » Au bas du papier, une petite tache d'encre violette. Tu reconnais la tache. Tu reconnais l'écriture. Tu regardes le Baron, qui hoche la tête. « C'est la même que celle de la lettre que j'ai reçue le lendemain du vol. Gribouille. Le Chancelier. Il nous a manipulés, vous et moi. »"
+      </ReadAloud>
+
+      <InfoBox title="Le rebondissement : ce que le héros apprend">
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Le Baron est innocent.</strong> Il a reçu une lettre anonyme lui conseillant de piéger « le voleur », et croit que le héros est ce voleur. En réalité, il a été manipulé par le Chancelier, pour qu'il soit accusé le soir du banquet.</li>
+          <li><strong>Le Chancelier Gribouille est le vrai voleur.</strong> Il a volé la Couronne, puis l'a cachée. Il a envoyé le héros enquêter sur le Baron pour qu'il apporte les « preuves » au roi, juste à temps pour le banquet.</li>
+          <li><strong>Pourquoi ?</strong> Le Chancelier déteste les blagues. S'il met la main sur la Couronne en public, il pourra l'utiliser pour interdire le rire dans le royaume, et régner sur un pays sérieux. Il compte la mettre sur sa propre tête lors du Grand Banquet.</li>
+          <li><strong>Relie les 4 indices :</strong> si le héros en a trouvé 2 ou 3, il réalise tout seul. Sinon, le Baron les énumère. Dans les deux cas, <strong>gagne un point de Panache</strong> si le héros devine tout seul avant le Baron.</li>
         </ul>
       </InfoBox>
 
       <ActionBox title="L'Arbre de Dialogue et les Résolutions">
-        <h4 className="font-bold text-lg mb-2">Option A : Pardonner à Gaston (aucun jet)</h4>
-        <p className="mb-6">Gaston éclate en sanglots et se jette dans les bras du héros. <strong>Gagne un point de Panache</strong> et <strong>le bonus de loyauté :</strong> pendant le combat final, Gaston peut intervenir (une fois) pour attirer l'attention du Chancelier et donner +3 au héros.</p>
-
-        <h4 className="font-bold text-lg mb-2">Option B : Pardonner, mais pas tout de suite (Test de CHARME - DD 11)</h4>
-        <p className="mb-6">« D'accord, mais tu me dois une grosse faveur. » Gaston accepte, soulagé. Il aidera à moitié (+2 au héros, une fois, pendant le combat final).</p>
-
-        <h4 className="font-bold text-lg mb-2">Option C : Ne pas lui pardonner (aucun jet)</h4>
-        <p>Gaston baisse la tête, serre son chapeau. « Je comprends. » Il disparaît dans la foule. <strong>Le héros n'aura pas son aide.</strong> (Il pourra changer d'avis pendant le combat final : l'oie interviendra alors toute seule, et ça compte quand même.)</p>
-      </ActionBox>
-
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LE PROCÈS DU BANQUET (Roleplay et Enquête)</h3>
-      <ReadAloud title="Texte à lire à voix haute">
-        "La grande salle de banquet est pleine à craquer : des centaines d'invités en robes de gala, des tables couvertes de gâteaux, des trombones, un orchestre de chaussettes. Au centre, sur son trône, le roi Gaspard, pas de baignoire cette fois, a le visage défait. À côté de lui, le Chancelier Gribouille, tout en gris, lève la main : « Majesté, nobles invités, le voleur a été découvert ! Voici, enchaîné par mes soins, le Baron Cornichon ! » Deux gardes tiennent le Baron par les épaules. Il te fait un signe discret : c'est le moment. « Et voici maintenant, pour le procès, le détective que j'ai moi-même chargé de l'enquête ! » Il se tourne vers toi, sûr de lui. Tout le monde te regarde. Que fais-tu ?"
-      </ReadAloud>
-
-      <ActionBox title="Options d'Exploration et Mécaniques : le procès par les preuves">
-        <p className="mb-4">Le héros doit <strong>convaincre le roi que le Chancelier est coupable</strong>. Pour ça, il présente ses preuves, une par une, comme au tribunal. Pour chaque indice, l'enfant explique ce qu'il a trouvé : <strong>chaque indice bien expliqué donne +1 au jet final</strong>.</p>
-
-        <h4 className="font-bold text-lg mb-2">Les preuves possibles</h4>
+        <h4 className="font-bold text-lg mb-2">Option A : Faire confiance au Baron (Test de CHARME - DD 13)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Preuve 1 :</strong> la tache d'encre violette sur le coussin (chapitre 1).</li>
-          <li><strong>Preuve 2 :</strong> la tache d'encre sur le doigt du Chancelier (chapitre 1).</li>
-          <li><strong>Preuve 3 :</strong> les brigands payés par un « monsieur en gris, aux doigts tachés d'encre » (chapitre 2).</li>
-          <li><strong>Preuve 4 :</strong> le marché payé pour accuser le Baron (chapitre 3).</li>
-          <li><strong>Preuve 5 :</strong> la lettre signée « G. » du Baron (chapitre 5).</li>
-          <li><strong>Preuve 6 :</strong> l'emplacement de la Couronne, dans la soupière, révélé par Gaston.</li>
+          <li><strong>Réussite :</strong> le Baron libère le héros, lui rend son sac, et propose de l'accompagner. Il devient un <strong>allié</strong> pour le chapitre 8 (il apporte la fausse couronne et une cape de rechange).</li>
+          <li><strong>Échec :</strong> il hésite : « Je dois être certain. » Il libère le héros, mais ne l'accompagne qu'à distance, et fait surveiller la sortie.</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">Le jet final (Test de CHARME - DD 14, +1 par preuve présentée)</h4>
+        <h4 className="font-bold text-lg mb-2">Option B : S'évader sans lui (Test de MALICE - DD 14, +3 avec le crochet)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Réussite :</strong> le roi comprend. Le Chancelier devient pâle : il recule.</li>
-          <li><strong>Échec :</strong> le roi hésite : « Les preuves sont... intéressantes. Mais le Chancelier est mon plus fidèle conseiller depuis trente ans ! » Le Chancelier saute sur l'occasion et passe à l'action (le combat commence quand même, mais le héros perd son bonus d'initiative).</li>
+          <li><strong>Réussite :</strong> la serrure cède. Monsieur Moisi guide le héros dans les tunnels.</li>
+          <li><strong>Échec :</strong> la serrure se bloque, et un garde arrive. Combat possible (voir plus bas).</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">Le coup de théâtre (aucun jet)</h4>
-        <p>Si le héros ouvre la soupière (ou si Gaston la renverse sur la table), la Couronne roule jusqu'au pied du roi. Les invités poussent un cri. <strong>Gagne un point de Panache</strong> pour ce rebondissement spectaculaire.</p>
+        <h4 className="font-bold text-lg mb-2">Option C : Poser une question sur Gaston (Roleplay)</h4>
+        <p>Le Baron avoue : « Votre oie était très fière de vous. Elle n'a pas arrêté de dire que vous étiez le meilleur détective de sa carrière. Elle m'a dit : "Faites attention, il est trop gentil pour votre prison." Puis elle a pleuré dans un mouchoir en soie. » Il soupire : « Elle a refusé le maïs, finalement. Elle l'a jeté dans les douves. Mais trop tard. »</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : GRIBOUILLE LE TRÈS SÉRIEUX (Combat final)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LES TUNNELS DE MONSIEUR MOISI (Exploration et Énigmes)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "Le Chancelier ne tremble pas. Il lève une main, et d'un geste, la Couronne bondit dans sa paume. Il la pose sur sa tête. Un éclair gris traverse la salle. Les bougies s'éteignent. Les trombones se taisent. « Assez ! » dit-il d'une voix froide qui résonne partout. « Vous voulez du rire ? Voilà ce qu'il en coûte. À partir de ce soir, ce royaume sera sérieux, silencieux et propre. » Son manteau gris se gonfle comme une voile, et autour de lui, un halo sombre se forme, fait de trois anneaux de brume grise. La salle entière retient son souffle. Le héros prend une grande inspiration. Que fais-tu ?"
+        "Monsieur Moisi pousse la pierre branlante, qui bascule dans un grincement. Derrière elle, un trou noir s'ouvre sur un tunnel humide, bas de plafond, qui sent le chou, la cave et un très vieux fromage. « Par ici, » chuchote le vieux voleur. « Mais attention : le tunnel a des... disons... des habitants. » Une goutte tombe du plafond. Quelque part dans le noir, tu entends un « plic », un « plouf », et un petit rire étouffé. « C'est rien, » ajoute Moisi. « Ce sont juste des rats. Enfin... des rats-ninjas. »"
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (le Chancelier Gribouille, la Couronne sur la tête)">
-        <p className="mb-4">C'est le combat le plus dur de l'histoire. Le héros peut utiliser tout son Panache. <strong>Initiative :</strong> D20 + Courage pour le héros, D20 +3 pour le Chancelier.</p>
+      <ActionBox title="Options d'Exploration et Mécaniques (Bac à sable)">
+        <h4 className="font-bold text-lg mb-2">1. Traverser le couloir des pièges (Test de MALICE - DD 13)</h4>
+        <p className="mb-2">Le couloir est piégé : des dalles qui s'enfoncent, des fléchettes de fromage, des lames qui sortent des murs.</p>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> le héros repère les dalles et les évite. Moisi, qui connaît le tracé, lui souffle : « Gauche, gauche, droite, saute ! »</li>
+          <li><strong>Échec :</strong> une fléchette de fromage frappe le héros (−2 PV). Elle sent très mauvais pendant des heures (aucun malus, juste une odeur).</li>
+        </ul>
 
-        <h4 className="font-bold text-lg mb-2">L'Ennemi : Gribouille le Très Sérieux</h4>
+        <h4 className="font-bold text-lg mb-2">2. Les Rats-Ninjas (Négociation ou combat)</h4>
+        <p className="mb-2">Trois petits rats en cagoule noire jaillissent des ombres, brandissant des cure-dents comme des épées. Leur chef, <strong>Maître Moustache-Noire</strong>, se plante devant le héros : « Qui ose pénétrer dans notre dojo ? » Il parle avec un accent japonais approximatif.</p>
+        <ul className="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>Négocier (CHARME - DD 12) :</strong> le héros leur offre du fromage (+2), ou fait semblant de les craindre (+2). <strong>Réussite :</strong> les rats s'inclinent. « Tu as le respect des anciens. Passe, grand détective. »</li>
+          <li><strong>Combattre :</strong> trois rats-ninjas (5 PV chacun, CA 13, attaque à +3, 1D4 de dégâts). Ils disparaissent dans la fumée dès qu'ils sont touchés. <strong>Tactique :</strong> Boudin les attrape par la queue (1 par tour), le héros utilise une potion de fromage pour les distraire (MALICE - DD 12).</li>
+        </ul>
+        <p className="mb-6"><strong>Récompense (si négociation réussie) :</strong> <strong>Loot : un Cure-dent Sacré</strong> (peut être lancé pour crever un ballon, dévier un coup, ou ouvrir une serrure facile).</p>
+
+        <h4 className="font-bold text-lg mb-2">3. La porte à énigme (Test de MALICE - DD 13)</h4>
+        <p className="mb-2">Au bout du tunnel, une porte de pierre porte une inscription : « Pour sortir, dis-moi quelle est la chose qui monte quand la pluie tombe et qui descend quand la pluie s'arrête ? »</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Réponse :</strong> un parapluie. (Accepte « une ombrelle », « un parasol ».)</li>
+          <li><strong>Réussite :</strong> la porte s'ouvre. <strong>Échec :</strong> Moisi s'en souvient en dormant, et finit par souffler la réponse en ronflant. Perte d'un tour.</li>
+        </ul>
+      </ActionBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : L'ÉVASION (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Vous remontez l'escalier des cuisines, le Baron et son sac de rechange en tête, Boudin qui ferme la marche en essuyant ses larmes. Au sommet, devant la grande porte, un homme énorme, cuirassé jusqu'aux oreilles, surgit : le Garde-Chef Pâté, flanqué de deux soldats. « Halte ! Le Baron, je vous arrête... Euh... vous êtes le Baron. Mince. Qu'est-ce que je dis ? » Il consulte un petit carnet. « Ah oui : vous êtes tous arrêtés ! »"
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Garde-Chef Pâté et deux soldats)">
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : Garde-Chef Pâté et 2 Soldats</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
-          <li><strong>Points de Vie (PV) :</strong> 24.</li>
-          <li><strong>Classe d'Armure (CA) :</strong> 15 tant que le « Bouclier de Sérieux » est actif, 11 quand il est brisé.</li>
-          <li><strong>Attaques :</strong> « Décret Glacial » (+5 pour toucher, 1D8 de dégâts), « Regard Sévère » (le héros perd 1 Panache s'il rate un jet de CHARME DD 13).</li>
-          <li><strong>Bouclier de Sérieux :</strong> <strong>trois anneaux de brume</strong>. Chaque anneau se brise quand quelqu'un fait <strong>rire</strong> dans la salle (voir ci-dessous). Quand les trois sont brisés, la CA tombe à 11 et la Couronne se met à clignoter de lumière dorée.</li>
-          <li><strong>Phase 2 (à 12 PV ou moins) :</strong> le Chancelier hurle « SILENCE ! » : le héros ne peut plus dépenser de Panache pendant un tour. Mais il peut compter sur ses alliés.</li>
+          <li><strong>Garde-Chef Pâté :</strong> 14 PV, CA 14. Attaque à +4, 1D8 de dégâts. Il lit son carnet un tour sur deux et rate alors son attaque.</li>
+          <li><strong>Soldats (× 2) :</strong> 8 PV chacun, CA 12. Attaque à +2, 1D6 de dégâts.</li>
         </ul>
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
-        <ul className="list-disc pl-5 space-y-4 mb-4">
-          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1. Efficace seulement quand le bouclier est brisé.</li>
-          <li><strong>Option B - Faire rire pour briser un anneau (CHARME - DD 13, ou Réplique Cinglante avec 1 Panache) :</strong> une blague, une grimace, une imitation du Chancelier. <strong>Si l'enfant fait vraiment rire, c'est réussi sans jet.</strong> Chaque rire brise un anneau.</li>
-          <li><strong>Option C - Les alliés font rire :</strong> le roi (très doué) peut jeter une brioche à la tête du Chancelier : un anneau brisé. Le Baron imite un hibou (un anneau brisé). Boudin raconte une blague de troll (un anneau brisé).</li>
-          <li><strong>Option D - Gaston (si pardonné) :</strong> elle lance une pluie de maïs doré : le Chancelier glisse (il perd son tour) et le héros gagne +3 à son prochain jet.</li>
-          <li><strong>Option E - Esquive et ruse (COURAGE ou MALICE - DD 13) :</strong> le héros utilise la table, les gâteaux, la nappe pour esquiver le Décret Glacial et frapper par surprise (dégâts doublés si la nappe est tirée).</li>
-          <li><strong>Option F - Les potions :</strong> une potion de pomme redonne 5 PV (prend un tour).</li>
+        <ul className="list-disc pl-5 space-y-3 mb-4">
+          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1. Contre le Garde-Chef, c'est plus dur.</li>
+          <li><strong>Option B - Boudin (si le héros l'a consolé) :</strong> il soulève un soldat et le jette contre la porte (le soldat est hors-jeu). Une fois par combat.</li>
+          <li><strong>Option C - Le carnet (MALICE - DD 13) :</strong> le héros fait tomber le carnet de Pâté dans la marmite : le garde-chef passe un tour à le chercher.</li>
+          <li><strong>Option D - Le Baron (si allié) :</strong> il attaque à +3, 1D6 de dégâts, et lance parfois une blague qui déstabilise un soldat.</li>
+          <li><strong>Option E - Baratin (CHARME - DD 14) :</strong> le héros persuade les soldats qu'une fête a lieu dans la cave. Ils partent en courant, laissant le garde-chef seul.</li>
         </ul>
-        <p className="italic">Si le héros tombe à 0 PV, KO comique : il tombe dans un gâteau géant, se réveille avec 5 PV, perd un Panache, et la foule, qui rit de bon cœur, brise un anneau tout seule.</p>
+        <p className="italic">Après le combat, une trappe donne sur un tunnel qui débouche, à l'aube, sur la route du palais.</p>
       </CombatBox>
 
-      <ReadAloud title="Texte à lire à voix haute (le dernier anneau se brise)">
-        "L'ultime anneau de brume se fend, craque, et s'éparpille en fumée. Le Chancelier lève les bras, stupéfait, comme un homme qui tombe dans le vide. La Couronne, sur sa tête, se met à clignoter : doré, gris, doré, gris. Quelque part dans la salle, quelqu'un éclate de rire, un petit rire de bébé, un rire d'oie, un rire de roi. Puis tous les invités rient ensemble, de plus en plus fort, un énorme rire qui secoue les murs. La Couronne s'enflamme d'une lumière d'or pur, arrache le gris du Chancelier, et s'envole de sa tête pour retomber dans les mains du roi. Gribouille, la bouche ouverte, reste immobile. Puis, très lentement, il ouvre les lèvres... et glousse. Un petit gloussement. Puis un autre. Il se met la main sur la bouche, horrifié. « Je... ne peux pas... Hi hi... Je ne peux plus m'arrêter ! »"
+      <ReadAloud title="Texte à lire à voix haute (la sortie)">
+        "Vous émergez dans l'herbe humide, juste avant l'aube. Au loin, la silhouette du palais de Pétaouchnok brille sous la lune. Les cloches du banquet commencent à sonner. Le Baron te serre la main. « Je me rappellerai de ce jour. Allons démasquer ce vilain. » Le ciel rosit, et au même moment, très haut, tu entends un cri : « COUAC ! » Une grande tache blanche descend du ciel en piquet. C'est une oie, un peu essoufflée, avec un chapeau de travers."
       </ReadAloud>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : LE DÉNOUEMENT (Roleplay)</h3>
-      <ReadAloud title="Texte à lire à voix haute">
-        "Le roi Gaspard se lève, la Couronne dans les mains, des larmes de joie dans les yeux. « Mes amis ! » Il la pose sur sa tête, et un grand éclair d'or éclaire tout le royaume. Au loin, dans les rues, les gens se mettent à rire sans savoir pourquoi. « Détective, » dit-il en te serrant dans ses bras mouillés (il est encore un peu savonneux), « tu as sauvé le royaume. Et tu as sauvé mon Banquet. Ce soir, on mange, on chante, on rit... et on dit merci à ceux qui ont rendu ça possible. » Il se tourne vers le Baron : « Cornichon, mon ami, pardon. » Il se tourne vers toi : « Et pour toi, ce qui reste d'un royaume reconnaissant. »"
-      </ReadAloud>
-
-      <ActionBox title="Les choix de la fin">
-        <h4 className="font-bold text-lg mb-2">Que faire du Chancelier ? (Roleplay)</h4>
-        <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Le pardonner :</strong> « La punition parfaite : un an à travailler comme bouffon du roi. » Le Chancelier, qui rit de plus en plus, accepte. (+1 Panache pour la clémence.)</li>
-          <li><strong>Le faire juger :</strong> le roi décide d'une peine amusante : « Interdit de sérieux pendant un an ! » L'histoire finit sur un éclat de rire.</li>
-          <li><strong>Lui demander pourquoi :</strong> Gribouille avoue qu'enfant, on s'était moqué de lui, et qu'il avait juré de ne plus jamais rire. Le héros peut lui répondre (CHARME, DD 12) : s'il réussit, le Chancelier, désarmé, pleure de joie.</li>
-        </ul>
-
-        <h4 className="font-bold text-lg mb-2">Que faire de Gaston ? (Roleplay)</h4>
-        <p>Si le héros a pardonné, le roi lui offre un titre : « Détective royal en second ». Elle fond en larmes. Sinon, elle repart seule, la tête haute, avec son chapeau de travers. Dans les deux cas, <strong>laisse un moment de calme</strong> : ce que dit le héros compte plus que n'importe quel jet.</p>
-      </ActionBox>
-
-      <InfoBox title="Récompenses finales">
+      <InfoBox title="Récompenses et Note pour le MJ">
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Loot :</strong> la <strong>Médaille du Détective Royal</strong> et 100 écus du roi.</li>
-          <li><strong>Panache :</strong> recompte les points de Panache : chaque point qui reste vaut une médaille de bravoure (voir l'épilogue).</li>
-          <li><strong>Le cœur de l'histoire :</strong> le rire est une force. Et un ami qui se trompe peut revenir, si on lui laisse la porte ouverte.</li>
+          <li><strong>Loot :</strong> le héros récupère son sac à gadgets, <strong>une Fausse Couronne</strong> (si le Baron est allié) et peut dépenser 1 Panache pour une dernière potion.</li>
+          <li><strong>Panache :</strong> donne un point au héros pour la gentillesse envers Boudin ou Moisi, et un autre s'il a deviné tout seul le coupable.</li>
+          <li><strong>Gaston revient (fin de chapitre).</strong> Joue-le avec émotion : il est essoufflé, honteux, et n'ose pas se poser. C'est le héros qui décide de ce qu'il lui répond (voir chapitre 6).</li>
         </ul>
       </InfoBox>
     </section>

@@ -1,117 +1,168 @@
 import React from 'react';
 import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
-export default function Chapitre5() {
+export default function Chapitre4() {
   return (
     <section id="chap5">
-      <h2 className="font-display text-4xl font-bold text-violet-700 mb-6 border-b-4 border-violet-200 pb-2 mt-16">
-        CHAPITRE 5 : LES CACHOTS ET LA GRANDE SURPRISE
+      <h2 className="font-display text-4xl font-bold text-rose-700 mb-6 border-b-4 border-rose-200 pb-2 mt-16">
+        CHAPITRE 5 : LE CHÂTEAU DU BARON CORNICHON
       </h2>
-      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : Les cachots du château du Baron Cornichon<br/>Ambiance : Humour de cellule et émotion : le héros est au plus bas, puis tout se retourne. C'est le rebondissement central.</p>
+      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : Le château du Baron Cornichon, sur la colline<br/>Ambiance : Infiltration comique, pièges absurdes, puis un coup de théâtre : la trahison.</p>
 
       <InfoBox title="Synopsis du Chapitre pour le Maître du Jeu">
-        <p>Le héros est dans une cellule, avec deux prisonniers farfelus. Le Baron vient l'interroger : <strong>il n'est pas le voleur</strong>. Il a lui-même été accusé par une lettre anonyme, et il a tendu un piège pour attraper le vrai coupable. Il montre une <strong>lettre signée « G. »</strong>, avec une tache d'encre violette. Le héros comprend <strong>que le Chancelier Gribouille, qui lui a confié l'enquête, est le vrai voleur</strong>. Il faut s'évader, avec ou sans le Baron, avant le Grand Banquet (dans quelques heures).</p>
+        <p>Le héros s'introduit dans le château par le fossé, la cour ou la cuisine. Il y croise des gardes ridicules et un chien qui se prend pour un lion, puis trouve, dans la salle du trésor, une <strong>couronne sous verre</strong>. C'est un piège : <strong>Gaston le trahit</strong> en échange d'un sac de maïs doré, et le Baron fait prisonnier le héros. <strong>Prépare cette scène avec soin :</strong> joue-la avec humour mais laisse un vrai moment de silence quand l'oie parle.</p>
       </InfoBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : LA CELLULE (Exploration et Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : L'ENTRÉE DANS LE CHÂTEAU (Exploration)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "Il fait noir, froid et ça sent le chou. Au fond de la cellule, deux silhouettes te regardent. « Un nouveau ! » dit une voix grinçante. Une lueur apparaît : un petit homme tout ridé, au visage couvert de moisissure verte, allume une bougie sur sa propre barbe. « Je suis Monsieur Moisi, voleur retraité. Depuis trente ans ici, je connais tous les murs. » À côté de lui, un énorme troll en tablier, la tête dans les mains, pleure doucement. « Je m'appelle Boudin. Je suis le cuisinier. J'ai brûlé la tarte du Baron. »"<br/><br/>
-        "Tu regardes autour de toi : la porte de fer est solide, un petit soupirail laisse passer la lumière de la lune, et dans un coin, des ossements de poulet forment un dessin bizarre. Une pierre du mur semble branler un peu. Que fais-tu ?"
+        "Le château du Baron Cornichon ressemble à une pile de crêpes qu'un géant aurait posées de travers. Les tourelles penchent, les fenêtres sont trop petites, et un drapeau en forme de cornichon flotte au sommet. Un fossé vert l'entoure, rempli d'une eau trouble, où l'on aperçoit parfois une grosse carpe bouger. Un pont-levis est levé, mais derrière la haie, tu entends un garde chanter : « Je suis le garde, je garde, je garde... »"<br/><br/>
+        "Tu vois trois options : une petite porte de cuisine entrouverte, dont sort une odeur de soupe au chou ; un mur recouvert de lierre qui monte jusqu'à une fenêtre ouverte ; et un tuyau d'évacuation assez large pour qu'on s'y glisse. Gaston, lui, regarde ailleurs en lissant ses plumes, un peu trop calme. Que fais-tu ?"
       </ReadAloud>
 
-      <InfoBox title="Profil des prisonniers">
+      <InfoBox title="Profil des gardes et du chien du Baron">
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Monsieur Moisi :</strong> très vieux voleur, toujours à moitié endormi. Il connaît le plan des cachots par cœur, mais se perd à chaque phrase. Il parle en parenthèses.</li>
-          <li><strong>Boudin le troll cuisinier :</strong> immense, sensible, fond en larmes à tout propos. Il peut forcer la porte, mais seulement s'il se sent aimé.</li>
+          <li><strong>Les gardes du château :</strong> ils croient que « garder » veut dire « parler tout seul pour rester éveillé ». Ils racontent leurs vacances à voix haute et ne voient rien.</li>
+          <li><strong>Brutus le chien :</strong> un minuscule chihuahua à collier clouté, qui aboie comme un lion, mais qui a peur de tout ce qui est plus gros que lui, y compris l'oie Gaston.</li>
         </ul>
       </InfoBox>
 
       <ActionBox title="Options d'Exploration et Mécaniques (Bac à sable)">
-        <h4 className="font-bold text-lg mb-2">1. Parler à Monsieur Moisi (Test de CHARME - DD 12)</h4>
+        <h4 className="font-bold text-lg mb-2">1. Entrer par la cuisine (Test de CHARME - DD 12)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Réussite :</strong> il donne l'itinéraire : « Il y a un passage derrière la pierre branlante, qui mène aux cuisines. De là, l'escalier central. (Moi, je ne le prends plus, mes genoux...). »</li>
-          <li><strong>Échec :</strong> il se perd dans son histoire et s'endort.</li>
+          <li>Un cuisinier surveille sa soupe : « Je suis occupé, mais si tu m'aides, je ne te dénonce pas ! »</li>
+          <li><strong>Réussite :</strong> le héros goûte la soupe (« Délicieuse ! ») et entre sans histoire. Il rejoint l'escalier central sans être vu.</li>
+          <li><strong>Échec :</strong> la soupe est affreuse. Le héros fait la grimace, le cuisinier crie : un garde arrive. Le héros peut l'éviter (COURAGE, DD 12) ou le combattre.</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">2. Consoler Boudin (Test de CHARME - DD 11)</h4>
+        <h4 className="font-bold text-lg mb-2">2. Escalader le lierre (Test de COURAGE - DD 13, +2 avec le grappin renforcé)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Réussite :</strong> Boudin sèche ses larmes, et se propose de défoncer la porte quand le héros sera prêt. Il devient un allié pour le prochain combat (+2 aux attaques du héros ce soir-là).</li>
-          <li><strong>Échec :</strong> il pleure encore plus fort, mais le héros gagne un point de Panache pour sa gentillesse.</li>
+          <li><strong>Réussite :</strong> il atteint la fenêtre et entre dans une chambre qui sent le fromage. Il peut fouiller discrètement (<strong>Loot : une Clé de Cave</strong>).</li>
+          <li><strong>Échec :</strong> le lierre cède, le héros chute dans le fossé (−2 PV, et la carpe lui mordille la botte). Il peut réessayer ou changer de route.</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">3. Fouiller la cellule (Test de MALICE - DD 13)</h4>
-        <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Réussite : Loot : un Crochet de serrurier</strong> caché dans les ossements, qui donne +3 pour crocheter la porte.</li>
-          <li><strong>Échec :</strong> il ne trouve que des os de poulet. (Il gagne l'envie de manger du poulet.)</li>
+        <h4 className="font-bold text-lg mb-2">3. Se glisser par le tuyau (Test de MALICE - DD 12)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> il rampe sans bruit jusqu'à une salle d'armes, pleine d'épées rouillées et d'une armure qui lui fait un coucou.</li>
+          <li><strong>Échec :</strong> il se coince. Gaston doit le tirer, en râlant. Le héros perd un tour et 1 PV.</li>
         </ul>
+
+        <h4 className="font-bold text-lg mb-2">4. Remarquer que Gaston est bizarre (Test de MALICE - DD 13, si ce n'est pas déjà fait)</h4>
+        <p>Si le héros a déjà remarqué le maïs sur le bec de Gaston au chapitre 4, il a un <strong>avantage</strong> ici (il lance deux D20 et garde le meilleur). <strong>Réussite :</strong> il comprend que Gaston cache quelque chose. S'il lui pose la question, l'oie jure sur sa vanité qu'elle est « un modèle de loyauté ». (Le héros peut alors garder sa potion de pomme en réserve pour la trahison.)</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LE BARON TOMBE DES NUES (Rencontre et Rebondissement)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LA GALERIE DES ANCÊTRES PARLANTS (Exploration et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "La porte s'ouvre dans un grincement. Le Baron Cornichon entre, tout seul, sans garde, sa cape violette repliée sur le bras. Il s'assoit sur un tabouret en face de toi, soupire, et sort de sa poche un papier froissé. « Détective. Je dois vous avouer quelque chose : je me suis trompé. Votre oie m'a livré le détective du Chancelier, et j'ai cru tenir le voleur. Mais en vous regardant... vous ne ressemblez pas à un voleur. Vous ressemblez à quelqu'un qui a été manipulé. Comme moi. »"<br/><br/>
-        "Il te tend le papier. C'est une lettre, écrite d'une main soignée : « Baron Cornichon, le roi vous soupçonne de vouloir la Couronne. Pour vous défendre, préparez un piège dans votre château. Un voleur viendra. Signé : G. » Au bas du papier, une petite tache d'encre violette. Tu reconnais la tache. Tu reconnais l'écriture. Tu regardes le Baron, qui hoche la tête. « C'est la même que celle de la lettre que j'ai reçue le lendemain du vol. Gribouille. Le Chancelier. Il nous a manipulés, vous et moi. »"
+        "Tu pousses une porte et tu te retrouves dans une longue galerie éclairée de bougies. Sur les murs, des dizaines de portraits d'hommes et de femmes à moustaches, à nez crochus, à chapeaux ridicules, te regardent de leurs yeux peints. Tu fais trois pas. Un portrait tousse. Un autre murmure : « Chut, il y a quelqu'un. » « Où ça ? » « Là, le petit avec l'oie. » Une grosse voix s'élève : « Un intrus ! Un intrus dans la galerie des Cornichon ! » Aussitôt, tous les portraits se mettent à parler en même temps, dans un joyeux brouhaha. Gaston sursaute : « Je n'ai rien fait ! J'ai juste... marché. »"
       </ReadAloud>
 
-      <InfoBox title="Le rebondissement : ce que le héros apprend">
+      <InfoBox title="Profil des Ancêtres Parlants">
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Le Baron est innocent.</strong> Il a reçu une lettre anonyme lui conseillant de piéger « le voleur », et croit que le héros est ce voleur. En réalité, il a été manipulé par le Chancelier, pour qu'il soit accusé le soir du banquet.</li>
-          <li><strong>Le Chancelier Gribouille est le vrai voleur.</strong> Il a volé la Couronne, puis l'a cachée. Il a envoyé le héros enquêter sur le Baron pour qu'il apporte les « preuves » au roi, juste à temps pour le banquet.</li>
-          <li><strong>Pourquoi ?</strong> Le Chancelier déteste les blagues. S'il met la main sur la Couronne en public, il pourra l'utiliser pour interdire le rire dans le royaume, et régner sur un pays sérieux. Il compte la mettre sur sa propre tête lors du Grand Banquet.</li>
-          <li><strong>Relie les 4 indices :</strong> si le héros en a trouvé 2 ou 3, il réalise tout seul. Sinon, le Baron les énumère. Dans les deux cas, <strong>gagne un point de Panache</strong> si le héros devine tout seul avant le Baron.</li>
+          <li><strong>Qui ils sont :</strong> les portraits des ancêtres du Baron, enchantés par un sort ancien. Ils se disputent, se coupent la parole et ont tous un avis sur tout.</li>
+          <li><strong>Sir Cornichon le Vieux :</strong> le plus ancien, moustache en guidon, voix de tonnerre. Il croit que tout est une invasion.</li>
+          <li><strong>Dame Cornichonne :</strong> élégante, un peu snob, pleine de ragots.</li>
+          <li><strong>Le petit Cornichon-Junior :</strong> un enfant en collerette qui répète tout ce que dit son grand-père.</li>
+          <li><strong>Ce qu'ils savent :</strong> ils ont vu tout ce qui s'est passé dans le château depuis trois siècles, y compris les visites du Chancelier Gribouille, qui vient « discuter de la Couronne » tard le soir.</li>
         </ul>
       </InfoBox>
 
-      <ActionBox title="L'Arbre de Dialogue et les Résolutions">
-        <h4 className="font-bold text-lg mb-2">Option A : Faire confiance au Baron (Test de CHARME - DD 13)</h4>
+      <ActionBox title="Options d'Exploration et Mécaniques (Bac à sable)">
+        <h4 className="font-bold text-lg mb-2">1. Calmer les portraits (Test de CHARME - DD 12)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Réussite :</strong> le Baron libère le héros, lui rend son sac, et propose de l'accompagner. Il devient un <strong>allié</strong> pour le chapitre 6 (il apporte la fausse couronne et une cape de rechange).</li>
-          <li><strong>Échec :</strong> il hésite : « Je dois être certain. » Il libère le héros, mais ne l'accompagne qu'à distance, et fait surveiller la sortie.</li>
+          <li><strong>Réussite :</strong> le héros fait un compliment à chacun. Les portraits se calment, flattés, et se mettent à raconter l'histoire de la famille.</li>
+          <li><strong>Échec :</strong> ils crient « Alerte ! » en chœur. Un garde arrive au bout du couloir (voir la Scène 4).</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">Option B : S'évader sans lui (Test de MALICE - DD 14, +3 avec le crochet)</h4>
+        <h4 className="font-bold text-lg mb-2">2. Écouter les ragots de Dame Cornichonne (Test de MALICE - DD 12)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">
-          <li><strong>Réussite :</strong> la serrure cède. Monsieur Moisi guide le héros dans les tunnels.</li>
-          <li><strong>Échec :</strong> la serrure se bloque, et un garde arrive. Combat possible (voir plus bas).</li>
+          <li><strong>Réussite :</strong> elle murmure : « Le Baron ? Il est incapable de voler une pomme. Il pleure quand il écrase une fourmi. Ce sont les gens en gris qui sont louches. » <strong>Indice :</strong> les portraits savent que le Baron est un brave homme. Le héros peut avoir un doute sur l'accusation.</li>
+          <li><strong>Échec :</strong> elle parle de la mode du siècle dernier.</li>
         </ul>
 
-        <h4 className="font-bold text-lg mb-2">Option C : Poser une question sur Gaston (Roleplay)</h4>
-        <p>Le Baron avoue : « Votre oie était très fière de vous. Elle n'a pas arrêté de dire que vous étiez le meilleur détective de sa carrière. Elle m'a dit : "Faites attention, il est trop gentil pour votre prison." Puis elle a pleuré dans un mouchoir en soie. » Il soupire : « Elle a refusé le maïs, finalement. Elle l'a jeté dans les douves. Mais trop tard. »</p>
+        <h4 className="font-bold text-lg mb-2">3. Demander à Sir Cornichon le Vieux de l'aider (Test de CHARME - DD 13)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> il ordonne à tous les portraits de se taire pendant quelques minutes, ce qui permet au héros de traverser la galerie sans alerter les gardes. <strong>Gagne +2 à tous les jets de discrétion de la Scène 4.</strong></li>
+          <li><strong>Échec :</strong> il hurle « À L'ASSAUT ! » et tous les portraits applaudissent. Le héros doit courir.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">4. Fouiller derrière les cadres (Test de MALICE - DD 13)</h4>
+        <p>Derrière un portrait se cache un petit passage secret. <strong>Réussite : Loot : une Clé de Cave</strong> (permet d'ouvrir la porte du couloir des cachots au chapitre 6, sans crocheter la serrure) et <strong>un Message Gris</strong> froissé : « Baron, vous serez bientôt accusé. Gardez le silence. G. » (Preuve supplémentaire à garder pour le procès.)</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : L'ÉVASION (Combat)</h3>
+            <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LA BIBLIOTHÈQUE DES LIVRES QUI MORDENT (Énigme et Piège)</h3>
       <ReadAloud title="Texte à lire à voix haute">
-        "Vous remontez l'escalier des cuisines, le Baron et son sac de rechange en tête, Boudin qui ferme la marche en essuyant ses larmes. Au sommet, devant la grande porte, un homme énorme, cuirassé jusqu'aux oreilles, surgit : le Garde-Chef Pâté, flanqué de deux soldats. « Halte ! Le Baron, je vous arrête... Euh... vous êtes le Baron. Mince. Qu'est-ce que je dis ? » Il consulte un petit carnet. « Ah oui : vous êtes tous arrêtés ! »"
+        "Au bout de la galerie, une grande porte de bois sculpté donne sur une salle ronde, tapissée d'étagères pleines de livres. Dès que tu entres, tu entends un grognement. Un gros dictionnaire, posé sur une table, ouvre ses pages comme une gueule. « GRRR ! » Un autre livre, plus petit, saute de son étagère et te mord la manche. « Aïe ! » Des dizaines de volumes se mettent à claquer des couvertures, à grogner, à battre des pages. Au centre, sur un pupitre, un livre est ouvert à une page particulière : une énigme gravée en lettres dorées."
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (Garde-Chef Pâté et deux soldats)">
-        <h4 className="font-bold text-lg mb-2">Les Ennemis : Garde-Chef Pâté et 2 Soldats</h4>
+      <ActionBox title="L'énigme de la bibliothèque (Épreuve d'énigme et de combat léger)">
+        <p className="mb-4">Les livres qui mordent protègent un coffre caché derrière la bibliothèque. Pour les apaiser, il faut résoudre l'énigme du pupitre, ou les calmer un à un.</p>
+        <p className="italic mb-4">« J'ai des pages, mais pas de pattes. J'ai un dos, mais pas de tête. J'ai des histoires plein le ventre, mais pas de bouche pour les raconter. Et pourtant, aujourd'hui, je mords. Qui suis-je ? » <em>(Réponse : un livre. Si l'enfant sèche, le MJ peut montrer du doigt un livre qui mord : c'est une aide gratuite.)</em></p>
+
+        <h4 className="font-bold text-lg mb-2">Option A : Résoudre l'énigme (Test de MALICE - DD 13)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> les livres se referment doucement, et un panneau secret s'ouvre : <strong>Loot : un Livre d'Astuces</strong> (permet de relancer un jet de MALICE, une fois).</li>
+          <li><strong>Échec :</strong> les livres mordent : −2 PV et la perte d'un tour.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">Option B : Calmer les livres (Test de CHARME - DD 12)</h4>
+        <p className="mb-6">Chanter une berceuse, raconter une histoire, ou lire un livre à voix haute (les livres adorent qu'on les lise). <strong>Réussite :</strong> ils s'endorment. <strong>Gagne un Panache</strong> si le héros invente une histoire drôle.</p>
+
+        <h4 className="font-bold text-lg mb-2">Option C : Fuir (Test de COURAGE - DD 11)</h4>
+        <p>Le héros ressort en courant, couvert de morsures de papier (−1 PV). Gaston, elle, a perdu un bout de plume.</p>
+      </ActionBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : LES COULOIRS ET LE CHIEN BRUTUS (Combat facultatif)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Les couloirs du château sont tapissés de portraits du Baron, tous avec la même moue. Au détour d'un escalier, une boule de poils aboie de toutes ses forces. « GRRR ! GRRR ! » Brutus, le chihuahua, te fonce dessus en montrant ses dents minuscules. Il aboie si fort que deux gardes viennent voir : « Qu'y a-t-il, Brutus ? » « GRRR ! » « Ah, d'accord, c'est un intrus. Euh... où ça ? »"
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Brutus et deux gardes distraits)">
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : Brutus et deux Gardes du Château</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
-          <li><strong>Garde-Chef Pâté :</strong> 14 PV, CA 14. Attaque à +4, 1D8 de dégâts. Il lit son carnet un tour sur deux et rate alors son attaque.</li>
-          <li><strong>Soldats (× 2) :</strong> 8 PV chacun, CA 12. Attaque à +2, 1D6 de dégâts.</li>
+          <li><strong>Brutus :</strong> 6 PV, CA 13. Attaque à +3, 1D4 de dégâts. Si Gaston s'approche, il s'enfuit en jappant.</li>
+          <li><strong>Garde du château (× 2) :</strong> 10 PV chacun, CA 12. Attaque à +3, 1D6 de dégâts. Ils attaquent un tour sur deux (ils oublient pourquoi ils sont là).</li>
         </ul>
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-3 mb-4">
-          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1. Contre le Garde-Chef, c'est plus dur.</li>
-          <li><strong>Option B - Boudin (si le héros l'a consolé) :</strong> il soulève un soldat et le jette contre la porte (le soldat est hors-jeu). Une fois par combat.</li>
-          <li><strong>Option C - Le carnet (MALICE - DD 13) :</strong> le héros fait tomber le carnet de Pâté dans la marmite : le garde-chef passe un tour à le chercher.</li>
-          <li><strong>Option D - Le Baron (si allié) :</strong> il attaque à +3, 1D6 de dégâts, et lance parfois une blague qui déstabilise un soldat.</li>
-          <li><strong>Option E - Baratin (CHARME - DD 14) :</strong> le héros persuade les soldats qu'une fête a lieu dans la cave. Ils partent en courant, laissant le garde-chef seul.</li>
+          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1.</li>
+          <li><strong>Option B - Les portraits (MALICE - DD 12) :</strong> le héros décroche un grand portrait qui tombe sur un garde : il perd son tour et 1D6 PV.</li>
+          <li><strong>Option C - Gaston contre Brutus :</strong> si le héros lui demande, Gaston fait peur au chien (il siffle fort). Brutus s'enfuit.</li>
+          <li><strong>Option D - Baratin (CHARME - DD 13) :</strong> le héros convainc les gardes qu'il est un cousin du Baron, venu pour la fête. Ils le saluent et s'en vont chercher un goûter.</li>
         </ul>
-        <p className="italic">Après le combat, une trappe donne sur un tunnel qui débouche, à l'aube, sur la route du palais.</p>
+        <p className="italic">Si le héros n'arrive pas à les éviter et tombe à 0 PV, le KO comique est « réveillé par un seau d'eau, 5 PV, un Panache en moins », et on passe directement à la scène 3 (le Baron le trouve).</p>
       </CombatBox>
 
-      <ReadAloud title="Texte à lire à voix haute (la sortie)">
-        "Vous émergez dans l'herbe humide, juste avant l'aube. Au loin, la silhouette du palais de Pétaouchnok brille sous la lune. Les cloches du banquet commencent à sonner. Le Baron te serre la main. « Je me rappellerai de ce jour. Allons démasquer ce vilain. » Le ciel rosit, et au même moment, très haut, tu entends un cri : « COUAC ! » Une grande tache blanche descend du ciel en piquet. C'est une oie, un peu essoufflée, avec un chapeau de travers."
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 5 : LA SALLE DU TRÉSOR ET LA TRAHISON (Roleplay)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Au bout d'un long couloir, une grande porte est entrouverte. Au centre d'une salle ronde, sous une cloche de verre, brille la Couronne du Rire. Elle est dorée, elle scintille, elle est exactement comme sur les tableaux. Gaston s'approche, bouche bée. « Mon Dieu... Mon enquête est terminée. » Tu t'approches de la cloche, la main tendue, le cœur battant."<br/><br/>
+        "Et là, derrière toi, un déclic. Tu te retournes : la porte vient de se refermer. Gaston est en train de reculer, lentement, vers un coin de la salle, les yeux baissés. Un homme grand, en cape violette, sort de l'ombre en battant des mains. « Bravo, bravo ! Je vous attendais ! » Le Baron Cornichon sourit. Dans une main, il tient un grand sac de toile. Tu entends le tintement de grains. « Gaston ? Les dix kilos de maïs doré, comme promis. » L'oie baisse la tête. « Désolé, détective. Dix kilos. Tu comprends. Dix kilos. »"
       </ReadAloud>
 
-      <InfoBox title="Récompenses et Note pour le MJ">
+      <InfoBox title="Profil du Baron Cornichon et de la trahison">
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Loot :</strong> le héros récupère son sac à gadgets, <strong>une Fausse Couronne</strong> (si le Baron est allié) et peut dépenser 1 Panache pour une dernière potion.</li>
-          <li><strong>Panache :</strong> donne un point au héros pour la gentillesse envers Boudin ou Moisi, et un autre s'il a deviné tout seul le coupable.</li>
-          <li><strong>Gaston revient (fin de chapitre).</strong> Joue-le avec émotion : il est essoufflé, honteux, et n'ose pas se poser. C'est le héros qui décide de ce qu'il lui répond (voir chapitre 6).</li>
+          <li><strong>Le Baron Cornichon :</strong> grand, élégant, cape violette, rire communicatif, mais très vexé d'être soupçonné par le roi. Il a tendu un piège pour attraper « le voleur » qui s'en prend à son château (en réalité, il pense que c'est le héros).</li>
+          <li><strong>La trahison de Gaston :</strong> pendant le chapitre 4, le Baron l'a payée en promesse de maïs doré pour qu'il l'avertisse de l'arrivée du « détective du Chancelier ». L'oie ne pensait pas que ça irait si loin. <strong>Joue-la mal à l'aise : elle ment mal, hésite, et finit par craquer.</strong></li>
+          <li><strong>La couronne sous verre :</strong> c'est une fausse couronne, en fromage doré et colorant. C'est le piège du Baron pour attirer le voleur.</li>
         </ul>
       </InfoBox>
+
+      <ActionBox title="La trahison : les réactions du héros">
+        <p className="mb-4">Laisse d'abord le temps à l'enfant de réagir (colère, tristesse, rire...). Voici les actions possibles, mais il peut aussi improviser.</p>
+
+        <h4 className="font-bold text-lg mb-2">Option A : S'enfuir par la fenêtre (Test de COURAGE - DD 15, ou avec Panache)</h4>
+        <p className="mb-6"><strong>Réussite :</strong> il saute dans les douves, échappe à deux gardes... et se fait attraper à la sortie par une dizaine de lanciers. De toute façon, il sera capturé : mais il garde son sac et ses objets. <strong>Échec :</strong> il est capturé et confisque son sac à gadgets (il le retrouvera au chapitre 5).</p>
+
+        <h4 className="font-bold text-lg mb-2">Option B : Parler au Baron et plaider son innocence (Test de CHARME - DD 14)</h4>
+        <p className="mb-6"><strong>Réussite :</strong> le Baron hésite, mais ses gardes entrent déjà. Il dit : « Je vous écouterai, je le promets, mais dans une cellule. » Le héros est conduit au cachot <strong>sans ses menottes</strong> et garde ses objets. <strong>Échec :</strong> « Tous les voleurs disent ça ! » Il est menotté et fouillé.</p>
+
+        <h4 className="font-bold text-lg mb-2">Option C : Parler à Gaston (Roleplay)</h4>
+        <p className="mb-2">C'est la scène émotionnelle du chapitre. Laisse l'enfant dire ce qu'il pense. Gaston murmure : « Dix kilos de maïs... j'ai pas pu résister. Tu es un bon détective. Je suis un mauvais oiseau. » Si le héros est vraiment touchant, l'oie a les larmes aux yeux.</p>
+        <p><strong>Gagne un point de Panache</strong> pour avoir osé parler à celui qui l'a trahi.</p>
+      </ActionBox>
+
+      <ReadAloud title="Texte à lire à voix haute (la capture)">
+        "Un garde ouvre une trappe sous tes pieds, et tu tombes dans un toboggan de pierre, qui t'amène dans le noir, entre deux rires, dans un grand « SPLOUCH ». Au-dessus de toi, la trappe se referme. Tu entends encore, très faiblement, la voix de Gaston : « ...je suis désolé... » Puis le silence. Tu es dans les cachots du château, dans une cellule sale, sans aucune idée de la suite. Mais en regardant bien dans le noir, tu aperçois que tu n'es pas seul."
+      </ReadAloud>
     </section>
   );
 }

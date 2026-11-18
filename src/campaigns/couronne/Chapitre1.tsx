@@ -65,7 +65,7 @@ export default function Chapitre1() {
         <ul className="list-disc pl-5 space-y-2">
           <li><strong>Apparence :</strong> grande oie blanche, très fière, un petit chapeau melon toujours de travers.</li>
           <li><strong>Voix :</strong> voix de diva vexée, lente et pleine de soupirs. Elle se prend pour le meilleur détective du monde. Elle commente tout : « Sublime. » « Pitoyable. » « Je vous l'avais dit. »</li>
-          <li><strong>Son défaut (à préparer pour le chapitre 4) :</strong> elle adore le <strong>maïs doré</strong>, plus que tout. Dès qu'on en agite devant elle, elle perd la tête. Elle est lâche mais attachante. Sous sa vanité, elle apprécie sincèrement le héros, et le montre en l'insultant gentiment.</li>
+          <li><strong>Son défaut (à préparer pour le chapitre 5) :</strong> elle adore le <strong>maïs doré</strong>, plus que tout. Dès qu'on en agite devant elle, elle perd la tête. Elle est lâche mais attachante. Sous sa vanité, elle apprécie sincèrement le héros, et le montre en l'insultant gentiment.</li>
           <li><strong>En jeu :</strong> Gaston peut donner <strong>un coup de main</strong> (+2) à un jet une fois par chapitre, en échange d'un compliment sincère du héros.</li>
         </ul>
       </InfoBox>
@@ -90,6 +90,64 @@ export default function Chapitre1() {
       <ReadAloud title="Texte à lire à voix haute (fin du chapitre)">
         "Le Chancelier te tend un parchemin tout gris, couvert d'une écriture serrée : l'itinéraire de l'enquête. « Forêt des Brigands, Marché aux Menteurs, puis le château du Baron. Dépêchez-vous : le banquet est demain à vingt heures. » Il sourit, ou plutôt ses lèvres se tendent un peu. Quand tu quittes le château, Gaston te suit en marchant comme si tout lui appartenait. « Chérie, » dit-elle à une passante, « ne regardez pas, c'est mon assistant. » Tu soupires. Ça va être une longue enquête."
       </ReadAloud>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LES PRÉPARATIFS DANS LE VILLAGE (Exploration et Roleplay)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Avant de partir en enquête, il faut s'équiper. Tu retournes à ton agence, au-dessus de la boulangerie de Madame Tartine, pour attraper ton sac, ton manteau de détective et ta loupe. En bas, la boulangère t'attend sur le pas de la porte, les mains pleines de farine. « Alors, c'est vrai ? Tu enquêtes pour le roi ? » Elle essuie une larme avec un torchon (ce qui met de la farine sur sa joue). « Dis-moi ce dont tu as besoin. Pour toi, c'est cadeau. Enfin, presque cadeau. » Dans la rue, les habitants se regroupent : le forgeron, la couturière, le marchand de bretzels. Tout le monde veut te donner un conseil. Que fais-tu ?"
+      </ReadAloud>
+
+      <InfoBox title="Profil des habitants de la Rue des Rumeurs">
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Madame Tartine :</strong> boulangère généreuse, grosse voix, câlins dangereux. Elle mélange les noms (« Détective Gaston ! »).</li>
+          <li><strong>Gédéon le forgeron :</strong> immense, timide, il forge surtout des cuillères. Il rêve d'être poète.</li>
+          <li><strong>Mademoiselle Ficelle, la couturière :</strong> très rapide, parle en rafales, a toujours une aiguille entre les dents.</li>
+          <li><strong>Monsieur Bretzel :</strong> marchand ambulant, connaît toutes les rumeurs du village. La moitié sont fausses, et il le sait.</li>
+        </ul>
+      </InfoBox>
+
+      <ActionBox title="Options d'Exploration et Mécaniques (Bac à sable)">
+        <h4 className="font-bold text-lg mb-2">1. Demander un équipement à Madame Tartine (Test de CHARME - DD 11)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>Réussite :</strong> elle offre, au choix, <strong>trois brioches-potions</strong> (chacune rend 3 PV) ou <strong>un sac de pain de voyage</strong> qui sert d'appât pour les animaux.</li>
+          <li><strong>Échec :</strong> elle insiste pour te faire goûter « un petit quelque chose » : le héros perd un tour mais gagne un <strong>Panache</strong> pour sa politesse.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">2. Visiter la forge de Gédéon (Test de CHARME ou de COURAGE - DD 12)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li>Gédéon forge une petite cuillère en argent. Il t'offre de l'aiguiser, de renforcer ton épée, ou de lire son poème (« Ô marteau, ô enclume »).</li>
+          <li><strong>Réussite (en lisant le poème avec émotion) :</strong> <strong>Loot : épée renforcée</strong> (dégâts 1D6 +2 pour toute l'aventure).</li>
+          <li><strong>Échec :</strong> la lecture est très mauvaise. Gédéon pleure. L'épée reste inchangée, mais le héros gagne +1 Panache pour sa gentillesse.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">3. Passer chez Mademoiselle Ficelle (Test de MALICE - DD 11)</h4>
+        <ul className="list-disc pl-5 space-y-2 mb-6">
+          <li>Elle propose de coudre une <strong>doublure à capes</strong> en un clin d'œil. Mais elle a aussi un tas de vieux costumes à vendre.</li>
+          <li><strong>Réussite :</strong> <strong>Loot : un Déguisement en trois parties</strong> (moustache, perruque, lunettes) qui donne +2 à un jet de CHARME ou de MALICE pour passer inaperçu.</li>
+          <li><strong>Échec :</strong> elle coud la manche du héros à son propre pantalon par erreur. Il perd un tour et rit.</li>
+        </ul>
+
+        <h4 className="font-bold text-lg mb-2">4. Écouter les rumeurs de Monsieur Bretzel (Roleplay + jet de MALICE - DD 12)</h4>
+        <p className="mb-2">Il parle sans s'arrêter : « Le roi a perdu sa Couronne ? Normal, il la perd chaque année. » « Le Baron Cornichon ? Il fabrique des bombes à fromage. » « Le Chancelier ? Un saint homme, qui ne dort jamais. » « Le roi a un jumeau caché. » Le héros doit <strong>trier le vrai du faux</strong> (une seule de ces phrases est vraie : le Chancelier ne dort effectivement jamais, car il rédige des décrets la nuit).</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Réussite :</strong> le héros repère la vraie rumeur. <strong>Gagne un point de Panache.</strong></li>
+          <li><strong>Échec :</strong> il croit aux jumeaux, et Gaston passe dix minutes à en parler.</li>
+        </ul>
+      </ActionBox>
+
+            <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : LE DÉPART EN CARRIOLE (Roleplay)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Le départ se fait en carriole : une vieille charrette de légumes tirée par un âne nommé Philippe, qui soupire à chaque pas. Gaston s'installe à l'avant, un coussin sous les plumes. « Je me place à l'avant, évidemment. Je suis le chef de mission. » Tu t'assois à l'arrière, entre une caisse de choux et un sac de carottes. La charrette démarre dans un grincement, sous les applaudissements du village. Madame Tartine agite un mouchoir, Gédéon récite un vers triste, et un enfant crie : « Détective ! Ramène la Couronne ! » Tu souris. Le soleil se lève, la route s'ouvre devant toi, et à l'horizon, la Forêt des Chuchotis attend."
+      </ReadAloud>
+
+      <ActionBox title="Pendant le trajet (Roleplay et petits jets)">
+        <p className="mb-4">Ce moment calme sert à créer du lien entre le héros et Gaston. Laisse l'enfant décider de ce qu'il fait.</p>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Discuter avec Gaston :</strong> elle parle de sa carrière (« J'ai résolu l'affaire du Gâteau Disparu. C'était moi qui l'avais mangé. »). Si le héros l'écoute avec attention (aucun jet), <strong>gagne un point de Panache</strong> et elle révèle son rêve : posséder un champ entier de maïs doré.</li>
+          <li><strong>Examiner le parchemin du Chancelier (Test de MALICE - DD 13) :</strong> l'écriture est soignée, avec un « G » très ornementé. <strong>Réussite :</strong> en l'approchant de la lumière, le héros voit que le papier est <em>très</em> grisé, et qu'il sent l'encre violette (même parfum que sur le coussin). <strong>Indice supplémentaire.</strong></li>
+          <li><strong>Jouer à un jeu de devinettes avec l'âne Philippe (Test de CHARME - DD 11) :</strong> il ne répond qu'avec des soupirs, mais, si le héros réussit, il pousse un « hi-han » joyeux et accélère. <strong>Le trajet gagne une heure</strong> (utile pour le chapitre 7).</li>
+          <li><strong>Rédiger son carnet de détective :</strong> le héros note ses premiers indices. Le MJ peut l'aider à les résumer (« La miette, la plume, le cheveu... »).</li>
+        </ul>
+      </ActionBox>
 
       <InfoBox title="Note pour le MJ : faire le point">
         <p>Résume à voix haute les trois choses à retenir. Compte les points de Panache, les potions et les écus du héros (20 de départ, moins ceux perdus). Rappelle au passage que l'enfant a le droit de dépenser du Panache sur n'importe quel jet : c'est la première fois qu'il y pense.</p>
