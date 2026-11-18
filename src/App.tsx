@@ -133,7 +133,7 @@ const kidsCampaigns: Campaign[] = [
     id: 'c8',
     title: 'La Couronne du Rire',
     description: "La Couronne magique du roi a disparu la veille du Grand Banquet ! Menez l'enquête avec une oie très gourmande, affrontez des brigands poètes, déjouez les mensonges d'un marché... et méfiez-vous de ceux en qui vous avez confiance.",
-    duration: '4h - 6h (3 séances conseillées)',
+    duration: '3h - 4h30 (3 séances conseillées)',
     difficulty: 'Difficulté 3/5',
     players: '1 héros (dès 8 ans)',
     world: 'royaume',
