@@ -40,6 +40,10 @@ for nom, motifs in HISTOIRES.items():
     fichiers = [f for p in motifs for f in glob.glob(p) if 'Illustrations' not in f]
     src = '\n'.join(open(f, encoding='utf-8').read() for f in fichiers)
     lus = sum(mots(texte(x)) for x in re.findall(r'<ReadAloud[^>]*>(.*?)</ReadAloud>', src, flags=re.S))
+    # les prologues sont des fichiers de données : tous leurs paragraphes sont lus à voix haute
+    for f in fichiers:
+        if f.endswith('Prologue.tsx'):
+            lus += sum(mots(x) for x in re.findall(r'^\s+"(.{40,})",$', open(f, encoding='utf-8').read(), flags=re.M))
     total = mots(texte(re.sub(r'import[^\n]*\n', '', src)))
     jets = len(re.findall(r'(?:Test|Jet) d[eu]|jet d[eu]|\(D20|DD \d+', src))
     combats = len(re.findall(r'<CombatBox', src))

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre2() {
   return (
@@ -90,6 +90,10 @@ export default function Chapitre2() {
       <CombatBox title="Mécaniques de Combat (trois brigands, un héros)">
         <p className="mb-4">Initiative : chacun lance un D20, le héros ajoute son Courage. Rappel : attaque = D20 + talent contre la CA, puis 1D6 +1 de dégâts avec l'épée.</p>
 
+        <FirstRound>
+        <p><strong>Le détective</strong> attaque Rimbaud (10 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong> +1 = 5. Rimbaud avait 10 PV : il lui en reste <strong>5</strong>.</p>
+        <p>Au tour de Rimbaud, le MJ lance un D20 : <strong>6</strong>, +3 = <strong>9</strong>. Il faut <strong>13</strong> ou plus pour toucher le détective : c'est moins : <strong>raté !</strong> L'épée de bois siffle à côté. (Avec 13 ou plus, le détective aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Brigands Poètes</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Rimbaud :</strong> 10 PV, CA 12. Attaque à +3 (le MJ lance D20 +3 : touché si le total atteint 13), 1D6 de dégâts.</li>

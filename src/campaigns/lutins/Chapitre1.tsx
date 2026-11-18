@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre1() {
   return (
@@ -79,7 +79,11 @@ export default function Chapitre1() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Votre première bataille à plusieurs)">
-        <p className="mb-2">Chacun son tour, autour de la table. À son tour, un enfant dit ce que fait son héros et lance le <strong>D20</strong> (+3 si l'action correspond à son talent). Si le total atteint <strong>10</strong>, c'est une <strong>touche</strong>. <strong>Exemple :</strong> Léo, l'Acrobate, saute sur une gargouille : il fait 8, +3 = 11. Touché !</p>
+        <p className="mb-2">Chacun son tour, autour de la table. À son tour, un enfant dit ce que fait son héros et lance le <strong>D20</strong> (+3 si l'action correspond à son talent). Si le total atteint <strong>10</strong>, c'est une <strong>touche</strong>.</p>
+        <FirstRound>
+        <p><strong>Léa, l'Acrobate,</strong> lance le D20 pour attaquer une gargouille : elle fait <strong>8</strong>, +3 parce que c'est son talent (Agilité) = <strong>11</strong>. 11 atteint 10 : <strong>une touche !</strong> Il en faut 2 en tout : il en reste donc une à faire.</p>
+        <p>À la fin du tour de table, le MJ lance le D6 : il fait <strong>4</strong>. Il fallait 1 ou 2, donc rien ne se passe : l'équipe garde tous ses Rires. (Avec 1 ou 2, un héros aurait perdu 1 Rire.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2 mt-4">Les Ennemies : 3 Gargouilles Chatouilleuses</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Pour en faire tomber une :</strong> 2 touches.</li>

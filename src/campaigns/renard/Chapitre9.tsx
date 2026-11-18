@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre9() {
   return (
@@ -63,6 +63,10 @@ export default function Chapitre9() {
       <CombatBox title="Mécaniques de Combat (si l'enfant choisit de se battre : c'est permis)">
         <p className="mb-4">Fais en sorte que la bagarre mène, elle aussi, vers la compréhension : les racines défendent avant tout une taupe qui pleure en silence.</p>
 
+        <FirstRound>
+        <p><strong>Le petit renard</strong> attaque une Racine d'Ombre (18 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une Racine d'Ombre avait 18 PV : il lui en reste <strong>14</strong>.</p>
+        <p>Au tour d'une Racine d'Ombre, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> Le fouet de racine claque à côté. (Avec 11 ou plus, le petit renard aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">L'Ennemi : les Racines d'Ombre</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 18 au total (réparties sur plusieurs racines qui attaquent chacune leur tour).</li>

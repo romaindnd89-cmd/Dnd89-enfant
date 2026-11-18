@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre2() {
   return (
@@ -41,9 +41,12 @@ export default function Chapitre2() {
 
       <CombatBox title="Mécaniques de Combat (Votre premier combat)">
         <p className="mb-2">Le combat se joue <strong>chacun son tour</strong>. À chaque tour, un héros lance le <strong>D20</strong> et ajoute son talent pour savoir s'il <em>touche</em> : si le total atteint la <strong>CA</strong> (la difficulté pour toucher) du monstre, c'est touché. Puis il lance le <strong>D6</strong> pour compter les dégâts.</p>
-        <p className="italic mb-4"><strong>Exemple :</strong> le Chevalier frappe une gelée. Il lance le D20 : 8. Il ajoute son Courage (+3) : 11. 11 atteint la CA de 10 : touché ! Il lance le D6 : 4. La gelée avait 6 PV, il lui en reste 2.</p>
         <p className="mb-4">Initiative : chaque héros lance un D20 ; les gelées jouent après les deux héros.</p>
 
+        <FirstRound>
+        <p><strong>Le Chevalier</strong> attaque une gelée (6 PV, CA 10). Il lance le D20 et fait <strong>8</strong>. Il ajoute son Courage (+3) : 8 + 3 = <strong>11</strong>. 11 atteint la CA 10 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une gelée avait 6 PV : il lui en reste <strong>2</strong>.</p>
+        <p>Au tour d'une gelée, le MJ lance un D20 : <strong>6</strong>. Il faut <strong>10</strong> ou plus pour toucher le chevalier : c'est moins : <strong>raté !</strong> La gelée éclabousse le mur. (Avec 10 ou plus, le chevalier aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 2 Gelées Farceuses</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 6 chacune.</li>
@@ -71,6 +74,10 @@ export default function Chapitre2() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Gros-Chapeau, le champignon géant)">
+        <FirstRound>
+        <p><strong>Le Chevalier</strong> attaque Gros-Chapeau (14 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Gros-Chapeau avait 14 PV : il lui en reste <strong>10</strong>.</p>
+        <p>Au tour de Gros-Chapeau, le MJ lance un D20 : <strong>6</strong>. Il faut <strong>10</strong> ou plus pour toucher le chevalier : c'est moins : <strong>raté !</strong> Le champignon retombe à côté, et fait trembler le sol. (Avec 10 ou plus, le chevalier aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">L'Ennemi : Gros-Chapeau</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Points de Vie (PV) :</strong> 14. <strong>Classe d'Armure (CA) :</strong> 11.</li>

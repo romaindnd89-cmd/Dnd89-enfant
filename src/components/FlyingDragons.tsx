@@ -61,7 +61,18 @@ export default function FlyingDragons() {
     return () => window.removeEventListener('pointerdown', onDown);
   }, []);
 
-  const flyers = useMemo(() => FLYERS, []);
+  const [small, setSmall] = useState(() => window.matchMedia('(max-width: 640px)').matches);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 640px)');
+    const f = () => setSmall(mq.matches);
+    mq.addEventListener('change', f);
+    return () => mq.removeEventListener('change', f);
+  }, []);
+  // Téléphone : un seul dragon, plus petit. Grand écran : trois.
+  const flyers = useMemo(
+    () => (small ? [{ ...FLYERS[0], size: 52, top: 22, dur: 32 }] : FLYERS.slice(0, 3)),
+    [small]
+  );
   if (reduced) return null;
 
   return (

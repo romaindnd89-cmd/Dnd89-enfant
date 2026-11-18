@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre6() {
   return (
@@ -33,6 +33,10 @@ export default function Chapitre6() {
       </ActionBox>
 
       <CombatBox title="Mécaniques de Combat (La Bataille de Coussins)">
+        <FirstRound>
+        <p><strong>Léa, l'Acrobate,</strong> lance le D20 pour attaquer un Garde Royal : elle fait <strong>9</strong>, +3 parce que c'est son talent (Agilité) = <strong>12</strong>. 12 atteint 11 : <strong>une touche !</strong> Il en faut 2 en tout : il en reste donc une à faire.</p>
+        <p>À la fin du tour de table, le MJ lance le D6 : il fait <strong>4</strong>. Il fallait 1, 2 ou 3, donc rien ne se passe : l'équipe garde tous ses Rires. (Avec 1, 2 ou 3, un héros aurait perdu 1 Rire.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Gardes Royaux et le capitaine Sir Plumard</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Gardes Royaux (× 3) :</strong> 2 touches chacun. <strong>Sir Plumard :</strong> 3 touches. Un jet à <strong>11 ou plus</strong> est une touche.</li>

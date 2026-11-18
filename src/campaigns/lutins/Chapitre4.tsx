@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre4() {
   return (
@@ -45,6 +45,10 @@ export default function Chapitre4() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Le chevalier Trois-Lutins)">
+        <FirstRound>
+        <p><strong>Léa, l'Acrobate,</strong> lance le D20 pour attaquer le chevalier Trois-Lutins : elle fait <strong>9</strong>, +3 parce que c'est son talent (Agilité) = <strong>12</strong>. 12 atteint 11 : <strong>une touche !</strong> Il en faut 6 en tout : il en reste 5.</p>
+        <p>À la fin du tour de table, le MJ lance le D6 : il fait <strong>4</strong>. Il fallait 1, 2 ou 3, donc rien ne se passe : l'équipe garde tous ses Rires. (Avec 1, 2 ou 3, un héros aurait perdu 1 Rire.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">L'Ennemi : le chevalier Trois-Lutins</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Résistance :</strong> 6 touches pour le faire tomber (5 touches si l'équipe a 3 enfants). Un jet à <strong>11 ou plus</strong> est une touche.</li>

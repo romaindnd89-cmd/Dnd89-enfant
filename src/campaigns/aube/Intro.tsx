@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReadAloud, InfoBox } from '../../components/StoryBlocks';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen, Download, Printer } from 'lucide-react';
 
 export default function Intro() {
@@ -50,8 +49,6 @@ export default function Intro() {
         <BookOpen className="w-8 h-8 text-amber-500" />
         LIVRE D'AVENTURE : L'HÉRITIER DE L'AUBE
       </h2>
-
-      <ReadingLegend />
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4 flex items-center gap-2">
         <span className="text-blue-500">💠</span> Prologue : La Légende du Cristal de Vie

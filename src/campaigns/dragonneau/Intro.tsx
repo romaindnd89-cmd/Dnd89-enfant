@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox, ActionBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const knightTheme: SheetTheme = {
@@ -30,20 +29,11 @@ export default function Intro() {
         LIVRE D'AVENTURE : LE DRAGONNEAU PERDU
       </h2>
 
-      <ReadingLegend />
-
-      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+      <InfoBox title="Résumé de toute l'aventure (pour le MJ, avec les secrets)">
         <p className="mb-2">Une aventure d'<strong>initiation pour 2 joueurs</strong> (deux enfants, ou un enfant et un parent) qui n'ont jamais joué au jeu de rôle. En 4 chapitres, les deux héros retrouvent <strong>Braisillon</strong>, un bébé dragon qui s'est enfui la nuit de sa naissance, avant que la Grande Torche du village ne s'éteigne.</p>
         <p className="mb-2">Il n'y a <strong>pas de vrai méchant</strong> : Braisillon a juste peur de son propre feu. Chaque héros a son propre talent, et l'aventure est faite pour que <strong>les deux soient utiles à chaque chapitre</strong>.</p>
         <p className="font-bold">Durée : 1h30 à 2h, avec 7 combats gentils. Difficulté : 1/5. Dès 6 ans.</p>
       </InfoBox>
-
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Prologue : La légende de Fumerolles</h3>
-      <ReadAloud title="Texte à lire à voix haute, pour ouvrir le livre">
-        "Au pied du Mont Braise, un volcan endormi qui ronfle doucement, se niche le petit village de Fumerolles. Ses maisons ont des toits de tuiles rouges, ses rues sentent la brioche chaude, et chaque soir, la Grande Torche brûle sur la place pour éclairer tout le monde."<br/><br/>
-        "Depuis cent ans, cette torche est allumée par un dragon. Le plus vieux dragon du village, Cendrelle, la rallume chaque année avec son souffle, le soir de la Fête des Flammes. Mais cette année, c'est différent : Cendrelle est très fatiguée, et c'est son petit, tout juste sorti de l'œuf, qui doit allumer la torche pour la première fois."<br/><br/>
-        "Vous êtes deux apprentis du village, les meilleurs amis, et ce matin, la cloche sonne : l'œuf du temple est vide, et le bébé dragon a disparu !"
-      </ReadAloud>
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Les règles pour jouer à deux</h3>
       <ActionBox title="Trois règles toutes simples">

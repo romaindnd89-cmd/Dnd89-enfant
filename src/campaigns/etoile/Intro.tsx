@@ -1,6 +1,5 @@
 import React from 'react';
 import { BookOpen, Download, Printer } from 'lucide-react';
-import ReadingLegend from '../../components/ReadingLegend';
 
 export default function Intro() {
   const char1Url = "https://i.postimg.cc/PvHqKC4Y/1775768001882.png";
@@ -50,8 +49,6 @@ export default function Intro() {
         <BookOpen className="w-8 h-8 text-emerald-500" />
         FICHES DE PERSONNAGES (DÉPART)
       </h2>
-
-      <ReadingLegend />
 
       <p className="text-lg text-slate-600 mb-8">
         Avant de commencer l'aventure, voici les fiches de vos deux héros : Aura et Kael. Vous pouvez les télécharger et les imprimer pour jouer !

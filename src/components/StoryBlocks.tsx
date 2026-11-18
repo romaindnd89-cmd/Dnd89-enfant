@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { MessageCircle, Swords, Dices, Info } from 'lucide-react';
+import { MessageCircle, Swords, Dices, Info, Target } from 'lucide-react';
 
 /**
  * Petit badge fixe, toujours affiché quel que soit le titre personnalisé
@@ -88,5 +88,20 @@ export function InfoBox({ children, title = "Note pour le MJ" }: { children: Rea
         {children}
       </div>
     </Reveal>
+  );
+}
+
+/** Premier tour d'un combat, joué pas à pas avec des chiffres, pour montrer comment faire. */
+export function FirstRound({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="my-4 rounded-xl border-2 border-dashed border-rose-300 bg-white/70 p-3 sm:p-4 text-rose-950">
+      <p className="flex items-center gap-2 font-display font-bold text-rose-800 mb-2">
+        <Target className="w-5 h-5 shrink-0" /> Exemple du premier tour
+        <span className="text-xs font-bold uppercase tracking-wide bg-rose-100 text-rose-700 rounded-full px-2 py-0.5">
+          à jouer avec de vrais dés
+        </span>
+      </p>
+      <div className="space-y-2 text-[15px] leading-relaxed">{children}</div>
+    </div>
   );
 }

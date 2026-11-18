@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre5() {
   return (
@@ -113,6 +113,10 @@ export default function Chapitre5() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Garde-Chef Pâté et deux soldats)">
+        <FirstRound>
+        <p><strong>Le détective</strong> attaque un soldat (8 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong> +1 = 5. Un soldat avait 8 PV : il lui en reste <strong>3</strong>.</p>
+        <p>Au tour d'un soldat, le MJ lance un D20 : <strong>7</strong>, +2 = <strong>9</strong>. Il faut <strong>13</strong> ou plus pour toucher le détective : c'est moins : <strong>raté !</strong> La lance cogne contre le mur. (Avec 13 ou plus, le détective aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : Garde-Chef Pâté et 2 Soldats</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Garde-Chef Pâté :</strong> 14 PV, CA 14. Attaque à +4, 1D8 de dégâts. Il lit son carnet un tour sur deux et rate alors son attaque.</li>

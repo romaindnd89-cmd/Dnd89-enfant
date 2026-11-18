@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre6() {
   return (
@@ -47,6 +47,10 @@ export default function Chapitre6() {
       <CombatBox title="Mécaniques de Combat (Filandre, l'Araignée de Brume)">
         <p className="mb-4">Initiative : D20, à 10 ou plus le héros commence. Rappel : D20 + talent pour toucher, D6 pour les dégâts.</p>
 
+        <FirstRound>
+        <p><strong>Le petit renard</strong> attaque Filandre (14 PV, CA 13). Il lance le D20 et fait <strong>11</strong>. Il ajoute son Courage (+3) : 11 + 3 = <strong>14</strong>. 14 atteint la CA 13 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Filandre avait 14 PV : il lui en reste <strong>10</strong>.</p>
+        <p>Au tour de Filandre, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> Le fil collant s'enroule autour d'une branche. (Avec 11 ou plus, le petit renard aurait perdu 1D6 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">L'Ennemie : Filandre</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 14.</li>

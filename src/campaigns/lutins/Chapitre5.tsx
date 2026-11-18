@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre5() {
   return (
@@ -65,6 +65,10 @@ export default function Chapitre5() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Les Doubles Farceurs)">
+        <FirstRound>
+        <p><strong>Léa, l'Acrobate,</strong> lance le D20 pour attaquer son Double farceur : elle fait <strong>8</strong>, +3 parce que c'est son talent (Agilité) = <strong>11</strong>. 11 atteint 10 : <strong>une touche !</strong> Il en faut 2 en tout : il en reste donc une à faire.</p>
+        <p>À la fin du tour de table, le MJ lance le D6 : il fait <strong>4</strong>. Il fallait 1 ou 2, donc rien ne se passe : l'équipe garde tous ses Rires. (Avec 1 ou 2, un héros aurait perdu 1 Rire.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : un Double par enfant</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Chaque Double</strong> copie le talent de son héros : il faut le toucher <strong>2 fois</strong> pour qu'il retourne dans son miroir.</li>

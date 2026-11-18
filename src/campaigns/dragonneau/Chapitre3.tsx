@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox, FirstRound } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -43,6 +43,10 @@ export default function Chapitre3() {
       </ReadAloud>
 
       <CombatBox title="Mécaniques de Combat (Les Chauves-Souris de Cristal)">
+        <FirstRound>
+        <p><strong>Le Chevalier</strong> attaque une chauve-souris de cristal (5 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>3</strong>. Une chauve-souris de cristal avait 5 PV : il lui en reste <strong>2</strong>.</p>
+        <p>Au tour d'une chauve-souris de cristal, le MJ lance un D20 : <strong>6</strong>. Il faut <strong>10</strong> ou plus pour toucher le chevalier : c'est moins : <strong>raté !</strong> La chauve-souris pique dans le vide. (Avec 10 ou plus, le chevalier aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Chauves-Souris de Cristal</h4>
         <ul className="list-disc pl-5 space-y-1 mb-4">
           <li><strong>Points de Vie (PV) :</strong> 5 chacune. <strong>Classe d'Armure (CA) :</strong> 12.</li>
@@ -86,6 +90,10 @@ export default function Chapitre3() {
       </ActionBox>
 
       <CombatBox title="Mécaniques de Combat (uniquement si les héros attaquent le troll)">
+        <FirstRound>
+        <p><strong>Le Chevalier</strong> attaque Grognon (8 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Grognon avait 8 PV : il lui en reste <strong>4</strong>.</p>
+        <p>Au tour de Grognon, le MJ lance un D20 : <strong>6</strong>. Il faut <strong>10</strong> ou plus pour toucher le chevalier : c'est moins : <strong>raté !</strong> La massue s'enfonce dans la mousse. (Avec 10 ou plus, le chevalier aurait perdu 1D4 PV.)</p>
+        </FirstRound>
         <h4 className="font-bold text-lg mb-2">L'Ennemi : Grognon, le troll enrhumé</h4>
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 8.</li>

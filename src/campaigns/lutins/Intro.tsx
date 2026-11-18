@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox, ActionBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -21,22 +20,7 @@ export default function Intro() {
         LIVRE D'AVENTURE : LE TRÉSOR DES LUTINS FARCEURS
       </h2>
 
-      <ReadingLegend />
-
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">
-        Prologue : La légende de Chantefarce
-      </h3>
-      <ReadAloud title="À lire à voix haute, pour ouvrir le livre :">
-        Au sommet d'une colline couverte de trèfles se dresse le vieux <strong>château de Chantefarce</strong>. Plus aucun roi n'y habite depuis longtemps. À la place, il est rempli de <strong>lutins farceurs</strong> : de petits bonshommes hauts comme trois pommes, coiffés de bonnets à grelots, qui passent leurs journées à inventer des blagues.<br/><br/>
-        Leur roi, <strong>Pirouette Iᵉʳ</strong>, possède un trésor fabuleux : un coffre rempli de <strong>pièces d'or en chocolat</strong>. Mais un trésor que personne ne cherche, c'est ennuyeux. Alors les lutins ont caché des pièces dans tout le château, posé des pièges rigolos dans chaque salle, et envoyé une invitation aux enfants les plus courageux du pays : vous !
-      </ReadAloud>
-
-      <ReadAloud title="À lire à voix haute pour commencer :">
-        "Ce matin, chacun de vous a trouvé sous son oreiller une minuscule enveloppe verte, fermée par un grelot. Dedans, une carte écrite en lettres tordues : « Avis aux courageux ! Le trésor de Chantefarce attend ceux qui sauront rire, ruser et s'entraider. Venez nombreux. Venez ensemble. Signé : le roi Pirouette. P.-S. : Attention où vous mettez les pieds. Hi hi hi ! »<br/><br/>
-        Vous voilà donc, tous réunis, devant la grande grille du château. Quelque part là-haut, derrière une fenêtre, un petit rire s'échappe… puis un autre… puis cent."
-      </ReadAloud>
-
-      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+      <InfoBox title="Résumé de toute l'aventure (pour le MJ, avec les secrets)">
         <p className="mb-2">Une aventure <strong>d'équipe pour 3 à 6 enfants</strong>, en 6 salles. Dans chaque salle, les héros déjouent une farce des lutins et gagnent des <strong>pièces en chocolat</strong>. Il n'y a pas de vrais méchants : les lutins veulent surtout jouer, et vérifier que les enfants savent <strong>s'entraider et partager</strong>.</p>
         <p className="mb-2">Le secret de la fin : le grand coffre ne s'ouvre que si l'équipe accepte de <strong>partager le trésor</strong> avec les lutins.</p>
         <p className="font-bold">Durée : 1h15 à 1h45, avec 6 batailles rigolotes. Difficulté : 1,5/5. Dès 5 ans. Idéal pour un anniversaire.</p>

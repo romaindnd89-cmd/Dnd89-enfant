@@ -29,6 +29,7 @@ import DragonSprite from './components/DragonSprite';
 import TrophyShelf from './components/TrophyShelf';
 import { WORLDS, WorldKey } from './theme/worlds';
 import FantasyScene from './components/FantasyScene';
+import StoryFilters, { Filters, NO_FILTER, StoryMeta, matchesFilters } from './components/StoryFilters';
 
 type AgeGroup = 'kids' | 'normal' | 'expert';
 
@@ -45,6 +46,8 @@ interface Campaign {
   world: WorldKey;
   /** Lueur de la carte au survol (classe Tailwind littérale) */
   glow: string;
+  /** Données de tri pour les filtres de l'accueil */
+  meta: StoryMeta;
   component: React.ComponentType<{ onBack: () => void }>;
 }
 
@@ -59,6 +62,7 @@ const kidsCampaigns: Campaign[] = [
     imageUrl: 'https://i.postimg.cc/d0DjC5Nm/1775600945286.png',
     world: 'hub',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(244,63,94,0.7)]',
+    meta: { players: [1, 1], level: 1, minutes: [60, 90] },
     component: RoyaumeDesMoustaches,
   },
   {
@@ -71,6 +75,7 @@ const kidsCampaigns: Campaign[] = [
     imageUrl: 'https://i.postimg.cc/3xBKk9mv/1775684547380.png',
     world: 'hub',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(56,189,248,0.7)]',
+    meta: { players: [1, 1], level: 2, minutes: [120, 180] },
     component: BouboulePangea,
   },
   {
@@ -83,6 +88,7 @@ const kidsCampaigns: Campaign[] = [
     imageUrl: 'https://i.postimg.cc/rpR69wWt/1775769643787.png',
     world: 'gate',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(129,140,248,0.7)]',
+    meta: { players: [2, 2], level: 2, minutes: [120, 180] },
     component: EtoileCampaign,
   },
   {
@@ -95,6 +101,7 @@ const kidsCampaigns: Campaign[] = [
     imageUrl: 'https://i.postimg.cc/CLscyy0K/1775862835775.png',
     world: 'peaks',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(251,191,36,0.7)]',
+    meta: { players: [1, 1], level: 2, minutes: [120, 180] },
     component: AubeCampaign,
   },
   {
@@ -106,6 +113,7 @@ const kidsCampaigns: Campaign[] = [
     players: '1 héros (dès 6 ans)',
     world: 'renard',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(249,115,22,0.7)]',
+    meta: { players: [1, 1], level: 2, minutes: [135, 180] },
     component: RenardCampaign,
   },
   {
@@ -117,6 +125,7 @@ const kidsCampaigns: Campaign[] = [
     players: '3 à 6 héros (dès 5 ans)',
     world: 'lutins',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(52,211,153,0.7)]',
+    meta: { players: [3, 6], level: 1, minutes: [75, 105] },
     component: LutinsCampaign,
   },
   {
@@ -128,6 +137,7 @@ const kidsCampaigns: Campaign[] = [
     players: '2 héros (initiation, dès 6 ans)',
     world: 'volcan',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(251,146,60,0.7)]',
+    meta: { players: [2, 2], level: 1, minutes: [90, 120] },
     component: DragonneauCampaign,
   },
   {
@@ -139,6 +149,7 @@ const kidsCampaigns: Campaign[] = [
     players: '1 héros (dès 8 ans)',
     world: 'royaume',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(217,70,239,0.7)]',
+    meta: { players: [1, 1], level: 3, minutes: [195, 270] },
     component: CouronneCampaign,
   },
   {
@@ -150,6 +161,7 @@ const kidsCampaigns: Campaign[] = [
     players: '1 héros (dès 6 ans)',
     world: 'ile',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(34,211,238,0.7)]',
+    meta: { players: [1, 1], level: 2, minutes: [30, 40] },
     component: IleCampaign,
   },
 ];
@@ -165,6 +177,7 @@ function hasEntered(): boolean {
 export default function App() {
   const [entered, setEntered] = useState<boolean>(hasEntered);
   const [activeTab, setActiveTab] = useState<AgeGroup>('kids');
+  const [filters, setFilters] = useState<Filters>(NO_FILTER);
   const [selectedCampaignId, setSelectedCampaignId] = useState<string | null>(null);
   const [showParentGuide, setShowParentGuide] = useState(false);
   const [flash, setFlash] = useState(0);
@@ -193,6 +206,8 @@ export default function App() {
     setShowParentGuide(false);
     window.scrollTo(0, 0);
   };
+
+  const visibleKids = kidsCampaigns.filter((c) => matchesFilters(c.meta, filters));
 
   const SelectedComponent = selected?.component;
 
@@ -332,6 +347,36 @@ export default function App() {
                   exit={{ opacity: 0, y: -14 }}
                   transition={{ duration: 0.3 }}
                 >
+                  <StoryFilters
+                    value={filters}
+                    onChange={setFilters}
+                    count={visibleKids.length}
+                    total={kidsCampaigns.length}
+                  />
+
+                  {visibleKids.length === 0 ? (
+                    <div className="glass-dark backdrop-blur-md rounded-2xl p-8 text-center mb-10">
+                      <p className="text-slate-200 text-lg mb-4">Aucune aventure ne correspond à ces filtres.</p>
+                      <button
+                        onClick={() => setFilters(NO_FILTER)}
+                        className="font-display font-bold text-amber-200 border border-amber-300/50 rounded-full px-5 py-2 hover:bg-amber-300/10"
+                      >
+                        Tout afficher
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                      {visibleKids.map((campaign, index) => (
+                        <CampaignCard
+                          key={campaign.id}
+                          campaign={campaign}
+                          index={index}
+                          onOpen={() => openCampaign(campaign.id)}
+                        />
+                      ))}
+                    </div>
+                  )}
+
                   {/* Guide du parent */}
                   <button
                     onClick={() => {
@@ -357,17 +402,6 @@ export default function App() {
                   </button>
 
                   <TrophyShelf />
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {kidsCampaigns.map((campaign, index) => (
-                      <CampaignCard
-                        key={campaign.id}
-                        campaign={campaign}
-                        index={index}
-                        onOpen={() => openCampaign(campaign.id)}
-                      />
-                    ))}
-                  </div>
 
                 </motion.div>
               )}
@@ -415,7 +449,7 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1 + index * 0.08, duration: 0.5 }}
       whileHover={{ y: -6 }}
-      className={`group relative overflow-hidden rounded-2xl glass-dark backdrop-blur-md cursor-pointer transition-shadow duration-500 ${campaign.glow}`}
+      className={`group relative overflow-hidden rounded-2xl card-solid cursor-pointer transition-shadow duration-500 ${campaign.glow}`}
     >
       {/* Couverture : la porte vers le monde */}
       <div className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${w.fallback}`}>
@@ -430,7 +464,8 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
           <img
             src={campaign.imageUrl}
             alt=""
-            loading="lazy"
+            loading={index < 3 ? 'eager' : 'lazy'}
+            decoding="async"
             referrerPolicy="no-referrer"
             onError={() => setCoverFailed(true)}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
@@ -439,7 +474,7 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
         <div className="absolute inset-0 ring-1 ring-inset ring-amber-200/10" />
         {/* Petit dragon qui garde la porte, et qui s'envole quand on approche */}
-        <div className="card-dragon absolute right-3 top-3 pointer-events-none" style={{ transform: 'scaleX(-1)' }} aria-hidden="true">
+        <div className="card-dragon hidden sm:block absolute right-3 top-3 pointer-events-none" style={{ transform: 'scaleX(-1)' }} aria-hidden="true">
           <div className="card-dragon-inner">
             <DragonSprite size={52} tint={index} speed={0.55 + (index % 3) * 0.1} />
           </div>

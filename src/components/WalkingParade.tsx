@@ -23,7 +23,7 @@ export default function WalkingParade() {
   if (reduced) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 h-24 z-[44] pointer-events-none overflow-hidden" aria-hidden="true">
+    <div className="hidden sm:block fixed inset-x-0 bottom-0 h-24 z-[44] pointer-events-none overflow-hidden" aria-hidden="true">
       {WALKERS.map((w, i) => (
         <div
           key={w.id}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReadAloud, InfoBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import ReadingLegend from '../../components/ReadingLegend';
 import { BookOpen, Timer } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -21,9 +20,7 @@ export default function Intro() {
         LIVRE D'AVENTURE : L'ÎLE QUI BOUGEAIT
       </h2>
 
-      <ReadingLegend />
-
-      <InfoBox title="L'aventure en deux mots (pour le MJ)">
+      <InfoBox title="Résumé de toute l'aventure (pour le MJ, avec les secrets)">
         <p className="mb-2">Une aventure <strong>express de 30 minutes</strong> pour <strong>un héros</strong> : un jeune pirate échoue sur une île qui ronfle, rencontre une capitaine rivale très susceptible, trouve un œuf géant dans une grotte... et découvre que <strong>l'île est une tortue géante</strong> qui cherche son œuf depuis cent ans.</p>
         <p className="mb-2"><strong>Spoiler pour le MJ :</strong> ne dis pas à l'enfant que l'île est vivante ! Il y a des indices dès le début (le sol qui tremble, les arbres qui ronflent, la « montagne » qui respire). La révélation est le grand moment de l'histoire.</p>
         <p className="font-bold">Durée : 30 à 40 minutes (20 minutes avec les raccourcis), en 3 actes d'environ 10 minutes. Difficulté : 2/5. Dès 6 ans. 2 petits combats.</p>
@@ -42,11 +39,6 @@ export default function Intro() {
           </div>
         </div>
       </InfoBox>
-
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Prologue : Le Mousse de l'Albatros Rigolo</h3>
-      <ReadAloud title="Texte à lire à voix haute, pour ouvrir le livre">
-        "Tu es le mousse de l'Albatros Rigolo, le navire le plus drôle des sept mers, dont la voile est rapiécée avec des chaussettes. Ton capitaine, c'est un perroquet vert, Capitaine Miette, qui s'est nommé chef parce qu'il parle plus fort que tout le monde. Ce matin, une tempête ridicule (des vagues qui font « splash », un éclair qui éternue) a fait tourner le navire sur lui-même, et toi, tu as atterri sur un tonneau, Miette accroché à ton épaule : « ON COULE ! JE SUIS LE CAPITAINE ! » Le tonneau file sur les vagues... vers une île."
-      </ReadAloud>
 
       <InfoBox title="Les règles express (un seul coup d'œil)">
         <ul className="list-disc pl-5 space-y-2">
