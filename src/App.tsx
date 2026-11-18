@@ -449,7 +449,7 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1 + index * 0.08, duration: 0.5 }}
       whileHover={{ y: -6 }}
-      className={`group relative overflow-hidden rounded-2xl glass-dark backdrop-blur-md cursor-pointer transition-shadow duration-500 ${campaign.glow}`}
+      className={`group relative overflow-hidden rounded-2xl card-solid cursor-pointer transition-shadow duration-500 ${campaign.glow}`}
     >
       {/* Couverture : la porte vers le monde */}
       <div className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${w.fallback}`}>
@@ -464,7 +464,8 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
           <img
             src={campaign.imageUrl}
             alt=""
-            loading="lazy"
+            loading={index < 3 ? 'eager' : 'lazy'}
+            decoding="async"
             referrerPolicy="no-referrer"
             onError={() => setCoverFailed(true)}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
@@ -473,7 +474,7 @@ function CampaignCard({ campaign, index, onOpen }: CampaignCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
         <div className="absolute inset-0 ring-1 ring-inset ring-amber-200/10" />
         {/* Petit dragon qui garde la porte, et qui s'envole quand on approche */}
-        <div className="card-dragon absolute right-3 top-3 pointer-events-none" style={{ transform: 'scaleX(-1)' }} aria-hidden="true">
+        <div className="card-dragon hidden sm:block absolute right-3 top-3 pointer-events-none" style={{ transform: 'scaleX(-1)' }} aria-hidden="true">
           <div className="card-dragon-inner">
             <DragonSprite size={52} tint={index} speed={0.55 + (index % 3) * 0.1} />
           </div>

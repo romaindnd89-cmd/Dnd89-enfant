@@ -28,7 +28,7 @@ export default function WorldHero({
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-slate-950/20" />
 
       {/* Un petit dragon traverse la bannière */}
-      <div className="hero-flyer absolute inset-x-0 top-6 pointer-events-none" aria-hidden="true">
+      <div className="hero-flyer hidden sm:block absolute inset-x-0 top-6 pointer-events-none" aria-hidden="true">
         <div className="dragon-bob">
           <DragonSprite size={64} tint={1} speed={0.45} />
         </div>
