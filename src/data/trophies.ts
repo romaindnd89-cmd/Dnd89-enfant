@@ -56,6 +56,14 @@ export const TROPHIES: Record<string, TrophyDef> = {
     gradient: 'from-orange-400 to-rose-600',
     message: "Vous avez retrouvé Braisillon et allumé la Grande Torche ensemble. Quelle équipe formidable !",
   },
+  couronne: {
+    id: 'couronne',
+    title: 'Détective Royal',
+    adventure: 'La Couronne du Rire',
+    emoji: '👑',
+    gradient: 'from-yellow-400 to-fuchsia-600',
+    message: "Tu as démasqué le vrai coupable, sauvé la Couronne et fait rire tout un royaume. Quel flair de détective !",
+  },
   aube: {
     id: 'aube',
     title: "Chevalier de l'Aube",

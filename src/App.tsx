@@ -13,6 +13,7 @@ import AubeCampaign from './campaigns/AubeCampaign';
 import RenardCampaign from './campaigns/RenardCampaign';
 import LutinsCampaign from './campaigns/LutinsCampaign';
 import DragonneauCampaign from './campaigns/DragonneauCampaign';
+import CouronneCampaign from './campaigns/CouronneCampaign';
 import ParentGuide from './components/ParentGuide';
 import DiceRoller from './components/DiceRoller';
 import DragonHelper from './components/DragonHelper';
@@ -127,6 +128,17 @@ const kidsCampaigns: Campaign[] = [
     world: 'volcan',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(251,146,60,0.7)]',
     component: DragonneauCampaign,
+  },
+  {
+    id: 'c8',
+    title: 'La Couronne du Rire',
+    description: "La Couronne magique du roi a disparu la veille du Grand Banquet ! Menez l'enquête avec une oie très gourmande, affrontez des brigands poètes, déjouez les mensonges d'un marché... et méfiez-vous de ceux en qui vous avez confiance.",
+    duration: '2h30 - 3h30 (deux séances possibles)',
+    difficulty: 'Difficulté 3/5',
+    players: '1 héros (dès 8 ans)',
+    world: 'royaume',
+    glow: 'hover:shadow-[0_0_45px_-10px_rgba(217,70,239,0.7)]',
+    component: CouronneCampaign,
   },
 ];
 

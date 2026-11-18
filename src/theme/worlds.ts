@@ -134,6 +134,21 @@ export const WORLDS = {
       crystalA: '#ffd27a', crystalB: '#ff7a45',
     },
   },
+  /** La Couronne du Rire : le royaume de Pétaouchnok, or et rose au crépuscule */
+  royaume: {
+    variant: 'valley',
+    moon: false,
+    dragon: null,
+    fallback: 'from-fuchsia-950 via-amber-900 to-slate-950',
+    palette: {
+      skyTop: '#2b1245', skyBottom: '#f0a24a', glow: '#ffe9a8', cloud: '#ffc9a0',
+      far: '#6b3a6e', farLight: '#8f5086', forest: '#4a2a55', forestNear: '#33193f',
+      leafA: '#d9822b', leafB: '#f2b84b',
+      rock: '#3d2447', rockLight: '#664076', rockDark: '#241330', ground: '#1f1028',
+      castle: '#3b2150', window: '#ffe07a', water: '#e08a5a',
+      crystalA: '#ffe07a', crystalB: '#ff9bd2',
+    },
+  },
 } as const satisfies Record<string, World>;
 
 export type WorldKey = keyof typeof WORLDS;
