@@ -20,6 +20,7 @@ HISTOIRES = {
     'Lutins': ['src/campaigns/lutins/*.tsx'],
     'Dragonneau': ['src/campaigns/dragonneau/*.tsx'],
     'Couronne': ['src/campaigns/couronne/*.tsx'],
+    'Île qui Bougeait': ['src/campaigns/ile/*.tsx'],
 }
 
 def texte(t):

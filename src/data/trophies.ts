@@ -64,6 +64,14 @@ export const TROPHIES: Record<string, TrophyDef> = {
     gradient: 'from-yellow-400 to-fuchsia-600',
     message: "Tu as démasqué le vrai coupable, sauvé la Couronne et fait rire tout un royaume. Quel flair de détective !",
   },
+  ile: {
+    id: 'ile',
+    title: "Capitaine de l'Île",
+    adventure: "L'Île qui Bougeait",
+    emoji: '🐢',
+    gradient: 'from-cyan-400 to-emerald-600',
+    message: "Tu as rendu son œuf à la Grande Tortue et sauvé l'île qui bougeait. Un vrai capitaine !",
+  },
   aube: {
     id: 'aube',
     title: "Chevalier de l'Aube",

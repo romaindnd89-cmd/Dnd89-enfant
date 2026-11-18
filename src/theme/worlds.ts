@@ -149,6 +149,21 @@ export const WORLDS = {
       crystalA: '#ffe07a', crystalB: '#ff9bd2',
     },
   },
+  /** L'Île qui Bougeait : mer turquoise et sable doré */
+  ile: {
+    variant: 'valley',
+    moon: false,
+    dragon: null,
+    fallback: 'from-cyan-900 via-teal-800 to-slate-950',
+    palette: {
+      skyTop: '#0b3a5a', skyBottom: '#7fe0d8', glow: '#fff1b8', cloud: '#e6fbff',
+      far: '#1f7f8f', farLight: '#3fb0b5', forest: '#157a66', forestNear: '#0c5a4b',
+      leafA: '#2fb36b', leafB: '#8ae06a',
+      rock: '#6a5a45', rockLight: '#9b8660', rockDark: '#3d3226', ground: '#d9b873',
+      castle: '#6a5a45', window: '#ffe07a', water: '#2fa8d8',
+      crystalA: '#ffe9a8', crystalB: '#7fe0d8',
+    },
+  },
 } as const satisfies Record<string, World>;
 
 export type WorldKey = keyof typeof WORLDS;

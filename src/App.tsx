@@ -14,6 +14,7 @@ import RenardCampaign from './campaigns/RenardCampaign';
 import LutinsCampaign from './campaigns/LutinsCampaign';
 import DragonneauCampaign from './campaigns/DragonneauCampaign';
 import CouronneCampaign from './campaigns/CouronneCampaign';
+import IleCampaign from './campaigns/IleCampaign';
 import ParentGuide from './components/ParentGuide';
 import DiceRoller from './components/DiceRoller';
 import DragonHelper from './components/DragonHelper';
@@ -139,6 +140,17 @@ const kidsCampaigns: Campaign[] = [
     world: 'royaume',
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(217,70,239,0.7)]',
     component: CouronneCampaign,
+  },
+  {
+    id: 'c9',
+    title: "L'Île qui Bougeait",
+    description: "Une aventure express de pirates, en 30 minutes ! Échoué sur une île qui ronfle, un mousse et son perroquet cherchent un trésor, croisent une capitaine rivale en fausse barbe... et découvrent un secret immense.",
+    duration: '30 - 40 min (aventure express)',
+    difficulty: 'Difficulté 2/5',
+    players: '1 héros (dès 6 ans)',
+    world: 'ile',
+    glow: 'hover:shadow-[0_0_45px_-10px_rgba(34,211,238,0.7)]',
+    component: IleCampaign,
   },
 ];
 
