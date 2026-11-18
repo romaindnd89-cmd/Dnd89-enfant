@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { MessageCircle, Swords, Dices, Info, Target } from 'lucide-react';
+import { MessageCircle, Swords, Dices, Info, Target, Search } from 'lucide-react';
 
 /**
  * Petit badge fixe, toujours affiché quel que soit le titre personnalisé
@@ -103,5 +103,51 @@ export function FirstRound({ children }: { children: React.ReactNode }) {
       </p>
       <div className="space-y-2 text-[15px] leading-relaxed">{children}</div>
     </div>
+  );
+}
+
+/**
+ * Question de déduction : l'enfant réfléchit avec les indices qu'il a trouvés.
+ * La réponse est repliée pour que l'enfant ne la lise pas par hasard.
+ */
+export function Deduction({
+  question,
+  clues,
+  hint,
+  answer,
+  title = 'À toi de déduire',
+}: {
+  question: string;
+  clues: string[];
+  hint: string;
+  answer: React.ReactNode;
+  title?: string;
+}) {
+  return (
+    <Reveal className="my-6 rounded-2xl bg-violet-50 border-2 border-violet-200 overflow-hidden shadow-sm">
+      <div className="bg-violet-100/50 px-4 py-2 border-b border-violet-200 flex flex-wrap items-center gap-2">
+        <Search className="box-icon w-5 h-5 text-violet-600 shrink-0" />
+        <span className="font-bold text-violet-800 font-display">🔎 {title}</span>
+        <Kicker emoji="🧠" text="On réfléchit ensemble, sans dé" className="bg-violet-600 text-white" />
+      </div>
+      <div className="p-4 sm:p-6 text-violet-900 space-y-3">
+        <p className="text-lg font-bold">{question}</p>
+        <div>
+          <p className="font-bold text-sm uppercase tracking-wide text-violet-700 mb-1">Les indices à relire</p>
+          <ul className="list-disc pl-5 space-y-1">
+            {clues.map((c) => (
+              <li key={c}>{c}</li>
+            ))}
+          </ul>
+        </div>
+        <p className="rounded-xl bg-white/70 border border-violet-200 px-3 py-2 text-[15px]">
+          <strong>Coup de pouce si l'enfant sèche :</strong> {hint}
+        </p>
+        <details className="rounded-xl bg-white/70 border border-violet-200 px-3 py-2">
+          <summary className="cursor-pointer font-bold text-violet-800">👁️ Voir la réponse (pour le MJ)</summary>
+          <div className="mt-2 space-y-2 text-[15px]">{answer}</div>
+        </details>
+      </div>
+    </Reveal>
   );
 }

@@ -15,6 +15,7 @@ import LutinsCampaign from './campaigns/LutinsCampaign';
 import DragonneauCampaign from './campaigns/DragonneauCampaign';
 import CouronneCampaign from './campaigns/CouronneCampaign';
 import IleCampaign from './campaigns/IleCampaign';
+import LanterneCampaign from './campaigns/LanterneCampaign';
 import ParentGuide from './components/ParentGuide';
 import DiceRoller from './components/DiceRoller';
 import DragonHelper from './components/DragonHelper';
@@ -163,6 +164,18 @@ const kidsCampaigns: Campaign[] = [
     glow: 'hover:shadow-[0_0_45px_-10px_rgba(34,211,238,0.7)]',
     meta: { players: [1, 1], level: 2, minutes: [30, 40] },
     component: IleCampaign,
+  },
+  {
+    id: 'c10',
+    title: 'La Dernière Lanterne',
+    description: "Les lanternes de la Vallée s'éteignent une à une. Enquêtez dans les archives, démêlez les indices, affrontez des ombres et des loups de givre... et découvrez un secret qui vous fera grandir. Une histoire émouvante, avec une vraie morale.",
+    duration: '1h35 - 2h05 (2 séances possibles)',
+    difficulty: 'Difficulté 2,5/5',
+    players: '1 héros (dès 8 ans)',
+    world: 'lanternes',
+    glow: 'hover:shadow-[0_0_45px_-10px_rgba(251,191,36,0.7)]',
+    meta: { players: [1, 1], level: 2, minutes: [95, 125] },
+    component: LanterneCampaign,
   },
 ];
 

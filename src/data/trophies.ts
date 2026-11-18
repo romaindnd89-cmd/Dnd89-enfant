@@ -72,6 +72,14 @@ export const TROPHIES: Record<string, TrophyDef> = {
     gradient: 'from-cyan-400 to-emerald-600',
     message: "Tu as rendu son œuf à la Grande Tortue et sauvé l'île qui bougeait. Un vrai capitaine !",
   },
+  lanterne: {
+    id: 'lanterne',
+    title: 'Gardien des Lanternes',
+    adventure: 'La Dernière Lanterne',
+    emoji: '🏮',
+    gradient: 'from-amber-300 to-indigo-600',
+    message: "Tu as mené l'enquête jusqu'au bout, tu as demandé de l'aide et partagé ta lumière. Une lanterne brille plus longtemps quand on la partage.",
+  },
   aube: {
     id: 'aube',
     title: "Chevalier de l'Aube",

@@ -164,6 +164,21 @@ export const WORLDS = {
       crystalA: '#ffe9a8', crystalB: '#7fe0d8',
     },
   },
+  /** La Dernière Lanterne : une vallée d'hiver éclairée de mille lanternes */
+  lanternes: {
+    variant: 'valley',
+    moon: true,
+    dragon: null,
+    fallback: 'from-slate-900 via-indigo-950 to-slate-950',
+    palette: {
+      skyTop: '#0b1530', skyBottom: '#d9a05f', glow: '#ffd9a0', cloud: '#c8d4ea',
+      far: '#34456a', farLight: '#4f6591', forest: '#22314a', forestNear: '#172234',
+      leafA: '#8a6a4a', leafB: '#c9a36a',
+      rock: '#444a5a', rockLight: '#788096', rockDark: '#262a35', ground: '#dce6f3',
+      castle: '#2d2440', window: '#ffc861', water: '#6a8fb8',
+      crystalA: '#ffc861', crystalB: '#9fc4ff',
+    },
+  },
 } as const satisfies Record<string, World>;
 
 export type WorldKey = keyof typeof WORLDS;
