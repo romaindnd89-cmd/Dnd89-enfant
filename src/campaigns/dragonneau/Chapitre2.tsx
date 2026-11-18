@@ -7,7 +7,7 @@ export default function Chapitre2() {
       <h2 className="font-display text-4xl font-bold text-pink-700 mb-6 border-b-4 border-pink-200 pb-2 mt-16">
         CHAPITRE 2 : LA FORÊT DES CHAMPIGNONS
       </h2>
-      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 1<br/>Lieu : La Forêt des Champignons Rebondissants, à l'est du village<br/>Ambiance : Étrange, drôle et colorée. Premier combat, gentil et rigolo.</p>
+      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 1<br/>Lieu : La Forêt des Champignons Rebondissants, à l'est du village<br/>Ambiance : Étrange, drôle et colorée. Deux combats gentils et rigolos : des gelées, puis un champignon géant.</p>
 
       <InfoBox title="Synopsis du Chapitre pour le Maître du Jeu">
         <p>Les héros traversent une forêt de gros champignons qui rebondissent, puis tombent sur deux gelées farceuses qui gardent un sentier. C'est le premier combat : <strong>prends le temps d'expliquer les dés avec l'exemple.</strong> Une petite quête annexe offre une aide pour le chapitre 3.</p>
@@ -64,6 +64,29 @@ export default function Chapitre2() {
       <ReadAloud title="Texte à lire à voix haute (la fin du combat)">
         "Les gelées s'effondrent en deux flaques brillantes, puis rebondissent de nouveau, de plus en plus petites, jusqu'à devenir de minuscules billes sucrées. « On abandonne ! » rient-elles. « C'était trop drôle ! Prenez le sentier, petits héros. Et si vous croisez le petit dragon, dites-lui qu'on l'aime bien ! » Elles roulent s'asseoir sous un champignon rose, en grignotant leur propre queue sucrée."
       </ReadAloud>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LE CHAMPIGNON GÉANT SAUTEUR (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Vous venez de laisser les gelées derrière vous quand le sol se met à trembler : BOING... BOING... BOING ! Un champignon violet, gros comme une maison, sort de terre en rebondissant sur son pied, avec deux petits yeux ronds sous son chapeau. « QUI MARCHE SUR MON JARDIN ? » demande-t-il d'une voix de basse. À chaque saut, il lâche un nuage de spores roses qui sentent la barbe à papa. « Je suis Gros-Chapeau, roi des champignons ! Personne ne passe sans me battre au saut ! »"
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Gros-Chapeau, le champignon géant)">
+        <h4 className="font-bold text-lg mb-2">L'Ennemi : Gros-Chapeau</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Points de Vie (PV) :</strong> 14. <strong>Classe d'Armure (CA) :</strong> 11.</li>
+          <li><strong>Attaque (Saut écrasant) :</strong> touche à 10 ou plus (D20 du MJ), 1D6 de dégâts. Il saute un tour sur deux : le tour d'après, il est en l'air et ne peut pas attaquer.</li>
+          <li><strong>Spores qui chatouillent :</strong> toutes les deux attaques, il souffle des spores : un héros tire un D6 ; sur 1 ou 2, il éclate de rire et passe son tour.</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Coup d'épée ou Étincelle :</strong> D20 + talent, 1D6.</li>
+          <li><strong>Option B - Viser le pied (COURAGE - DD 11) :</strong> quand il est au sol, les dégâts sont doublés.</li>
+          <li><strong>Option C - Rebondir sur un petit champignon (COURAGE - DD 10) :</strong> frapper depuis les airs, +2 aux dégâts.</li>
+          <li><strong>Option D - Lueur magique (Magicien) :</strong> il est ébloui et perd son prochain saut.</li>
+          <li><strong>Option E - Le faire rire (CŒUR - DD 11) :</strong> Gros-Chapeau rigole si fort qu'il perd l'équilibre.</li>
+        </ul>
+        <p className="italic mt-3">À 0 PV, il s'assoit, tout rond : « Pardon, c'était pour rire ! » Il offre une <strong>poudre de spores</strong> (une fois : fait éternuer un ennemi, qui perd son tour).</p>
+      </CombatBox>
 
       <ActionBox title="Butin et Quête Annexe : le pont cassé">
         <p className="mb-4"><strong>Loot : une Bille de gelée,</strong> qui rebondit très haut : au chapitre 3, elle permet de lancer un objet très loin.</p>

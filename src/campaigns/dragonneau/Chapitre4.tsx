@@ -13,7 +13,30 @@ export default function Chapitre4() {
         <p>Au sommet du volcan, Braisillon se cache derrière un golem de pierre qui le protège, mais qui prend les héros pour des ennemis. Les héros peuvent le battre, ou lui expliquer qu'ils sont amis. Ensuite vient la vraie épreuve : aider le bébé dragon à ne plus avoir peur de son feu. <strong>Le cœur de l'histoire :</strong> on n'a pas besoin d'être parfait pour être aimé, et l'amitié aide à dompter ce qui fait peur.</p>
       </InfoBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : LE GOLEM GARDIEN (Combat ou Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : LES SALAMANDRES DE BRAISE (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Le tunnel monte en spirale, de plus en plus chaud. Les parois deviennent rouges, puis orange, et le sol craque comme du charbon sous vos pieds. Un grésillement vous arrête : trois petites salamandres enflammées, rouges comme des braises, sortent de fissures dans la roche en lâchant des étincelles. « Chaud ! Chaud ! Chaud ! » crient-elles en tournant en rond. « On garde le chemin du nid ! On a la consigne : pas de visiteurs ! » Elles crachent des petites boules de feu : pchh ! pchh ! pchh !"
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Salamandres de Braise)">
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Salamandres de Braise</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Points de Vie (PV) :</strong> 6 chacune. <strong>Classe d'Armure (CA) :</strong> 11.</li>
+          <li><strong>Attaque (Boule de braise) :</strong> touche à 10 ou plus (D20 du MJ), 1D4 de dégâts. Elles attaquent toutes ensemble si elles sont plus de deux.</li>
+          <li><strong>Point faible : l'eau.</strong> Une salamandre arrosée s'éteint (elle perd son prochain tour, et ne peut plus attaquer au tour d'après).</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Coup d'épée ou Étincelle :</strong> D20 + talent, 1D6.</li>
+          <li><strong>Option B - Le Chapeau-bouclier ou le Bouclier :</strong> annule une boule de braise.</li>
+          <li><strong>Option C - Du sirop bleu (MALICE - DD 10) :</strong> si les héros ont encore une flasque du sirop du chapitre 2, ils éteignent deux salamandres d'un coup.</li>
+          <li><strong>Option D - La Bille de gelée :</strong> lancée sur une salamandre, elle la colle au mur.</li>
+          <li><strong>Option E - Les rassurer (CŒUR - DD 10) :</strong> « Nous venons en amis du petit dragon. » Elles s'arrêtent, puis s'écartent timidement.</li>
+        </ul>
+        <p className="italic mt-3">À 0 PV, une salamandre se roule en boule et devient une petite braise tiède (+3 PV pour qui la serre dans les mains).</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LE GOLEM GARDIEN (Combat ou Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Le tunnel débouche sur une plateforme de pierre noire, au sommet du volcan. Le ciel est rouge et orange, le soleil se couche, et un vent chaud vous décoiffe. Au milieu, un immense nid fait de branches et de braises tièdes. Et devant le nid, un grand golem de pierre, haut comme deux hommes, se redresse en craquant. Ses yeux sont deux braises. « Personne ne s'approche du petit, » grince-t-il d'une voix de rocher. « Il a peur. Il a été touché par le feu. Je le protège. »"<br/><br/>
         "Derrière lui, dans le nid, vous apercevez deux grands yeux dorés, ronds comme des assiettes, qui vous regardent entre les cailloux. Une petite voix tremble : « Allez-vous-en... Je suis dangereux... » Que faites-vous ?"
@@ -56,7 +79,7 @@ export default function Chapitre4() {
         <p className="italic">À 0 PV, il s'assoit et dit : « Vous avez... du cœur. Allez le voir. »</p>
       </CombatBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : BRAISILLON A PEUR DE SON FEU (Rencontre et Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : BRAISILLON A PEUR DE SON FEU (Rencontre et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Le golem s'écarte avec un grand craquement, et vous avancez doucement vers le nid. Braisillon est là, serré dans un coin, la queue entre les pattes, ses grands yeux dorés pleins de larmes. Quand il renifle, une petite étincelle sort de son nez et fait un « pschit » sur le sol. Il recule vivement. « Ne t'approche pas ! Je vais brûler tout le monde ! J'ai brûlé la moustache du boulanger, et la queue du chat... »"<br/><br/>
         "Il serre contre lui une vieille chaussette trouée, son seul doudou. Derrière lui, au loin, vous apercevez le village de Fumerolles, avec la Grande Torche encore éteinte sur la place. La nuit va tomber. Que faites-vous ?"

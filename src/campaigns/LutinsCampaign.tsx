@@ -34,7 +34,7 @@ export default function LutinsCampaign({ onBack }: { onBack: () => void }) {
         overline="Aventure d'équipe"
         title="Le Trésor des Lutins Farceurs"
         subtitle="Six salles, six farces, un coffre à trois serrures. Entrez ensemble, ressortez les poches pleines."
-        badges={['45 min – 1h15', 'Difficulté 1,5/5', '3 à 6 héros, dès 5 ans']}
+        badges={['1h15 – 1h45', 'Difficulté 1,5/5', '3 à 6 héros, dès 5 ans']}
       />
 
       <div className="space-y-16">

@@ -30,7 +30,7 @@ export default function DragonneauCampaign({ onBack }: { onBack: () => void }) {
         overline="Aventure d'initiation à deux"
         title="Le Dragonneau Perdu"
         subtitle="Un bébé dragon a peur de son propre feu. Deux apprentis partent le retrouver avant la nuit."
-        badges={['1h – 1h30', 'Difficulté 1/5', '2 héros, dès 6 ans']}
+        badges={['1h30 – 2h', 'Difficulté 1/5', '2 héros, dès 6 ans']}
       />
 
       <div className="space-y-16">

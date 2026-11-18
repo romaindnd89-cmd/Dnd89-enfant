@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre1() {
   return (
@@ -10,7 +10,7 @@ export default function Chapitre1() {
       <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 1<br/>Lieu : L'entrée fortifiée du château de Chantefarce<br/>Ambiance : Fête foraine un peu décatie, pleine de bonne humeur cachée derrière des airs de mystère. Installe bien le ton léger de toute l'aventure.</p>
 
       <InfoBox title="Synopsis de la Salle pour le Maître du Jeu">
-        <p>Première salle, la plus simple. L'équipe explore les abords du château (un trèfle à quatre feuilles à trouver), puis résout la devinette du lutin portier Grelot pour ouvrir la grille. Un seau de confettis est suspendu au-dessus : un piège rigolo. <strong>Rappel : chaque enfant lance son D20 à son tour, +3 si l'action correspond à son talent. 10 ou plus, c'est réussi.</strong></p>
+        <p>Première salle, la plus simple, avec une petite bataille d'échauffement contre trois gargouilles. L'équipe explore les abords du château (un trèfle à quatre feuilles à trouver), puis résout la devinette du lutin portier Grelot pour ouvrir la grille. Un seau de confettis est suspendu au-dessus : un piège rigolo. <strong>Rappel : chaque enfant lance son D20 à son tour, +3 si l'action correspond à son talent. 10 ou plus, c'est réussi.</strong></p>
       </InfoBox>
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : L'ENTRÉE DU CHÂTEAU (Exploration)</h3>
@@ -72,6 +72,28 @@ export default function Chapitre1() {
         "« Une clé ! Bravo, bravo ! » Grelot tape des mains, et la serrure en forme de bouche éclate de rire, montrant toutes ses dents dans un concert de grincements joyeux. La grille s'ouvre toute seule en grinçant un petit air de fanfare bancale, juste pour vous."<br/><br/>
         "Grelot ôte son énorme bonnet pour saluer, et deux pièces dorées en tombent à vos pieds. « C'est pour vous, cadeau de la maison ! Le roi a dit : une salle, des pièces, c'est la règle. Mais chut, ne répétez pas qu'il y a six salles... Oh, zut, je viens de le dire moi-même. »"
       </ReadAloud>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LES GARGOUILLES CHATOUILLEUSES (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "À peine la grille ouverte, vous faites trois pas dans la cour, et là, au-dessus de vos têtes, trois gargouilles de pierre, perchées sur le mur, ouvrent un œil, puis l'autre. « Hi hi hi ! » ricane la première. « Des visiteurs ! » « On les chatouille ? » « ON LES CHATOUILLE ! » Elles se détachent de la pierre dans un grand bruit de cailloux, déploient leurs ailes toutes lourdes, et fondent sur vous avec chacune une longue plume dans la gueule. Attention : ça va chatouiller !"
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Votre première bataille à plusieurs)">
+        <p className="mb-2">Chacun son tour, autour de la table. À son tour, un enfant dit ce que fait son héros et lance le <strong>D20</strong> (+3 si l'action correspond à son talent). Si le total atteint <strong>10</strong>, c'est une <strong>touche</strong>. <strong>Exemple :</strong> Léo, l'Acrobate, saute sur une gargouille : il fait 8, +3 = 11. Touché !</p>
+        <h4 className="font-bold text-lg mb-2 mt-4">Les Ennemies : 3 Gargouilles Chatouilleuses</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Pour en faire tomber une :</strong> 2 touches.</li>
+          <li><strong>Leur attaque (fin de chaque tour de table) :</strong> le MJ lance 1D6. Sur 1 ou 2, une plume chatouille un héros : l'équipe perd <strong>1 Rire</strong>.</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Grimper et frapper (COURAGE ou AGILITÉ) :</strong> sauter sur le mur pour taper une gargouille sur le nez.</li>
+          <li><strong>Option B - Chatouiller en retour (CŒUR) :</strong> une gargouille chatouillée pouffe de rire et perd son tour.</li>
+          <li><strong>Option C - Les arroser (MALICE) :</strong> remplir un seau d'eau dans la fontaine et le jeter : une gargouille se met à bouder, et toutes les autres rient d'elle.</li>
+          <li><strong>Option D - Le Chevalier :</strong> son Bouclier arrête une plume et fait rire tout le monde.</li>
+        </ul>
+        <p className="italic mt-3">Une gargouille « vaincue » s'assoit, hilare, sur son rebord, et applaudit les autres. Si l'équipe tombe à 0 Rire : pause chatouilles collective, et les gargouilles rendent 3 Rires en échange d'une grimace.</p>
+      </CombatBox>
 
       <InfoBox title="Récompenses">
         <p><strong>Loot : 2 pièces en chocolat</strong> pour le trésor commun. À déposer tout de suite dans le bol de l'équipe.</p>

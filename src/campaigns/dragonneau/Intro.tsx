@@ -35,7 +35,7 @@ export default function Intro() {
       <InfoBox title="L'aventure en deux mots (pour le MJ)">
         <p className="mb-2">Une aventure d'<strong>initiation pour 2 joueurs</strong> (deux enfants, ou un enfant et un parent) qui n'ont jamais joué au jeu de rôle. En 4 chapitres, les deux héros retrouvent <strong>Braisillon</strong>, un bébé dragon qui s'est enfui la nuit de sa naissance, avant que la Grande Torche du village ne s'éteigne.</p>
         <p className="mb-2">Il n'y a <strong>pas de vrai méchant</strong> : Braisillon a juste peur de son propre feu. Chaque héros a son propre talent, et l'aventure est faite pour que <strong>les deux soient utiles à chaque chapitre</strong>.</p>
-        <p className="font-bold">Durée : 1h à 1h30. Difficulté : 1/5. Dès 6 ans.</p>
+        <p className="font-bold">Durée : 1h30 à 2h, avec 7 combats gentils. Difficulté : 1/5. Dès 6 ans.</p>
       </InfoBox>
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Prologue : La légende de Fumerolles</h3>

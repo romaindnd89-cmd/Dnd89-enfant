@@ -37,7 +37,29 @@ export default function Chapitre3() {
         </ul>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : GROGNON, LE TROLL DU PONT (Rencontre et Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LES CHAUVES-SOURIS DE CRISTAL (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "La porte de pierre s'ouvre dans un long grincement, et un souffle d'air froid sort de la grotte. Tout à coup, les cristaux du plafond se mettent à bouger : ce ne sont pas des cristaux, ce sont des <strong>chauves-souris de cristal</strong> ! Trois petites bêtes translucides, aux ailes pointues comme du verre, se décrochent du plafond et tournoient autour de vous en poussant des « Iiiiik ! » aigus. Chacun de leurs cris fait tinter les cristaux alentour, comme un orchestre de verre."
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Chauves-Souris de Cristal)">
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Chauves-Souris de Cristal</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Points de Vie (PV) :</strong> 5 chacune. <strong>Classe d'Armure (CA) :</strong> 12.</li>
+          <li><strong>Attaque (Piqué) :</strong> touche à 10 ou plus (D20 du MJ), 1D4 de dégâts.</li>
+          <li><strong>Cri de verre :</strong> si deux chauves-souris crient en même temps, un héros ébloui perd son tour (tire un D6 : 1 ou 2).</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Coup d'épée ou Étincelle :</strong> D20 + talent, 1D6. Elles sont difficiles à toucher en vol.</li>
+          <li><strong>Option B - Lueur magique (Magicien) :</strong> elles ne supportent pas la lumière : elles tombent, éblouies, au sol (+2 pour les toucher).</li>
+          <li><strong>Option C - Le Bouclier (Chevalier) :</strong> il renvoie le cri : une chauve-souris étourdie perd son tour.</li>
+          <li><strong>Option D - Les calmer (CŒUR - DD 11) :</strong> une berceuse ou le <strong>Cristal chantant</strong> les endort doucement.</li>
+        </ul>
+        <p className="italic mt-3">Une chauve-souris vaincue se pose sur un cristal et s'endort, la tête en bas.</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : GROGNON, LE TROLL DU PONT (Rencontre et Roleplay)</h3>
       <InfoBox title="Profil de Grognon, le troll du pont">
         <ul className="list-disc pl-5 space-y-2">
           <li><strong>Apparence :</strong> énorme, moussu, avec un petit bonnet de laine sur la tête.</li>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre6() {
   return (
@@ -24,10 +24,33 @@ export default function Chapitre6() {
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 1 : LA SALLE DU TRÔNE (Rencontre et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "À vos pieds, devant le trône royal, un coffre gigantesque attend, cerclé de bandes dorées et fermé par trois énormes serrures. Sur chacune, un mot est gravé : RIRE, RUSE, PARTAGE. L'air sent le chocolat, très fort, et ça vient du coffre lui-même."<br/><br/>
-        "Un brouhaha joyeux emplissait la salle, mais tout s'arrête net dès que vous franchissez le seuil. Il ne reste qu'un seul petit bruit : celui d'un grelot accroché à la couronne du roi. Le petit roi se lève d'un bond, manque de perdre l'équilibre sur ses coussins, se rattrape de justesse. « Chasseurs de trésor ! Vous avez franchi ma grille, survécu à ma cuisine, apprivoisé mes livres volants, renversé mon chevalier et trompé mes miroirs. Bravo ! Mais mon coffre a trois serrures, et aucune clé au monde ne peut les ouvrir. Il faut, pour chacune, trouver une chose qu'on ne peut pas mettre dans sa poche. Êtes-vous prêts ? » Les lutins retiennent leur souffle. Par quelle serrure commencez-vous ?"
+        "Un brouhaha joyeux emplissait la salle, mais tout s'arrête net dès que vous franchissez le seuil. Il ne reste qu'un seul petit bruit : celui d'un grelot accroché à la couronne du roi. Le petit roi se lève d'un bond, manque de perdre l'équilibre sur ses coussins, se rattrape de justesse. « Chasseurs de trésor ! Vous avez franchi ma grille, survécu à ma cuisine, apprivoisé mes livres volants, renversé mon chevalier et trompé mes miroirs. Bravo ! Mais mon coffre a trois serrures, et aucune clé au monde ne peut les ouvrir. Il faut, pour chacune, trouver une chose qu'on ne peut pas mettre dans sa poche. Êtes-vous prêts ? » Les lutins retiennent leur souffle. Mais avant de toucher aux serrures, il y a une petite formalité..."
       </ReadAloud>
 
-      <ActionBox title="Les trois serrures (dans l'ordre que tu veux)">
+      <ActionBox title="Avant les serrures : l'épreuve de la Garde Royale">
+        <h4 className="font-bold text-lg mb-2">Avant les serrures : l'épreuve de la Garde Royale (Combat)</h4>
+        <p className="mb-2">Le roi tape trois fois sur son trône : « Avant de toucher à mon coffre, il faut prouver que vous êtes assez costauds pour le porter ! » Quatre lutins en armure de casserole bondissent de derrière les rideaux avec de gros <strong>coussins</strong> pour armes : c'est la Garde Royale, menée par le capitaine <strong>Sir Plumard</strong>.</p>
+      </ActionBox>
+
+      <CombatBox title="Mécaniques de Combat (La Bataille de Coussins)">
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Gardes Royaux et le capitaine Sir Plumard</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Gardes Royaux (× 3) :</strong> 2 touches chacun. <strong>Sir Plumard :</strong> 3 touches. Un jet à <strong>11 ou plus</strong> est une touche.</li>
+          <li><strong>Leur attaque (fin de chaque tour de table) :</strong> 1D6 du MJ. Sur 1, 2 ou 3, un coussin « paf » un héros : l'équipe perd <strong>1 Rire</strong>.</li>
+          <li><strong>Plumes partout :</strong> chaque coussin touché explose en plumes, qui flottent dans l'air. Le premier à éternuer perd son tour (tire un D6 : sur 1, c'est toi).</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Lancer un coussin (AGILITÉ) :</strong> un garde est assis par terre, assommé de fous rires.</li>
+          <li><strong>Option B - Faire une forteresse de coussins (COURAGE) :</strong> les attaques du MJ ratent sur 1 ou 2 pendant un tour.</li>
+          <li><strong>Option C - Faire rire le capitaine (CŒUR) :</strong> une grimace et il laisse tomber son coussin.</li>
+          <li><strong>Option D - Rouler Sir Plumard sur le tapis (MALICE) :</strong> il glisse et passe son tour.</li>
+        </ul>
+        <p className="italic mt-3">Après la bataille, tout le monde est couvert de plumes, le roi applaudit debout, et la Garde Royale salue les héros avant de leur rendre leurs coussins en cadeau.</p>
+      </CombatBox>
+
+      <ActionBox title="Maintenant, les trois serrures (dans l'ordre que tu veux)">
+
         <h4 className="font-bold text-lg mb-2">Serrure 1 : RIRE (Roleplay ou test de CŒUR - DD 10)</h4>
         <p className="mb-6">Il faut faire rire le roi, qui se retient de toutes ses forces. Chaque enfant tente à son tour devant le public : une grimace, une blague, une danse, une imitation. <strong>Si l'enfant le fait pour de vrai, c'est réussi d'office</strong>, sans jet. Sinon, jet de CŒUR. La serrure s'ouvre dès que la <strong>moitié de l'équipe</strong> a réussi. Le <strong>plumeau géant</strong> compte pour une réussite garantie.</p>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -47,7 +47,28 @@ export default function Chapitre3() {
         <p><strong>À chaque échec :</strong> une nuée de livres chatouille les héros avec leurs pages. L'équipe perd <strong>1 Rire</strong>, rien de plus grave.</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LE LIVRE S'OUVRE ENFIN</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LES DICTIONNAIRES GLOUTONS (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Pendant que vous courez après le Grand Livre, un grondement sourd fait trembler les étagères du fond. Trois énormes dictionnaires, gros comme des coffres, se laissent tomber sur le sol avec un « BOUM ! ». Leurs couvertures s'ouvrent comme des gueules, pleines de pages qui claquent. « GLOUP ! » dit l'un. « Nous avons faim de MOTS ! » grogne l'autre. « Donnez-nous vos histoires, vos blagues, vos chapeaux ! » Ils avancent en traînant leurs reliures sur le parquet, et mordent le premier qui passe à leur portée."
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Dictionnaires Gloutons)">
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Dictionnaires Gloutons</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Pour en refermer un :</strong> 2 touches (un jet à 10 ou plus).</li>
+          <li><strong>Leur attaque (fin de chaque tour de table) :</strong> 1D6 du MJ. Sur 1 ou 2, un dictionnaire mord un chapeau : l'équipe perd <strong>1 Rire</strong>.</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - S'asseoir sur la couverture (COURAGE) :</strong> un dictionnaire coincé ne peut plus mordre.</li>
+          <li><strong>Option B - Lui lire une histoire (CŒUR) :</strong> les dictionnaires adorent qu'on leur raconte quelque chose : une touche automatique si l'histoire est drôle.</li>
+          <li><strong>Option C - Lui donner un mot difficile (MALICE) :</strong> « Anticonstitutionnellement ! » Le dictionnaire cherche, cherche... et perd son tour.</li>
+          <li><strong>Option D - Esquiver en glissant sur le parquet (AGILITÉ) :</strong> glissade acrobatique, +2 au prochain jet.</li>
+        </ul>
+        <p className="italic mt-3">Un dictionnaire vaincu se referme en soupirant, et glisse timidement à l'équipe : « Pardon, j'avais faim. »</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LE LIVRE S'OUVRE ENFIN</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Le Grand Livre des Blagues se pose enfin sur les genoux tendus de l'équipe, encore tiède d'avoir tant volé, et se met à ronronner comme un gros chat satisfait. Mais il reste fermé. « Il ne s'ouvre que si on lui raconte quelque chose de drôle ! » crie Maître Parchemin. À qui le tour ?"
       </ReadAloud>

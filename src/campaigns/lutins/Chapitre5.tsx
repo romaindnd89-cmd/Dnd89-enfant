@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre5() {
   return (
@@ -58,6 +58,28 @@ export default function Chapitre5() {
         <h4 className="font-bold text-lg mb-2">Trouver la vraie porte</h4>
         <p>Reflet donne son indice : « La vraie porte est la seule qui n'aime pas qu'on lui souffle dessus. » En soufflant ensemble sur chaque miroir, tous se couvrent de buée, sauf la vraie porte, en bois véritable. Un jet de <strong>MALICE (DD 10)</strong> permet aussi de le deviner sans l'indice.</p>
       </ActionBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LES DOUBLES FARCEURS (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Vous venez de réussir le jeu du miroir. Reflet applaudit... puis il éclate d'un grand rire malicieux. « Hi hi hi ! Vous croyiez que c'était fini ? » Dans les miroirs, vos reflets s'arrêtent de vous imiter. Ils se regardent, sourient d'un air farceur, puis sortent des cadres, un par un, en passant leurs jambes par-dessus le bord ! Devant chaque enfant se tient maintenant un <strong>double</strong> de son héros, avec le même bonnet, les mêmes gestes, et un sourire un peu trop grand. « C'est le dernier jeu, » dit Reflet. « Battez-vous contre vous-mêmes ! »"
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Doubles Farceurs)">
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : un Double par enfant</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Chaque Double</strong> copie le talent de son héros : il faut le toucher <strong>2 fois</strong> pour qu'il retourne dans son miroir.</li>
+          <li><strong>Leur attaque (fin de chaque tour de table) :</strong> 1D6 du MJ. Sur 1 ou 2, un Double joue un tour à son héros : l'équipe perd <strong>1 Rire</strong>.</li>
+          <li><strong>Règle comique : le Double copie ton dernier geste.</strong> Si un héros fait deux fois la même action, le Double la copie et l'esquive. Il faut <strong>changer de geste à chaque tour</strong> pour le surprendre !</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Faire le contraire (MALICE) :</strong> le Double fait la même chose que toi... donc si tu tournes à gauche, il tourne à gauche et se cogne dans ton ami.</li>
+          <li><strong>Option B - Échanger de place avec un ami :</strong> les Doubles se trompent de cible. Le jet d'AGILITÉ de l'ami gagne +2.</li>
+          <li><strong>Option C - Le faire rire (CŒUR) :</strong> un Double qui rit ne peut plus copier : touche automatique.</li>
+          <li><strong>Option D - Le Magicien :</strong> son Abracadabra fait disparaître un Double pour un tour.</li>
+        </ul>
+        <p className="italic mt-3">Un Double touché deux fois se remet dans son miroir en faisant la révérence.</p>
+      </CombatBox>
 
       <ReadAloud title="Texte à lire à voix haute (la vraie porte apparaît)">
         "Vous soufflez ensemble, un grand coup collectif. Les miroirs se voilent de buée les uns après les autres, comme de petites fenêtres embuées un matin d'hiver. Tous, sauf un seul. La vraie porte est là, toute simple, avec sa poignée en forme de grelot. Dans la buée d'un miroir proche, un petit doigt invisible trace un bonhomme qui sourit, puis deux pièces bien rondes. Et ces mêmes pièces tombent du miroir, pour de bon, à vos pieds."
