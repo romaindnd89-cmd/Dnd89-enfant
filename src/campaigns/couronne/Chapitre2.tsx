@@ -99,7 +99,7 @@ export default function Chapitre2() {
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-4 mb-4">
-          <li><strong>Option A - Coup d'épée :</strong> D20 + COURAGE (+2), 1D6 +1 de dégâts.</li>
+          <li><strong>Option A - Coup d'épée :</strong> D20 + COURAGE (+3), 1D6 +1 de dégâts.</li>
           <li><strong>Option B - Réplique Cinglante (1 Panache) :</strong> le héros lance une moquerie sur la rime ratée d'un brigand : celui-ci perd son tour, et ses alliés ricanent.</li>
           <li><strong>Option C - Les branches basses (MALICE - DD 12) :</strong> le héros fait basculer une branche qui assomme deux brigands à la fois (1D6 de dégâts chacun).</li>
           <li><strong>Option D - Utiliser Gaston :</strong> il peut mordre un brigand (D20 +2, 1D4 de dégâts), mais en échange le héros doit lui promettre du maïs.</li>

@@ -38,7 +38,7 @@ export default function CouronneCampaign({ onBack }: { onBack: () => void }) {
         overline="Enquête pour un héros"
         title="La Couronne du Rire"
         subtitle="Un vol, une trahison, un coupable inattendu et un royaume qui ne doit surtout pas arrêter de rire."
-        badges={['3h – 4h30 (3 séances)', 'Difficulté 3/5', '1 héros, dès 8 ans']}
+        badges={['3h15 – 4h30 (3 séances)', 'Difficulté 3/5', '1 héros, dès 8 ans']}
       />
 
       <div className="space-y-16">

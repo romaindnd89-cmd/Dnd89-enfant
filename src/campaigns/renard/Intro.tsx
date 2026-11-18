@@ -40,7 +40,7 @@ export default function Intro() {
       <InfoBox title="L'aventure en deux mots (pour le MJ)">
         <p className="mb-2">Le petit renard est le seul à avoir gardé ses souvenirs. Sa mission : retrouver les <strong>3 Glands d'Or</strong> cachés dans la forêt et les rapporter au Grand Chêne-Mémoire <strong>avant la première neige</strong>, sinon l'oubli deviendra définitif.</p>
         <p className="mb-2">La coupable est <strong>Grisaille</strong>, une vieille taupe-sorcière très seule. Elle n'est pas vraiment méchante : elle a lancé la Brume d'Oubli parce que, à force d'être oubliée de tous, elle a préféré que plus personne ne se souvienne de rien. Le secret de l'aventure : <strong>on ne la vainc pas en se battant, mais en lui rendant une amie</strong>.</p>
-        <p className="font-bold">Durée : 2h à 3h (plusieurs sessions possibles). Difficulté : 2/5. Dès 6 ans.</p>
+        <p className="font-bold">Durée : 2h15 à 3h, avec 8 combats (plusieurs sessions possibles). Difficulté : 2/5. Dès 6 ans.</p>
       </InfoBox>
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4 flex items-center gap-2">
@@ -72,6 +72,7 @@ export default function Intro() {
           'La Feuille d’Or : ta boussole magique. Elle brille plus fort quand un souvenir est tout près.',
           '3 Noisettes grillées : si tu en manges une, tu récupères 3 PV.',
           'Une écharpe rouge, tricotée par Mémé Rouquine.',
+          'Ta fourrure agile : pour te toucher, un monstre doit faire 11 ou plus au D20 (ta CA).',
         ]}
       />
 
@@ -84,6 +85,7 @@ export default function Intro() {
           <li><strong>🎒 Le sac à dos et les objets :</strong> tout ce que le héros ramasse se note sur sa fiche. Ce ne sont pas des babioles : un objet trouvé tôt (une goutte de rosée, un champignon-lanterne…) sert souvent bien plus loin dans l'aventure. Encouragez l'enfant à fouiller et à ramasser !</li>
           <li><strong>🌀 Les états (ce qui change pour un tour) :</strong> parfois le héros est <em>collé</em>, <em>ébloui</em>, <em>ralenti</em> ou <em>endormi</em>. L'encadré explique à chaque fois comment s'en libérer — en général, un petit jet au tour suivant.</li>
           <li><strong>⚔️ L'initiative (en combat) :</strong> au début d'un combat, un jet de D20 décide qui agit en premier, le héros ou le monstre.</li>
+          <li><strong>🛡️ Quand un monstre attaque :</strong> le MJ lance un D20. À <strong>11 ou plus</strong> (la « CA » du renard, sa difficulté à toucher), le monstre touche et le héros perd des PV (le dé de dégâts est indiqué dans la fiche du monstre).</li>
         </ul>
       </InfoBox>
     </section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -7,7 +7,7 @@ export default function Chapitre3() {
       <h2 className="font-display text-4xl font-bold text-amber-700 mb-6 border-b-4 border-amber-200 pb-2 mt-16">
         CHAPITRE 4 : LE MARCHÉ AUX MENTEURS
       </h2>
-      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : Le Marché aux Menteurs, à la sortie de la forêt<br/>Ambiance : Un marché coloré où tout le monde ment, joyeusement. Chapitre d'enquête et de bagout, sans combat obligatoire.</p>
+      <p className="text-slate-500 font-medium mb-8">Niveau recommandé : 3<br/>Lieu : Le Marché aux Menteurs, à la sortie de la forêt<br/>Ambiance : Un marché coloré où tout le monde ment, joyeusement. Chapitre d'enquête et de bagout, avec une bagarre de légumes en pleine rue.</p>
 
       <InfoBox title="Synopsis du Chapitre pour le Maître du Jeu">
         <p>Au marché, <strong>tous les marchands mentent par métier</strong>. Le héros doit démêler le vrai du faux pour apprendre où est caché le butin du Baron Cornichon. Un pickpocket lui vole un objet, qu'il faut récupérer. <strong>Préparation de la trahison :</strong> pendant ce chapitre, Gaston disparaît quelques minutes et revient avec des miettes de maïs doré sur le bec : un inconnu lui a promis un sac de grain doré. Le héros peut le remarquer (MALICE, DD 13).</p>
@@ -105,7 +105,31 @@ export default function Chapitre3() {
         <p>Madame Zut sourit : « Tu verras. » Elle ne se vexe pas. Le héros n'a pas d'avantage, mais la prophétie reste dans un coin de sa tête. (Si le héros fait une blague, <strong>+1 Panache</strong> : Madame Zut adore ça.)</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : LE VRAI RENSEIGNEMENT (Rencontre et Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : LA BAGARRE DES GROS-BRAS (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Tu sors de la tente de Madame Zut quand un éclat de voix te fait te retourner. Trois montagnes de muscles en tablier de boucher bloquent la ruelle, avec des mains grosses comme des pastèques. Le plus grand tient une énorme courgette comme une massue. « C'est toi, le détective ? » demande-t-il d'une voix grave. « Un monsieur sérieux, tout en gris, nous a payés pour te faire taire. » Il fait craquer ses doigts : crac ! « On est les Gros-Bras du Marché. Et on a une commande de légumes... en pleine figure. » Autour de toi, les étals sont remplis de fruits, de tomates et de poireaux."
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (La Bagarre de Légumes)">
+        <p className="mb-4">Combat drôle, en pleine rue. Initiative : D20 + Courage. Rappel : attaque = D20 + talent contre la CA ; les ennemis lancent D20 + leur bonus contre la CA du héros (13).</p>
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : Maître Concombre et 2 Gros-Bras</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-6">
+          <li><strong>Maître Concombre :</strong> 10 PV, CA 12. Attaque à +3, 1D6 de dégâts (coup de courgette).</li>
+          <li><strong>Gros-Bras (× 2) :</strong> 8 PV chacun, CA 11. Attaque à +2, 1D4 de dégâts (tomates et poireaux).</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-4 mb-4">
+          <li><strong>Option A - Coup d'épée :</strong> D20 + COURAGE (+3), 1D6 +1 de dégâts.</li>
+          <li><strong>Option B - Pyramide de melons (MALICE - DD 12) :</strong> le héros fait rouler les melons : deux Gros-Bras trébuchent et perdent leur tour.</li>
+          <li><strong>Option C - Réplique Cinglante (1 Panache) :</strong> « Votre courgette est molle ! » Maître Concombre se vexe et rate son tour.</li>
+          <li><strong>Option D - Les marchands (CHARME - DD 12) :</strong> Moustache, Madame Pivoine ou Maître Cloche aident le héros s'il les a ménagés (+2 à son prochain jet, une fois).</li>
+          <li><strong>Option E - Doigts-de-Fée (si le héros l'a rattrapé) :</strong> il pique la courgette du chef : il passe un tour à la chercher.</li>
+          <li><strong>Option F - Gaston :</strong> elle mord un mollet (D20 +2, 1D4) pour une poignée de maïs promise.</li>
+        </ul>
+        <p className="italic">Si le héros tombe à 0 PV, KO comique : il atterrit dans un panier de choux, réveillé par un marchand avec un seau d'eau. 5 PV, un Panache en moins.</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 5 : LE VRAI RENSEIGNEMENT (Rencontre et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Madame Pivoine te fait signe de venir. Elle baisse la voix. « Détective, je vais te dire une vérité, la seule de ma vie. Le Baron Cornichon n'est pas du tout celui que l'on croit. Il vit dans un château sur la colline, il aime les chapeaux, il a toujours une cape violette. Et... » Elle regarde autour d'elle. « ...quelqu'un a payé tout le marché hier pour qu'on te raconte que le voleur, c'est lui. Je ne sais pas qui. Un monsieur sérieux, il ne rigolait pas, il m'a fait peur. » Elle reprend sa pancarte. « Évidemment, je mens. »"
       </ReadAloud>
@@ -121,7 +145,7 @@ export default function Chapitre3() {
         <p>Elle hésite, puis souffle : « Il avait des gants gris, et il sentait l'encre. Mais je mens. » C'est la même description que celle des brigands : <strong>deux témoignages indépendants pointent vers la même personne</strong>. Gagne un point de Panache pour avoir recoupé les indices.</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 5 : LA TAVERNE DU HÉRISSON QUI RIT (Repos et Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 6 : LA TAVERNE DU HÉRISSON QUI RIT (Repos et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Le soleil descend lentement quand vous arrivez à une grande auberge au bord du marché : « AU HÉRISSON QUI RIT », annonce une enseigne représentant un hérisson hilare. À l'intérieur, une salle chaleureuse, pleine de monde, de chansons, de fumée et d'odeurs de soupe. Au fond, un barde à moustache joue de la guitare en chantant : « Il était un petit détective, qui cherchait, qui cherchait, qui cherchait... » Une aubergiste ronde et souriante te tend un bol : « Pour le courage, mon petit. C'est offert. » Tu t'assois, les pieds fatigués, le cœur un peu plus léger. Gaston s'installe à côté de toi, étrangement silencieuse."
       </ReadAloud>

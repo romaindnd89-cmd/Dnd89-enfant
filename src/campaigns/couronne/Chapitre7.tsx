@@ -123,7 +123,7 @@ export default function Chapitre7() {
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-4 mb-4">
-          <li><strong>Option A - Coup d'épée :</strong> D20 + COURAGE (+2), 1D6 +1.</li>
+          <li><strong>Option A - Coup d'épée :</strong> D20 + COURAGE (+3), 1D6 +1.</li>
           <li><strong>Option B - Faire rire (CHARME - DD 12) :</strong> si l'enfant propose une blague, même simple, une Cravate Grise perd son tour en se bouchant les oreilles. Si la blague est vraiment bonne, elle tombe à genoux.</li>
           <li><strong>Option C - Le Baron (si allié) :</strong> il attaque à +4, 1D6 de dégâts, et glisse une blague au passage. À chaque blague du Baron, une Cravate Grise perd son tour.</li>
           <li><strong>Option D - Boudin (s'il est resté avec le groupe) :</strong> il attrape deux Cravates et les cogne l'une contre l'autre (2 PV de dégâts chacune).</li>

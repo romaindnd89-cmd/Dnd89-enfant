@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre3() {
   return (
@@ -44,7 +44,30 @@ export default function Chapitre3() {
         </ul>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LA TRAVERSÉE ET LES TÊTARDS</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LES GRENOUILLES ÉCLABOUSSANTES (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Tu sautes de pierre en pierre, plic, ploc, plic, quand trois énormes grenouilles vertes jaillissent de l'eau, juste devant toi, avec des plouf ! sonores. « C'est NOTRE pont ! » coasse la première en gonflant ses joues. « Ce sont NOS pierres ! » ajoute la deuxième. « Et c'est NOTRE jour de bain ! » termine la troisième. Elles se mettent en rang, prennent une grande inspiration, et te lancent trois grands jets d'eau avec leurs bouches : SPLASH !"
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Grenouilles Éclaboussantes)">
+        <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
+        <h4 className="font-bold text-lg mb-2">Les Ennemies : 3 Grenouilles Éclaboussantes</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>PV :</strong> 4 chacune. <strong>CA :</strong> 10.</li>
+          <li><strong>Attaque (Jet d'eau) :</strong> touche à 11 ou plus (D20 du MJ), 1D4 de dégâts. Le héros trempé a −1 au prochain jet d'Agilité.</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Griffes et crocs :</strong> 1D20 + COURAGE (+3), dégâts 1D6.</li>
+          <li><strong>Option B - Bond du Renard (AGILITÉ +4) :</strong> sauter par-dessus un jet d'eau et atterrir sur une grenouille : dégâts doublés.</li>
+          <li><strong>Option C - Le Saut de Grenouille (si appris) :</strong> les grenouilles, impressionnées, perdent leur tour.</li>
+          <li><strong>Option D - Lumi (une fois) :</strong> la luciole les éblouit : elles ratent leur prochain jet.</li>
+          <li><strong>Option E - Les faire rire (CŒUR +5) :</strong> un renard qui sait faire des grimaces désarme une grenouille.</li>
+        </ul>
+        <p className="italic mt-3">Une grenouille touchée saute dans l'eau en boudant : « Pas juste ! Je reviendrai avec mes cousines ! »</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LA TRAVERSÉE ET LES TÊTARDS</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Une à une, les pierres plates remontent du fond de l'eau, toutes luisantes. Tu sautes de l'une à l'autre : plic, ploc, plic ! Sous tes pattes, le ruisseau rit tout bas, comme s'il te félicitait. Sur l'autre rive, tu te retournes : Croâ agite sa grande patte palmée. « Reviens me voir quand la forêt aura retrouvé ses couleurs ! J'aurai inventé une devinette toute neuve, rien que pour toi ! »"<br/><br/>
         "Juste après le gué, de toutes petites voix paniquées appellent à l'aide depuis une flaque qui rapetisse au soleil. Une dizaine de têtards tournent en rond : « À l'aide ! On a oublié le chemin du ruisseau ! » Que fais-tu ?"

@@ -90,7 +90,7 @@ export default function Chapitre3() {
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 8.</li>
           <li><strong>Classe d'Armure (CA) :</strong> 11.</li>
-          <li><strong>Attaque (Gros coup de massue) :</strong> 1D4 de dégâts. Il éternue toutes les deux attaques et rate alors son coup.</li>
+          <li><strong>Attaque (Gros coup de massue) :</strong> touche à 10 ou plus (D20 du MJ), 1D4 de dégâts. Il éternue toutes les deux attaques et rate alors son coup.</li>
         </ul>
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-3">

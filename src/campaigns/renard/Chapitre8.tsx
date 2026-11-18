@@ -68,7 +68,7 @@ export default function Chapitre8() {
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 6 chacune.</li>
           <li><strong>Classe d'Armure (CA) :</strong> 10.</li>
-          <li><strong>Attaque (Coup de boue) :</strong> 1D4 de dégâts. Lentes et maladroites, elles ratent souvent.</li>
+          <li><strong>Attaque (Coup de boue) :</strong> touche à 11 ou plus (D20 du MJ), 1D4 de dégâts. Lentes et maladroites, elles ratent souvent.</li>
         </ul>
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-3">

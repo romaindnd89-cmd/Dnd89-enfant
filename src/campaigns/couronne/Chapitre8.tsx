@@ -69,7 +69,7 @@ export default function Chapitre6() {
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-4 mb-4">
-          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1. Efficace seulement quand le bouclier est brisé.</li>
+          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+3), 1D6 +1. Efficace seulement quand le bouclier est brisé.</li>
           <li><strong>Option B - Faire rire pour briser un anneau (CHARME - DD 13, ou Réplique Cinglante avec 1 Panache) :</strong> une blague, une grimace, une imitation du Chancelier. <strong>Si l'enfant fait vraiment rire, c'est réussi sans jet.</strong> Chaque rire brise un anneau.</li>
           <li><strong>Option C - Les alliés font rire :</strong> le roi (très doué) peut jeter une brioche à la tête du Chancelier : un anneau brisé. Le Baron imite un hibou (un anneau brisé). Boudin raconte une blague de troll (un anneau brisé).</li>
           <li><strong>Option D - Gaston (si pardonné) :</strong> elle lance une pluie de maïs doré : le Chancelier glisse (il perd son tour) et le héros gagne +3 à son prochain jet.</li>

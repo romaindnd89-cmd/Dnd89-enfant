@@ -51,7 +51,7 @@ export default function Chapitre6() {
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 14.</li>
           <li><strong>Classe d'Armure (CA) :</strong> 13.</li>
-          <li><strong>Attaque (Fil collant) :</strong> 1D6 de dégâts. Si elle touche, le héros est collé : au tour suivant, AGILITÉ DD 10 pour se libérer avant d'agir.</li>
+          <li><strong>Attaque (Fil collant) :</strong> touche à 11 ou plus (D20 du MJ), 1D6 de dégâts. Si elle touche, le héros est collé : au tour suivant, AGILITÉ DD 10 pour se libérer avant d'agir.</li>
           <li><strong>Lâcheté :</strong> à 4 PV ou moins, elle arrête le combat et supplie qu'on la laisse partir.</li>
         </ul>
 

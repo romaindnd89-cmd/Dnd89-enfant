@@ -121,7 +121,7 @@ export default function Chapitre5() {
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-3 mb-4">
-          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1. Contre le Garde-Chef, c'est plus dur.</li>
+          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+3), 1D6 +1. Contre le Garde-Chef, c'est plus dur.</li>
           <li><strong>Option B - Boudin (si le héros l'a consolé) :</strong> il soulève un soldat et le jette contre la porte (le soldat est hors-jeu). Une fois par combat.</li>
           <li><strong>Option C - Le carnet (MALICE - DD 13) :</strong> le héros fait tomber le carnet de Pâté dans la marmite : le garde-chef passe un tour à le chercher.</li>
           <li><strong>Option D - Le Baron (si allié) :</strong> il attaque à +3, 1D6 de dégâts, et lance parfois une blague qui déstabilise un soldat.</li>

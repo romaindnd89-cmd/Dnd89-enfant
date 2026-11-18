@@ -26,7 +26,7 @@ export default function Intro() {
       <InfoBox title="L'aventure en deux mots (pour le MJ)">
         <p className="mb-2">Une enquête <strong>drôle et pleine de surprises</strong> pour <strong>un héros</strong>, un cran au-dessus des histoires d'initiation. La Couronne du roi a disparu la veille du Grand Banquet. Le héros, accompagné d'une oie bavarde et très gourmande, mène l'enquête à travers huit étapes : une forêt de brigands poètes, une rivière où les canards sont en grève, un marché où tout le monde ment, un château piégé, des cachots, une course contre la montre et un grand banquet...</p>
         <p className="mb-2"><strong>Attention, spoilers pour le MJ :</strong> le héros va être <strong>trahi</strong> par son propre coéquipier, puis découvrir que <strong>celui qui lui a confié l'enquête est le vrai coupable</strong>. Ne le dis pas à l'enfant : laisse-le deviner, il y a des indices partout. L'oie, elle, aura une chance de se racheter.</p>
-        <p className="font-bold">Durée : 3h à 4h30 (trois séances conseillées : chapitres 1 à 3, 4 à 6, puis 7 et 8). Difficulté : 3/5. Dès 8 ans.</p>
+        <p className="font-bold">Durée : 3h15 à 4h30 (trois séances conseillées : chapitres 1 à 3, 4 à 6, puis 7 et 8). Difficulté : 3/5. Dès 8 ans.</p>
       </InfoBox>
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Prologue : Le royaume de Pétaouchnok</h3>
@@ -63,7 +63,7 @@ export default function Intro() {
         theme={theme}
         hp={18}
         stats={[
-          { label: 'Courage', emoji: '🔥', value: '+2', note: 'se battre, foncer, résister' },
+          { label: 'Courage', emoji: '🔥', value: '+3', note: 'se battre, foncer, résister' },
           { label: 'Malice', emoji: '🧠', value: '+3', note: 'enquêter, crocheter, deviner les mensonges' },
           { label: 'Charme', emoji: '😎', value: '+3', note: 'baratiner, faire rire, convaincre' },
         ]}

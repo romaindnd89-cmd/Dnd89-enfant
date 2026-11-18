@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre7() {
   return (
@@ -31,7 +31,31 @@ export default function Chapitre7() {
         <p><strong>Version dés :</strong> pour les enfants qui préfèrent, remplace chaque niveau par un jet de FLAIR : DD 8, puis 11, puis 14.</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LA CHANSON DE GRISEFEUILLE</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LES ÉCHOS MOQUEURS (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Au moment où le dernier cristal s'allume, un « Hihihi ! » moqueur résonne dans la grotte. Trois silhouettes sombres sortent des murs : des ombres en forme de renard, qui imitent chacun de tes gestes avec un temps de retard. « On est les Échos, » ricanent-elles en chœur. « On répète tout ! On vole tous les chants ! Tu ne rendras jamais la chanson à la forêt ! » Elles te foncent dessus, griffes en avant, en répétant tes cris."
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Échos Moqueurs)">
+        <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
+        <h4 className="font-bold text-lg mb-2">Les Ennemis : 3 Échos Moqueurs</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>PV :</strong> 4 chacun. <strong>CA :</strong> 12.</li>
+          <li><strong>Attaque (Griffes d'ombre) :</strong> touche à 11 ou plus (D20 du MJ), 1D4 de dégâts.</li>
+          <li><strong>Règle comique : le renard n'attaque pas deux fois de la même façon.</strong> Si le héros fait deux fois le même geste de suite, l'Écho le copie et l'esquive.</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Griffes et crocs :</strong> D20 + COURAGE (+3), 1D6.</li>
+          <li><strong>Option B - Le silence (MALICE +3, DD 11) :</strong> le héros se tait, et les Échos, qui n'ont rien à copier, restent figés.</li>
+          <li><strong>Option C - La Chanson (si apprise) :</strong> chanter fait fondre un Écho en note de musique. (Au départ, on peut simplement fredonner : +2.)</li>
+          <li><strong>Option D - Lumi (une fois) :</strong> sa lumière chasse les ombres : une touche automatique.</li>
+          <li><strong>Option E - Retourner leur imitation (MALICE +3) :</strong> faire un geste ridicule : l'Écho le copie... et se cogne dans son voisin.</li>
+        </ul>
+        <p className="italic mt-3">Un Écho vaincu se transforme en petite note de musique qui s'envole dans la grotte.</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LA CHANSON DE GRISEFEUILLE</h3>
       <ReadAloud title="Texte à lire à voix haute (ou à chanter !)">
         "Quand les trois cristaux brillent ensemble, ils jouent la véritable Chanson de Grisefeuille, et tu la reconnais, le cœur serré : c'est l'air que fredonnait Mémé Rouquine ce matin-là. Cette fois, les paroles reviennent, portées par l'écho de toute la grotte :"<br/><br/>
         « Feuille d'or et feuille rousse,<br/>

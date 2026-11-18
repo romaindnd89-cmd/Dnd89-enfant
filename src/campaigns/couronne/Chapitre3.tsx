@@ -102,7 +102,7 @@ export default function Chapitre3() {
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-4 mb-4">
-          <li><strong>Option A - Coup d'épée :</strong> D20 + COURAGE (+2), 1D6 +1. Un caneton tombe en un seul coup.</li>
+          <li><strong>Option A - Coup d'épée :</strong> D20 + COURAGE (+3), 1D6 +1. Un caneton tombe en un seul coup.</li>
           <li><strong>Option B - Le sifflet à canard (sac à gadgets) :</strong> le héros souffle : tous les canards s'arrêtent, hypnotisés, pendant un tour (ils croient que c'est leur maman).</li>
           <li><strong>Option C - Pousser les canetons à l'eau (COURAGE - DD 12) :</strong> un caneton tombe dans la rivière et part en flottant, sans dégâts, mais hors du combat.</li>
           <li><strong>Option D - Réplique Cinglante (1 Panache) :</strong> « Colonel, votre chapeau est mal mis. » Le Colonel perd son tour à vérifier.</li>

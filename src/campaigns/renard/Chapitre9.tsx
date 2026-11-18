@@ -67,7 +67,7 @@ export default function Chapitre9() {
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 18 au total (réparties sur plusieurs racines qui attaquent chacune leur tour).</li>
           <li><strong>Classe d'Armure (CA) :</strong> 12.</li>
-          <li><strong>Attaque (Fouet de racine) :</strong> 1D6 de dégâts. Elles cherchent à repousser et à impressionner, jamais à blesser gravement.</li>
+          <li><strong>Attaque (Fouet de racine) :</strong> touche à 11 ou plus (D20 du MJ), 1D6 de dégâts. Elles cherchent à repousser et à impressionner, jamais à blesser gravement.</li>
         </ul>
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>

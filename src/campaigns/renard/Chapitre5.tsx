@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre5() {
   return (
@@ -28,7 +28,31 @@ export default function Chapitre5() {
         <p className="italic">« À l'intérieur, les ronces forment des couloirs hauts comme des tunnels. Tu croises un vieux cerf-volant d'enfant, ses couleurs mangées par le temps, resté accroché comme un fantôme de papier, et une chenille toute grise qui avance sans se presser sur une épine. Plus tu avances, plus les sanglots se font clairs. »</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : PIQUILLON, COINCÉ DANS SES PROPRES ÉPINES (Rencontre et Roleplay)</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 2 : LES RONCES GRIFFEUSES (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Tu avances dans un couloir d'épines quand un craquement te fait sursauter : les ronces autour de toi bougent ! Trois grosses branches épineuses se tordent comme des serpents verts, se dressent devant toi et claquent en l'air, leurs épines brillantes comme des dents. « Chhhh... » murmurent-elles. « Personne ne passe... Personne ne vole le Gland... » Elles se préparent à te fouetter."
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Ronces Griffeuses)">
+        <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
+        <h4 className="font-bold text-lg mb-2">Les Ennemies : 3 Ronces Griffeuses</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>PV :</strong> 5 chacune. <strong>CA :</strong> 11.</li>
+          <li><strong>Attaque (Coup d'épine) :</strong> touche à 11 ou plus (D20 du MJ), 1D4 de dégâts.</li>
+          <li><strong>Point faible : l'eau.</strong> Une ronce mouillée s'affaisse : elle perd son tour. (Rappel : la Goutte de rosée du chapitre 1 est parfaite.)</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Griffes et crocs :</strong> D20 + COURAGE (+3), 1D6.</li>
+          <li><strong>Option B - Esquiver (AGILITÉ +4, DD 11) :</strong> le renard se faufile : la ronce se noue toute seule, et perd son tour.</li>
+          <li><strong>Option C - Goutte de rosée :</strong> versée sur une ronce, elle l'assouplit complètement (+3 pour la toucher).</li>
+          <li><strong>Option D - Bouclier d'écorce :</strong> il annule un coup d'épine.</li>
+          <li><strong>Option E - Les calmer (CŒUR +5, DD 12) :</strong> « Nous voulons seulement aider celui qui pleure. » Elles se détendent, intriguées.</li>
+        </ul>
+        <p className="italic mt-3">Une ronce à 0 PV se dénoue et laisse tomber une poignée de mûres (+1 PV chacune).</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : PIQUILLON, COINCÉ DANS SES PROPRES ÉPINES (Rencontre et Roleplay)</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Au cœur du labyrinthe, tu découvres la source des sanglots : un tout petit hérisson, pas plus gros que ton museau, complètement empêtré dans les ronces. Ses propres piquants se sont accrochés partout, et plus il se débat, plus il s'enfonce. À côté de lui, sur un lit de feuilles, le Gland du Rire brille doucement, mais chaque fois que le hérisson renifle, sa lumière vacille."<br/><br/>
         "« Je... je voulais le ramener au Grand Chêne, » renifle-t-il. « Je voulais être utile, pour une fois. Mais je me suis coincé, et maintenant j'ai tout oublié, même comment on fait pour sourire... » Que fais-tu ?"

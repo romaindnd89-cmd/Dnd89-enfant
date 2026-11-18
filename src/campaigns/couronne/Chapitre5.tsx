@@ -124,7 +124,7 @@ export default function Chapitre4() {
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
         <ul className="list-disc pl-5 space-y-3 mb-4">
-          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+2), 1D6 +1.</li>
+          <li><strong>Option A - Attaque classique :</strong> D20 + COURAGE (+3), 1D6 +1.</li>
           <li><strong>Option B - Les portraits (MALICE - DD 12) :</strong> le héros décroche un grand portrait qui tombe sur un garde : il perd son tour et 1D6 PV.</li>
           <li><strong>Option C - Gaston contre Brutus :</strong> si le héros lui demande, Gaston fait peur au chien (il siffle fort). Brutus s'enfuit.</li>
           <li><strong>Option D - Baratin (CHARME - DD 13) :</strong> le héros convainc les gardes qu'il est un cousin du Baron, venu pour la fête. Ils le saluent et s'en vont chercher un goûter.</li>

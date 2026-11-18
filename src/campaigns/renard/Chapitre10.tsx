@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReadAloud, ActionBox, InfoBox } from '../../components/StoryBlocks';
+import { ReadAloud, CombatBox, ActionBox, InfoBox } from '../../components/StoryBlocks';
 
 export default function Chapitre10() {
   return (
@@ -43,7 +43,31 @@ export default function Chapitre10() {
         <p><strong>Récompense :</strong> touchés par cette seconde chance, les trois corbeaux soulèvent le héros par son écharpe rouge et le portent au-dessus de la cime des arbres. <strong>Un des obstacles de la course est automatiquement réussi</strong>, et l'enfant aperçoit d'en haut toute la forêt grise avant qu'elle ne retrouve ses couleurs.</p>
       </ActionBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : REPLANTER LES TROIS SOUVENIRS</h3>
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LES OMBRES DE NEIGE (Combat)</h3>
+      <ReadAloud title="Texte à lire à voix haute">
+        "Vous arrivez à cent pas du Grand Chêne quand la neige se met à tourbillonner : de grandes formes pâles se détachent du vent, trois silhouettes de brume blanche, les yeux vides et les bras traînants. « Les derniers souvenirs... à nous... » murmurent-elles d'une voix de vent. « L'oubli n'est pas fini... Donne-nous tes Glands... » Elles avancent vers toi, en glissant sur la neige, froides comme de la glace."
+      </ReadAloud>
+
+      <CombatBox title="Mécaniques de Combat (Les Ombres de Neige)">
+        <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
+        <h4 className="font-bold text-lg mb-2">Les Ennemies : 3 Ombres de Neige</h4>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>PV :</strong> 6 chacune. <strong>CA :</strong> 11.</li>
+          <li><strong>Attaque (Souffle glacé) :</strong> touche à 11 ou plus (D20 du MJ), 1D4 de dégâts. Un héros touché a froid : −1 à son prochain jet.</li>
+          <li><strong>Point faible : la lumière et la chaleur.</strong> La Feuille d'Or, la lumière de Lumi et un câlin les font fondre.</li>
+        </ul>
+        <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
+        <ul className="list-disc pl-5 space-y-3">
+          <li><strong>Option A - Griffes et crocs :</strong> D20 + COURAGE (+3), 1D6.</li>
+          <li><strong>Option B - Brandir la Feuille d'Or (COURAGE +3) :</strong> une Ombre fond d'un coup, sans jet de dégâts.</li>
+          <li><strong>Option C - Lumi et la poussière de lune (si obtenue) :</strong> toutes les Ombres perdent leur tour.</li>
+          <li><strong>Option D - Piquillon (une fois) :</strong> en boule, il fait perdre 2 PV à une Ombre.</li>
+          <li><strong>Option E - Grisaille :</strong> son tunnel permet d'éviter les Ombres, qui se perdent dans la neige.</li>
+        </ul>
+        <p className="italic mt-3">Une Ombre vaincue se change en petit flocon et s'envole, tout joyeux.</p>
+      </CombatBox>
+
+      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 4 : REPLANTER LES TROIS SOUVENIRS</h3>
       <ReadAloud title="Texte à lire à voix haute">
         "Essoufflés, les flocons plein la fourrure, vous arrivez enfin au pied du Grand Chêne-Mémoire. Ses racines, larges comme des ponts, s'enfoncent dans la terre grise. Entre elles, trois petits creux parfaitement ronds attendent leurs trois Glands d'Or, comme s'ils retenaient leur souffle depuis le début de cette aventure."
       </ReadAloud>

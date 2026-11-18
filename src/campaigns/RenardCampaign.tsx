@@ -42,7 +42,7 @@ export default function RenardCampaign({ onBack }: { onBack: () => void }) {
         overline="Aventure pour un héros"
         title="Le Renardeau et la Forêt qui Oublie"
         subtitle="Retrouve les 3 Glands d'Or et rends ses couleurs à Grisefeuille avant la première neige."
-        badges={['2h – 3h', 'Difficulté 2/5', 'Dès 6 ans']}
+        badges={['2h15 – 3h', 'Difficulté 2/5', 'Dès 6 ans']}
       />
 
       <div className="space-y-16">

@@ -61,7 +61,7 @@ export default function Chapitre2() {
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 5 chacun (Cendrar en a 6).</li>
           <li><strong>Classe d'Armure (CA) :</strong> 11.</li>
-          <li><strong>Attaque (Coup de bec) :</strong> 1D4 de dégâts. Ils attaquent chacun leur tour, jamais ensemble.</li>
+          <li><strong>Attaque (Coup de bec) :</strong> touche à 11 ou plus (D20 du MJ), 1D4 de dégâts. Ils attaquent chacun leur tour, jamais ensemble.</li>
           <li><strong>Lâcheté :</strong> un corbeau tombé à 2 PV ou moins s'enfuit en piaillant.</li>
         </ul>
 

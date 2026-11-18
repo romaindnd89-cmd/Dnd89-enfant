@@ -59,6 +59,7 @@ export default function Intro() {
           <li><strong>Les PV (points de vie)</strong> descendent quand un monstre touche un héros. À <strong>0 PV</strong>, on ne « meurt » jamais : on est trop fatigué, l'autre héros relève son ami, et il repart avec 3 PV.</li>
           <li><strong>Le D6</strong> (dé à 6 faces) sert à compter les dégâts, quand on touche un monstre en combat.</li>
           <li><strong>Se soigner :</strong> chaque héros a deux petits en-cas magiques (+3 PV chacun). Entre deux chapitres, un court repos rend aussi 2 PV.</li>
+          <li><strong>Quand un monstre attaque :</strong> le MJ lance un D20. À <strong>10 ou plus</strong>, le monstre touche et le héros perd des PV (le dé de dégâts est écrit dans la fiche du monstre).</li>
           <li><strong>L'initiative :</strong> au début d'un combat, chaque joueur lance le D20. Le plus haut résultat commence, puis on joue dans l'ordre.</li>
         </ul>
       </InfoBox>

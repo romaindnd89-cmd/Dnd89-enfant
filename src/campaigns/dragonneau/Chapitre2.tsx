@@ -48,7 +48,7 @@ export default function Chapitre2() {
         <ul className="list-disc pl-5 space-y-1 mb-6">
           <li><strong>Points de Vie (PV) :</strong> 6 chacune.</li>
           <li><strong>Classe d'Armure (CA) :</strong> 10.</li>
-          <li><strong>Attaque (Éclaboussure) :</strong> elles touchent à 9 ou plus sur un D20 (le MJ lance), et font 1D4 de dégâts. Chaque gelée attaque un héros différent.</li>
+          <li><strong>Attaque (Éclaboussure) :</strong> elles touchent à 10 ou plus sur un D20 (le MJ lance), et font 1D4 de dégâts. Chaque gelée attaque un héros différent.</li>
         </ul>
 
         <h4 className="font-bold text-lg mb-2">Tactique et Environnement (Le rôle du MJ) :</h4>
