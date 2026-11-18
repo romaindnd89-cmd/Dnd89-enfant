@@ -29,13 +29,6 @@ export default function Intro() {
         <p className="font-bold">Durée : 3h15 à 4h30 (trois séances conseillées : chapitres 1 à 3, 4 à 6, puis 7 et 8). Difficulté : 3/5. Dès 8 ans.</p>
       </InfoBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Prologue : Le royaume de Pétaouchnok</h3>
-      <ReadAloud title="Texte à lire à voix haute, pour ouvrir le livre">
-        "Le royaume de Pétaouchnok-sur-Mer est le royaume le plus drôle du monde. Ses habitants se saluent avec des grimaces, ses soldats défilent en chaussons, et son roi, Gaspard le Gourmand, règle les affaires de l'État depuis son bain moussant. Tout ça tient grâce à un objet magique : la Couronne du Rire. Elle brille et elle protège le royaume tant que quelqu'un, quelque part, rigole."<br/><br/>
-        "Mais ce matin, quand le roi a voulu la remettre sur sa tête pour le Grand Banquet de demain soir, il n'a trouvé qu'un coussin vide, une miette de fromage et une plume. La Couronne a disparu. Et sans rire, au royaume, tout devient gris, grincheux et sérieux. Il reste une journée et demie pour la retrouver."<br/><br/>
-        "Toi, tu es un jeune détective-aventurier qui vient d'ouvrir son agence, au-dessus de la boulangerie. Jusqu'ici, tu as retrouvé trois chaussettes et un hamster. Aujourd'hui, c'est le royaume entier qui frappe à ta porte."
-      </ReadAloud>
-
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Les règles de cette aventure (difficulté 3)</h3>
       <InfoBox title="La boîte à outils du jeu de rôle">
         <ul className="list-disc pl-5 space-y-2">

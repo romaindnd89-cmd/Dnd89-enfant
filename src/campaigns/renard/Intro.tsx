@@ -23,20 +23,6 @@ export default function Intro() {
 
       <ReadingLegend />
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4 flex items-center gap-2">
-        <span className="text-orange-500">🍂</span> Prologue : La Légende du Grand Chêne-Mémoire
-      </h3>
-      <ReadAloud title="À lire à voix haute, pour ouvrir le livre :">
-        Il était une fois une forêt si belle qu'on l'appelait <strong>Grisefeuille-la-Dorée</strong>. À l'automne, ses arbres se couvraient de feuilles rouges, oranges et jaunes, et le vent les faisait danser comme une pluie de pièces d'or. Mais le vrai trésor de la forêt n'était pas sa couleur : c'était sa <strong>mémoire</strong>.<br/><br/>
-        Au cœur de Grisefeuille se dresse le <strong>Grand Chêne-Mémoire</strong>, le plus vieil arbre du monde. Dans ses racines profondes sont gardés les trois plus précieux souvenirs de la forêt, enfermés dans trois <strong>Glands d'Or</strong> : le Gland du <strong>Rire</strong>, le Gland de la <strong>Chanson</strong> et le Gland de l'<strong>Amitié</strong>. Tant qu'ils brillent, les animaux se souviennent de ceux qu'ils aiment, des chansons du soir et des rires d'été.<br/><br/>
-        Mais une nuit, tout a changé. Une <strong>brume grise</strong> s'est levée du fond des terriers. Au matin, les couleurs avaient disparu, les oiseaux avaient oublié leurs chansons, et les trois Glands d'Or s'étaient envolés. La forêt commençait à oublier… et bientôt, elle oublierait tout, pour toujours.
-      </ReadAloud>
-
-      <ReadAloud title="À lire à voix haute pour commencer :">
-        "Cette nuit-là, tu t'es endormi tout au fond de ton terrier, un petit renardeau roulé en boule, serrant très fort contre ton cœur une feuille dorée que ta grand-mère t'avait offerte. Et c'est peut-être pour ça… que toi, tu n'as rien oublié.<br/><br/>
-        Quand tu ouvres les yeux, la forêt n'est plus qu'un dessin au crayon gris. Les arbres, l'herbe, le ciel : tout a perdu ses couleurs. Autour de toi, les animaux marchent sans savoir où ils vont, le regard tout flou. Dans ta patte, ta feuille brille encore, chaude et dorée, comme un petit soleil. Une toute petite lumière s'approche en voletant… et une voix minuscule chuchote : « Enfin ! Quelqu'un qui se souvient ! »"
-      </ReadAloud>
-
       <InfoBox title="L'aventure en deux mots (pour le MJ)">
         <p className="mb-2">Le petit renard est le seul à avoir gardé ses souvenirs. Sa mission : retrouver les <strong>3 Glands d'Or</strong> cachés dans la forêt et les rapporter au Grand Chêne-Mémoire <strong>avant la première neige</strong>, sinon l'oubli deviendra définitif.</p>
         <p className="mb-2">La coupable est <strong>Grisaille</strong>, une vieille taupe-sorcière très seule. Elle n'est pas vraiment méchante : elle a lancé la Brume d'Oubli parce que, à force d'être oubliée de tous, elle a préféré que plus personne ne se souvienne de rien. Le secret de l'aventure : <strong>on ne la vainc pas en se battant, mais en lui rendant une amie</strong>.</p>

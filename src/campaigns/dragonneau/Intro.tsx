@@ -38,13 +38,6 @@ export default function Intro() {
         <p className="font-bold">Durée : 1h30 à 2h, avec 7 combats gentils. Difficulté : 1/5. Dès 6 ans.</p>
       </InfoBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Prologue : La légende de Fumerolles</h3>
-      <ReadAloud title="Texte à lire à voix haute, pour ouvrir le livre">
-        "Au pied du Mont Braise, un volcan endormi qui ronfle doucement, se niche le petit village de Fumerolles. Ses maisons ont des toits de tuiles rouges, ses rues sentent la brioche chaude, et chaque soir, la Grande Torche brûle sur la place pour éclairer tout le monde."<br/><br/>
-        "Depuis cent ans, cette torche est allumée par un dragon. Le plus vieux dragon du village, Cendrelle, la rallume chaque année avec son souffle, le soir de la Fête des Flammes. Mais cette année, c'est différent : Cendrelle est très fatiguée, et c'est son petit, tout juste sorti de l'œuf, qui doit allumer la torche pour la première fois."<br/><br/>
-        "Vous êtes deux apprentis du village, les meilleurs amis, et ce matin, la cloche sonne : l'œuf du temple est vide, et le bébé dragon a disparu !"
-      </ReadAloud>
-
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Les règles pour jouer à deux</h3>
       <ActionBox title="Trois règles toutes simples">
         <ul className="list-disc pl-5 space-y-3">

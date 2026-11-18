@@ -43,11 +43,6 @@ export default function Intro() {
         </div>
       </InfoBox>
 
-      <h3 className="font-display text-2xl font-bold text-slate-700 mt-10 mb-4">Prologue : Le Mousse de l'Albatros Rigolo</h3>
-      <ReadAloud title="Texte à lire à voix haute, pour ouvrir le livre">
-        "Tu es le mousse de l'Albatros Rigolo, le navire le plus drôle des sept mers, dont la voile est rapiécée avec des chaussettes. Ton capitaine, c'est un perroquet vert, Capitaine Miette, qui s'est nommé chef parce qu'il parle plus fort que tout le monde. Ce matin, une tempête ridicule (des vagues qui font « splash », un éclair qui éternue) a fait tourner le navire sur lui-même, et toi, tu as atterri sur un tonneau, Miette accroché à ton épaule : « ON COULE ! JE SUIS LE CAPITAINE ! » Le tonneau file sur les vagues... vers une île."
-      </ReadAloud>
-
       <InfoBox title="Les règles express (un seul coup d'œil)">
         <ul className="list-disc pl-5 space-y-2">
           <li><strong>🎲 Le jet de dé :</strong> pour une action difficile, l'enfant lance le <strong>D20</strong> et ajoute son talent. S'il atteint ou dépasse le <strong>DD</strong>, c'est réussi. <em>Exemple : il veut sauter un tronc (DD 10). Il fait 8, +3 de Courage = 11 : réussi !</em></li>

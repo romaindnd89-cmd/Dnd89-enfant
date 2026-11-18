@@ -2,6 +2,7 @@ import React from 'react';
 import WorldHero from '../components/WorldHero';
 import CampaignShell, { ShellSection } from '../components/CampaignShell';
 import Intro from './ile/Intro';
+import ProloguePage from './ile/Prologue';
 import Chapitre1 from './ile/Chapitre1';
 import Chapitre2 from './ile/Chapitre2';
 import Chapitre3 from './ile/Chapitre3';
@@ -11,6 +12,7 @@ import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
   { id: 'intro', label: 'Prologue, chrono et fiche', className: 'hover:bg-slate-50 text-slate-700' },
+  { id: 'prologue', label: '📖 Prologue : le début de l\'histoire', className: 'hover:bg-cyan-50 text-cyan-700' },
   { id: 'chap1', label: 'Acte 1 : Le Naufrage de Poche', className: 'hover:bg-cyan-50 text-cyan-700' },
   { id: 'chap2', label: 'Acte 2 : La Jungle qui Ronfle', className: 'hover:bg-emerald-50 text-emerald-700' },
   { id: 'chap3', label: 'Acte 3 : Le Trésor qui Respire', className: 'hover:bg-amber-50 text-amber-700' },
@@ -35,6 +37,7 @@ export default function IleCampaign({ onBack }: { onBack: () => void }) {
 
       <div className="space-y-16">
         <Intro />
+        <ProloguePage />
         <Chapitre1 />
         <Chapitre2 />
         <Chapitre3 />

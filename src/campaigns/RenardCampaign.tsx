@@ -2,6 +2,7 @@ import React from 'react';
 import WorldHero from '../components/WorldHero';
 import CampaignShell, { ShellSection } from '../components/CampaignShell';
 import Intro from './renard/Intro';
+import ProloguePage from './renard/Prologue';
 import Chapitre1 from './renard/Chapitre1';
 import Chapitre2 from './renard/Chapitre2';
 import Chapitre3 from './renard/Chapitre3';
@@ -18,6 +19,7 @@ import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
   { id: 'intro', label: 'Prologue : La Légende du Grand Chêne', className: 'hover:bg-slate-50 text-slate-700' },
+  { id: 'prologue', label: '📖 Prologue : le début de l\'histoire', className: 'hover:bg-orange-50 text-orange-700' },
   { id: 'chap1', label: 'Chapitre 1 : Le Réveil Gris', className: 'hover:bg-orange-50 text-orange-700' },
   { id: 'chap2', label: 'Chapitre 2 : Les Corbeaux de Suie', className: 'hover:bg-orange-50 text-orange-700' },
   { id: 'chap3', label: 'Chapitre 3 : Le Ruisseau Bavard', className: 'hover:bg-sky-50 text-sky-700' },
@@ -49,6 +51,7 @@ export default function RenardCampaign({ onBack }: { onBack: () => void }) {
 
       <div className="space-y-16">
         <Intro />
+        <ProloguePage />
         <Chapitre1 />
         <Chapitre2 />
         <Chapitre3 />
