@@ -29,7 +29,7 @@ export default function Chapitre1() {
       </InfoBox>
 
       <ActionBox title="Options d'Exploration et Mécaniques (Bac à sable)">
-        <p className="mb-4">L'enfant choisit son ordre. <strong>Chaque indice trouvé</strong> se note dans le carnet d'enquête. Donne un point de <strong>Lueur</strong> à une idée vraiment maline.</p>
+        <p className="mb-4">L'enfant choisit son ordre. <strong>Chaque indice trouvé</strong> est dit à voix haute par toi : l'enfant le retient. Donne un point de <strong>Lueur</strong> à une idée vraiment maline.</p>
 
         <h4 className="font-bold text-lg mb-2">1. Examiner les douze lanternes éteintes (Test de SAVOIR - DD 11)</h4>
         <ul className="list-disc pl-5 space-y-2 mb-6">

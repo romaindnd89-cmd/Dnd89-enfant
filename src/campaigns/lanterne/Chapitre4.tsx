@@ -47,7 +47,7 @@ export default function Chapitre4() {
       </ReadAloud>
 
       <ActionBox title="Défendre les gobelins (épreuve de déduction et de Cœur)">
-        <p className="mb-3">Le héros peut s'avancer et parler. Le jet est un <strong>test de CŒUR - DD 13</strong>. Pour l'aider, <strong>chaque indice utile qu'il cite avec ses mots</strong> donne <strong>+1</strong> (maximum +4). Aide-le sans lui souffler : c'est lui qui doit relire son carnet.</p>
+        <p className="mb-3">Le héros peut s'avancer et parler. Le jet est un <strong>test de CŒUR - DD 13</strong>. Pour l'aider, <strong>chaque indice utile qu'il cite avec ses mots</strong> donne <strong>+1</strong> (maximum +4). Aide-le sans lui souffler : c'est lui qui doit se souvenir.</p>
         <ul className="list-disc pl-5 space-y-2 mb-4">
           <li><strong>Indice 1 ou 2 :</strong> « Les lanternes s'éteignent chaque nuit à minuit, bien avant que les gobelins ne volent quoi que ce soit. »</li>
           <li><strong>Indice 4 :</strong> « Il ne manque que quatre tonneaux. Ça ne suffit pas à éteindre toutes les lanternes. »</li>
@@ -61,7 +61,7 @@ export default function Chapitre4() {
       </ActionBox>
 
       <ReadAloud title="Texte à lire à voix haute (après leur départ)">
-        "Quand les torches s'éloignent, le silence retombe. Mousse pose sa main sur la tienne. « Merci, » dit-elle simplement. Personne ne dit plus rien pendant un long moment. Le feu craque. Tu t'assois, ton carnet sur les genoux, et tu relis tes notes. Douze indices. Douze petits morceaux de verre brisé, à remettre dans l'ordre. Un par un, doucement, ils commencent à former une image."
+        "Quand les torches s'éloignent, le silence retombe. Mousse pose sa main sur la tienne. « Merci, » dit-elle simplement. Personne ne dit plus rien pendant un long moment. Le feu craque. Tu t'assois, les genoux serrés contre toi, et tu repasses tout dans ta tête. Douze indices. Douze petits morceaux de verre brisé, à remettre dans l'ordre. Un par un, doucement, ils commencent à former une image."
       </ReadAloud>
 
       <h3 className="font-display text-2xl font-bold text-slate-700 mt-8 mb-4">SCÈNE 3 : LA GRANDE DÉDUCTION</h3>
@@ -87,7 +87,7 @@ export default function Chapitre4() {
       />
 
       <ReadAloud title="Texte à lire à voix haute (la découverte)">
-        "Tu fermes ton carnet. Tes mains tremblent un peu. Tu repenses à la toux étouffée dans le mouchoir, aux pas lents, aux « va dormir, mon petit », aux plaisanteries pour éviter les questions. Tu repenses à la lanterne de ton maître, toujours allumée, et à la façon dont il la tenait, chaque soir, comme on tient une main qui s'en va. Pip pose sa petite patte sur ton bras. « Il ne voulait pas que tu aies peur, » murmure-t-elle. « Alors c'est toi qui as peur à sa place. »"<br/><br/>
+        "Tu fermes les yeux. Tes mains tremblent un peu. Tu repenses à la toux étouffée dans le mouchoir, aux pas lents, aux « va dormir, mon petit », aux plaisanteries pour éviter les questions. Tu repenses à la lanterne de ton maître, toujours allumée, et à la façon dont il la tenait, chaque soir, comme on tient une main qui s'en va. Pip pose sa petite patte sur ton bras. « Il ne voulait pas que tu aies peur, » murmure-t-elle. « Alors c'est toi qui as peur à sa place. »"<br/><br/>
         "Dans le feu, une braise éclate. Il est presque minuit. Tu te lèves. Tu sais où aller."
       </ReadAloud>
 

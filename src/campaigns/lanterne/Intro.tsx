@@ -1,7 +1,6 @@
 import React from 'react';
 import { InfoBox, ActionBox } from '../../components/StoryBlocks';
 import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
-import InvestigationNotebook from '../../components/InvestigationNotebook';
 import { BookOpen } from 'lucide-react';
 
 const theme: SheetTheme = {
@@ -45,7 +44,7 @@ export default function Intro() {
           <li><strong>🧠 Les déductions (sans dé).</strong> Des encadrés violets « À toi de déduire » posent une question. L'enfant relit ses indices et propose une réponse. <strong>Aucun dé : c'est lui qui réfléchit.</strong> Chaque encadré contient un coup de pouce si l'enfant sèche, et la réponse, repliée pour le MJ.</li>
           <li><strong>⚔️ Les combats.</strong> Comme dans les autres histoires : D20 + talent contre la CA, D6 de dégâts. Un exemple du premier tour t'aide au début de chaque combat.</li>
         </ul>
-        <p className="mt-2"><strong>Le carnet d'enquête</strong> (à imprimer, plus bas) sert à noter les indices. Il aide l'enfant à relier les informations entre elles. Tu peux aussi l'aider à les noter.</p>
+        <p className="mt-2"><strong>Les indices</strong> sont numérotés dans le texte (Indice 1, Indice 2…). Redis-les à voix haute à l'enfant quand il les trouve, et relis-les-lui avant chaque déduction : une aventure se joue avec la mémoire et l'imagination, pas avec des papiers.</p>
       </InfoBox>
 
       <InfoBox title="Les règles (un seul coup d'œil)">
@@ -82,20 +81,11 @@ export default function Intro() {
         startItems={[
           "Une lanterne d'apprenti et un bâton (1D6 de dégâts).",
           '2 tisanes tièdes : +4 PV chacune.',
-          "Le carnet d'enquête (à remplir pendant l'aventure).",
+          "Une bonne mémoire et un grand cœur (aucun papier à remplir).",
           '3 points de Lueur (5 au maximum). Ta CA : 12.',
         ]}
       />
 
-      <InvestigationNotebook
-        title="La Dernière Lanterne"
-        clueCount={12}
-        questions={[
-          "Pourquoi les lanternes s'éteignent-elles dans cet ordre ?",
-          'Qui vole l\'huile, et pourquoi ?',
-          "Qui est la silhouette qui descend au Puits chaque nuit ?",
-        ]}
-      />
     </section>
   );
 }

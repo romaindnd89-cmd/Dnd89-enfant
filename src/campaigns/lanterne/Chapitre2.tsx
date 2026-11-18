@@ -84,9 +84,9 @@ export default function Chapitre2() {
 
       <ActionBox title="Dans la Réserve">
         <ul className="list-disc pl-5 space-y-3">
-          <li><strong>Examiner la page déchirée (Test de SAVOIR - DD 12) :</strong> <strong>Indice 8</strong> : la déchirure est récente. Il y a des <strong>poils gris de blaireau</strong> collés à la tranche. Quelqu'un a déchiré cette page <strong>par colère, ou par peur</strong>. Le héros peut la glisser dans son carnet : <em>la suite de la page est quelque part, ailleurs.</em></li>
+          <li><strong>Examiner la page déchirée (Test de SAVOIR - DD 12) :</strong> <strong>Indice 8</strong> : la déchirure est récente. Il y a des <strong>poils gris de blaireau</strong> collés à la tranche. Quelqu'un a déchiré cette page <strong>par colère, ou par peur</strong>. Le héros peut la garder dans sa poche : <em>la suite de la page est quelque part, ailleurs.</em></li>
           <li><strong>Interroger Hulotte (Test de CŒUR - DD 11) :</strong> elle avoue : « Bernardin m'a demandé de ne pas parler de cette page. Il m'a dit : 'Mon petit apprenti est trop jeune pour porter ça.' Il aime ses secrets, ce blaireau. » <strong>Gagne un point de Lueur</strong> pour avoir su la faire parler.</li>
-          <li><strong>Prendre une copie du registre (aucun jet) :</strong> Hulotte accepte de recopier les passages sur la Flamme-Source : le héros les emporte dans son carnet.</li>
+          <li><strong>Prendre une copie du registre (aucun jet) :</strong> Hulotte accepte de recopier les passages sur la Flamme-Source : le héros garde ces notes sur lui.</li>
         </ul>
       </ActionBox>
 
