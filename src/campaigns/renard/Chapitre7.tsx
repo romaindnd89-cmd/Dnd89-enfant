@@ -36,7 +36,7 @@ export default function Chapitre7() {
         "Au moment où le dernier cristal s'allume, un « Hihihi ! » moqueur résonne dans la grotte. Trois silhouettes sombres sortent des murs : des ombres en forme de renard, qui imitent chacun de tes gestes avec un temps de retard. « On est les Échos, » ricanent-elles en chœur. « On répète tout ! On vole tous les chants ! Tu ne rendras jamais la chanson à la forêt ! » Elles te foncent dessus, griffes en avant, en répétant tes cris."
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (Les Échos Moqueurs)">
+      <CombatBox title="Mécaniques de Combat (Les Échos Moqueurs)" image="/art/monstres/echos-moqueurs.webp" imageAlt="Les Échos Moqueurs">
         <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
         <FirstRound>
         <p><strong>Le petit renard</strong> attaque un Écho moqueur (4 PV, CA 12). Il lance le D20 et fait <strong>10</strong>. Il ajoute son Courage (+3) : 10 + 3 = <strong>13</strong>. 13 atteint la CA 12 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Un Écho moqueur avait 4 PV : il tombe à 0, il est <strong>K.O.</strong></p>

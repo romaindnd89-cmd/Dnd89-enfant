@@ -78,9 +78,14 @@ export default function StoryGallery({
                     {...(kind === 'objet' ? { 'data-objet': true } : {})}
                     className="print-card bg-white rounded-2xl border-2 border-slate-200 shadow-sm overflow-hidden flex flex-col"
                   >
-                    <div className={`relative h-44 bg-gradient-to-br ${gradient} flex items-center justify-center overflow-hidden`}>
+                    <div className={`relative h-44 ${it.image && kind !== 'lieu' ? 'bg-white' : `bg-gradient-to-br ${gradient}`} flex items-center justify-center overflow-hidden`}>
                       {it.image ? (
-                        <img src={it.image} alt={it.name} className="w-full h-full object-cover" loading="lazy" />
+                        <img
+                          src={it.image}
+                          alt={it.name}
+                          className={`w-full h-full ${kind === 'lieu' ? 'object-cover' : 'object-contain p-2'}`}
+                          loading="lazy"
+                        />
                       ) : (
                         <span className="text-7xl drop-shadow-lg" aria-hidden="true">{it.emoji}</span>
                       )}

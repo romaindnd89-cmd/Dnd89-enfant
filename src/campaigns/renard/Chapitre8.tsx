@@ -63,7 +63,7 @@ export default function Chapitre8() {
         <p>Rien n'est perdu : le héros peut souffler dans le <strong>Sifflet en gland</strong> du chapitre 4 ! Les écureuils de Noisette déboulent par dizaines et chargent les Mottes Grises à coups de noisettes et de cris de guerre. Passe directement à la scène 3, sans combat.</p>
       </InfoBox>
 
-      <CombatBox title="Mécaniques de Combat (uniquement si le héros est repéré)">
+      <CombatBox title="Mécaniques de Combat (uniquement si le héros est repéré)" image="/art/monstres/mottes-grises.webp" imageAlt="Les Mottes Grises">
         <FirstRound>
         <p><strong>Le petit renard</strong> attaque une Motte Grise (6 PV, CA 10). Il lance le D20 et fait <strong>8</strong>. Il ajoute son Courage (+3) : 8 + 3 = <strong>11</strong>. 11 atteint la CA 10 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une Motte Grise avait 6 PV : il lui en reste <strong>2</strong>.</p>
         <p>Au tour d'une Motte Grise, le MJ lance un D20 : <strong>7</strong>. Il faut <strong>11</strong> ou plus pour toucher le petit renard : c'est moins : <strong>raté !</strong> La motte glisse et s'écrase par terre. (Avec 11 ou plus, le petit renard aurait perdu 1D4 PV.)</p>

@@ -44,7 +44,7 @@ export default function Chapitre6() {
         <p>Si l'enfant préfère se battre, ou si les deux premières options échouent, Filandre descend complètement de sa toile.</p>
       </ActionBox>
 
-      <CombatBox title="Mécaniques de Combat (Filandre, l'Araignée de Brume)">
+      <CombatBox title="Mécaniques de Combat (Filandre, l'Araignée de Brume)" image="/art/monstres/filandre.webp" imageAlt="Filandre, l'Araignée de Brume">
         <p className="mb-4">Initiative : D20, à 10 ou plus le héros commence. Rappel : D20 + talent pour toucher, D6 pour les dégâts.</p>
 
         <FirstRound>

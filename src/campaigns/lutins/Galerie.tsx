@@ -1,11 +1,11 @@
 import React from 'react';
 import StoryGallery, { GalleryItem } from '../../components/StoryGallery';
 
-const items: GalleryItem[] = [
-  { kind: 'lieu', name: "La Grille qui Chatouille", emoji: '🚪', description: "L'entrée du château de Chantefarce : une grille de fer dont les barreaux tirent la langue, avec une serrure en forme de bouche qui rigole." },
-  { kind: 'lieu', name: "La Cuisine en Folie", emoji: '🥧', description: "De grandes cuisines pleines de farine, avec un gâteau géant à trois étages gardé par des lutins marmitons armés de tartes." },
-  { kind: 'lieu', name: "La Salle des Miroirs", emoji: '🪞', description: "Une salle ronde tapissée de miroirs déformants, où tous les reflets se ressemblent... sauf un qui tire la langue." },
-  { kind: 'lieu', name: "La Salle du Trésor", emoji: '👑', description: "La grande salle du trône, avec un coffre à trois serrures : RIRE, RUSE et PARTAGE." },
+export const items: GalleryItem[] = [
+  { kind: 'lieu', name: "La Grille qui Chatouille", emoji: '🚪', description: "L'entrée du château de Chantefarce : une grille de fer dont les barreaux tirent la langue, avec une serrure en forme de bouche qui rigole.", image: '/art/galerie/lutins-la-grille-qui-chatouille.webp' },
+  { kind: 'lieu', name: "La Cuisine en Folie", emoji: '🥧', description: "De grandes cuisines pleines de farine, avec un gâteau géant à trois étages gardé par des lutins marmitons armés de tartes.", image: '/art/galerie/lutins-la-cuisine-en-folie.webp' },
+  { kind: 'lieu', name: "La Salle des Miroirs", emoji: '🪞', description: "Une salle ronde tapissée de miroirs déformants, où tous les reflets se ressemblent... sauf un qui tire la langue.", image: '/art/galerie/lutins-la-salle-des-miroirs.webp' },
+  { kind: 'lieu', name: "La Salle du Trésor", emoji: '👑', description: "La grande salle du trône, avec un coffre à trois serrures : RIRE, RUSE et PARTAGE.", image: '/art/galerie/lutins-la-salle-du-tresor.webp' },
   { kind: 'personnage', name: "Grelot, le lutin portier", emoji: '🔔', description: "Pas plus haut qu'une botte, avec un énorme bonnet rouge à pompon. Il adore parler et ne sait pas garder un secret.", image: '/art/elf.png' },
   { kind: 'personnage', name: "Dame Louche", emoji: '👩‍🍳', description: "La cheffe cuisinière, imposante, une toque géante et une louche brandie comme une épée. Un compliment sur sa cuisine l'adoucit tout de suite." },
   { kind: 'personnage', name: "Maître Parchemin", emoji: '📚', description: "Le vieux bibliothécaire, sourd comme un pot et obsédé par le silence, alors qu'il est le plus bruyant du château." },

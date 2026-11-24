@@ -416,3 +416,20 @@ button:active { transform: scale(0.97); }
   .pf-far, .pf-mid, .pf-near { transform: none !important; }
   .cloud-drift { display: none; }
 }
+
+/* Kit imprimable d'une aventure (KitImprimable) : les pages sont montées dans #kit-print-root
+   uniquement au moment d'imprimer. */
+#kit-print-root { display: none; }
+@media print {
+  body:has(#kit-print-root:not(:empty)) { background: #fff !important; }
+  body:has(#kit-print-root:not(:empty)) > *:not(#kit-print-root) { display: none !important; }
+  #kit-print-root:not(:empty) { display: block; }
+  #kit-print-root, #kit-print-root * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  #kit-print-root .kit-page { break-after: page; page-break-after: always; break-inside: avoid; }
+  #kit-print-root .kit-page:last-child { break-after: auto; page-break-after: auto; }
+  #kit-print-root .kit-cut { border: 1.5px dashed #64748b; break-inside: avoid; }
+  #kit-print-root .print-sheet { box-shadow: none !important; }
+}

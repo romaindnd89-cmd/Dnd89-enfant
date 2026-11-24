@@ -1,16 +1,8 @@
 import React from 'react';
 import { ReadAloud, InfoBox } from '../../components/StoryBlocks';
-import CharacterSheet, { SheetTheme } from '../../components/CharacterSheet';
+import CharacterSheet from '../../components/CharacterSheet';
+import { renardSheet } from './sheet';
 import { BookOpen } from 'lucide-react';
-
-const theme: SheetTheme = {
-  bannerGradient: 'from-orange-400 to-amber-600',
-  statBox: 'border-orange-100 bg-orange-50/60',
-  statValue: 'text-orange-600',
-  dot: 'bg-orange-400',
-  accentText: 'text-orange-600',
-  button: 'bg-orange-600 hover:bg-orange-700',
-};
 
 export default function Intro() {
   return (
@@ -33,31 +25,7 @@ export default function Intro() {
         <p>Pendant toute l'aventure, une petite luciole nommée <strong>Lumi</strong> vole aux côtés de l'enfant. Elle brille d'une lumière douce et dorée. Lumi connaît beaucoup de secrets, mais elle est toute petite : elle a besoin du courage du héros. Sa lumière <strong>fait peur aux créatures de la brume</strong> et se ravive chaque fois qu'on approche d'un Gland d'Or. Tu peux la présenter à l'enfant avec tes propres mots, ou directement pendant la première scène du chapitre 1.</p>
       </InfoBox>
 
-      <CharacterSheet
-        heroEmoji="🦊"
-        heroTitle="Le Renardeau"
-        subtitle="Le seul à se souvenir — dès 6 ans"
-        theme={theme}
-        hp={10}
-        stats={[
-          { label: 'Courage', emoji: '🔥', value: '+3' },
-          { label: 'Agilité', emoji: '🤸', value: '+4', note: 'pour bondir' },
-          { label: 'Flair', emoji: '👃', value: '+5', note: 'ton super-pouvoir' },
-          { label: 'Malice', emoji: '🦊', value: '+3' },
-          { label: 'Cœur', emoji: '💛', value: '+5', note: 'pour les amis' },
-        ]}
-        abilities={[
-          { name: 'Bond du Renard', desc: "tu sautes très loin ou très haut. Lance 1D20 + Agilité." },
-          { name: 'Super-Flair', desc: "tu sens les choses cachées et tu devines les mensonges. Lance 1D20 + Flair." },
-          { name: 'Petit Malin', desc: "une fois par aventure, tu peux relancer un dé raté." },
-        ]}
-        startItems={[
-          'La Feuille d’Or : ta boussole magique. Elle brille plus fort quand un souvenir est tout près.',
-          '3 Noisettes grillées : si tu en manges une, tu récupères 3 PV.',
-          'Une écharpe rouge, tricotée par Mémé Rouquine.',
-          'Ta fourrure agile : pour te toucher, un monstre doit faire 11 ou plus au D20 (ta CA).',
-        ]}
-      />
+      <CharacterSheet {...renardSheet} />
 
       <InfoBox title="La boîte à outils du jeu de rôle (version enfant)">
         <p className="mb-2">Voici toutes les mécaniques utilisées dans l'aventure. Tu n'as rien à apprendre par cœur : chaque encadré te rappelle quoi faire au bon moment. C'est un vrai petit Donjons & Dragons, juste plus doux.</p>
