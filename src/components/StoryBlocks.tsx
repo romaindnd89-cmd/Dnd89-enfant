@@ -46,7 +46,7 @@ export function ReadAloud({ children, title = "À lire à voix haute" }: { child
   );
 }
 
-export function CombatBox({ children, title = "Combat" }: { children: React.ReactNode, title?: string }) {
+export function CombatBox({ children, title = "Combat", image, imageAlt = "" }: { children: React.ReactNode, title?: string, image?: string, imageAlt?: string }) {
   return (
     <Reveal className="my-6 rounded-2xl bg-rose-50 border-2 border-rose-200 overflow-hidden shadow-sm">
       <div className="bg-rose-100/50 px-4 py-2 border-b border-rose-200 flex flex-wrap items-center gap-2">
@@ -55,6 +55,12 @@ export function CombatBox({ children, title = "Combat" }: { children: React.Reac
         <Kicker emoji="🎲" text="Règles du jeu — les phrases en italique, tu peux les lire" className="bg-rose-600 text-white" />
       </div>
       <div className="p-4 sm:p-6 text-rose-900 space-y-3">
+        {image && (
+          <figure className="mx-auto max-w-xs text-center">
+            <img src={image} alt={imageAlt} loading="lazy" className="w-full rounded-xl bg-white border-2 border-rose-200 p-2 object-contain" />
+            <figcaption className="mt-1 text-sm font-semibold text-rose-700">👀 Aperçu : à montrer au début du combat</figcaption>
+          </figure>
+        )}
         {children}
       </div>
     </Reveal>

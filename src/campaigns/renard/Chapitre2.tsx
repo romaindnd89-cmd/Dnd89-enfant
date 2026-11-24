@@ -52,7 +52,7 @@ export default function Chapitre2() {
         "Les trois corbeaux tournent la tête vers toi d'un seul mouvement, comme actionnés par un même fil invisible. « Un renard qui se souvient ? CROÂ ! Interdit ! La patronne n'aime pas ça du tout ! » Dans un envol de plumes grasses et de petite fumée noire, ils s'élancent vers toi, leurs serres tendues en avant."
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (Ton tout premier combat)">
+      <CombatBox title="Mécaniques de Combat (Ton tout premier combat)" image="/art/monstres/corbeaux-de-suie.webp" imageAlt="Les Corbeaux de Suie">
         <p className="mb-2">Un combat se joue au <strong>tour par tour</strong>, avec seulement deux dés : le <strong>D20</strong> pour savoir si on touche, le <strong>D6</strong> pour les dégâts. (Le bouton 🎲 en bas de l'écran contient tous les dés.)</p>
         <p className="mb-4">Commence par l'initiative : D20, à 10 ou plus le héros agit en premier.</p>
 

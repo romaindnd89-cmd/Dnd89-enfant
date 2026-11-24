@@ -33,7 +33,7 @@ export default function Chapitre5() {
         "Tu avances dans un couloir d'épines quand un craquement te fait sursauter : les ronces autour de toi bougent ! Trois grosses branches épineuses se tordent comme des serpents verts, se dressent devant toi et claquent en l'air, leurs épines brillantes comme des dents. « Chhhh... » murmurent-elles. « Personne ne passe... Personne ne vole le Gland... » Elles se préparent à te fouetter."
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (Les Ronces Griffeuses)">
+      <CombatBox title="Mécaniques de Combat (Les Ronces Griffeuses)" image="/art/monstres/ronces-griffeuses.webp" imageAlt="Les Ronces Griffeuses">
         <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
         <FirstRound>
         <p><strong>Le petit renard</strong> attaque une ronce griffeuse (5 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>3</strong>. Une ronce griffeuse avait 5 PV : il lui en reste <strong>2</strong>.</p>

@@ -48,7 +48,7 @@ export default function Chapitre10() {
         "Vous arrivez à cent pas du Grand Chêne quand la neige se met à tourbillonner : de grandes formes pâles se détachent du vent, trois silhouettes de brume blanche, les yeux vides et les bras traînants. « Les derniers souvenirs... à nous... » murmurent-elles d'une voix de vent. « L'oubli n'est pas fini... Donne-nous tes Glands... » Elles avancent vers toi, en glissant sur la neige, froides comme de la glace."
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (Les Ombres de Neige)">
+      <CombatBox title="Mécaniques de Combat (Les Ombres de Neige)" image="/art/monstres/ombres-de-neige.webp" imageAlt="Les Ombres de Neige">
         <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
         <FirstRound>
         <p><strong>Le petit renard</strong> attaque une Ombre de Neige (6 PV, CA 11). Il lance le D20 et fait <strong>9</strong>. Il ajoute son Courage (+3) : 9 + 3 = <strong>12</strong>. 12 atteint la CA 11 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une Ombre de Neige avait 6 PV : il lui en reste <strong>2</strong>.</p>

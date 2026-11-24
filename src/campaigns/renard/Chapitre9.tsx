@@ -60,7 +60,7 @@ export default function Chapitre9() {
         </ul>
       </InfoBox>
 
-      <CombatBox title="Mécaniques de Combat (si l'enfant choisit de se battre : c'est permis)">
+      <CombatBox title="Mécaniques de Combat (si l'enfant choisit de se battre : c'est permis)" image="/art/monstres/racines-d-ombre.webp" imageAlt="Les Racines d'Ombre">
         <p className="mb-4">Fais en sorte que la bagarre mène, elle aussi, vers la compréhension : les racines défendent avant tout une taupe qui pleure en silence.</p>
 
         <FirstRound>

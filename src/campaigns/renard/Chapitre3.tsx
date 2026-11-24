@@ -49,7 +49,7 @@ export default function Chapitre3() {
         "Tu sautes de pierre en pierre, plic, ploc, plic, quand trois énormes grenouilles vertes jaillissent de l'eau, juste devant toi, avec des plouf ! sonores. « C'est NOTRE pont ! » coasse la première en gonflant ses joues. « Ce sont NOS pierres ! » ajoute la deuxième. « Et c'est NOTRE jour de bain ! » termine la troisième. Elles se mettent en rang, prennent une grande inspiration, et te lancent trois grands jets d'eau avec leurs bouches : SPLASH !"
       </ReadAloud>
 
-      <CombatBox title="Mécaniques de Combat (Les Grenouilles Éclaboussantes)">
+      <CombatBox title="Mécaniques de Combat (Les Grenouilles Éclaboussantes)" image="/art/monstres/grenouilles.webp" imageAlt="Les Grenouilles Éclaboussantes">
         <p className="mb-2">Rappel : D20 + talent pour toucher, D6 pour les dégâts. Quand un monstre attaque, le MJ lance un D20 : à 11 ou plus, il touche le renard.</p>
         <FirstRound>
         <p><strong>Le petit renard</strong> attaque une grenouille (4 PV, CA 10). Il lance le D20 et fait <strong>8</strong>. Il ajoute son Courage (+3) : 8 + 3 = <strong>11</strong>. 11 atteint la CA 10 : <strong>touché !</strong> Il lance le D6 pour les dégâts : <strong>4</strong>. Une grenouille avait 4 PV : il tombe à 0, il est <strong>K.O.</strong></p>

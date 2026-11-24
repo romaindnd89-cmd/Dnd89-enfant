@@ -23,18 +23,18 @@ const chapitres: { label: string; combat?: string }[] = [
   { label: 'Épilogue & Médailles' },
 ];
 
-type Monstre = { chap: number; nom: string; nb: string; emoji: string; pv: string; ca: number; attaque: string; special: string };
+type Monstre = { chap: number; image: string; nom: string; nb: string; emoji: string; pv: string; ca: number; attaque: string; special: string };
 
 /** Stats reprises des encadrés « Les Ennemis » de chaque chapitre. */
 const monstres: Monstre[] = [
-  { chap: 2, nom: 'Corbeaux de Suie', nb: '×3', emoji: '🐦', pv: '5 (Cendrar : 6)', ca: 11, attaque: 'Coup de bec : 1D4', special: "Un corbeau à 2 PV ou moins s'enfuit en piaillant." },
-  { chap: 3, nom: 'Grenouilles Éclaboussantes', nb: '×3', emoji: '🐸', pv: '4', ca: 10, attaque: "Jet d'eau : 1D4", special: "Héros trempé : −1 au prochain jet d'Agilité." },
-  { chap: 5, nom: 'Ronces Griffeuses', nb: '×3', emoji: '🌿', pv: '5', ca: 11, attaque: "Coup d'épine : 1D4", special: "Point faible : l'eau. Une ronce mouillée perd son tour." },
-  { chap: 6, nom: "Filandre, l'Araignée de Brume", nb: '×1', emoji: '🕷️', pv: '14', ca: 13, attaque: 'Fil collant : 1D6', special: "Héros collé : Agilité DD 10 pour se libérer. À 4 PV ou moins, elle supplie qu'on la laisse partir. Craint la lumière vive et la chaleur." },
-  { chap: 7, nom: 'Échos Moqueurs', nb: '×3', emoji: '👻', pv: '4', ca: 12, attaque: "Griffes d'ombre : 1D4", special: "Si le héros répète le même geste, l'Écho le copie et l'esquive." },
-  { chap: 8, nom: 'Mottes Grises', nb: '×2', emoji: '🟤', pv: '6', ca: 10, attaque: 'Coup de boue : 1D4', special: 'Lentes et maladroites. Combat seulement si le héros est repéré.' },
-  { chap: 9, nom: "Racines d'Ombre", nb: '', emoji: '🌱', pv: '18 au total', ca: 12, attaque: 'Fouet de racine : 1D6', special: 'Elles veulent repousser, pas blesser. Combat facultatif : on peut choisir de se battre.' },
-  { chap: 10, nom: 'Ombres de Neige', nb: '×3', emoji: '❄️', pv: '6', ca: 11, attaque: 'Souffle glacé : 1D4', special: 'Héros touché : −1 au prochain jet. Point faible : la lumière et la chaleur.' },
+  { chap: 2, nom: 'Corbeaux de Suie', image: '/art/monstres/corbeaux-de-suie.webp', nb: '×3', emoji: '🐦', pv: '5 (Cendrar : 6)', ca: 11, attaque: 'Coup de bec : 1D4', special: "Un corbeau à 2 PV ou moins s'enfuit en piaillant." },
+  { chap: 3, nom: 'Grenouilles Éclaboussantes', image: '/art/monstres/grenouilles.webp', nb: '×3', emoji: '🐸', pv: '4', ca: 10, attaque: "Jet d'eau : 1D4", special: "Héros trempé : −1 au prochain jet d'Agilité." },
+  { chap: 5, nom: 'Ronces Griffeuses', image: '/art/monstres/ronces-griffeuses.webp', nb: '×3', emoji: '🌿', pv: '5', ca: 11, attaque: "Coup d'épine : 1D4", special: "Point faible : l'eau. Une ronce mouillée perd son tour." },
+  { chap: 6, nom: "Filandre, l'Araignée de Brume", image: '/art/monstres/filandre.webp', nb: '×1', emoji: '🕷️', pv: '14', ca: 13, attaque: 'Fil collant : 1D6', special: "Héros collé : Agilité DD 10 pour se libérer. À 4 PV ou moins, elle supplie qu'on la laisse partir. Craint la lumière vive et la chaleur." },
+  { chap: 7, nom: 'Échos Moqueurs', image: '/art/monstres/echos-moqueurs.webp', nb: '×3', emoji: '👻', pv: '4', ca: 12, attaque: "Griffes d'ombre : 1D4", special: "Si le héros répète le même geste, l'Écho le copie et l'esquive." },
+  { chap: 8, nom: 'Mottes Grises', image: '/art/monstres/mottes-grises.webp', nb: '×2', emoji: '🟤', pv: '6', ca: 10, attaque: 'Coup de boue : 1D4', special: 'Lentes et maladroites. Combat seulement si le héros est repéré.' },
+  { chap: 9, nom: "Racines d'Ombre", image: '/art/monstres/racines-d-ombre.webp', nb: '', emoji: '🌱', pv: '18 au total', ca: 12, attaque: 'Fouet de racine : 1D6', special: 'Elles veulent repousser, pas blesser. Combat facultatif : on peut choisir de se battre.' },
+  { chap: 10, nom: 'Ombres de Neige', image: '/art/monstres/ombres-de-neige.webp', nb: '×3', emoji: '❄️', pv: '6', ca: 11, attaque: 'Souffle glacé : 1D4', special: 'Héros touché : −1 au prochain jet. Point faible : la lumière et la chaleur.' },
 ];
 
 const Titre = ({ children }: { children: React.ReactNode }) => (
@@ -86,7 +86,7 @@ function Pages() {
                 'Ce kit imprimé (fiche, cartes, écran du MJ)',
                 'Des ciseaux pour découper les cartes',
                 'Un dé à 20 faces (D20) et un dé à 6 faces (D6)',
-                'Pas de dés ? Le patron en papier (dernière page) ou le bouton 🎲 de l’application',
+                'Pas de dés ? Le bouton 🎲 de l’application les remplace. Le patron en papier (dernière page) est facultatif',
                 'Des crayons de couleur pour le portrait du héros',
               ].map((m) => (
                 <li key={m} className="flex gap-2"><span aria-hidden="true">☐</span>{m}</li>
@@ -185,7 +185,7 @@ function Pages() {
           {monstres.map((m) => (
             <article key={m.nom} className="kit-cut rounded-xl p-2.5 h-[56mm] flex flex-col text-[11.5px] leading-tight">
               <div className="flex items-center gap-2">
-                <span className="text-3xl" aria-hidden="true">{m.emoji}</span>
+                <img src={m.image} alt={m.nom} className="h-[26mm] w-[26mm] object-contain shrink-0" />
                 <div>
                   <p className="font-display font-bold text-[14px] leading-tight">{m.nom} {m.nb}</p>
                   <p className="text-slate-500 text-[10.5px]">Chapitre {m.chap}</p>
@@ -250,7 +250,7 @@ function Pages() {
 
       {/* 7. Dés en papier */}
       <section className="kit-page text-slate-800 text-[13px]">
-        <Bandeau emoji="🎲" titre="Tes dés en papier" sous="Découpe tout autour (languettes jaunes comprises), plie chaque pointillé vers l'intérieur, puis colle chaque languette sous le bord qui porte la même lettre." />
+        <Bandeau emoji="🎲" titre="Tes dés en papier (facultatif)" sous="Facultatif : tu peux aussi lancer les dés virtuels de l'application (bouton 🎲). Si tu préfères le vrai plaisir du papier : découpe tout autour (languettes jaunes comprises), plie chaque pointillé vers l'intérieur, puis colle chaque languette sous le bord qui porte la même lettre." />
         <div className="flex flex-col items-center gap-5">
           <div>
             <p className="font-display font-bold text-center mb-1">Le dé à 20 faces (D20) : pour réussir ses actions</p>
