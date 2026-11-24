@@ -21,7 +21,7 @@ export interface SheetTheme {
   button: string;         // ex: 'bg-orange-600 hover:bg-orange-700'
 }
 
-interface CharacterSheetProps {
+export interface CharacterSheetProps {
   heroEmoji: string;
   heroTitle: string;
   subtitle: string;
@@ -47,38 +47,24 @@ interface CharacterSheetProps {
  * page, ce qui donne une seule page A4 (les variantes `print:` compactent
  * la mise en page).
  */
-export default function CharacterSheet({
-  heroEmoji,
-  heroTitle,
-  subtitle,
-  theme,
-  stats,
-  hp,
-  abilities,
-  startItems,
-  compactPrint,
-  hpLabel = 'Points de vie',
-  hpUnit = 'PV',
-  abilitiesLabel = 'Mes pouvoirs',
-}: CharacterSheetProps) {
-  const sheetRef = useRef<HTMLDivElement>(null);
-
-  const handlePrint = () => {
-    const sheet = sheetRef.current;
-    if (!sheet) return;
-    let root = document.getElementById('print-root');
-    if (!root) {
-      root = document.createElement('div');
-      root.id = 'print-root';
-      document.body.appendChild(root);
-    }
-    root.innerHTML = '';
-    root.appendChild(sheet.cloneNode(true));
-    window.print();
-  };
-
+export const SheetPaper = React.forwardRef<HTMLDivElement, CharacterSheetProps>(function SheetPaper(
+  {
+    heroEmoji,
+    heroTitle,
+    subtitle,
+    theme,
+    stats,
+    hp,
+    abilities,
+    startItems,
+    compactPrint,
+    hpLabel = 'Points de vie',
+    hpUnit = 'PV',
+    abilitiesLabel = 'Mes pouvoirs',
+  },
+  sheetRef,
+) {
   return (
-    <div className="mt-12">
       <div
         ref={sheetRef}
         className="print-sheet bg-white rounded-3xl shadow-lg border-2 border-slate-200 overflow-hidden"
@@ -167,6 +153,30 @@ export default function CharacterSheet({
           </div>
         </div>
       </div>
+  );
+});
+
+export default function CharacterSheet(props: CharacterSheetProps) {
+  const { theme } = props;
+  const sheetRef = useRef<HTMLDivElement>(null);
+
+  const handlePrint = () => {
+    const sheet = sheetRef.current;
+    if (!sheet) return;
+    let root = document.getElementById('print-root');
+    if (!root) {
+      root = document.createElement('div');
+      root.id = 'print-root';
+      document.body.appendChild(root);
+    }
+    root.innerHTML = '';
+    root.appendChild(sheet.cloneNode(true));
+    window.print();
+  };
+
+  return (
+    <div className="mt-12">
+      <SheetPaper ref={sheetRef} {...props} />
 
       {/* Bouton imprimer (hors de la fiche, donc jamais imprimé) */}
       <div className="flex justify-center mt-6">

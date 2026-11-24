@@ -15,9 +15,11 @@ import Chapitre9 from './renard/Chapitre9';
 import Chapitre10 from './renard/Chapitre10';
 import Epilogue from './renard/Epilogue';
 import Galerie from './renard/Galerie';
+import Kit from './renard/Kit';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
+  { id: 'kit', label: '🖨️ Kit imprimable (à imprimer avant de jouer)', className: 'hover:bg-orange-50 text-orange-700' },
   { id: 'intro', label: 'Prologue : La Légende du Grand Chêne', className: 'hover:bg-slate-50 text-slate-700' },
   { id: 'prologue', label: '📖 Prologue : le début de l\'histoire', className: 'hover:bg-orange-50 text-orange-700' },
   { id: 'chap1', label: 'Chapitre 1 : Le Réveil Gris', className: 'hover:bg-orange-50 text-orange-700' },
@@ -50,6 +52,7 @@ export default function RenardCampaign({ onBack }: { onBack: () => void }) {
       />
 
       <div className="space-y-16">
+        <Kit />
         <Intro />
         <ProloguePage />
         <Chapitre1 />

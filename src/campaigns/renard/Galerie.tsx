@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryGallery, { GalleryItem } from '../../components/StoryGallery';
 
-const items: GalleryItem[] = [
+export const items: GalleryItem[] = [
   { kind: 'lieu', name: "Le terrier de la famille Renard", emoji: '🏡', description: "Un terrier chaleureux sous les racines d'un vieux chêne, avec une couverture tricotée dans un coin. Le matin de l'histoire, tout y est devenu gris.", image: '/art/galerie/renard-le-terrier-de-la-famille-renard.webp' },
   { kind: 'lieu', name: "Le village des écureuils", emoji: '🌳', description: "De petites maisons de bois suspendues dans les branches d'un grand hêtre, reliées par des ponts de corde. Le village entier a oublié où il a caché ses noisettes.", image: '/art/galerie/renard-le-village-des-ecureuils.webp' },
   { kind: 'lieu', name: "La Grotte aux Échos", emoji: '🎵', description: "Une grotte aux stalactites en tuyaux d'orgue, qui répète tout ce qu'on lui dit. Trois cristaux de couleur gardent la chanson perdue de la forêt.", image: '/art/galerie/renard-la-grotte-aux-echos.webp' },
