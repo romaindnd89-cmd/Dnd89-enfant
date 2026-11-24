@@ -8,9 +8,11 @@ import Chapitre2 from './ile/Chapitre2';
 import Chapitre3 from './ile/Chapitre3';
 import Epilogue from './ile/Epilogue';
 import Galerie from './ile/Galerie';
+import Kit from './ile/Kit';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
+  { id: 'kit', label: '🖨️ Kit imprimable (à imprimer avant de jouer)', className: 'hover:bg-cyan-50 text-cyan-700' },
   { id: 'intro', label: 'Prologue, chrono et fiche', className: 'hover:bg-slate-50 text-slate-700' },
   { id: 'prologue', label: '📖 Prologue : le début de l\'histoire', className: 'hover:bg-cyan-50 text-cyan-700' },
   { id: 'chap1', label: 'Acte 1 : Le Naufrage de Poche', className: 'hover:bg-cyan-50 text-cyan-700' },
@@ -36,6 +38,7 @@ export default function IleCampaign({ onBack }: { onBack: () => void }) {
       />
 
       <div className="space-y-16">
+        <Kit />
         <Intro />
         <ProloguePage />
         <Chapitre1 />

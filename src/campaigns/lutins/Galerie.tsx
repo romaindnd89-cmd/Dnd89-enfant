@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryGallery, { GalleryItem } from '../../components/StoryGallery';
 
-const items: GalleryItem[] = [
+export const items: GalleryItem[] = [
   { kind: 'lieu', name: "La Grille qui Chatouille", emoji: '🚪', description: "L'entrée du château de Chantefarce : une grille de fer dont les barreaux tirent la langue, avec une serrure en forme de bouche qui rigole.", image: '/art/galerie/lutins-la-grille-qui-chatouille.webp' },
   { kind: 'lieu', name: "La Cuisine en Folie", emoji: '🥧', description: "De grandes cuisines pleines de farine, avec un gâteau géant à trois étages gardé par des lutins marmitons armés de tartes.", image: '/art/galerie/lutins-la-cuisine-en-folie.webp' },
   { kind: 'lieu', name: "La Salle des Miroirs", emoji: '🪞', description: "Une salle ronde tapissée de miroirs déformants, où tous les reflets se ressemblent... sauf un qui tire la langue.", image: '/art/galerie/lutins-la-salle-des-miroirs.webp' },

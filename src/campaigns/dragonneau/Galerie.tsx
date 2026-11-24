@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryGallery, { GalleryItem } from '../../components/StoryGallery';
 
-const items: GalleryItem[] = [
+export const items: GalleryItem[] = [
   { kind: 'lieu', name: "Le village de Fumerolles", emoji: '🏘️', description: "Un village aux toits de tuiles rouges, qui sent la brioche chaude. Au centre, la Grande Torche attend le souffle du petit dragon." },
   { kind: 'lieu', name: "La Forêt des Champignons", emoji: '🍄', description: "Une forêt à l'envers, aux champignons géants roses et orange sur lesquels on rebondit, avec des gelées farceuses et un ruisseau de sirop bleu." },
   { kind: 'lieu', name: "Les Grottes de Cristal", emoji: '💎', description: "Des cristaux bleus, roses et verts sortent des murs comme des fleurs de glace. Une salle à leviers, des chauves-souris et un troll enrhumé." },

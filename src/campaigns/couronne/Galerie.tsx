@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryGallery, { GalleryItem } from '../../components/StoryGallery';
 
-const items: GalleryItem[] = [
+export const items: GalleryItem[] = [
   { kind: 'lieu', name: "Le château de Pétaouchnok", emoji: '🏰', description: "Le palais du roi Gaspard, où les trombones jouent des marches funèbres un peu trop gaies et où le roi règne depuis sa baignoire à roulettes." },
   { kind: 'lieu', name: "Le Marché aux Menteurs", emoji: '🛍️', description: "Un marché coloré où tout le monde ment par métier. On y vend des pommes bleues cueillies sur la Lune." },
   { kind: 'lieu', name: "Le château du Baron Cornichon", emoji: '🥒', description: "Une pile de crêpes de pierre posées de travers, avec une galerie de portraits qui parlent et une bibliothèque dont les livres mordent." },

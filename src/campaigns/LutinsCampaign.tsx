@@ -11,9 +11,11 @@ import Chapitre5 from './lutins/Chapitre5';
 import Chapitre6 from './lutins/Chapitre6';
 import Epilogue from './lutins/Epilogue';
 import Galerie from './lutins/Galerie';
+import Kit from './lutins/Kit';
 import FinishAdventure from '../components/FinishAdventure';
 
 const sections: ShellSection[] = [
+  { id: 'kit', label: '🖨️ Kit imprimable (à imprimer avant de jouer)', className: 'hover:bg-emerald-50 text-emerald-700' },
   { id: 'intro', label: 'Prologue, règles et fiches', className: 'hover:bg-slate-50 text-slate-700' },
   { id: 'prologue', label: '📖 Prologue : le début de l\'histoire', className: 'hover:bg-emerald-50 text-emerald-700' },
   { id: 'chap1', label: 'Salle 1 : La Grille qui Chatouille', className: 'hover:bg-emerald-50 text-emerald-700' },
@@ -42,6 +44,7 @@ export default function LutinsCampaign({ onBack }: { onBack: () => void }) {
       />
 
       <div className="space-y-16">
+        <Kit />
         <Intro />
         <ProloguePage />
         <Chapitre1 />

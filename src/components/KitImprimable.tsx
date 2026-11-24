@@ -16,6 +16,7 @@ export default function KitImprimable({
   contents,
   buttonClass,
   accentClass,
+  pageCount,
   pages,
 }: {
   id?: string;
@@ -27,6 +28,8 @@ export default function KitImprimable({
   buttonClass: string;
   /** Classes Tailwind LITTÉRALES de l'accent, ex. "text-orange-600" */
   accentClass: string;
+  /** Nombre de pages A4 du kit (par défaut : une par ligne du sommaire) */
+  pageCount?: number;
   pages: React.ReactNode;
 }) {
   const [printing, setPrinting] = useState(false);
@@ -88,7 +91,7 @@ export default function KitImprimable({
           className={`flex items-center gap-2 ${buttonClass} text-white font-bold py-3 px-6 rounded-full transition-colors shadow-md`}
         >
           <Printer className="w-5 h-5" />
-          Imprimer le kit ({contents.length} pages)
+          Imprimer le kit ({pageCount ?? contents.length} pages)
         </button>
         <span className="text-sm text-slate-500">Dans la fenêtre d'impression, choisis « Enregistrer au format PDF » pour garder le fichier.</span>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryGallery, { GalleryItem } from '../../components/StoryGallery';
 
-const items: GalleryItem[] = [
+export const items: GalleryItem[] = [
   { kind: 'lieu', name: "La plage qui ronfle", emoji: '🏖️', description: "Du sable doré chaud comme du pain, des cocotiers penchés et, au loin, une montagne verte si ronde qu'on dirait un dos." },
   { kind: 'lieu', name: "La jungle qui ronfle", emoji: '🌴', description: "Des fleurs géantes, des lianes qui se balancent toutes ensemble, et un sol qui vibre tous les dix pas." },
   { kind: 'lieu', name: "La grotte au cœur de l'île", emoji: '🕳️', description: "Une grotte tiède qui sent la vanille. Au fond, sur un nid de mousse, un trésor qui bat comme un cœur." },
