@@ -250,7 +250,7 @@ function Pages() {
 
       {/* 7. Dés en papier */}
       <section className="kit-page text-slate-800 text-[13px]">
-        <Bandeau emoji="🎲" titre="Tes dés en papier" sous="Découpe le long des traits pleins, plie le long des pointillés, puis colle ou scotche les bords." />
+        <Bandeau emoji="🎲" titre="Tes dés en papier" sous="Découpe tout autour (languettes jaunes comprises), plie chaque pointillé vers l'intérieur, puis colle chaque languette sous le bord qui porte la même lettre." />
         <div className="flex flex-col items-center gap-5">
           <div>
             <p className="font-display font-bold text-center mb-1">Le dé à 20 faces (D20) : pour réussir ses actions</p>
@@ -260,7 +260,7 @@ function Pages() {
             <p className="font-display font-bold text-center mb-1">Le dé à 6 faces (D6) : pour les dégâts</p>
             <D6Net />
           </div>
-          <p className="text-slate-500 text-center">Astuce : colle le patron sur du carton fin pour un dé plus solide.</p>
+          <p className="text-slate-500 text-center">Astuce : imprime sur du papier épais ou colle le patron sur du carton fin. Marque les plis avec un stylo sans encre et une règle. Colle la dernière languette en tenant le dé fermé quelques secondes.</p>
         </div>
       </section>
     </>
